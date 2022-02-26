@@ -4,34 +4,33 @@ using UnityEngine;
 
 namespace ItIsNotOnlyMe
 {
-
     public class Posion : IPosion
     {
-        private Atributos _atributos;
+        private Propiedades _propiedades;
 
-        public Posion(Atributos atributo)
+        public Posion(Propiedades propiedades)
         {
-            _atributos = atributo;
+            _propiedades = propiedades;
         }
 
-        public Atributos GetAtributos()
+        public Propiedades GetPropiedades()
         {
-            return _atributos;
+            return _propiedades;
         }
 
         public float Distancia(IPosion posion)
         {
-            return Atributos.Comparacion(_atributos, posion.GetAtributos());
+            return Propiedades.Comparacion(_propiedades, posion.GetPropiedades());
         }
 
         public float Similitud(IPosion posion)
         {
-            return Atributos.Similitud(_atributos, posion.GetAtributos());
+            return Propiedades.Similitud(_propiedades, posion.GetPropiedades());
         }
 
         public float Multiplicidad(IPosion posion)
         {
-            return Atributos.Multiplicdad(_atributos, posion.GetAtributos());
+            return Propiedades.Multiplicdad(_propiedades, posion.GetPropiedades());
         }
     }
 }

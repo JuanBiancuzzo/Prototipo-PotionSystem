@@ -9,37 +9,37 @@ namespace ItIsNotOnlyMe
         private float _vida, _temperatura, _visivilidad, _velocidad, _estado, _peso;
 
         private Posion _posionBase = null;
-        public Posion Posion
+        private Posion _posion
         {
             get
             {
                 if (_posionBase == null)
                 {
-                    Atributos atributos = new Atributos(_vida, _temperatura, _visivilidad, _velocidad, _estado, _peso);
+                    Propiedades atributos = new Propiedades(_vida, _temperatura, _visivilidad, _velocidad, _estado, _peso);
                     _posionBase = new Posion(atributos);
                 }
                 return _posionBase;
             }
         }
 
-        public Atributos GetAtributos()
+        public Propiedades GetPropiedades()
         {
-            return Posion.GetAtributos();
+            return _posion.GetPropiedades();
         }
 
         public float Distancia(IPosion posion)
         {
-            return Posion.Distancia(posion);
+            return _posion.Distancia(posion);
         }
 
         public float Similitud(IPosion posion)
         {
-            return Posion.Similitud(posion);
+            return _posion.Similitud(posion);
         }
 
         public float Multiplicidad(IPosion posion)
         {
-            return Posion.Multiplicidad(posion);
+            return _posion.Multiplicidad(posion);
         }
     }
 }

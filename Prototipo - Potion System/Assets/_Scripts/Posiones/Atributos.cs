@@ -4,56 +4,26 @@ using UnityEngine;
 
 namespace ItIsNotOnlyMe
 {
-    public struct Atributos
+    public class Atributos
     {
-        public float Vida, Temperatura, Visivilidad, Velocidad, Estado, Peso;
+        private List<Par> _pares;
 
-        public Atributos(float vida, float temperatura, float visivilidad, 
-                         float velocidad, float estado, float peso)
+        public Atributos(List<Par> pares)
         {
-            Vida = vida;
-            Temperatura = temperatura;
-            Visivilidad = visivilidad;
-            Velocidad = velocidad;
-            Estado = estado;
-            Peso = peso;
-        }
-
-        public Atributos(List<float> valores)
-        {
-            Vida = valores[0];
-            Temperatura = valores[1];
-            Visivilidad = valores[2];
-            Velocidad = valores[3];
-            Estado = valores[4];
-            Peso = valores[5];
-        }
-
-        private void Multiplicar(float escalar)
-        {
-            Vida *= escalar;
-            Temperatura *= escalar;
-            Visivilidad *= escalar;
-            Velocidad *= escalar;
-            Estado *= escalar;
-            Peso *= escalar;
-        }
-
-        private Atributos Duplicar()
-        {
-            return new Atributos(Valores(this));
+            _pares = pares;
         }
 
         public static float Comparacion(Atributos propio, Atributos otro)
         {
-            List<float> valoresPropios = Valores(propio);
-            List<float> valoresOtro = Valores(otro);
+            Tuple<Atributos, Atributos> atributosNuevos = AtributoGeneral(propio, otro);
+            propio = atributosNuevos.Item1;
+            otro = atributosNuevos.Item2;
 
-            List<float> diferencia = new List<float>();
-            for (int i = 0; i < valoresPropios.Count; i++)
-                diferencia.Add(valoresPropios[i] - valoresOtro[i]);
+            List<Par> paresNuevos = new List<Par>();
+            for (int i = 0; i < propio._pares.Count; i++)
+                paresNuevos.Add(Par.Restar(propio._pares[i], otro._pares[i]));
 
-            return Modulo(new Atributos(diferencia));
+            return Modulo(new Atributos(paresNuevos));
         }
 
         public static float Similitud(Atributos propio, Atributos otro)
@@ -61,26 +31,26 @@ namespace ItIsNotOnlyMe
             return ProductoInterno(Normalizar(propio), Normalizar(otro));
         }
 
-        public static float Multiplicdad(Atributos propio, Atributos otro)
+        public static float Multiplicidad(Atributos propio, Atributos otro)
         {
             Atributos otroProyectado = Proyeccion(propio, otro);
 
             float moduloPropio = Modulo(propio);
-            float moduloProyeccion = Modulo(otro);
+            float moduloProyeccion = Modulo(otroProyectado);
 
-            return moduloPropio / moduloProyeccion;
+            return Mathf.Sign(Similitud(propio, otro)) * (moduloProyeccion / moduloPropio);
         }
 
         private static float ProductoInterno(Atributos propio, Atributos otro)
         {
-            List<float> valoresPropios = Valores(propio);
-            List<float> valoresOtro = Valores(otro);
+            Tuple<Atributos, Atributos> atributosNuevos = AtributoGeneral(propio, otro);
+            propio = atributosNuevos.Item1;
+            otro = atributosNuevos.Item2;
 
-            float similitud = 0f;
-            for (int i = 0; i < valoresPropios.Count; i++)
-                similitud += valoresPropios[i] * valoresOtro[i];
-
-            return similitud;
+            float producto = 0f;
+            for (int i = 0; i < propio._pares.Count; i++)
+                producto += Par.Multiplicar(propio._pares[i], otro._pares[i]);
+            return producto;
         }
 
         private static float Modulo(Atributos atributos)
@@ -90,34 +60,56 @@ namespace ItIsNotOnlyMe
 
         private static Atributos Normalizar(Atributos atributos)
         {
-            List<float> valores = Valores(atributos);
             float modulo = Modulo(atributos);
+            List<Par> nuevosPares = new List<Par>();
 
-            for (int i = 0; i < valores.Count; i++)
-                valores[i] /= modulo;
+            foreach (Par par in atributos._pares)
+                nuevosPares.Add(Par.Dividir(par, modulo));
 
-            return new Atributos(valores);
+            return new Atributos(nuevosPares);
         }
 
         private static Atributos Proyeccion(Atributos propio, Atributos otro)
         {
-            float escalar = ProductoInterno(propio, otro) / Mathf.Pow(Modulo(propio), 2);
-            Atributos nuevo = propio.Duplicar();
-            nuevo.Multiplicar(escalar);
-            return nuevo;
+            float escalar = ProductoInterno(propio, otro) / ProductoInterno(propio, propio);
+            return Multiplicar(propio, escalar);
         }
 
-        private static List<float> Valores(Atributos atributos)
+        private static Atributos Multiplicar(Atributos atributos, float escalar)
         {
-            return new List<float>
+            List<Par> nuevosPares = new List<Par>();
+            foreach (Par par in atributos._pares)
+                nuevosPares.Add(Par.Multiplicar(par, escalar));
+            return new Atributos(nuevosPares);
+        }
+
+        private static Tuple<Atributos, Atributos> AtributoGeneral(Atributos propio, Atributos otro)
+        {
+            List<Par> paresPropio = new List<Par>(), paresOtro = new List<Par>();
+
+            foreach (Par parPropio in propio._pares)
             {
-                atributos.Vida,
-                atributos.Temperatura,
-                atributos.Visivilidad,
-                atributos.Velocidad,
-                atributos.Estado,
-                atributos.Peso
-            };
+                Par par = Par.CopiaNula(parPropio);
+                foreach (Par parOtro in otro._pares)
+                {
+                    if (parPropio.Comparar(parOtro))
+                        par = parOtro;
+                }
+
+                paresPropio.Add(parPropio);
+                paresOtro.Add(par);
+            }
+
+            foreach (Par parOtro in otro._pares)
+            {
+                if (Par.Existe(parOtro, propio._pares))
+                    continue;
+
+                paresOtro.Add(parOtro);
+                paresPropio.Add(Par.CopiaNula(parOtro));
+            }
+
+            return new Tuple<Atributos, Atributos>(new Atributos(paresPropio), new Atributos(paresOtro));
         }
     }
 }
