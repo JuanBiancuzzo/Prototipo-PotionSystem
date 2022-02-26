@@ -2,7 +2,7 @@
 {
     public interface IPosion
     { 
-        public Propiedades GetPropiedades();
+        public Atributos GetAtributos();
 
         public float Distancia(IPosion posion);
 

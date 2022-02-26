@@ -1,12 +1,23 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace ItIsNotOnlyMe
 {
-    [CreateAssetMenu(fileName = "Receta para posion", menuName = "Receta de posion")]
+    [CreateAssetMenu(fileName = "Receta para posion", menuName = "Posiones/Receta de posion")]
     public class Receta : ScriptableObject, IPosion
     {
-        [SerializeField] [Range(-20f, 20f)]
-        private float _vida, _temperatura, _visivilidad, _velocidad, _estado, _peso;
+        [Serializable]
+        private struct ParIdValor
+        {
+            [SerializeField] 
+            public IdentificadorSO Identificador;
+
+            [SerializeField] [Range(-20, 20)]
+            public float Valor;
+        }
+
+        [SerializeField] List<ParIdValor> _parIdValores;
 
         private Posion _posionBase = null;
         private Posion _posion
@@ -15,16 +26,18 @@ namespace ItIsNotOnlyMe
             {
                 if (_posionBase == null)
                 {
-                    Propiedades atributos = new Propiedades(_vida, _temperatura, _visivilidad, _velocidad, _estado, _peso);
-                    _posionBase = new Posion(atributos);
+                    List<Par> pares = new List<Par>();
+                    foreach (ParIdValor par in _parIdValores)
+                        pares.Add(new Par(par.Identificador, par.Valor));
+                    _posionBase = new Posion(new Atributos(pares));
                 }
                 return _posionBase;
             }
         }
 
-        public Propiedades GetPropiedades()
+        public Atributos GetAtributos()
         {
-            return _posion.GetPropiedades();
+            return _posion.GetAtributos();
         }
 
         public float Distancia(IPosion posion)

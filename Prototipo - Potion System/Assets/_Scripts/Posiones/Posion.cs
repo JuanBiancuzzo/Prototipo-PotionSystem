@@ -6,31 +6,31 @@ namespace ItIsNotOnlyMe
 {
     public class Posion : IPosion
     {
-        private Propiedades _propiedades;
+        private Atributos _atributos;
 
-        public Posion(Propiedades propiedades)
+        public Posion(Atributos atributos)
         {
-            _propiedades = propiedades;
+            _atributos = atributos;
         }
 
-        public Propiedades GetPropiedades()
+        public Atributos GetAtributos()
         {
-            return _propiedades;
+            return _atributos;
         }
 
         public float Distancia(IPosion posion)
         {
-            return Propiedades.Comparacion(_propiedades, posion.GetPropiedades());
+            return Atributos.Comparacion(_atributos, posion.GetAtributos());
         }
 
         public float Similitud(IPosion posion)
         {
-            return Propiedades.Similitud(_propiedades, posion.GetPropiedades());
+            return Atributos.Similitud(_atributos, posion.GetAtributos());
         }
 
         public float Multiplicidad(IPosion posion)
         {
-            return Propiedades.Multiplicdad(_propiedades, posion.GetPropiedades());
+            return Atributos.Multiplicidad(_atributos, posion.GetAtributos());
         }
     }
 }
