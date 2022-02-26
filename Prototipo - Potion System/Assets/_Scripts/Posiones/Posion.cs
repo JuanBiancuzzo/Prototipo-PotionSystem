@@ -21,7 +21,17 @@ namespace ItIsNotOnlyMe
 
         public float Distancia(IPosion posion)
         {
-            return Atributos.Comparacion(posion.GetAtributos(), _atributos);
+            return Atributos.Comparacion(_atributos, posion.GetAtributos());
+        }
+
+        public float Similitud(IPosion posion)
+        {
+            return Atributos.Similitud(_atributos, posion.GetAtributos());
+        }
+
+        public float Multiplicidad(IPosion posion)
+        {
+            return Atributos.Multiplicdad(_atributos, posion.GetAtributos());
         }
     }
 }
