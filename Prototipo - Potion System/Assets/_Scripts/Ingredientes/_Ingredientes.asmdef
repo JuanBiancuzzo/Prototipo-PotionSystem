@@ -1,3 +1,16 @@
 {
-	"name": "_Ingredientes"
+    "name": "_Ingredientes",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6f896faa020831b4d86e0b20d1d9ebb0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
