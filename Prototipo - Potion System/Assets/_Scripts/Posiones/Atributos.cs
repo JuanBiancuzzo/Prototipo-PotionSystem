@@ -41,6 +41,40 @@ namespace ItIsNotOnlyMe
             return Mathf.Sign(Similitud(propio, otro)) * (moduloProyeccion / moduloPropio);
         }
 
+        public static Atributos Sumar(Atributos propio, Atributos otro)
+        {
+            Tuple<Atributos, Atributos> atributosNuevos = AtributoGeneral(propio, otro);
+            propio = atributosNuevos.Item1;
+            otro = atributosNuevos.Item2;
+
+            List<Par> paresNuevos = new List<Par>();
+            for (int i = 0; i < propio._pares.Count; i++)
+                paresNuevos.Add(Par.Sumar(propio._pares[i], otro._pares[i]));
+
+            return new Atributos(paresNuevos);
+        }
+
+        public static Atributos Restar(Atributos propio, Atributos otro)
+        {
+            Tuple<Atributos, Atributos> atributosNuevos = AtributoGeneral(propio, otro);
+            propio = atributosNuevos.Item1;
+            otro = atributosNuevos.Item2;
+
+            List<Par> paresNuevos = new List<Par>();
+            for (int i = 0; i < propio._pares.Count; i++)
+                paresNuevos.Add(Par.Restar(propio._pares[i], otro._pares[i]));
+
+            return new Atributos(paresNuevos);
+        }
+
+        public static Atributos Multiplicar(Atributos atributos, float escalar)
+        {
+            List<Par> nuevosPares = new List<Par>();
+            foreach (Par par in atributos._pares)
+                nuevosPares.Add(Par.Multiplicar(par, escalar));
+            return new Atributos(nuevosPares);
+        }
+
         private static float ProductoInterno(Atributos propio, Atributos otro)
         {
             Tuple<Atributos, Atributos> atributosNuevos = AtributoGeneral(propio, otro);
@@ -73,14 +107,6 @@ namespace ItIsNotOnlyMe
         {
             float escalar = ProductoInterno(propio, otro) / ProductoInterno(propio, propio);
             return Multiplicar(propio, escalar);
-        }
-
-        private static Atributos Multiplicar(Atributos atributos, float escalar)
-        {
-            List<Par> nuevosPares = new List<Par>();
-            foreach (Par par in atributos._pares)
-                nuevosPares.Add(Par.Multiplicar(par, escalar));
-            return new Atributos(nuevosPares);
         }
 
         private static Tuple<Atributos, Atributos> AtributoGeneral(Atributos propio, Atributos otro)

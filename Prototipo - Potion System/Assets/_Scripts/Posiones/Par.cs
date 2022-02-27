@@ -4,6 +4,7 @@ namespace ItIsNotOnlyMe
 {
     public struct Par
     {
+        private static float _valorNulo = 0f;
         private IIdentificador _identificador;
         private float _valor;
 
@@ -23,9 +24,16 @@ namespace ItIsNotOnlyMe
             return par.Comparar(_identificador);
         }
 
+        public static Par Sumar(Par propio, Par otro)
+        {
+            float nuevoValor = propio.Comparar(otro) ? propio._valor + otro._valor : _valorNulo;
+            return new Par(propio._identificador, nuevoValor);
+        }
+
         public static Par Restar(Par propio, Par otro)
         {
-            return new Par(propio._identificador, propio._valor - otro._valor);
+            float nuevoValor = propio.Comparar(otro) ? propio._valor - otro._valor : _valorNulo;
+            return new Par(propio._identificador, nuevoValor);
         }
 
         public static Par Multiplicar(Par par, float valor)
@@ -35,7 +43,7 @@ namespace ItIsNotOnlyMe
 
         public static float Multiplicar(Par propio, Par otro)
         {
-            return propio._valor * otro._valor;
+            return propio.Comparar(otro) ? propio._valor * otro._valor : _valorNulo;
         }
 
         public static Par Dividir(Par par, float valor)

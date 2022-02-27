@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889037d022f305449850d7f226e0a6ab, type: 3}
   m_Name: Healing
   m_EditorClassIdentifier: 
-  _vida: 15
-  _temperatura: -2
-  _visivilidad: 0
-  _velocidad: 0
-  _estado: 10
-  _peso: 7.5
+  _parIdValores:
+  - Identificador: {fileID: 11400000, guid: 4b80e453a3cf68449aa0d1164b6822ea, type: 2}
+    Valor: 20
+  - Identificador: {fileID: 11400000, guid: 3c3ea6726bb98644bbccb0ebc83f30be, type: 2}
+    Valor: -2
+  - Identificador: {fileID: 11400000, guid: 7a6685bbd4a0e864896a3946c8cff220, type: 2}
+    Valor: -5
+  - Identificador: {fileID: 11400000, guid: 7740134192a55aa4d874b23f9a4288e6, type: 2}
+    Valor: 5
