@@ -4,7 +4,9 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "Scripts"
+        "_Posiones",
+        "_Ingredientes",
+        "_Contenedor"
     ],
     "includePlatforms": [
         "Editor"
