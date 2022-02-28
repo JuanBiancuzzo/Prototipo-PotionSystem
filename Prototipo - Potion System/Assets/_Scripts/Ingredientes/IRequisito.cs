@@ -2,14 +2,13 @@
 {
     public interface IRequisito
     {
-        //public int GetID();
+        public float ConseguirValor(IDemandado demandado, IIdentificador identificador);
 
-        public float ConseguirValor(IIngrediente ingrediente, IIdentificador identid);
+        public bool Evaluar(IDemandado demandado);
+    }
 
-        public bool Evaluar(IIngrediente ingrediente);
-
-        //public bool Permitido(IIngrediente principal, IIngrediente otro);
-
-        //public IRequisito CombinacionNueva(IRequisito requisito);
+    public interface IDemandado
+    {
+        public float ObtenerValor(IIdentificador identificador);
     }
 }

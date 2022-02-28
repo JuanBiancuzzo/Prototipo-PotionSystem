@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace ItIsNotOnlyMe
 {
+    /*
     public abstract class Requisito : IRequisito
     {
         private static int _contador = 0;
@@ -57,4 +58,5 @@ namespace ItIsNotOnlyMe
             throw new System.NotImplementedException();
         }
     }
+    */
 }

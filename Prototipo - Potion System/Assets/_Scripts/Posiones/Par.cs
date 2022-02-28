@@ -24,6 +24,16 @@ namespace ItIsNotOnlyMe
             return par.Comparar(_identificador);
         }
 
+        public float GetValor()
+        {
+            return _valor;
+        }
+
+        public IIdentificador GetIdentificador()
+        {
+            return _identificador;
+        }
+
         public static Par Sumar(Par propio, Par otro)
         {
             float nuevoValor = propio.Comparar(otro) ? propio._valor + otro._valor : _valorNulo;

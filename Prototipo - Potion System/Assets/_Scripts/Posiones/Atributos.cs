@@ -6,11 +6,26 @@ namespace ItIsNotOnlyMe
 {
     public class Atributos
     {
+        private static float _valorNulo = 0f;
         private List<Par> _pares;
 
         public Atributos(List<Par> pares)
         {
             _pares = pares;
+        }
+
+        public float GetValor(IIdentificador identificador)
+        {
+            foreach (Par par in _pares)
+                if (par.Comparar(identificador))
+                    return par.GetValor();
+            return _valorNulo;
+        }
+
+        public IEnumerable<IIdentificador> GetIdentificadores()
+        {
+            foreach (Par par in _pares)
+                yield return par.GetIdentificador();
         }
 
         public static float Comparacion(Atributos propio, Atributos otro)

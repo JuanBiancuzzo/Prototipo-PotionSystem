@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace ItIsNotOnlyMe
 {
+    /*
     public class Guias : IIntercambio
     {
         private List<IIntercambio> _intercambios;
@@ -23,4 +24,5 @@ namespace ItIsNotOnlyMe
             throw new System.NotImplementedException();
         }
     }
+    */
 }

@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using NUnit.Framework;
 using ItIsNotOnlyMe;
-using UnityEngine;
-using UnityEngine.TestTools;
 
 public partial class RequisitosTest
 {
@@ -29,21 +25,16 @@ public partial class RequisitosTest
         }
     }
 
-    private class IngredientePrueba : IIngrediente
+    private class DemandadoPrueba : IDemandado
     {
         private IIdentificador _identificador;
         private float _valor, _valorNulo;
 
-        public IngredientePrueba(IIdentificador identificador, float valor, float valorNulo)
+        public DemandadoPrueba(IIdentificador identificador, float valor, float valorNulo)
         {
             _identificador = identificador;
             _valor = valor;
             _valorNulo = valorNulo;
-        }
-
-        public Atributos Agregar(Atributos atributos)
-        {
-            throw new System.NotImplementedException();
         }
 
         public float ObtenerValor(IIdentificador identificador)
@@ -63,12 +54,12 @@ public partial class RequisitosTest
             _identificador = identificador;
         }
 
-        public float ConseguirValor(IIngrediente ingrediente, IIdentificador identificador)
+        public float ConseguirValor(IDemandado ingrediente, IIdentificador identificador)
         {
             return ingrediente.ObtenerValor(identificador);
         }
 
-        public bool Evaluar(IIngrediente ingrediente)
+        public bool Evaluar(IDemandado ingrediente)
         {
             float valor = ConseguirValor(ingrediente, _identificador);
             return valor > _valorMinimo;
@@ -81,10 +72,30 @@ public partial class RequisitosTest
     [Test]
     public void RequisitoSeCumpleConUnIngredienteValido()
     {
-        float valorIngrediente = 5, valorNulo = 0, valorMinimo = 2;
-        IIngrediente ingredienteValido = new IngredientePrueba(_uno, valorIngrediente, valorNulo);
+        float valorDemandado = 5, valorNulo = 0, valorMinimo = 2;
+        IDemandado ingredienteValido = new DemandadoPrueba(_uno, valorDemandado, valorNulo);
         IRequisito requisito = new RequisitoMayor(valorMinimo, _uno);
 
         Assert.IsTrue(requisito.Evaluar(ingredienteValido));
+    }
+
+    [Test]
+    public void RequisitoNoSeCumpleConUnIngredienteSinElIdentificador()
+    {
+        float valorDemandado = 5, valorNulo = 0, valorMinimo = 2;
+        IDemandado ingredienteValido = new DemandadoPrueba(_dos, valorDemandado, valorNulo);
+        IRequisito requisito = new RequisitoMayor(valorMinimo, _uno);
+
+        Assert.IsFalse(requisito.Evaluar(ingredienteValido));
+    }
+
+    [Test]
+    public void RequisitoNoSeCumpleConUnIngredienteConIdentificadorPeroNoValorNecesario()
+    {
+        float valorDemandado = 2, valorNulo = 0, valorMinimo = 5;
+        IDemandado ingredienteValido = new DemandadoPrueba(_uno, valorDemandado, valorNulo);
+        IRequisito requisito = new RequisitoMayor(valorMinimo, _uno);
+
+        Assert.IsFalse(requisito.Evaluar(ingredienteValido));
     }
 }

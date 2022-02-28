@@ -1,62 +1,40 @@
-﻿namespace ItIsNotOnlyMe
+﻿using System.Collections.Generic;
+
+namespace ItIsNotOnlyMe
 {
     public class Ingrediente : IIngrediente
     {
-        private IRequisito _reglas;
-        private IIntercambio _guias;
-        private Atributos _atributos;
+        private List<ICambiar> _modificadores;
+        private Atributos _atributosBase;
 
-        public Ingrediente(IRequisito reglas, IIntercambio guias, Atributos atributos)
+        public Ingrediente(Atributos atributosBase)
         {
-            _reglas = reglas;
-            _guias = guias;
-            _atributos = atributos;
+            _modificadores = new List<ICambiar>();
+            _atributosBase = atributosBase;
         }
 
         public Atributos Agregar(Atributos atributos)
         {
-            return Atributos.Sumar(_atributos, atributos);
+            List<Par> nuevosPares = new List<Par>();
+            foreach (IIdentificador identificador in _atributosBase.GetIdentificadores())
+            {
+                float nuevoValor = ObtenerValor(identificador);
+                nuevosPares.Add(new Par(identificador, nuevoValor));
+            }
+
+            return Atributos.Sumar(atributos, new Atributos(nuevosPares));
         }
 
-        public IIngrediente CrearCombinacion(IIngrediente otro)
+        public void AgregarModificador(ICambiar modificador)
         {
-            if (!PermiteUnirse(otro))
-                return null;
-
-            AplicarIntercambio(otro);
-            otro.AplicarIntercambio(this);
-
-            return new Compuesto(this, otro);
+            _modificadores.Add(modificador);
         }
 
-        public IRequisito UnirReglas(IRequisito requisito)
+        public float ObtenerValor(IIdentificador identificador)
         {
-            return _reglas.CombinacionNueva(requisito);
-        }
-
-        public IRequisito UnirReglas(IIngrediente ingrediente)
-        {
-            return ingrediente.UnirReglas(_reglas);
-        }
-
-        public IIntercambio UnirGuias(IIntercambio intercambio)
-        {
-            return _guias.CombinacionNueva(intercambio);
-        }
-
-        public IIntercambio UnirGuias(IIngrediente ingrediente)
-        {
-            return ingrediente.UnirGuias(_guias);
-        }
-
-        public void AplicarIntercambio(IIngrediente otro)
-        {
-            _guias.Intercambiar(this, otro);
-        }
-
-        public bool PermiteUnirse(IIngrediente otro)
-        {
-            return _reglas.Permitido(this, otro);
+            float valor = _atributosBase.GetValor(identificador);
+            _modificadores.ForEach(cambiar => valor = cambiar.Modificar(identificador, valor));
+            return valor;
         }
     }
 }
