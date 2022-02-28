@@ -53,12 +53,12 @@ public class CambiarTest
         }
     }
 
-    private class CambiarSumarDos : ICambiar
+    private class CambiarSumar : ICambiar
     {
         private float _valorSumar;
         private IIdentificador _identificador;
 
-        public CambiarSumarDos(float valorSumar, IIdentificador identificador)
+        public CambiarSumar(float valorSumar, IIdentificador identificador)
         {
             _valorSumar = valorSumar;
             _identificador = identificador;
@@ -85,7 +85,7 @@ public class CambiarTest
     {
         float valorCambiante = 3, valorNulo = 0, valorCambio = 2;
         CambiantePrueba cambiante = new CambiantePrueba(_uno, valorCambiante, valorNulo);
-        ICambiar cambiar = new CambiarSumarDos(valorCambio, _uno);
+        ICambiar cambiar = new CambiarSumar(valorCambio, _uno);
 
         cambiar.Cambiar(cambiante);
 
@@ -97,7 +97,7 @@ public class CambiarTest
     {
         float valorCambiante = 3, valorNulo = 0, valorCambio = 2;
         CambiantePrueba cambiante = new CambiantePrueba(_uno, valorCambiante, valorNulo);
-        ICambiar cambiar = new CambiarSumarDos(valorCambio, _dos);
+        ICambiar cambiar = new CambiarSumar(valorCambio, _dos);
 
         cambiar.Cambiar(cambiante);
 

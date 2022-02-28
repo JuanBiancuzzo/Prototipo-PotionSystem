@@ -152,5 +152,19 @@ namespace ItIsNotOnlyMe
 
             return new Tuple<Atributos, Atributos>(new Atributos(paresPropio), new Atributos(paresOtro));
         }
+
+        public static Atributos UnionNula(Atributos propio, Atributos otro)
+        {
+            List<Par> pares = new List<Par>();
+
+            foreach (Par par in propio._pares)
+                pares.Add(Par.CopiaNula(par));
+
+            foreach (Par par in otro._pares)
+                if (!Par.Existe(par, propio._pares))
+                    pares.Add(Par.CopiaNula(par));
+
+            return new Atributos(pares);
+        }
     }
 }

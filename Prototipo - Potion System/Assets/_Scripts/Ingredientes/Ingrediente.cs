@@ -16,7 +16,8 @@ namespace ItIsNotOnlyMe
         public Atributos Agregar(Atributos atributos)
         {
             List<Par> nuevosPares = new List<Par>();
-            foreach (IIdentificador identificador in _atributosBase.GetIdentificadores())
+            Atributos union = Atributos.UnionNula(_atributosBase, atributos);
+            foreach (IIdentificador identificador in union.GetIdentificadores())
             {
                 float nuevoValor = ObtenerValor(identificador);
                 nuevosPares.Add(new Par(identificador, nuevoValor));
