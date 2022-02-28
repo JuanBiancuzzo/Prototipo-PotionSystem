@@ -38,7 +38,7 @@ public class AtributosTest
     private Identificador _densidad = new Identificador();
 
     [Test]
-    public void DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden()
+    public void Test01DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden()
     {
         List<Par> paresPropio = new List<Par>
         {
@@ -64,7 +64,7 @@ public class AtributosTest
     }
 
     [Test]
-    public void DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden()
+    public void Test02DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden()
     {
         List<Par> paresPropio = new List<Par>
         {
@@ -90,7 +90,7 @@ public class AtributosTest
     }
 
     [Test]
-    public void DistanciaEntreDosAtributosConParesDiferentes()
+    public void Test03DistanciaEntreDosAtributosConParesDiferentes()
     {
         List<Par> paresPropio = new List<Par>
         {
@@ -116,7 +116,7 @@ public class AtributosTest
     }
 
     [Test]
-    public void LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico()
+    public void Test04LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico()
     {
         List<Par> paresPropio = new List<Par>
         {
@@ -137,7 +137,7 @@ public class AtributosTest
     }
 
     [Test]
-    public void LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso()
+    public void Test05LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso()
     {
         List<Par> paresPropio = new List<Par>
         {
@@ -158,7 +158,7 @@ public class AtributosTest
     }
 
     [Test]
-    public void LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal()
+    public void Test06LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal()
     {
         List<Par> paresPropio = new List<Par>
         {
@@ -177,7 +177,7 @@ public class AtributosTest
     }
 
     [Test]
-    public void LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble()
+    public void Test07LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble()
     {
         List<Par> paresPropio = new List<Par>
         {
@@ -197,7 +197,7 @@ public class AtributosTest
     }
 
     [Test]
-    public void LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso()
+    public void Test08LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso()
     {
         List<Par> paresPropio = new List<Par>
         {

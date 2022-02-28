@@ -81,7 +81,7 @@ public class CambiarTest
     private IIdentificador _dos = new Identificador();
 
     [Test]
-    public void CambiarSeCumpleYElValorPasaDeTresADos()
+    public void Test01CambiarSeCumpleYElValorPasaDeTresADos()
     {
         float valorCambiante = 3, valorNulo = 0, valorCambio = 2;
         CambiantePrueba cambiante = new CambiantePrueba(_uno, valorCambiante, valorNulo);
@@ -93,7 +93,7 @@ public class CambiarTest
     }
 
     [Test]
-    public void CambiarVariaUnEjeQueNoTenia()
+    public void Test02CambiarVariaUnEjeQueNoTenia()
     {
         float valorCambiante = 3, valorNulo = 0, valorCambio = 2;
         CambiantePrueba cambiante = new CambiantePrueba(_uno, valorCambiante, valorNulo);

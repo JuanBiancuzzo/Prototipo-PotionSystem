@@ -70,7 +70,7 @@ public partial class RequisitosTest
     private IIdentificador _dos = new Identificador();
 
     [Test]
-    public void RequisitoSeCumpleConUnIngredienteValido()
+    public void Test01RequisitoSeCumpleConUnIngredienteValido()
     {
         float valorDemandado = 5, valorNulo = 0, valorMinimo = 2;
         IDemandado ingredienteValido = new DemandadoPrueba(_uno, valorDemandado, valorNulo);
@@ -80,7 +80,7 @@ public partial class RequisitosTest
     }
 
     [Test]
-    public void RequisitoNoSeCumpleConUnIngredienteSinElIdentificador()
+    public void Test02RequisitoNoSeCumpleConUnIngredienteSinElIdentificador()
     {
         float valorDemandado = 5, valorNulo = 0, valorMinimo = 2;
         IDemandado ingredienteValido = new DemandadoPrueba(_dos, valorDemandado, valorNulo);
@@ -90,7 +90,7 @@ public partial class RequisitosTest
     }
 
     [Test]
-    public void RequisitoNoSeCumpleConUnIngredienteConIdentificadorPeroNoValorNecesario()
+    public void Test03RequisitoNoSeCumpleConUnIngredienteConIdentificadorPeroNoValorNecesario()
     {
         float valorDemandado = 2, valorNulo = 0, valorMinimo = 5;
         IDemandado ingredienteValido = new DemandadoPrueba(_uno, valorDemandado, valorNulo);

@@ -4,13 +4,28 @@ namespace ItIsNotOnlyMe
 {
     public class Ingrediente : IIngrediente
     {
+        private List<IRequisito> _requisitosUnirse;
+        private List<ICambiar> _modificaresOtro;
+
         private List<ICambiar> _modificadores;
         private Atributos _atributosBase;
 
-        public Ingrediente(Atributos atributosBase)
+        public Ingrediente(Atributos atributosBase,
+                           List<IRequisito> requisitos = null,
+                           List<ICambiar> modificadoresOtro = null)
         {
+            _requisitosUnirse = (requisitos == null) ? new List<IRequisito>() : requisitos;
+            _modificaresOtro = (modificadoresOtro == null) ? new List<ICambiar>() : modificadoresOtro;
+
             _modificadores = new List<ICambiar>();
             _atributosBase = atributosBase;
+        }
+
+        public Ingrediente(Atributos atributosBase,
+                           List<ICambiar> modificadoresOtro,
+                           List<IRequisito> requisitos = null)
+            : this(atributosBase, requisitos, modificadoresOtro)
+        {
         }
 
         public Atributos Agregar(Atributos atributos)
@@ -24,6 +39,21 @@ namespace ItIsNotOnlyMe
             }
 
             return Atributos.Sumar(atributos, new Atributos(nuevosPares));
+        }
+
+        public IIngrediente Unirse(IIngrediente ingrediente)
+        {
+            return PermiteUnirse() && ingrediente.PermiteUnirse() ? new Compuesto(this, ingrediente) : null;
+        }
+
+        public bool PermiteUnirse()
+        {
+            return _requisitosUnirse.TrueForAll(requisito => requisito.Evaluar(this));
+        }
+
+        public void ModificarOtro(IIngrediente ingrediente)
+        {
+            _modificaresOtro.ForEach(modificador => ingrediente.AgregarModificador(modificador));
         }
 
         public void AgregarModificador(ICambiar modificador)
