@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1600
     height: 817
   m_ShowMode: 4
-  m_Title: Test Runner
+  m_Title: Project
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 66
+  controlID: 110
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 75
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -173,8 +173,8 @@ MonoBehaviour:
     y: 0
     width: 288
     height: 767
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 16
+  controlID: 69
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -332,7 +332,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 120
+    ID: 118
     splitterInitialOffset: 590
     currentActiveSplitter: -1
     realSizes:
@@ -399,7 +399,7 @@ MonoBehaviour:
       name: Prototipo - Potion System
       fullName: Prototipo - Potion System
       resultStatus: 1
-      duration: 0.1343255
+      duration: 0.135562
       messages: 
       output: 
       stacktrace: 
@@ -417,7 +417,7 @@ MonoBehaviour:
       fullName: C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo -
         Potion System/Library/ScriptAssemblies/EditModeTest.dll
       resultStatus: 1
-      duration: 0.0658653
+      duration: 0.0935876
       messages: 
       output: 
       stacktrace: 
@@ -433,7 +433,7 @@ MonoBehaviour:
       name: AtributosTest
       fullName: AtributosTest
       resultStatus: 1
-      duration: 0.0588214
+      duration: 0.0449164
       messages: 
       output: 
       stacktrace: 
@@ -446,11 +446,11 @@ MonoBehaviour:
       parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
         - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
     - id: 1002
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.DistanciaEntreDosAtributosConParesDiferentes]
-      name: DistanciaEntreDosAtributosConParesDiferentes
-      fullName: AtributosTest.DistanciaEntreDosAtributosConParesDiferentes
+      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test01DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden]
+      name: Test01DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden
+      fullName: AtributosTest.Test01DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden
       resultStatus: 1
-      duration: 0.0237123
+      duration: 0.0184319
       messages: 
       output: 
       stacktrace: 
@@ -463,11 +463,11 @@ MonoBehaviour:
       parentId: 1001
       parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
     - id: 1003
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden]
-      name: DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden
-      fullName: AtributosTest.DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden
+      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test02DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden]
+      name: Test02DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden
+      fullName: AtributosTest.Test02DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden
       resultStatus: 1
-      duration: 0.0010881
+      duration: 0.0011059
       messages: 
       output: 
       stacktrace: 
@@ -479,80 +479,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1002
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden]
-      name: DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden
-      fullName: AtributosTest.DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden
+    - id: 1004
+      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test03DistanciaEntreDosAtributosConParesDiferentes]
+      name: Test03DistanciaEntreDosAtributosConParesDiferentes
+      fullName: AtributosTest.Test03DistanciaEntreDosAtributosConParesDiferentes
       resultStatus: 1
-      duration: 0.0010457
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1008
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble]
-      name: LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble
-      fullName: AtributosTest.LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble
-      resultStatus: 1
-      duration: 0.0016786
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1009
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso]
-      name: LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso
-      fullName: AtributosTest.LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso
-      resultStatus: 1
-      duration: 0.0008197
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1007
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal]
-      name: LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal
-      fullName: AtributosTest.LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal
-      resultStatus: 1
-      duration: 0.0016981
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1006
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso]
-      name: LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso
-      fullName: AtributosTest.LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso
-      resultStatus: 1
-      duration: 0.0009593
+      duration: 0.0008667
       messages: 
       output: 
       stacktrace: 
@@ -565,11 +497,79 @@ MonoBehaviour:
       parentId: 1001
       parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
     - id: 1005
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico]
-      name: LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico
-      fullName: AtributosTest.LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico
+      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test04LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico]
+      name: Test04LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico
+      fullName: AtributosTest.Test04LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico
       resultStatus: 1
-      duration: 0.0017451
+      duration: 0.0021639
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
+    - id: 1006
+      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test05LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso]
+      name: Test05LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso
+      fullName: AtributosTest.Test05LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso
+      resultStatus: 1
+      duration: 0.0009365
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
+    - id: 1007
+      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test06LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal]
+      name: Test06LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal
+      fullName: AtributosTest.Test06LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal
+      resultStatus: 1
+      duration: 0.0006688
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
+    - id: 1008
+      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test07LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble]
+      name: Test07LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble
+      fullName: AtributosTest.Test07LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble
+      resultStatus: 1
+      duration: 0.0013815
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
+    - id: 1009
+      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test08LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso]
+      name: Test08LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso
+      fullName: AtributosTest.Test08LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso
+      resultStatus: 1
+      duration: 0.0008886
       messages: 
       output: 
       stacktrace: 
@@ -586,7 +586,7 @@ MonoBehaviour:
       name: CambiarTest
       fullName: CambiarTest
       resultStatus: 1
-      duration: 0.0112969
+      duration: 0.0101048
       messages: 
       output: 
       stacktrace: 
@@ -599,11 +599,11 @@ MonoBehaviour:
       parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
         - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
     - id: 1011
-      uniqueId: EditModeTest.dll/CambiarTest/[EditModeTest][CambiarTest.CambiarSeCumpleYElValorPasaDeTresADos]
-      name: CambiarSeCumpleYElValorPasaDeTresADos
-      fullName: CambiarTest.CambiarSeCumpleYElValorPasaDeTresADos
+      uniqueId: EditModeTest.dll/CambiarTest/[EditModeTest][CambiarTest.Test01CambiarSeCumpleYElValorPasaDeTresADos]
+      name: Test01CambiarSeCumpleYElValorPasaDeTresADos
+      fullName: CambiarTest.Test01CambiarSeCumpleYElValorPasaDeTresADos
       resultStatus: 1
-      duration: 0.0016904
+      duration: 0.0023905
       messages: 
       output: 
       stacktrace: 
@@ -616,11 +616,11 @@ MonoBehaviour:
       parentId: 1010
       parentUniqueId: EditModeTest.dll/[EditModeTest][CambiarTest][suite]
     - id: 1012
-      uniqueId: EditModeTest.dll/CambiarTest/[EditModeTest][CambiarTest.CambiarVariaUnEjeQueNoTenia]
-      name: CambiarVariaUnEjeQueNoTenia
-      fullName: CambiarTest.CambiarVariaUnEjeQueNoTenia
+      uniqueId: EditModeTest.dll/CambiarTest/[EditModeTest][CambiarTest.Test02CambiarVariaUnEjeQueNoTenia]
+      name: Test02CambiarVariaUnEjeQueNoTenia
+      fullName: CambiarTest.Test02CambiarVariaUnEjeQueNoTenia
       resultStatus: 1
-      duration: 0.0002036
+      duration: 0.0009538
       messages: 
       output: 
       stacktrace: 
@@ -637,7 +637,7 @@ MonoBehaviour:
       name: IngredienteTest
       fullName: IngredienteTest
       resultStatus: 1
-      duration: 0.0634526
+      duration: 0.0261382
       messages: 
       output: 
       stacktrace: 
@@ -650,45 +650,11 @@ MonoBehaviour:
       parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
         - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
     - id: 1014
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.IngredienteConLosRequisitosEsEvaluadoPositivo]
-      name: IngredienteConLosRequisitosEsEvaluadoPositivo
-      fullName: IngredienteTest.IngredienteConLosRequisitosEsEvaluadoPositivo
+      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test01IngredienteSinNingunRequisitoNecesarioEsEvaluadoPositivo]
+      name: Test01IngredienteSinNingunRequisitoNecesarioEsEvaluadoPositivo
+      fullName: IngredienteTest.Test01IngredienteSinNingunRequisitoNecesarioEsEvaluadoPositivo
       resultStatus: 1
-      duration: 0.020622
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1017
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.IngredienteEsModificadoSumandoleDosALaDimensionVelocidadQueNoTiene]
-      name: IngredienteEsModificadoSumandoleDosALaDimensionVelocidadQueNoTiene
-      fullName: IngredienteTest.IngredienteEsModificadoSumandoleDosALaDimensionVelocidadQueNoTiene
-      resultStatus: 1
-      duration: 0.0109467
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1016
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.IngredienteEsModificadoSumandoleDosALaDimensionVida]
-      name: IngredienteEsModificadoSumandoleDosALaDimensionVida
-      fullName: IngredienteTest.IngredienteEsModificadoSumandoleDosALaDimensionVida
-      resultStatus: 1
-      duration: 0.0005751
+      duration: 0.0024593
       messages: 
       output: 
       stacktrace: 
@@ -701,11 +667,164 @@ MonoBehaviour:
       parentId: 1013
       parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
     - id: 1015
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.IngredienteSinLosRequisitosEsEvaluadoNegativo]
-      name: IngredienteSinLosRequisitosEsEvaluadoNegativo
-      fullName: IngredienteTest.IngredienteSinLosRequisitosEsEvaluadoNegativo
+      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test02IngredienteConLosRequisitosEsEvaluadoPositivo]
+      name: Test02IngredienteConLosRequisitosEsEvaluadoPositivo
+      fullName: IngredienteTest.Test02IngredienteConLosRequisitosEsEvaluadoPositivo
       resultStatus: 1
-      duration: 0.0006026
+      duration: 0.0012872
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
+    - id: 1016
+      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test03IngredienteSinLosRequisitosEsEvaluadoNegativo]
+      name: Test03IngredienteSinLosRequisitosEsEvaluadoNegativo
+      fullName: IngredienteTest.Test03IngredienteSinLosRequisitosEsEvaluadoNegativo
+      resultStatus: 1
+      duration: 0.000655
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
+    - id: 1017
+      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test04IngredienteEsModificadoSumandoleDosALaDimensionVida]
+      name: Test04IngredienteEsModificadoSumandoleDosALaDimensionVida
+      fullName: IngredienteTest.Test04IngredienteEsModificadoSumandoleDosALaDimensionVida
+      resultStatus: 1
+      duration: 0.0021024
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
+    - id: 1018
+      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test05IngredienteEsModificadoSumandoleDosALaDimensionVelocidadQueNoTiene]
+      name: Test05IngredienteEsModificadoSumandoleDosALaDimensionVelocidadQueNoTiene
+      fullName: IngredienteTest.Test05IngredienteEsModificadoSumandoleDosALaDimensionVelocidadQueNoTiene
+      resultStatus: 1
+      duration: 0.0004309
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
+    - id: 1019
+      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test06CuandoSeJuntanDosIngredientesSinModificacionesYSinCondicionesElResultadoEsLaSumaDeAmbos]
+      name: Test06CuandoSeJuntanDosIngredientesSinModificacionesYSinCondicionesElResultadoEsLaSumaDeAmbos
+      fullName: IngredienteTest.Test06CuandoSeJuntanDosIngredientesSinModificacionesYSinCondicionesElResultadoEsLaSumaDeAmbos
+      resultStatus: 1
+      duration: 0.002947
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
+    - id: 1020
+      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test07ElPrimerIngredienteNoEstaEnCondicionesDeUnirse]
+      name: Test07ElPrimerIngredienteNoEstaEnCondicionesDeUnirse
+      fullName: IngredienteTest.Test07ElPrimerIngredienteNoEstaEnCondicionesDeUnirse
+      resultStatus: 1
+      duration: 0.001089
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
+    - id: 1021
+      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test08ElSegundoIngredienteNoEstaEnCondicionesDeUnirse]
+      name: Test08ElSegundoIngredienteNoEstaEnCondicionesDeUnirse
+      fullName: IngredienteTest.Test08ElSegundoIngredienteNoEstaEnCondicionesDeUnirse
+      resultStatus: 1
+      duration: 0.0006863
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
+    - id: 1022
+      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test09ElPrimeroTieneModificacionesParaElSegundoEntoncesElCompuestoEsElPrimeroMasElSegundoModificado]
+      name: Test09ElPrimeroTieneModificacionesParaElSegundoEntoncesElCompuestoEsElPrimeroMasElSegundoModificado
+      fullName: IngredienteTest.Test09ElPrimeroTieneModificacionesParaElSegundoEntoncesElCompuestoEsElPrimeroMasElSegundoModificado
+      resultStatus: 1
+      duration: 0.000987
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
+    - id: 1023
+      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test10ElSegundoTieneModificacionesParaElPrimeroEntoncesElCompuestoEsElPrimeroModificadoMasElSegundo]
+      name: Test10ElSegundoTieneModificacionesParaElPrimeroEntoncesElCompuestoEsElPrimeroModificadoMasElSegundo
+      fullName: IngredienteTest.Test10ElSegundoTieneModificacionesParaElPrimeroEntoncesElCompuestoEsElPrimeroModificadoMasElSegundo
+      resultStatus: 1
+      duration: 0.0008289
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
+    - id: 1024
+      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test11LosDosIngredientesTieneModificadoresEntoncesElCompuestoEsLaSumaModificada]
+      name: Test11LosDosIngredientesTieneModificadoresEntoncesElCompuestoEsLaSumaModificada
+      fullName: IngredienteTest.Test11LosDosIngredientesTieneModificadoresEntoncesElCompuestoEsLaSumaModificada
+      resultStatus: 1
+      duration: 0.0008454
       messages: 
       output: 
       stacktrace: 
@@ -722,7 +841,7 @@ MonoBehaviour:
       name: RequisitosTest
       fullName: RequisitosTest
       resultStatus: 1
-      duration: 0.0145761
+      duration: 0.0088996
       messages: 
       output: 
       stacktrace: 
@@ -734,12 +853,12 @@ MonoBehaviour:
       parentId: 1012
       parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
         - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-    - id: 1013
-      uniqueId: EditModeTest.dll/RequisitosTest/[EditModeTest][RequisitosTest.RequisitoNoSeCumpleConUnIngredienteConIdentificadorPeroNoValorNecesario]
-      name: RequisitoNoSeCumpleConUnIngredienteConIdentificadorPeroNoValorNecesario
-      fullName: RequisitosTest.RequisitoNoSeCumpleConUnIngredienteConIdentificadorPeroNoValorNecesario
+    - id: 1026
+      uniqueId: EditModeTest.dll/RequisitosTest/[EditModeTest][RequisitosTest.Test01RequisitoSeCumpleConUnIngredienteValido]
+      name: Test01RequisitoSeCumpleConUnIngredienteValido
+      fullName: RequisitosTest.Test01RequisitoSeCumpleConUnIngredienteValido
       resultStatus: 1
-      duration: 0.002085
+      duration: 0.0006195
       messages: 
       output: 
       stacktrace: 
@@ -749,14 +868,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1010
+      parentId: 1025
       parentUniqueId: EditModeTest.dll/[EditModeTest][RequisitosTest][suite]
-    - id: 1012
-      uniqueId: EditModeTest.dll/RequisitosTest/[EditModeTest][RequisitosTest.RequisitoNoSeCumpleConUnIngredienteSinElIdentificador]
-      name: RequisitoNoSeCumpleConUnIngredienteSinElIdentificador
-      fullName: RequisitosTest.RequisitoNoSeCumpleConUnIngredienteSinElIdentificador
+    - id: 1027
+      uniqueId: EditModeTest.dll/RequisitosTest/[EditModeTest][RequisitosTest.Test02RequisitoNoSeCumpleConUnIngredienteSinElIdentificador]
+      name: Test02RequisitoNoSeCumpleConUnIngredienteSinElIdentificador
+      fullName: RequisitosTest.Test02RequisitoNoSeCumpleConUnIngredienteSinElIdentificador
       resultStatus: 1
-      duration: 0.0002634
+      duration: 0.0011659
       messages: 
       output: 
       stacktrace: 
@@ -766,14 +885,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1010
+      parentId: 1025
       parentUniqueId: EditModeTest.dll/[EditModeTest][RequisitosTest][suite]
-    - id: 1011
-      uniqueId: EditModeTest.dll/RequisitosTest/[EditModeTest][RequisitosTest.RequisitoSeCumpleConUnIngredienteValido]
-      name: RequisitoSeCumpleConUnIngredienteValido
-      fullName: RequisitosTest.RequisitoSeCumpleConUnIngredienteValido
+    - id: 1028
+      uniqueId: EditModeTest.dll/RequisitosTest/[EditModeTest][RequisitosTest.Test03RequisitoNoSeCumpleConUnIngredienteConIdentificadorPeroNoValorNecesario]
+      name: Test03RequisitoNoSeCumpleConUnIngredienteConIdentificadorPeroNoValorNecesario
+      fullName: RequisitosTest.Test03RequisitoNoSeCumpleConUnIngredienteConIdentificadorPeroNoValorNecesario
       resultStatus: 1
-      duration: 0.0003884
+      duration: 0.0006527
       messages: 
       output: 
       stacktrace: 
@@ -783,15 +902,15 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1010
+      parentId: 1025
       parentUniqueId: EditModeTest.dll/[EditModeTest][RequisitosTest][suite]
-    m_ResultText: IngredienteTest (0,063s)
+    m_ResultText: IngredienteTest (0,026s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: efaf725b
       m_LastClickedID: 1534242799
-      m_ExpandedIDs: e42016c84d6046163991b11ef9eb8725afa49c43efaf725bab251d70ffffff7f
+      m_ExpandedIDs: e42016c84d6046163991b11ef9eb8725afa49c43ab251d70ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -814,7 +933,7 @@ MonoBehaviour:
       FailedHidden: 0
       NotRunHidden: 0
       m_SearchString: 
-      selectedCategoryMask: 0
+      selectedCategoryMask: -1
       availableCategories:
       - Uncategorized
 --- !u!114 &14
@@ -1314,9 +1433,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: be4c0000
+      m_SelectedIDs: 0e080000801100004a0f0000
       m_LastClickedID: 0
-      m_ExpandedIDs: e625ffff8e2affffd42bffffce2effff4a2fffffd432ffff3c33ffff8a34ffffd435ffff7051ffff2a5effff1c60ffff6864ffff006dffffe486ffffc288ffff728affffd4f2ffff38fbffff
+      m_ExpandedIDs: 0aa2fffffaa5ffff9ea6ffff54a9ffff82abfffff0b1ffff36b7ffff1abaffffacc0ffff20c1ffff86c2ffff94cfffffe0e4ffff1ae6ffff38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1381,7 +1500,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Tests/EditModeTest
+    - Assets/_Scripts/Contenedor
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -1396,7 +1515,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 683d0000
     m_LastClickedID: 15720
-    m_ExpandedIDs: 000000000a4b00000c4b00000e4b0000104b0000124b0000144b0000164b0000184b00001a4b00001c4b00001e4b0000
+    m_ExpandedIDs: 00000000024b0000044b0000064b0000084b00000a4b00000c4b00000e4b0000104b0000124b0000144b0000164b0000184b00001a4b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1421,10 +1540,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 258}
+    scrollPos: {x: 0, y: 22}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000000a4b00000c4b00000e4b0000104b0000124b0000144b0000184b00001a4b00001c4b00001e4b00003a4b0000cc4b0000164c0000
+    m_ExpandedIDs: ffffffff00000000024b0000044b0000064b0000084b00000a4b00000c4b00000e4b0000124b0000144b0000164b00001a4b00003a4b00003e4b0000bc4d0000c44d0000de4d0000e44d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1440,7 +1559,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 12}
+      m_ClientGUIView: {fileID: 7}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}

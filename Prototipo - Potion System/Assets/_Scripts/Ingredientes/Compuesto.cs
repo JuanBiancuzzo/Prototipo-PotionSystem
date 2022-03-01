@@ -13,10 +13,10 @@
             _ingrediente2.ModificarOtro(_ingrediente1);
         }
 
-        public Atributos Agregar(Atributos atributos)
+        public Atributos Agregar(Atributos atributos, float multiplicador = 1)
         {
-            Atributos sumaPrimera = _ingrediente1.Agregar(atributos);
-            return _ingrediente2.Agregar(sumaPrimera);
+            Atributos sumaPrimera = _ingrediente1.Agregar(atributos, multiplicador);
+            return _ingrediente2.Agregar(sumaPrimera, multiplicador);
         }
         public IIngrediente Unirse(IIngrediente ingrediente)
         {

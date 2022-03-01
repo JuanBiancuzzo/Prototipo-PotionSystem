@@ -28,7 +28,7 @@ namespace ItIsNotOnlyMe
         {
         }
 
-        public Atributos Agregar(Atributos atributos)
+        public Atributos Agregar(Atributos atributos, float multiplicador = 1)
         {
             List<Par> nuevosPares = new List<Par>();
             Atributos union = Atributos.UnionNula(_atributosBase, atributos);
@@ -38,7 +38,9 @@ namespace ItIsNotOnlyMe
                 nuevosPares.Add(new Par(identificador, nuevoValor));
             }
 
-            return Atributos.Sumar(atributos, new Atributos(nuevosPares));
+            Atributos multiplicado = Atributos.Multiplicar(new Atributos(nuevosPares), multiplicador);
+
+            return Atributos.Sumar(atributos, multiplicado);
         }
 
         public IIngrediente Unirse(IIngrediente ingrediente)

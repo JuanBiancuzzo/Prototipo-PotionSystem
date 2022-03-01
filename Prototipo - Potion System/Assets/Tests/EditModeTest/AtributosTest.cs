@@ -8,12 +8,12 @@ using UnityEngine.TestTools.Utils;
 
 public class AtributosTest
 {
-    private class Identificador : IIdentificador
+    private class IdentificadorPrueba : IIdentificador
     {
         private static int _contador = 0;
         private int _id;
 
-        public Identificador()
+        public IdentificadorPrueba()
         {
             _id = _contador;
             _contador++;
@@ -30,12 +30,12 @@ public class AtributosTest
         }
     }
 
-    private Identificador _vida = new Identificador();
-    private Identificador _temperatura = new Identificador();
-    private Identificador _visibilidad = new Identificador();
-    private Identificador _velocidad = new Identificador();
-    private Identificador _estado = new Identificador();
-    private Identificador _densidad = new Identificador();
+    private IdentificadorPrueba _vida = new IdentificadorPrueba();
+    private IdentificadorPrueba _temperatura = new IdentificadorPrueba();
+    private IdentificadorPrueba _visibilidad = new IdentificadorPrueba();
+    private IdentificadorPrueba _velocidad = new IdentificadorPrueba();
+    private IdentificadorPrueba _estado = new IdentificadorPrueba();
+    private IdentificadorPrueba _densidad = new IdentificadorPrueba();
 
     [Test]
     public void Test01DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden()
