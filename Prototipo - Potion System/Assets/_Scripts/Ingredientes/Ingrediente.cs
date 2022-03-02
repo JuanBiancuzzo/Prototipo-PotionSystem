@@ -53,7 +53,7 @@ namespace ItIsNotOnlyMe
             bool permite = false;
             foreach (ParRequisito par in _requisitos)
                 permite |= par.EvaluarPropio(this);
-            return permite;
+            return _requisitos.Count > 0 ? permite : true;
         }
 
         public bool PermiteUnirseCon(IIngrediente ingrediente)
