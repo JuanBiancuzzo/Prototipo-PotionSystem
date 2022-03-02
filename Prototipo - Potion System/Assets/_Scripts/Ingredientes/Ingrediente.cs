@@ -45,7 +45,9 @@ namespace ItIsNotOnlyMe
 
         public IIngrediente Unirse(IIngrediente ingrediente)
         {
-            return PermiteUnirse() && ingrediente.PermiteUnirse() ? new Compuesto(this, ingrediente) : null;
+            if (!(PermiteUnirse() && ingrediente.PermiteUnirse()))
+                return null;
+            return PermiteUnirseCon(ingrediente) && ingrediente.PermiteUnirseCon(this) ? new Compuesto(this, ingrediente) : null;
         }
 
         public bool PermiteUnirse()
@@ -61,7 +63,7 @@ namespace ItIsNotOnlyMe
             bool permite = false;
             foreach (ParRequisito par in _requisitos)
                 permite |= (par.EvaluarPropio(this) && par.EvaluarOtro(ingrediente));
-            return permite;
+            return _requisitos.Count > 0 ? permite : true;
         }
 
         public void ModificarOtro(IIngrediente ingrediente)

@@ -29,12 +29,12 @@ public class IngredienteTest
         }
     }
 
-    private class CambiarSumar : ICambiar
+    private class CambiarSumarPrueba : ICambiar
     {
         private float _valorSumar;
         private IIdentificador _identificador;
 
-        public CambiarSumar(float valorSumar, IIdentificador identificador)
+        public CambiarSumarPrueba(float valorSumar, IIdentificador identificador)
         {
             _valorSumar = valorSumar;
             _identificador = identificador;
@@ -53,12 +53,12 @@ public class IngredienteTest
         }
     }
 
-    private class CambiarMultiplicar : ICambiar
+    private class CambiarMultiplicarPrueba : ICambiar
     {
         private float _valorSumar;
         private IIdentificador _identificador;
 
-        public CambiarMultiplicar(float valorSumar, IIdentificador identificador)
+        public CambiarMultiplicarPrueba(float valorSumar, IIdentificador identificador)
         {
             _valorSumar = valorSumar;
             _identificador = identificador;
@@ -77,12 +77,12 @@ public class IngredienteTest
         }
     }
 
-    private class RequisitoMayor : IRequisito
+    private class RequisitoMayorPrueba : IRequisito
     {
         private float _valorMinimo;
         private IIdentificador _identificador;
 
-        public RequisitoMayor(float valorMinimo, IIdentificador identificador)
+        public RequisitoMayorPrueba(float valorMinimo, IIdentificador identificador)
         {
             _valorMinimo = valorMinimo;
             _identificador = identificador;
@@ -100,7 +100,7 @@ public class IngredienteTest
         }
     }
 
-    private class RequisitoValido : IRequisito
+    private class RequisitoValidoPrueba : IRequisito
     {
         public float ConseguirValor(IDemandado demandado, IIdentificador identificador)
         {
@@ -110,6 +110,19 @@ public class IngredienteTest
         public bool Evaluar(IDemandado demandado)
         {
             return true;
+        }
+    }
+
+    private class RequisitoInvalidoPrueba : IRequisito
+    {
+        public float ConseguirValor(IDemandado demandado, IIdentificador identificador)
+        {
+            return demandado.ObtenerValor(identificador);
+        }
+
+        public bool Evaluar(IDemandado demandado)
+        {
+            return false;
         }
     }
 
@@ -145,9 +158,9 @@ public class IngredienteTest
     public void Test02IngredienteConLosRequisitosEsEvaluadoPositivo()
     {
         float valorMinimo = 4f;
-        IRequisito requisito = new RequisitoMayor(valorMinimo, _vida);
+        IRequisito requisito = new RequisitoMayorPrueba(valorMinimo, _vida);
 
-        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValido()) };
+        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValidoPrueba()) };
 
         float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
         Atributos atributosBase = new Atributos(new List<Par>
@@ -163,9 +176,9 @@ public class IngredienteTest
     public void Test03IngredienteSinLosRequisitosEsEvaluadoNegativo()
     {
         float valorMinimo = 4f;
-        IRequisito requisito = new RequisitoMayor(valorMinimo, _temp);
+        IRequisito requisito = new RequisitoMayorPrueba(valorMinimo, _temp);
 
-        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValido()) };
+        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValidoPrueba()) };
 
         float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
         Atributos atributosBase = new Atributos(new List<Par>
@@ -188,7 +201,7 @@ public class IngredienteTest
         IIngrediente ingrediente = new Ingrediente(atributosBase);
 
         float valorASumar = 2f;
-        ICambiar cambiar = new CambiarSumar(valorASumar, _vida);
+        ICambiar cambiar = new CambiarSumarPrueba(valorASumar, _vida);
 
         cambiar.Cambiar(ingrediente);
 
@@ -210,7 +223,7 @@ public class IngredienteTest
         IIngrediente ingrediente = new Ingrediente(atributosBase);
 
         float valorASumar = 2f;
-        ICambiar cambiar = new CambiarSumar(valorASumar, _vel);
+        ICambiar cambiar = new CambiarSumarPrueba(valorASumar, _vel);
 
         cambiar.Cambiar(ingrediente);
 
@@ -253,9 +266,9 @@ public class IngredienteTest
     public void Test07ElPrimerIngredienteNoEstaEnCondicionesDeUnirse()
     {
         float valorMinimo = 4f;
-        IRequisito requisito = new RequisitoMayor(valorMinimo, _temp);
+        IRequisito requisito = new RequisitoMayorPrueba(valorMinimo, _temp);
 
-        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValido()) };
+        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValidoPrueba()) };
 
         float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
         Atributos atributosBase1 = new Atributos(new List<Par>
@@ -290,9 +303,9 @@ public class IngredienteTest
         IIngrediente ingrediente1 = new Ingrediente(atributosBase1);
 
         float valorMinimo = 4f;
-        IRequisito requisito = new RequisitoMayor(valorMinimo, _temp);
+        IRequisito requisito = new RequisitoMayorPrueba(valorMinimo, _temp);
 
-        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValido()) };
+        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValidoPrueba()) };
 
         float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
         Atributos atributosBase2 = new Atributos(new List<Par>
@@ -310,10 +323,76 @@ public class IngredienteTest
     }
 
     [Test]
-    public void Test09ElPrimeroTieneModificacionesParaElSegundoEntoncesElCompuestoEsElPrimeroMasElSegundoModificado()
+    public void Test09ElPrimeroYElSegundoPuedenUnirseYPuedenUnirseEntreSi()
+    {
+
+        float valorMinimo = 1f;
+        IRequisito requisito = new RequisitoMayorPrueba(valorMinimo, _temp);
+
+        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValidoPrueba()) };
+
+        float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
+        Atributos atributosBase1 = new Atributos(new List<Par>
+        {
+            new Par(_vida, valorVida1), new Par(_temp, valorTemp1), new Par(_vel, valorVel1)
+        });
+        IIngrediente ingrediente1 = new Ingrediente(atributosBase1, requisitos);
+
+        float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
+        Atributos atributosBase2 = new Atributos(new List<Par>
+        {
+            new Par(_vida, valorVida2), new Par(_temp, valorTemp2), new Par(_vel, valorVel2)
+        });
+        IIngrediente ingrediente2 = new Ingrediente(atributosBase2);
+
+        Assert.IsTrue(ingrediente1.PermiteUnirse());
+        Assert.IsTrue(ingrediente2.PermiteUnirse());
+
+        Assert.IsTrue(ingrediente1.PermiteUnirseCon(ingrediente2));
+
+        IIngrediente compuesto = ingrediente1.Unirse(ingrediente2);
+
+        Assert.AreNotEqual(null, compuesto);
+    }
+
+    [Test]
+    public void Test10ElPrimeroYElSegundoPuedenUnirsePeroNoEntreSi()
+    {
+
+        float valorMinimo = 1f;
+        IRequisito requisito = new RequisitoMayorPrueba(valorMinimo, _temp);
+
+        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoInvalidoPrueba()) };
+
+        float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
+        Atributos atributosBase1 = new Atributos(new List<Par>
+        {
+            new Par(_vida, valorVida1), new Par(_temp, valorTemp1), new Par(_vel, valorVel1)
+        });
+        IIngrediente ingrediente1 = new Ingrediente(atributosBase1, requisitos);
+
+        float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
+        Atributos atributosBase2 = new Atributos(new List<Par>
+        {
+            new Par(_vida, valorVida2), new Par(_temp, valorTemp2), new Par(_vel, valorVel2)
+        });
+        IIngrediente ingrediente2 = new Ingrediente(atributosBase2);
+
+        Assert.IsTrue(ingrediente1.PermiteUnirse());
+        Assert.IsTrue(ingrediente2.PermiteUnirse());
+
+        Assert.IsFalse(ingrediente1.PermiteUnirseCon(ingrediente2)); 
+        
+        IIngrediente compuesto = ingrediente1.Unirse(ingrediente2);
+
+        Assert.AreEqual(null, compuesto);
+    }
+
+    [Test]
+    public void Test11ElPrimeroTieneModificacionesParaElSegundoEntoncesElCompuestoEsElPrimeroMasElSegundoModificado()
     {
         float valorASumar = 2f;
-        ICambiar cambiar = new CambiarMultiplicar(valorASumar, _vida);
+        ICambiar cambiar = new CambiarMultiplicarPrueba(valorASumar, _vida);
 
         List<ICambiar> modificadores = new List<ICambiar> { cambiar };
 
@@ -341,7 +420,7 @@ public class IngredienteTest
     }
 
     [Test]
-    public void Test10ElSegundoTieneModificacionesParaElPrimeroEntoncesElCompuestoEsElPrimeroModificadoMasElSegundo()
+    public void Test12ElSegundoTieneModificacionesParaElPrimeroEntoncesElCompuestoEsElPrimeroModificadoMasElSegundo()
     {
         float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
         Atributos atributosBase1 = new Atributos(new List<Par>
@@ -351,7 +430,7 @@ public class IngredienteTest
         IIngrediente ingrediente1 = new Ingrediente(atributosBase1);
 
         float valorASumar = 2f;
-        ICambiar cambiar = new CambiarMultiplicar(valorASumar, _vida);
+        ICambiar cambiar = new CambiarMultiplicarPrueba(valorASumar, _vida);
 
         List<ICambiar> modificadores = new List<ICambiar> { cambiar };
 
@@ -372,10 +451,10 @@ public class IngredienteTest
     }
 
     [Test]
-    public void Test11LosDosIngredientesTieneModificadoresEntoncesElCompuestoEsLaSumaModificada()
+    public void Test13LosDosIngredientesTieneModificadoresEntoncesElCompuestoEsLaSumaModificada()
     {
         float valorASumar1 = 3f;
-        List<ICambiar> modificadores1 = new List<ICambiar> { new CambiarMultiplicar(valorASumar1, _vida) };
+        List<ICambiar> modificadores1 = new List<ICambiar> { new CambiarMultiplicarPrueba(valorASumar1, _vida) };
 
         float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
         Atributos atributosBase1 = new Atributos(new List<Par>
@@ -385,7 +464,7 @@ public class IngredienteTest
         IIngrediente ingrediente1 = new Ingrediente(atributosBase1, modificadores1);
 
         float valorASumar2 = 4f;
-        List<ICambiar> modificadores2 = new List<ICambiar> { new CambiarMultiplicar(valorASumar2, _temp) };
+        List<ICambiar> modificadores2 = new List<ICambiar> { new CambiarMultiplicarPrueba(valorASumar2, _temp) };
 
         float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
         Atributos atributosBase2 = new Atributos(new List<Par>
