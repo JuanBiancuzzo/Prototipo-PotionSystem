@@ -391,8 +391,8 @@ public class IngredienteTest
     [Test]
     public void Test11ElPrimeroTieneModificacionesParaElSegundoEntoncesElCompuestoEsElPrimeroMasElSegundoModificado()
     {
-        float valorASumar = 2f;
-        ICambiar cambiar = new CambiarMultiplicarPrueba(valorASumar, _vida);
+        float valorAMultiplicar = 2f;
+        ICambiar cambiar = new CambiarMultiplicarPrueba(valorAMultiplicar, _vida);
 
         List<ICambiar> modificadores = new List<ICambiar> { cambiar };
 
@@ -414,7 +414,7 @@ public class IngredienteTest
 
         Atributos resultado = compuesto.Agregar(atributosNulo);
 
-        Assert.AreEqual(valorVida1 + valorVida2 * valorASumar, resultado.GetValor(_vida));
+        Assert.AreEqual(valorVida1 + valorVida2 * valorAMultiplicar, resultado.GetValor(_vida));
         Assert.AreEqual(valorTemp1 + valorTemp2, resultado.GetValor(_temp));
         Assert.AreEqual(valorVel1 + valorVel2, resultado.GetValor(_vel));
     }
@@ -429,8 +429,8 @@ public class IngredienteTest
         });
         IIngrediente ingrediente1 = new Ingrediente(atributosBase1);
 
-        float valorASumar = 2f;
-        ICambiar cambiar = new CambiarMultiplicarPrueba(valorASumar, _vida);
+        float valorAMultiplicar = 2f;
+        ICambiar cambiar = new CambiarMultiplicarPrueba(valorAMultiplicar, _vida);
 
         List<ICambiar> modificadores = new List<ICambiar> { cambiar };
 
@@ -445,7 +445,7 @@ public class IngredienteTest
 
         Atributos resultado = compuesto.Agregar(atributosNulo);
 
-        Assert.AreEqual(valorVida1 * valorASumar + valorVida2, resultado.GetValor(_vida));
+        Assert.AreEqual(valorVida1 * valorAMultiplicar + valorVida2, resultado.GetValor(_vida));
         Assert.AreEqual(valorTemp1 + valorTemp2, resultado.GetValor(_temp));
         Assert.AreEqual(valorVel1 + valorVel2, resultado.GetValor(_vel));
     }
@@ -453,8 +453,8 @@ public class IngredienteTest
     [Test]
     public void Test13LosDosIngredientesTieneModificadoresEntoncesElCompuestoEsLaSumaModificada()
     {
-        float valorASumar1 = 3f;
-        List<ICambiar> modificadores1 = new List<ICambiar> { new CambiarMultiplicarPrueba(valorASumar1, _vida) };
+        float valorAMultiplicar1 = 3f;
+        List<ICambiar> modificadores1 = new List<ICambiar> { new CambiarMultiplicarPrueba(valorAMultiplicar1, _vida) };
 
         float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
         Atributos atributosBase1 = new Atributos(new List<Par>
@@ -463,8 +463,8 @@ public class IngredienteTest
         });
         IIngrediente ingrediente1 = new Ingrediente(atributosBase1, modificadores1);
 
-        float valorASumar2 = 4f;
-        List<ICambiar> modificadores2 = new List<ICambiar> { new CambiarMultiplicarPrueba(valorASumar2, _temp) };
+        float valorAMultiplicar2 = 4f;
+        List<ICambiar> modificadores2 = new List<ICambiar> { new CambiarMultiplicarPrueba(valorAMultiplicar2, _temp) };
 
         float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
         Atributos atributosBase2 = new Atributos(new List<Par>
@@ -477,8 +477,8 @@ public class IngredienteTest
 
         Atributos resultado = compuesto.Agregar(atributosNulo);
 
-        Assert.AreEqual(valorVida1 + valorVida2 * valorASumar1, resultado.GetValor(_vida));
-        Assert.AreEqual(valorTemp1 * valorASumar2 + valorTemp2, resultado.GetValor(_temp));
+        Assert.AreEqual(valorVida1 + valorVida2 * valorAMultiplicar1, resultado.GetValor(_vida));
+        Assert.AreEqual(valorTemp1 * valorAMultiplicar2 + valorTemp2, resultado.GetValor(_temp));
         Assert.AreEqual(valorVel1 + valorVel2, resultado.GetValor(_vel));
     }
 }

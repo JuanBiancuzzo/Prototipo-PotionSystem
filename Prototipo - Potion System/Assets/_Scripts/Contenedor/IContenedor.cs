@@ -6,6 +6,6 @@
 
         public void AgregarIngrediente(IIngrediente ingrediente);
 
-        public void Avanzar(float dt);
+        //public void Avanzar(float dt);
     }
 }

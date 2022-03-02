@@ -29,23 +29,13 @@ public class ContenedorTest
             return _id == identificador.GetID();
         }
     }
-
-    private class FactoryPrueba : IFactoryContador
-    {
-        public IContadorDeProgreso CrearContador()
-        {
-            return new ProgresoPorcentual();
-        }
-    }
     
     private Mezcla _mezcla; 
     private Atributos _estadoInicial;
-    private FactoryPrueba _factory;
     private IIdentificador _vida, _temp, _vel;
 
     public ContenedorTest()
     {
-        _factory = new FactoryPrueba();
 
         _vida = new IdentificadorPrueba();
         _temp = new IdentificadorPrueba();
@@ -55,13 +45,13 @@ public class ContenedorTest
         {
             new Par(_vida, 1f), new Par(_temp, 1f), new Par(_vel, 1f)
         });
-        _mezcla = new Mezcla(_estadoInicial, _factory);
+        _mezcla = new Mezcla(_estadoInicial);
     }
 
     [Test]
     public void UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial()
     {
-        IContenedor contenedor = new Contenedor(_mezcla, _estadoInicial);
+        IContenedor contenedor = new Contenedor(_mezcla);
         Posion posionEsperada = new Posion(_estadoInicial);
 
         Posion posionResultado = contenedor.Finalizar();

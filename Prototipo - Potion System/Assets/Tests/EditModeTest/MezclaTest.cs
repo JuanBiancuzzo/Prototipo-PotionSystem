@@ -30,15 +30,30 @@ public class MezclaTest
         }
     }
 
-    private class FactoryPrueba : IFactoryContador
+    private class CambiarMultiplicarPrueba : ICambiar
     {
-        public IContadorDeProgreso CrearContador()
+        private float _valorSumar;
+        private IIdentificador _identificador;
+
+        public CambiarMultiplicarPrueba(float valorSumar, IIdentificador identificador)
         {
-            return new ProgresoPorcentual();
+            _valorSumar = valorSumar;
+            _identificador = identificador;
+        }
+
+        public void Cambiar(ICambiante cambiante)
+        {
+            cambiante.AgregarModificador(this);
+        }
+
+        public float Modificar(IIdentificador identificador, float valor)
+        {
+            if (_identificador.EsIgual(identificador))
+                return valor * _valorSumar;
+            return valor;
         }
     }
 
-    private FactoryPrueba _factory = new FactoryPrueba();
     private IIdentificador _vida = new IdentificadorPrueba();
     private IIdentificador _temp = new IdentificadorPrueba();
     private IIdentificador _vel = new IdentificadorPrueba();
@@ -51,7 +66,7 @@ public class MezclaTest
         {
             new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
         });
-        Mezcla mezcla = new Mezcla(atributosInicial, _factory);
+        Mezcla mezcla = new Mezcla(atributosInicial);
 
         Atributos resultado = mezcla.CalcularEstado();
 
@@ -61,69 +76,41 @@ public class MezclaTest
     }
 
     [Test]
-    public void Test02MezclaConUnIngredientesSinNingunAvanceAlCalcularElEstadoEsIgualAlEstadoInicial()
+    public void Test02MezclaConUnIngredientesAlCalcularElEstadoEsIgualAlEstadoInicialMasElIngrediente()
     {
         float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
         Atributos atributosInicial = new Atributos(new List<Par>
         {
             new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
         });
-        Mezcla mezcla = new Mezcla(atributosInicial, _factory);
-
-
-        float _valorVidaIngre = 4f, _valorTempIngre = 3f, _valorVelIngre = 5f;
-        IIngrediente ingrediente = new Ingrediente(new Atributos(new List<Par>
-        {
-            new Par(_vida, _valorVidaIngre), new Par(_temp, _valorTempIngre), 
-            new Par(_vel, _valorVelIngre)
-        }));
-
-        mezcla.Agregar(ingrediente);
-
-        Atributos resultado = mezcla.CalcularEstado();
-
-        Assert.AreEqual(valorVida, resultado.GetValor(_vida));
-        Assert.AreEqual(valorTemp, resultado.GetValor(_temp));
-        Assert.AreEqual(valorVel, resultado.GetValor(_vel));
-    }
-
-    [Test]
-    public void Test03MezclaConUnIngredientesCon10DeAvanceAlCalcularElEstadoEsElEstadoInicialMas10PorcientoDelIngrediente()
-    {
-        float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
-        Atributos atributosInicial = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
-        });
-        Mezcla mezcla = new Mezcla(atributosInicial, _factory);
+        Mezcla mezcla = new Mezcla(atributosInicial);
 
 
         float valorVidaIngre = 4f, valorTempIngre = 3f, valorVelIngre = 5f;
         IIngrediente ingrediente = new Ingrediente(new Atributos(new List<Par>
         {
-            new Par(_vida, valorVidaIngre), new Par(_temp, valorTempIngre),
+            new Par(_vida, valorVidaIngre), new Par(_temp, valorTempIngre), 
             new Par(_vel, valorVelIngre)
         }));
 
         mezcla.Agregar(ingrediente);
-        mezcla.Avanzar(10);
 
         Atributos resultado = mezcla.CalcularEstado();
 
-        Assert.AreEqual(valorVida + 0.1f * valorVidaIngre, resultado.GetValor(_vida));
-        Assert.AreEqual(valorTemp + 0.1f * valorTempIngre, resultado.GetValor(_temp));
-        Assert.AreEqual(valorVel + 0.1f * valorVelIngre, resultado.GetValor(_vel));
+        Assert.AreEqual(valorVida + valorVidaIngre, resultado.GetValor(_vida));
+        Assert.AreEqual(valorTemp + valorTempIngre, resultado.GetValor(_temp));
+        Assert.AreEqual(valorVel + valorVelIngre, resultado.GetValor(_vel));
     }
 
     [Test]
-    public void Test04MezclaConDosIngredientesUnoCon10DeAvanceYElOtroCon20DeAvanceYElEstadoEsEstadoInicialMas10PorcienteMas20Porciente()
+    public void Test03MezclaConDosIngredientesYAlCalcularElEstadoEsIgaulEstadoInicialMasLosDosIngredientes()
     {
         float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
         Atributos atributosInicial = new Atributos(new List<Par>
         {
             new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
         });
-        Mezcla mezcla = new Mezcla(atributosInicial, _factory);
+        Mezcla mezcla = new Mezcla(atributosInicial);
 
         float valorVidaIngre1 = 4f, valorTempIngre1 = 3f, valorVelIngre1 = 5f;
         IIngrediente ingrediente1 = new Ingrediente(new Atributos(new List<Par>
@@ -132,8 +119,6 @@ public class MezclaTest
             new Par(_vel, valorVelIngre1)
         }));
 
-        mezcla.Agregar(ingrediente1);
-        mezcla.Avanzar(10);
 
         float valorVidaIngre2 = 4f, valorTempIngre2 = 3f, valorVelIngre2 = 5f;
         IIngrediente ingrediente2 = new Ingrediente(new Atributos(new List<Par>
@@ -142,30 +127,30 @@ public class MezclaTest
             new Par(_vel, valorVelIngre2)
         }));
 
-        mezcla.Agregar(ingrediente2);
-        mezcla.Avanzar(10);
 
+        mezcla.Agregar(ingrediente1);
+        mezcla.Agregar(ingrediente2);
         Atributos resultado = mezcla.CalcularEstado();
 
         FloatEqualityComparer comparador = new FloatEqualityComparer(10e-3f);
 
-        float resultadoEsperado = valorVida + 0.2f * valorVidaIngre1 + 0.1f * valorVidaIngre2;
+        float resultadoEsperado = valorVida + valorVidaIngre1 + valorVidaIngre2;
         Assert.That(resultado.GetValor(_vida), Is.EqualTo(resultadoEsperado).Using(comparador));
-        resultadoEsperado = valorTemp + 0.2f * valorTempIngre1 + 0.1f * valorTempIngre2;
+        resultadoEsperado = valorTemp + valorTempIngre1 + valorTempIngre2;
         Assert.That(resultado.GetValor(_temp), Is.EqualTo(resultadoEsperado).Using(comparador));
-        resultadoEsperado = valorVel + 0.2f * valorVelIngre1 + 0.1f * valorVelIngre2;
+        resultadoEsperado = valorVel + valorVelIngre1 + valorVelIngre2;
         Assert.That(resultado.GetValor(_vel), Is.EqualTo(resultadoEsperado).Using(comparador));
     }
 
     [Test]
-    public void Test05MezclaConUnIngredienteDespuesDeFinalizarAlCalcularElEstadoEsIgualAlEstadoBase()
+    public void Test04MezclaConUnIngredienteDespuesDeFinalizarAlCalcularDeEstadoEsIgualAlEstadoInicial()
     {
         float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
         Atributos atributosInicial = new Atributos(new List<Par>
         {
             new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
         });
-        Mezcla mezcla = new Mezcla(atributosInicial, _factory);
+        Mezcla mezcla = new Mezcla(atributosInicial);
 
         float valorVidaIngre = 4f, valorTempIngre = 3f, valorVelIngre = 5f;
         IIngrediente ingrediente = new Ingrediente(new Atributos(new List<Par>
@@ -175,13 +160,12 @@ public class MezclaTest
         }));
 
         mezcla.Agregar(ingrediente);
-        mezcla.Avanzar(10); 
 
         Atributos resultado = mezcla.CalcularEstado();
 
-        Assert.AreEqual(valorVida + 0.1f * valorVidaIngre, resultado.GetValor(_vida));
-        Assert.AreEqual(valorTemp + 0.1f * valorTempIngre, resultado.GetValor(_temp));
-        Assert.AreEqual(valorVel + 0.1f * valorVelIngre, resultado.GetValor(_vel));
+        Assert.AreEqual(valorVida + valorVidaIngre, resultado.GetValor(_vida));
+        Assert.AreEqual(valorTemp + valorTempIngre, resultado.GetValor(_temp));
+        Assert.AreEqual(valorVel + valorVelIngre, resultado.GetValor(_vel));
 
         mezcla.Finalizar();
         resultado = mezcla.CalcularEstado();
@@ -189,5 +173,51 @@ public class MezclaTest
         Assert.AreEqual(valorVida, resultado.GetValor(_vida));
         Assert.AreEqual(valorTemp, resultado.GetValor(_temp));
         Assert.AreEqual(valorVel, resultado.GetValor(_vel));
+    }
+
+    [Test]
+    public void Test05MezclaConDosIngredientesAlMezclarseElCalculaodDeEstadoEsIgualAlEstadoInicialMasElIngredienteCombinado()
+    {
+        float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
+        Atributos atributosInicial = new Atributos(new List<Par>
+        {
+            new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
+        });
+        Mezcla mezcla = new Mezcla(atributosInicial);
+
+        float valorAMultiplicar = 2f;
+        ICambiar cambiar = new CambiarMultiplicarPrueba(valorAMultiplicar, _vida);
+
+        List<ICambiar> modificadores = new List<ICambiar> { cambiar };
+
+        float valorVidaIngre1 = 5f, valorTempIngre1 = 3f, valorVelIngre1 = 4f;
+        Atributos atributosBase1 = new Atributos(new List<Par>
+        {
+            new Par(_vida, valorVidaIngre1), new Par(_temp, valorTempIngre1), new Par(_vel, valorVelIngre1)
+        });
+        IIngrediente ingrediente1 = new Ingrediente(atributosBase1, modificadores);
+
+
+        float valorVidaIngre2 = 4f, valorTempIngre2 = 3f, valorVelIngre2 = 5f;
+        IIngrediente ingrediente2 = new Ingrediente(new Atributos(new List<Par>
+        {
+            new Par(_vida, valorVidaIngre2), new Par(_temp, valorTempIngre2),
+            new Par(_vel, valorVelIngre2)
+        }));
+
+        mezcla.Agregar(ingrediente1);
+        mezcla.Agregar(ingrediente2);
+
+        mezcla.Mezclar();
+        Atributos resultado = mezcla.CalcularEstado();
+
+        FloatEqualityComparer comparador = new FloatEqualityComparer(10e-3f);
+
+        float resultadoEsperado = valorVida + valorVidaIngre1 + valorVidaIngre2 * valorAMultiplicar;
+        Assert.That(resultado.GetValor(_vida), Is.EqualTo(resultadoEsperado).Using(comparador));
+        resultadoEsperado = valorTemp + valorTempIngre1 + valorTempIngre2;
+        Assert.That(resultado.GetValor(_temp), Is.EqualTo(resultadoEsperado).Using(comparador));
+        resultadoEsperado = valorVel + valorVelIngre1 + valorVelIngre2;
+        Assert.That(resultado.GetValor(_vel), Is.EqualTo(resultadoEsperado).Using(comparador));
     }
 }
