@@ -29,11 +29,26 @@ namespace ItIsNotOnlyMe
             return _porcentaje == _maximo;
         }
 
+        public IContadorDeProgreso Maximo()
+        {
+            return new ProgresoPorcentual(_maximo);
+        }
+
         public float Porcentaje()
         {
             float porcentaje = (_porcentaje - _porcentajeAnterior) / 100f;
             _porcentajeAnterior = _porcentaje;
             return porcentaje;
+        }
+
+        public void Restar(IContadorDeProgreso contadorDeProgreso)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Sumar(IContadorDeProgreso contadorDeProgreso)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
