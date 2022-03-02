@@ -67,6 +67,11 @@ namespace ItIsNotOnlyMe
             return Compuesto.PermiteUnirse();
         }
 
+        public bool PermiteUnirseCon(IIngrediente ingrediente)
+        {
+            return Compuesto.PermiteUnirseCon(ingrediente);
+        }
+
         public IIngrediente Unirse(IIngrediente ingrediente)
         {
             return Compuesto.Unirse(ingrediente);

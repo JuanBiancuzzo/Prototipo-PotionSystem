@@ -25,7 +25,12 @@
 
         public bool PermiteUnirse()
         {
-            return _ingrediente1.PermiteUnirse() && _ingrediente2.PermiteUnirse();
+            return _ingrediente1.PermiteUnirse() || _ingrediente2.PermiteUnirse();
+        }
+
+        public bool PermiteUnirseCon(IIngrediente ingrediente)
+        {
+            return _ingrediente1.PermiteUnirseCon(ingrediente) || _ingrediente2.PermiteUnirseCon(ingrediente);
         }
 
         public void ModificarOtro(IIngrediente ingrediente)
@@ -46,6 +51,5 @@
             valor += _ingrediente2.ObtenerValor(identificador);
             return valor;
         }
-
     }
 }

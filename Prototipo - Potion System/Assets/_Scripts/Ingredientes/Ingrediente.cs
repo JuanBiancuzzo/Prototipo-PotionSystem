@@ -4,17 +4,17 @@ namespace ItIsNotOnlyMe
 {
     public class Ingrediente : IIngrediente
     {
-        private List<IRequisito> _requisitosUnirse;
+        private List<ICombinacionRequisitos> _requisitos;
         private List<ICambiar> _modificaresOtro;
 
         private List<ICambiar> _modificadores;
         private Atributos _atributosBase;
 
         public Ingrediente(Atributos atributosBase,
-                           List<IRequisito> requisitos = null,
+                           List<ICombinacionRequisitos> requisitos = null,
                            List<ICambiar> modificadoresOtro = null)
         {
-            _requisitosUnirse = (requisitos == null) ? new List<IRequisito>() : requisitos;
+            _requisitos = (requisitos == null) ? new List<ICombinacionRequisitos>() : requisitos;
             _modificaresOtro = (modificadoresOtro == null) ? new List<ICambiar>() : modificadoresOtro;
 
             _modificadores = new List<ICambiar>();
@@ -23,7 +23,7 @@ namespace ItIsNotOnlyMe
 
         public Ingrediente(Atributos atributosBase,
                            List<ICambiar> modificadoresOtro,
-                           List<IRequisito> requisitos = null)
+                           List<ICombinacionRequisitos> requisitos = null)
             : this(atributosBase, requisitos, modificadoresOtro)
         {
         }
@@ -50,7 +50,18 @@ namespace ItIsNotOnlyMe
 
         public bool PermiteUnirse()
         {
-            return _requisitosUnirse.TrueForAll(requisito => requisito.Evaluar(this));
+            bool permite = false;
+            foreach (ParRequisito par in _requisitos)
+                permite |= par.EvaluarPropio(this);
+            return permite;
+        }
+
+        public bool PermiteUnirseCon(IIngrediente ingrediente)
+        {
+            bool permite = false;
+            foreach (ParRequisito par in _requisitos)
+                permite |= (par.EvaluarPropio(this) && par.EvaluarOtro(ingrediente));
+            return permite;
         }
 
         public void ModificarOtro(IIngrediente ingrediente)

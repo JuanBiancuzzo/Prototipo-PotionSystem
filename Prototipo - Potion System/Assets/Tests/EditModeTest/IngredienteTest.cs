@@ -100,6 +100,19 @@ public class IngredienteTest
         }
     }
 
+    private class RequisitoValido : IRequisito
+    {
+        public float ConseguirValor(IDemandado demandado, IIdentificador identificador)
+        {
+            return demandado.ObtenerValor(identificador);
+        }
+
+        public bool Evaluar(IDemandado demandado)
+        {
+            return true;
+        }
+    }
+
     private IIdentificador _vida, _temp, _vel;
     private Atributos atributosNulo;
 
@@ -134,7 +147,7 @@ public class IngredienteTest
         float valorMinimo = 4f;
         IRequisito requisito = new RequisitoMayor(valorMinimo, _vida);
 
-        List<IRequisito> requisitos = new List<IRequisito> { requisito };
+        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValido()) };
 
         float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
         Atributos atributosBase = new Atributos(new List<Par>
@@ -152,7 +165,7 @@ public class IngredienteTest
         float valorMinimo = 4f;
         IRequisito requisito = new RequisitoMayor(valorMinimo, _temp);
 
-        List<IRequisito> requisitos = new List<IRequisito> { requisito };
+        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValido()) };
 
         float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
         Atributos atributosBase = new Atributos(new List<Par>
@@ -242,7 +255,7 @@ public class IngredienteTest
         float valorMinimo = 4f;
         IRequisito requisito = new RequisitoMayor(valorMinimo, _temp);
 
-        List<IRequisito> requisitos = new List<IRequisito> { requisito };
+        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValido()) };
 
         float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
         Atributos atributosBase1 = new Atributos(new List<Par>
@@ -279,7 +292,7 @@ public class IngredienteTest
         float valorMinimo = 4f;
         IRequisito requisito = new RequisitoMayor(valorMinimo, _temp);
 
-        List<IRequisito> requisitos = new List<IRequisito> { requisito };
+        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValido()) };
 
         float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
         Atributos atributosBase2 = new Atributos(new List<Par>

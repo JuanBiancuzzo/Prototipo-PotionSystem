@@ -17,7 +17,7 @@ namespace ItIsNotOnlyMe
         [SerializeField] List<ParIdValor> _parIdValores;
 
         [SerializeField]
-        private List<RequisitoSO> _requisitos;
+        private List<ParRequisito> _requisitos;
         [SerializeField]
         private List<CambiarSO> _cambios;
 
@@ -32,7 +32,7 @@ namespace ItIsNotOnlyMe
                     List<ICambiar> cambios = new List<ICambiar>();
                     cambios.AddRange(_cambios);
 
-                    List<IRequisito> requisitos = new List<IRequisito>();
+                    List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos>();
                     requisitos.AddRange(_requisitos);
 
                     List<Par> pares = new List<Par>();
@@ -73,6 +73,11 @@ namespace ItIsNotOnlyMe
         public IIngrediente Unirse(IIngrediente ingrediente)
         {
             return Ingrediente.Unirse(ingrediente);
+        }
+
+        public bool PermiteUnirseCon(IIngrediente ingrediente)
+        {
+            return Ingrediente.PermiteUnirseCon(ingrediente);
         }
     }
 }

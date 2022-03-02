@@ -27,7 +27,7 @@ namespace ItIsNotOnlyMe
 
             foreach (ParValorIdentificador par in _pares)
             {
-                resultado &= par.Valor < ConseguirValor(demandado, par.Identificador);
+                resultado |= par.Valor < ConseguirValor(demandado, par.Identificador);
             }
 
             return resultado;

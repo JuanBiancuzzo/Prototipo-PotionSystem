@@ -8,6 +8,8 @@
 
         public bool PermiteUnirse();
 
+        public bool PermiteUnirseCon(IIngrediente ingrediente);
+
         public void ModificarOtro(IIngrediente ingrediente);
     }
 }
