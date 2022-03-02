@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 public class CambiarTest
 {
-    private class Identificador : IIdentificador
+    private class IdentificadorPrueba : IIdentificador
     {
         private static int _contador = 0;
         private int _id;
 
-        public Identificador()
+        public IdentificadorPrueba()
         {
             _id = _contador;
             _contador++;
@@ -77,8 +77,8 @@ public class CambiarTest
         }
     }
 
-    private IIdentificador _uno = new Identificador();
-    private IIdentificador _dos = new Identificador();
+    private IIdentificador _uno = new IdentificadorPrueba();
+    private IIdentificador _dos = new IdentificadorPrueba();
 
     [Test]
     public void Test01CambiarSeCumpleYElValorPasaDeTresADos()

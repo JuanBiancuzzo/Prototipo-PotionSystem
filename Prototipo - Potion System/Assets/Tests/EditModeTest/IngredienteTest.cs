@@ -7,12 +7,12 @@ using UnityEngine.TestTools;
 
 public class IngredienteTest
 {
-    private class Identificador : IIdentificador
+    private class IdentificadorPrueba : IIdentificador
     {
         private static int _contador = 0;
         private int _id;
 
-        public Identificador()
+        public IdentificadorPrueba()
         {
             _id = _contador;
             _contador++;
@@ -105,9 +105,9 @@ public class IngredienteTest
 
     public IngredienteTest()
     {
-        _vida = new Identificador();
-        _temp = new Identificador();
-        _vel = new Identificador();
+        _vida = new IdentificadorPrueba();
+        _temp = new IdentificadorPrueba();
+        _vel = new IdentificadorPrueba();
 
         atributosNulo = new Atributos(new List<Par>
         {

@@ -39,19 +39,9 @@ public class MezclaTest
     }
 
     private FactoryPrueba _factory = new FactoryPrueba();
-    private IIdentificador _vida, _temp, _vel;
-    private Atributos _atributosNulo;
-
-    public MezclaTest()
-    {
-        _vida = new IdentificadorPrueba();
-        _temp = new IdentificadorPrueba();
-        _vel = new IdentificadorPrueba();
-        _atributosNulo = new Atributos(new List<Par>
-        {
-            new Par(_vida, 0), new Par(_temp, 0), new Par(_vel, 0)
-        });
-    }
+    private IIdentificador _vida = new IdentificadorPrueba();
+    private IIdentificador _temp = new IdentificadorPrueba();
+    private IIdentificador _vel = new IdentificadorPrueba();
 
     [Test]
     public void Test01MezclaSinIngredientesAlCalcularElEstadoEsIgualAlEstadoInicial()
