@@ -37,7 +37,11 @@ namespace ItIsNotOnlyMe
 
         public Posion Finalizar()
         {
-            return new Posion(CalcularEstado());
+            Posion posion = new Posion(CalcularEstado());
+
+            _procesos.Clear();
+
+            return posion;
         }
     }
 }
