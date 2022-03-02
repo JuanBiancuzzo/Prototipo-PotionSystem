@@ -4,8 +4,8 @@
     {
         public Posion Finalizar();
 
-        public void ModificarMezcla(IIngrediente ingrediente);
+        public void AgregarIngrediente(IIngrediente ingrediente);
 
-        public void ModificarContenedor(IIngrediente ingrediente);
+        public void Avanzar(float dt);
     }
 }

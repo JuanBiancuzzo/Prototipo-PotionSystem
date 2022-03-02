@@ -5,11 +5,12 @@ namespace ItIsNotOnlyMe
     public class ProgresoPorcentual : IContadorDeProgreso
     {
         private static float _minimo = 0f, _maximo = 100f;
-        private float _porcentaje;
+        private float _porcentaje, _porcentajeAnterior;
 
         public ProgresoPorcentual(float porcentajeInicial = 0)
         {
             _porcentaje = Mathf.Min(_maximo, Mathf.Max(_minimo, porcentajeInicial));
+            _porcentajeAnterior = _porcentaje;
         }
 
         public void Avanzar(float valor)
@@ -30,7 +31,9 @@ namespace ItIsNotOnlyMe
 
         public float Porcentaje()
         {
-            return _porcentaje / 100f;
+            float porcentaje = (_porcentaje - _porcentajeAnterior) / 100f;
+            _porcentajeAnterior = _porcentaje;
+            return porcentaje;
         }
     }
 }

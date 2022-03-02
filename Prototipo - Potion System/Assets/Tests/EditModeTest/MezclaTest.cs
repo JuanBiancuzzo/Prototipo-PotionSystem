@@ -158,40 +158,7 @@ public class MezclaTest
     }
 
     [Test]
-    public void Test05MezclaConUnIngredienteCon50DeAvanceYAlFinalizarDaLaPosionEsperada()
-    {
-        float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
-        Atributos atributosInicial = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
-        });
-        Mezcla mezcla = new Mezcla(atributosInicial, _factory);
-
-        float valorVidaIngre = 4f, valorTempIngre = 3f, valorVelIngre = 5f;
-        IIngrediente ingrediente = new Ingrediente(new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVidaIngre), new Par(_temp, valorTempIngre),
-            new Par(_vel, valorVelIngre)
-        }));
-
-        mezcla.Agregar(ingrediente);
-        mezcla.Avanzar(50);
-
-        Posion posionRespuesta = mezcla.Finalizar();
-
-        Posion posionEsperada = new Posion(new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida + 0.5f * valorVidaIngre),
-            new Par(_temp, valorTemp + 0.5f * valorTempIngre),
-            new Par(_vel, valorVel + 0.5f * valorVelIngre)
-        }));
-
-        Assert.AreEqual(1f, posionEsperada.Similitud(posionRespuesta));
-        Assert.AreEqual(1f, posionEsperada.Multiplicidad(posionRespuesta));
-    }
-
-    [Test]
-    public void Test06MezclaConUnIngredienteDespuesDeFinalizarAlCalcularElEstadoEsIgualAlEstadoBase()
+    public void Test05MezclaConUnIngredienteDespuesDeFinalizarAlCalcularElEstadoEsIgualAlEstadoBase()
     {
         float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
         Atributos atributosInicial = new Atributos(new List<Par>
@@ -215,8 +182,8 @@ public class MezclaTest
         Assert.AreEqual(valorVida + 0.1f * valorVidaIngre, resultado.GetValor(_vida));
         Assert.AreEqual(valorTemp + 0.1f * valorTempIngre, resultado.GetValor(_temp));
         Assert.AreEqual(valorVel + 0.1f * valorVelIngre, resultado.GetValor(_vel));
-        mezcla.Finalizar();
 
+        mezcla.Finalizar();
         resultado = mezcla.CalcularEstado();
 
         Assert.AreEqual(valorVida, resultado.GetValor(_vida));

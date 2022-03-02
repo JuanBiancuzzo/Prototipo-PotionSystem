@@ -58,7 +58,8 @@ namespace ItIsNotOnlyMe
 
         public static Par Dividir(Par par, float valor)
         {
-            return new Par(par._identificador, par._valor / valor);
+            float valorResultante = (valor == 0f) ? 0f : par._valor / valor;
+            return new Par(par._identificador, valorResultante);
         }
 
         public static Par CopiaNula(Par par)

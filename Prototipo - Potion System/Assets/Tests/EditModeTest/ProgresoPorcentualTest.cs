@@ -49,4 +49,16 @@ public class ProgresoPorcentualTest
         Assert.IsTrue(progreso.Finalizado());
         Assert.AreEqual(1f, progreso.Porcentaje());
     }
+
+    [Test]
+    public void Test06AlAvanzarDiezYDespuesAvanzarDiezElPorcentajeEsCeroPuntoUno()
+    {
+        IContadorDeProgreso progreso = new ProgresoPorcentual();
+
+        progreso.Avanzar(10);
+        Assert.AreEqual(0.1f, progreso.Porcentaje());
+
+        progreso.Avanzar(10);
+        Assert.AreEqual(0.1f, progreso.Porcentaje());
+    }
 }

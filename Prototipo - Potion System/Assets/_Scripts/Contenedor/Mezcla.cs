@@ -35,13 +35,9 @@ namespace ItIsNotOnlyMe
             return atributos;
         }
 
-        public Posion Finalizar()
+        public void Finalizar()
         {
-            Posion posion = new Posion(CalcularEstado());
-
             _procesos.Clear();
-
-            return posion;
         }
     }
 }

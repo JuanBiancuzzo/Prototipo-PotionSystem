@@ -53,6 +53,8 @@ namespace ItIsNotOnlyMe
             float moduloPropio = Modulo(propio);
             float moduloProyeccion = Modulo(otroProyectado);
 
+            if (moduloPropio == 0f)
+                return 0f;
             return Mathf.Sign(Similitud(propio, otro)) * (moduloProyeccion / moduloPropio);
         }
 
@@ -120,7 +122,8 @@ namespace ItIsNotOnlyMe
 
         private static Atributos Proyeccion(Atributos propio, Atributos otro)
         {
-            float escalar = ProductoInterno(propio, otro) / ProductoInterno(propio, propio);
+            float moduloCuadrado = ProductoInterno(propio, propio);
+            float escalar = moduloCuadrado == 0f ? 0f : ProductoInterno(propio, otro) / moduloCuadrado; 
             return Multiplicar(propio, escalar);
         }
 
