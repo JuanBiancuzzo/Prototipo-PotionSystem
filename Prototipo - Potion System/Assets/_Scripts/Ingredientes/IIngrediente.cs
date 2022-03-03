@@ -2,7 +2,7 @@
 {
     public interface IIngrediente : IDemandado, ICambiante
     {
-        public Atributos Agregar(Atributos atributos, float multiplicador = 1);
+        public Atributos Agregar(Atributos atributos);
 
         public IIngrediente Unirse(IIngrediente ingrediente);
 

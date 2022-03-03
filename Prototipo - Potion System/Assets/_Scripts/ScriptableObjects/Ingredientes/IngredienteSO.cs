@@ -45,9 +45,9 @@ namespace ItIsNotOnlyMe
             }
         }
         
-        public Atributos Agregar(Atributos atributos, float multiplicador = 1)
+        public Atributos Agregar(Atributos atributos)
         {
-            return Ingrediente.Agregar(atributos, multiplicador);
+            return Ingrediente.Agregar(atributos);
         }
 
         public void AgregarModificador(ICambiar modificador)

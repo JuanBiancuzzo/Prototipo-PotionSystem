@@ -42,9 +42,9 @@ namespace ItIsNotOnlyMe
             }
         }
 
-        public Atributos Agregar(Atributos atributos, float multiplicador = 1)
+        public Atributos Agregar(Atributos atributos)
         {
-            return Compuesto.Agregar(atributos, multiplicador);
+            return Compuesto.Agregar(atributos);
         }
 
         public void AgregarModificador(ICambiar modificador)
