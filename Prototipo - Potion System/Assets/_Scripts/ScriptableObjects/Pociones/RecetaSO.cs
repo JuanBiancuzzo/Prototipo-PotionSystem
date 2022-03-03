@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ItIsNotOnlyMe
 {
     [CreateAssetMenu(fileName = "Receta para posion", menuName = "Posiones/Receta de posion")]
-    public class Receta : ScriptableObject, IPocion
+    public class RecetaSO : ScriptableObject, IPocion
     {
         [Serializable]
         private struct ParIdValor
