@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace ItIsNotOnlyMe
 {
-    public class Posion : IPosion
+    public class Pocion : IPocion
     {
         private Atributos _atributos;
 
-        public Posion(Atributos atributos)
+        public Pocion(Atributos atributos)
         {
             _atributos = atributos;
         }
@@ -18,17 +18,17 @@ namespace ItIsNotOnlyMe
             return _atributos;
         }
 
-        public float Distancia(IPosion posion)
+        public float Distancia(IPocion posion)
         {
             return Atributos.Comparacion(_atributos, posion.GetAtributos());
         }
 
-        public float Similitud(IPosion posion)
+        public float Similitud(IPocion posion)
         {
             return Atributos.Similitud(_atributos, posion.GetAtributos());
         }
 
-        public float Multiplicidad(IPosion posion)
+        public float Multiplicidad(IPocion posion)
         {
             return Atributos.Multiplicidad(_atributos, posion.GetAtributos());
         }

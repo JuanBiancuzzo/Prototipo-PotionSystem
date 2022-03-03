@@ -1,4 +1,6 @@
-﻿namespace ItIsNotOnlyMe
+﻿using System.Collections.Generic;
+
+namespace ItIsNotOnlyMe
 {
     public class Contenedor : IContenedor
     {
@@ -19,11 +21,11 @@
             _mezcla.Mezclar();
         }
 
-        public Posion Finalizar()
+        public Pocion Finalizar()
         {
             Atributos estado = _mezcla.CalcularEstado();
             _mezcla.Finalizar();
-            return new Posion(estado);
+            return new Pocion(estado);
         }
     }
 }

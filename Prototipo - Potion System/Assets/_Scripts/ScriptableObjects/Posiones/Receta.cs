@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ItIsNotOnlyMe
 {
     [CreateAssetMenu(fileName = "Receta para posion", menuName = "Posiones/Receta de posion")]
-    public class Receta : ScriptableObject, IPosion
+    public class Receta : ScriptableObject, IPocion
     {
         [Serializable]
         private struct ParIdValor
@@ -19,8 +19,8 @@ namespace ItIsNotOnlyMe
 
         [SerializeField] List<ParIdValor> _parIdValores;
 
-        private Posion _posionBase = null;
-        private Posion _posion
+        private Pocion _posionBase = null;
+        private Pocion _posion
         {
             get
             {
@@ -29,7 +29,7 @@ namespace ItIsNotOnlyMe
                     List<Par> pares = new List<Par>();
                     foreach (ParIdValor par in _parIdValores)
                         pares.Add(new Par(par.Identificador, par.Valor));
-                    _posionBase = new Posion(new Atributos(pares));
+                    _posionBase = new Pocion(new Atributos(pares));
                 }
                 return _posionBase;
             }
@@ -40,17 +40,17 @@ namespace ItIsNotOnlyMe
             return _posion.GetAtributos();
         }
 
-        public float Distancia(IPosion posion)
+        public float Distancia(IPocion posion)
         {
             return _posion.Distancia(posion);
         }
 
-        public float Similitud(IPosion posion)
+        public float Similitud(IPocion posion)
         {
             return _posion.Similitud(posion);
         }
 
-        public float Multiplicidad(IPosion posion)
+        public float Multiplicidad(IPocion posion)
         {
             return _posion.Multiplicidad(posion);
         }

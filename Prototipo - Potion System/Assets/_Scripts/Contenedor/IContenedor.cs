@@ -6,6 +6,6 @@
 
         public void Mezclar();
 
-        public Posion Finalizar();
+        public Pocion Finalizar();
     }
 }

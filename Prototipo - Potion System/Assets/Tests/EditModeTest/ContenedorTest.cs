@@ -26,16 +26,47 @@ public class ContenedorTest
         _mezcla = new Mezcla(_estadoInicial);
     }
 
+    private IIngrediente CrearIngrediente(float valorVida, float valorTemp, float valorVel)
+    {
+        Atributos atributo = new Atributos(new List<Par>
+        {
+            new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
+        });
+        return new Ingrediente(atributo);
+    }
+
     [Test]
-    public void UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial()
+    public void Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial()
     {
         IContenedor contenedor = new Contenedor(_mezcla);
-        Posion posionEsperada = new Posion(_estadoInicial);
+        Pocion pocionEsperada = new Pocion(_estadoInicial);
 
-        Posion posionResultado = contenedor.Finalizar();
+        Pocion pocionResultado = contenedor.Finalizar();
 
         FloatEqualityComparer comparador = new FloatEqualityComparer(10e-3f);
-        Assert.That(posionEsperada.Similitud(posionResultado), Is.EqualTo(1f).Using(comparador));
-        Assert.That(posionEsperada.Multiplicidad(posionResultado), Is.EqualTo(1f).Using(comparador));
+        Assert.That(pocionEsperada.Similitud(pocionResultado), Is.EqualTo(1f).Using(comparador));
+        Assert.That(pocionEsperada.Multiplicidad(pocionResultado), Is.EqualTo(1f).Using(comparador));
+    }
+
+    [Test]
+    public void Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente()
+    {
+        
+        float valorVida = 4f, valorTemp = 3f, valorVel = 5f;
+        Atributos atributo = new Atributos(new List<Par>
+        {
+            new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
+        });
+        IIngrediente ingrediente =  new Ingrediente(atributo);
+
+        Pocion pocionEsperada = new Pocion(Atributos.Sumar(_estadoInicial, atributo));
+        IContenedor contenedor = new Contenedor(_mezcla);
+        contenedor.AgregarIngrediente(ingrediente);
+
+        Pocion pocionResultado = contenedor.Finalizar();
+
+        FloatEqualityComparer comparador = new FloatEqualityComparer(10e-3f);
+        Assert.That(pocionEsperada.Similitud(pocionResultado), Is.EqualTo(1f).Using(comparador));
+        Assert.That(pocionEsperada.Multiplicidad(pocionResultado), Is.EqualTo(1f).Using(comparador));
     }
 }
