@@ -2,10 +2,10 @@
 {
     public interface IContenedor
     {
-        public Posion Finalizar();
-
         public void AgregarIngrediente(IIngrediente ingrediente);
 
-        //public void Avanzar(float dt);
+        public void Mezclar();
+
+        public Posion Finalizar();
     }
 }

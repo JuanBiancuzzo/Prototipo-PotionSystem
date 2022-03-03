@@ -8,28 +8,6 @@ using UnityEngine.TestTools.Utils;
 
 public class ContenedorTest
 {
-    private class IdentificadorPrueba : IIdentificador
-    {
-        private static int _contador = 0;
-        private int _id;
-
-        public IdentificadorPrueba()
-        {
-            _id = _contador;
-            _contador++;
-        }
-
-        public int GetID()
-        {
-            return _id;
-        }
-
-        public bool EsIgual(IIdentificador identificador)
-        {
-            return _id == identificador.GetID();
-        }
-    }
-    
     private Mezcla _mezcla; 
     private Atributos _estadoInicial;
     private IIdentificador _vida, _temp, _vel;

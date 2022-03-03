@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace ItIsNotOnlyMe
 {
-    public class Mezcla
+
+    public class Mezcla : IMezcla
     {
         private Atributos _estado;
-
         private List<IIngrediente> _ingredientes;
 
         public Mezcla(Atributos estado)

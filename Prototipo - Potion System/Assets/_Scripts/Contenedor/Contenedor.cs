@@ -2,9 +2,9 @@
 {
     public class Contenedor : IContenedor
     {
-        private Mezcla _mezcla;
+        private IMezcla _mezcla;
 
-        public Contenedor(Mezcla mezcla)
+        public Contenedor(IMezcla mezcla)
         {
             _mezcla = mezcla;
         }
@@ -12,6 +12,11 @@
         public void AgregarIngrediente(IIngrediente ingrediente)
         {
             _mezcla.Agregar(ingrediente);
+        }
+
+        public void Mezclar()
+        {
+            _mezcla.Mezclar();
         }
 
         public Posion Finalizar()

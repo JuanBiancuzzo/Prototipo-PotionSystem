@@ -8,28 +8,6 @@ using UnityEngine.TestTools.Utils;
 
 public class AtributosTest
 {
-    private class IdentificadorPrueba : IIdentificador
-    {
-        private static int _contador = 0;
-        private int _id;
-
-        public IdentificadorPrueba()
-        {
-            _id = _contador;
-            _contador++;
-        }
-
-        public int GetID()
-        {
-            return _id;
-        }
-
-        public bool EsIgual(IIdentificador identificador)
-        {
-            return _id == identificador.GetID();
-        }
-    }
-
     private IdentificadorPrueba _vida = new IdentificadorPrueba();
     private IdentificadorPrueba _temperatura = new IdentificadorPrueba();
     private IdentificadorPrueba _visibilidad = new IdentificadorPrueba();
