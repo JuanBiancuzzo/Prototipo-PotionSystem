@@ -5,8 +5,7 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "_Posiones",
-        "_Ingredientes",
-        "_Contenedor"
+        "_Ingredientes"
     ],
     "includePlatforms": [
         "Editor"

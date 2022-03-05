@@ -64,34 +64,22 @@ namespace ItIsNotOnlyMe
 
         public bool HayVinculo(IIngrediente ingrediente)
         {
-            foreach (IVinculo vinculo in _vinculos)
-                if (vinculo.HayVinculo(ingrediente))
-                    return true;
-            return false;
+            return _vinculos.Exists(vinculo => vinculo.HayVinculo(ingrediente));
         }
 
         public ICondicionDeVinculo EncontrarCondicion(IIngrediente ingrediente)
         {
-            foreach (ICondicionDeVinculo condicion in _condiciones)
-                if (condicion.Evaluar(this, ingrediente))
-                    return condicion;
-            return null;
+            return _condiciones.Find(condicion => condicion.Evaluar(this, ingrediente));
         }
 
         public bool PermiteVinculoCon(IVinculado vinculado)
         {
-            foreach (ICondicionDeVinculo condicion in _condiciones)
-                if (condicion.Evaluar(this, vinculado))
-                    return true;
-            return false;
+            return _condiciones.Exists(condicion => condicion.Evaluar(this, vinculado));
         }
 
         public void Estabilidad()
         {
-            List<IVinculo> vinculosNoEstables = new List<IVinculo>();
-            foreach (IVinculo vinculo in _vinculos)
-                if (!vinculo.Estable())
-                    vinculosNoEstables.Add(vinculo);
+            List<IVinculo> vinculosNoEstables = _vinculos.FindAll(vinculo => !vinculo.Estable());
             vinculosNoEstables.ForEach(vinculo => vinculo.RomperVinculo());
         }
     }

@@ -12,11 +12,11 @@
 
         public static bool Unirse(IIngrediente ingrediente1, IIngrediente ingrediente2)
         {
+            if (ingrediente1.HayVinculo(ingrediente2) || ingrediente2.HayVinculo(ingrediente1))
+                return false;
+
             ingrediente1.Estabilidad();
             ingrediente2.Estabilidad();
-
-            if (ingrediente1.HayVinculo(ingrediente2))
-                return false;
 
             IVinculo vinculo;
             ICondicionDeVinculo condicion;
