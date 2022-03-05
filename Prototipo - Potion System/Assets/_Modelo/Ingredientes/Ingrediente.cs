@@ -4,68 +4,52 @@ namespace ItIsNotOnlyMe
 {
     public class Ingrediente : IIngrediente
     {
-        private List<ICombinacionRequisitos> _requisitos;
-        private List<ICambiar> _modificaresOtro;
+        private List<IVinculo> _vinculos;
 
+        private List<ICondicionDeVinculo> _condiciones;
         private List<ICambiar> _modificadores;
+
         private Atributos _atributosBase;
 
         public Ingrediente(Atributos atributosBase,
-                           List<ICombinacionRequisitos> requisitos = null,
-                           List<ICambiar> modificadoresOtro = null)
+                           List<ICondicionDeVinculo> condiciones = null)
         {
-            _requisitos = (requisitos == null) ? new List<ICombinacionRequisitos>() : requisitos;
-            _modificaresOtro = (modificadoresOtro == null) ? new List<ICambiar>() : modificadoresOtro;
+            _vinculos = new List<IVinculo>();
 
+            _condiciones = (condiciones == null) ? new List<ICondicionDeVinculo>() : condiciones;
             _modificadores = new List<ICambiar>();
-            _atributosBase = atributosBase;
-        }
 
-        public Ingrediente(Atributos atributosBase,
-                           List<ICambiar> modificadoresOtro,
-                           List<ICombinacionRequisitos> requisitos = null)
-            : this(atributosBase, requisitos, modificadoresOtro)
-        {
+            _atributosBase = atributosBase;
         }
 
         public Atributos Agregar(Atributos atributos)
         {
-            List<Par> nuevosPares = new List<Par>();
-            Atributos union = Atributos.UnionNula(_atributosBase, atributos);
-            foreach (IIdentificador identificador in union.GetIdentificadores())
-            {
-                float nuevoValor = ObtenerValor(identificador);
-                nuevosPares.Add(new Par(identificador, nuevoValor));
-            }
-            return Atributos.Sumar(atributos, new Atributos(nuevosPares));
+            Estabilidad();
+            Atributos modificado = AtributoBaseModificado();
+            return Atributos.Sumar(atributos, modificado);
         }
 
-        public IIngrediente Unirse(IIngrediente ingrediente)
+        private Atributos AtributoBaseModificado()
         {
-            if (!(PermiteUnirse() && ingrediente.PermiteUnirse()))
-                return null;
-            return PermiteUnirseCon(ingrediente) && ingrediente.PermiteUnirseCon(this) ? new Compuesto(this, ingrediente) : null;
+            Atributos nuevo = _atributosBase;
+            _modificadores.ForEach(modificador => nuevo = modificador.Modificar(nuevo));
+            return nuevo;
         }
 
-        public bool PermiteUnirse()
+        public void CrearVinculo(IVinculo vinculo)
         {
-            bool permite = false;
-            foreach (ParRequisito par in _requisitos)
-                permite |= par.EvaluarPropio(this);
-            return _requisitos.Count > 0 ? permite : true;
+            _vinculos.Add(vinculo);
         }
 
-        public bool PermiteUnirseCon(IIngrediente ingrediente)
+        public void RomperVinculo(IVinculo vinculo)
         {
-            bool permite = false;
-            foreach (ParRequisito par in _requisitos)
-                permite |= (par.EvaluarPropio(this) && par.EvaluarOtro(ingrediente));
-            return _requisitos.Count > 0 ? permite : true;
+            _vinculos.Remove(vinculo);
         }
 
-        public void ModificarOtro(IIngrediente ingrediente)
+        public float ObtenerValor(IIdentificador identificador)
         {
-            _modificaresOtro.ForEach(modificador => ingrediente.AgregarModificador(modificador));
+            Atributos atributos = AtributoBaseModificado();
+            return atributos.GetValor(identificador);
         }
 
         public void AgregarModificador(ICambiar modificador)
@@ -73,11 +57,42 @@ namespace ItIsNotOnlyMe
             _modificadores.Add(modificador);
         }
 
-        public float ObtenerValor(IIdentificador identificador)
+        public void SacarModificador(ICambiar modificador)
         {
-            float valor = _atributosBase.GetValor(identificador);
-            _modificadores.ForEach(cambiar => valor = cambiar.Modificar(identificador, valor));
-            return valor;
+            _modificadores.Remove(modificador);
+        }
+
+        public bool HayVinculo(IIngrediente ingrediente)
+        {
+            foreach (IVinculo vinculo in _vinculos)
+                if (vinculo.HayVinculo(ingrediente))
+                    return true;
+            return false;
+        }
+
+        public ICondicionDeVinculo EncontrarCondicion(IIngrediente ingrediente)
+        {
+            foreach (ICondicionDeVinculo condicion in _condiciones)
+                if (condicion.Evaluar(this, ingrediente))
+                    return condicion;
+            return null;
+        }
+
+        public bool PermiteVinculoCon(IVinculado vinculado)
+        {
+            foreach (ICondicionDeVinculo condicion in _condiciones)
+                if (condicion.Evaluar(this, vinculado))
+                    return true;
+            return false;
+        }
+
+        public void Estabilidad()
+        {
+            List<IVinculo> vinculosNoEstables = new List<IVinculo>();
+            foreach (IVinculo vinculo in _vinculos)
+                if (!vinculo.Estable())
+                    vinculosNoEstables.Add(vinculo);
+            vinculosNoEstables.ForEach(vinculo => vinculo.RomperVinculo());
         }
     }
 }

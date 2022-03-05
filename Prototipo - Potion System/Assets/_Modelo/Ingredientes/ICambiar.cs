@@ -4,11 +4,13 @@
     {
         public void Cambiar(ICambiante cambiante);
 
-        public float Modificar(IIdentificador identificador, float valor);
+        public Atributos Modificar(Atributos atributos);
     }   
 
     public interface ICambiante
     {
         public void AgregarModificador(ICambiar modificador);
+
+        public void SacarModificador(ICambiar modificador);
     }
 }

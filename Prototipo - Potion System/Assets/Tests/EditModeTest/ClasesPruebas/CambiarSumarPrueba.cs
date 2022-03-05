@@ -1,4 +1,5 @@
 ﻿using ItIsNotOnlyMe;
+using System.Collections.Generic;
 
 public class CambiarSumarPrueba : ICambiar
 {
@@ -16,10 +17,8 @@ public class CambiarSumarPrueba : ICambiar
         cambiante.AgregarModificador(this);
     }
 
-    public float Modificar(IIdentificador identificador, float valor)
+    public Atributos Modificar(Atributos atributos)
     {
-        if (_identificador.EsIgual(identificador))
-            return valor + _valorSumar;
-        return valor;
+        return Atributos.Sumar(atributos, new Atributos(new List<Par> { new Par(_identificador, _valorSumar) }));
     }
 }

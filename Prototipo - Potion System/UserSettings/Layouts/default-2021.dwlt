@@ -8,30 +8,6 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PixelRect:
-    serializedVersion: 2
-    x: 218
-    y: 123
-    width: 1060
-    height: 565
-  m_ShowMode: 0
-  m_Title: Package Manager
-  m_RootView: {fileID: 4}
-  m_MinSize: {x: 800, y: 271}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_Maximized: 0
---- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -43,62 +19,12 @@ MonoBehaviour:
     width: 1600
     height: 817
   m_ShowMode: 4
-  m_Title: Scene
-  m_RootView: {fileID: 11}
-  m_MinSize: {x: 875, y: 300}
+  m_Title: Project
+  m_RootView: {fileID: 8}
+  m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: PackageManagerWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1060
-    height: 565
-  m_MinSize: {x: 800, y: 271}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_ActualView: {fileID: 16}
-  m_Panes:
-  - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 3}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1060
-    height: 565
-  m_MinSize: {x: 800, y: 271}
-  m_MaxSize: {x: 4000, y: 4021}
-  vertical: 0
-  controlID: 6661
---- !u!114 &5
+--- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,18 +40,18 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 498
+    y: 500
     width: 1042
-    height: 269
+    height: 267
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 20}
   - {fileID: 17}
+  - {fileID: 14}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &6
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,8 +64,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 9}
-  - {fileID: 5}
+  - {fileID: 6}
+  - {fileID: 2}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -149,8 +75,8 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 57
---- !u!114 &7
+  controlID: 120
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,14 +95,14 @@ MonoBehaviour:
     y: 338
     width: 270
     height: 429
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 22}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 22}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &8
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,8 +115,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 15}
-  - {fileID: 7}
+  - {fileID: 12}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 1330
@@ -200,8 +126,8 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 84
---- !u!114 &9
+  controlID: 52
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,16 +145,17 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1042
-    height: 498
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
+    height: 500
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 18}
-  - {fileID: 19}
+  - {fileID: 15}
+  - {fileID: 16}
+  - {fileID: 13}
   m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &10
+  m_LastSelected: 1
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -247,14 +174,14 @@ MonoBehaviour:
     y: 0
     width: 288
     height: 767
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 21}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 21}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &11
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,9 +194,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 12}
-  - {fileID: 14}
-  - {fileID: 13}
+  - {fileID: 9}
+  - {fileID: 11}
+  - {fileID: 10}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -282,7 +209,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &12
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -304,7 +231,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &13
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -325,7 +252,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &14
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,9 +265,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 6}
-  - {fileID: 10}
-  - {fileID: 8}
+  - {fileID: 3}
+  - {fileID: 7}
+  - {fileID: 5}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -350,8 +277,8 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 83
---- !u!114 &15
+  controlID: 51
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -372,12 +299,12 @@ MonoBehaviour:
     height: 338
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 23}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 23}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &16
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -386,26 +313,182 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 13953, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 11500000, guid: eb55afc2c109f42f2af37941a8c9300e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 800, y: 250}
+  m_MinSize: {x: 600, y: 300}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Package Manager
-    m_Image: {fileID: -2824328813065806953, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: PlayerInputs (Input Actions)
+    m_Image: {fileID: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 218
-    y: 123
-    width: 1060
-    height: 544
+    x: 0
+    y: 73
+    width: 1041
+    height: 311
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &17
+  m_ActionMapsTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: bdf89d75
+    m_LastClickedID: 1973287101
+    m_ExpandedIDs: 00000000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 6}
+    m_SearchString: 
+  m_ActionsTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 2a9a89aa
+    m_LastClickedID: -1433822678
+    m_ExpandedIDs: 5e9ed5b7eeb89bbe37fd0fdea187b40064fecd23bdf89d75
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 6}
+    m_SearchString: 
+  m_ControlPickerViewState:
+    m_AdvancedDropdownState:
+      states:
+      - itemId: 371857150
+        selectedIndex: 0
+        scroll: {x: 0, y: 0}
+      - itemId: 300744546
+        selectedIndex: 1
+        scroll: {x: 0, y: 0}
+      - itemId: 656259478
+        selectedIndex: 0
+        scroll: {x: 0, y: 0}
+      - itemId: 378383742
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+    m_ManualPathEditMode: 0
+  m_ActionAssetManager:
+    m_AssetObjectForEditing: {fileID: 0}
+    m_ImportedAssetObject: {fileID: -944628639613478452, guid: c7d160d1c2054be449fdde3f3f04d72a, type: 3}
+    m_AssetGUID: c7d160d1c2054be449fdde3f3f04d72a
+    m_ImportedAssetJson: "{\n    \"name\": \"PlayerInputs\",\n    \"maps\": [\n       
+      {\n            \"name\": \"Player\",\n            \"id\": \"e7fcdf1a-1ddc-4a51-9a66-7777e15c47af\",\n           
+      \"actions\": [\n                {\n                    \"name\": \"Mover\",\n                   
+      \"type\": \"Value\",\n                    \"id\": \"1f0514e1-9b96-4f78-950b-c5c6bc1a6d21\",\n                   
+      \"expectedControlType\": \"Vector2\",\n                    \"processors\":
+      \"\",\n                    \"interactions\": \"\",\n                    \"initialStateCheck\":
+      true\n                },\n                {\n                    \"name\":
+      \"Mirar\",\n                    \"type\": \"Value\",\n                    \"id\":
+      \"f20a8ec8-e08d-4d90-8d52-ac322684ad33\",\n                    \"expectedControlType\":
+      \"Vector2\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
+      },\n                {\n                    \"name\": \"Saltar\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"a14be12c-5734-4215-84cb-4981f883da41\",\n                   
+      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
+      }\n            ],\n            \"bindings\": [\n                {\n                   
+      \"name\": \"Flechas\",\n                    \"id\": \"00433930-f527-46c7-ac80-a8d51acb9893\",\n                   
+      \"path\": \"2DVector\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Mover\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"up\",\n                    \"id\": \"1984a672-da69-4f52-a905-5b331443ee42\",\n                   
+      \"path\": \"<Keyboard>/upArrow\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Mover\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"down\",\n                    \"id\": \"a7909742-9e01-4aa0-aab8-08c9b46ece56\",\n                   
+      \"path\": \"<Keyboard>/downArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"\",\n                    \"action\": \"Mover\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": true\n                },\n               
+      {\n                    \"name\": \"left\",\n                    \"id\": \"0f227a72-5e28-485f-95cc-ffc6b1bbfbac\",\n                   
+      \"path\": \"<Keyboard>/leftArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"\",\n                    \"action\": \"Mover\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": true\n                },\n               
+      {\n                    \"name\": \"right\",\n                    \"id\": \"0bac7864-b2d9-4934-89f0-c8b980d49e2e\",\n                   
+      \"path\": \"<Keyboard>/rightArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"\",\n                    \"action\": \"Mover\",\n                    \"isComposite\":
+      false,\n                    \"isPartOfComposite\": true\n                },\n               
+      {\n                    \"name\": \"AWSD\",\n                    \"id\": \"9504009f-134f-4340-923d-9eda75d3d5d2\",\n                   
+      \"path\": \"2DVector\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Mover\",\n                    \"isComposite\": true,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"up\",\n                    \"id\": \"12a90f8e-a722-4d9a-9a21-1814001d30a4\",\n                   
+      \"path\": \"<Keyboard>/w\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Mover\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"down\",\n                    \"id\": \"90d9330e-3552-47cb-8b63-2e20fba19148\",\n                   
+      \"path\": \"<Keyboard>/s\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Mover\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"left\",\n                    \"id\": \"7074404d-3557-4b80-985b-8e9af99a0132\",\n                   
+      \"path\": \"<Keyboard>/a\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Mover\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"right\",\n                    \"id\": \"f1480d4c-d33f-4e09-b3f3-c961eab70174\",\n                   
+      \"path\": \"<Keyboard>/d\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Mover\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"50c2d45b-ffb0-43b5-8d27-f635dd405a16\",\n                   
+      \"path\": \"<Mouse>/delta\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Mirar\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                },\n                {\n                   
+      \"name\": \"\",\n                    \"id\": \"52fe6e02-707f-4b79-a7ea-211a10b2fb7f\",\n                   
+      \"path\": \"<Keyboard>/space\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"Saltar\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": false\n                }\n            ]\n        }\n   
+      ],\n    \"controlSchemes\": []\n}"
+    m_IsDirty: 0
+  m_Toolbar:
+    m_IsDirty: 0
+    m_SelectedControlSchemeIndex: -1
+    m_SelectedDeviceRequirementIndex: -1
+    m_ControlSchemes: []
+    m_SearchText: 
+  m_DirtyTitle:
+    m_Text: (*) PlayerInputs (Input Actions)
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Title:
+    m_Text: PlayerInputs (Input Actions)
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -426,15 +509,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 554
+    y: 573
     width: 1041
-    height: 265
+    height: 246
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 118
+    ID: 358
     splitterInitialOffset: 561
     currentActiveSplitter: -1
     realSizes:
@@ -494,7 +577,7 @@ MonoBehaviour:
       availableCategories: []
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 17}
+    m_Window: {fileID: 14}
     m_NewResultList:
     - id: 1000
       uniqueId: '[Prototipo - Potion System][suite]'
@@ -512,676 +595,12 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1033
-      uniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
-        - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-      name: EditModeTest.dll
-      fullName: C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo -
-        Potion System/Library/ScriptAssemblies/EditModeTest.dll
-      resultStatus: 1
-      duration: 0.0502578
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1000
-      parentUniqueId: '[Prototipo - Potion System][suite]'
-    - id: 1001
-      uniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-      name: AtributosTest
-      fullName: AtributosTest
-      resultStatus: 1
-      duration: 0.0549228
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1033
-      parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
-        - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-    - id: 1002
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test01DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden]
-      name: Test01DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden
-      fullName: AtributosTest.Test01DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden
-      resultStatus: 1
-      duration: 0.0194348
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1003
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test02DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden]
-      name: Test02DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden
-      fullName: AtributosTest.Test02DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden
-      resultStatus: 1
-      duration: 0.0012798
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1004
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test03DistanciaEntreDosAtributosConParesDiferentes]
-      name: Test03DistanciaEntreDosAtributosConParesDiferentes
-      fullName: AtributosTest.Test03DistanciaEntreDosAtributosConParesDiferentes
-      resultStatus: 1
-      duration: 0.0010074
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1005
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test04LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico]
-      name: Test04LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico
-      fullName: AtributosTest.Test04LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico
-      resultStatus: 1
-      duration: 0.0030693
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1006
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test05LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso]
-      name: Test05LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso
-      fullName: AtributosTest.Test05LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso
-      resultStatus: 1
-      duration: 0.0010128
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1007
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test06LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal]
-      name: Test06LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal
-      fullName: AtributosTest.Test06LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal
-      resultStatus: 1
-      duration: 0.0006487
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1008
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test07LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble]
-      name: Test07LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble
-      fullName: AtributosTest.Test07LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble
-      resultStatus: 1
-      duration: 0.001385
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1009
-      uniqueId: EditModeTest.dll/AtributosTest/[EditModeTest][AtributosTest.Test08LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso]
-      name: Test08LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso
-      fullName: AtributosTest.Test08LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso
-      resultStatus: 1
-      duration: 0.0009036
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1010
-      uniqueId: EditModeTest.dll/[EditModeTest][CambiarTest][suite]
-      name: CambiarTest
-      fullName: CambiarTest
-      resultStatus: 1
-      duration: 0.0131445
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1033
-      parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
-        - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-    - id: 1011
-      uniqueId: EditModeTest.dll/CambiarTest/[EditModeTest][CambiarTest.Test01CambiarSeCumpleYElValorPasaDeTresADos]
-      name: Test01CambiarSeCumpleYElValorPasaDeTresADos
-      fullName: CambiarTest.Test01CambiarSeCumpleYElValorPasaDeTresADos
-      resultStatus: 1
-      duration: 0.001467
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: EditModeTest.dll/[EditModeTest][CambiarTest][suite]
-    - id: 1012
-      uniqueId: EditModeTest.dll/CambiarTest/[EditModeTest][CambiarTest.Test02CambiarVariaUnEjeQueNoTenia]
-      name: Test02CambiarVariaUnEjeQueNoTenia
-      fullName: CambiarTest.Test02CambiarVariaUnEjeQueNoTenia
-      resultStatus: 1
-      duration: 0.0002277
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: EditModeTest.dll/[EditModeTest][CambiarTest][suite]
-    - id: 1013
-      uniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
-      name: ContenedorTest
-      fullName: ContenedorTest
-      resultStatus: 1
-      duration: 0.0452071
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1045
-      parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
-        - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-    - id: 1014
-      uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial]
-      name: Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial
-      fullName: ContenedorTest.Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial
-      resultStatus: 1
-      duration: 0.0234663
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
-    - id: 1015
-      uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente]
-      name: Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente
-      fullName: ContenedorTest.Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente
-      resultStatus: 1
-      duration: 0.0029957
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
-    - id: 1013
-      uniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-      name: IngredienteTest
-      fullName: IngredienteTest
-      resultStatus: 1
-      duration: 0.031519
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1033
-      parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
-        - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-    - id: 1014
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test01IngredienteSinNingunRequisitoNecesarioEsEvaluadoPositivo]
-      name: Test01IngredienteSinNingunRequisitoNecesarioEsEvaluadoPositivo
-      fullName: IngredienteTest.Test01IngredienteSinNingunRequisitoNecesarioEsEvaluadoPositivo
-      resultStatus: 1
-      duration: 0.0015426
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1015
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test02IngredienteConLosRequisitosEsEvaluadoPositivo]
-      name: Test02IngredienteConLosRequisitosEsEvaluadoPositivo
-      fullName: IngredienteTest.Test02IngredienteConLosRequisitosEsEvaluadoPositivo
-      resultStatus: 1
-      duration: 0.0011669
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1016
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test03IngredienteSinLosRequisitosEsEvaluadoNegativo]
-      name: Test03IngredienteSinLosRequisitosEsEvaluadoNegativo
-      fullName: IngredienteTest.Test03IngredienteSinLosRequisitosEsEvaluadoNegativo
-      resultStatus: 1
-      duration: 0.0006868
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1017
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test04IngredienteEsModificadoSumandoleDosALaDimensionVida]
-      name: Test04IngredienteEsModificadoSumandoleDosALaDimensionVida
-      fullName: IngredienteTest.Test04IngredienteEsModificadoSumandoleDosALaDimensionVida
-      resultStatus: 1
-      duration: 0.0020238
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1018
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test05IngredienteEsModificadoSumandoleDosALaDimensionVelocidadQueNoTiene]
-      name: Test05IngredienteEsModificadoSumandoleDosALaDimensionVelocidadQueNoTiene
-      fullName: IngredienteTest.Test05IngredienteEsModificadoSumandoleDosALaDimensionVelocidadQueNoTiene
-      resultStatus: 1
-      duration: 0.0004396
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1019
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test06CuandoSeJuntanDosIngredientesSinModificacionesYSinCondicionesElResultadoEsLaSumaDeAmbos]
-      name: Test06CuandoSeJuntanDosIngredientesSinModificacionesYSinCondicionesElResultadoEsLaSumaDeAmbos
-      fullName: IngredienteTest.Test06CuandoSeJuntanDosIngredientesSinModificacionesYSinCondicionesElResultadoEsLaSumaDeAmbos
-      resultStatus: 1
-      duration: 0.0034249
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1020
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test07ElPrimerIngredienteNoEstaEnCondicionesDeUnirse]
-      name: Test07ElPrimerIngredienteNoEstaEnCondicionesDeUnirse
-      fullName: IngredienteTest.Test07ElPrimerIngredienteNoEstaEnCondicionesDeUnirse
-      resultStatus: 1
-      duration: 0.0008097
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1021
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test08ElSegundoIngredienteNoEstaEnCondicionesDeUnirse]
-      name: Test08ElSegundoIngredienteNoEstaEnCondicionesDeUnirse
-      fullName: IngredienteTest.Test08ElSegundoIngredienteNoEstaEnCondicionesDeUnirse
-      resultStatus: 1
-      duration: 0.0007793
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1024
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test09ElPrimeroYElSegundoPuedenUnirseYPuedenUnirseEntreSi]
-      name: Test09ElPrimeroYElSegundoPuedenUnirseYPuedenUnirseEntreSi
-      fullName: IngredienteTest.Test09ElPrimeroYElSegundoPuedenUnirseYPuedenUnirseEntreSi
-      resultStatus: 1
-      duration: 0.0008537
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1015
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1025
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test10ElPrimeroYElSegundoPuedenUnirsePeroNoEntreSi]
-      name: Test10ElPrimeroYElSegundoPuedenUnirsePeroNoEntreSi
-      fullName: IngredienteTest.Test10ElPrimeroYElSegundoPuedenUnirsePeroNoEntreSi
-      resultStatus: 1
-      duration: 0.0007385
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1015
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1026
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test11ElPrimeroTieneModificacionesParaElSegundoEntoncesElCompuestoEsElPrimeroMasElSegundoModificado]
-      name: Test11ElPrimeroTieneModificacionesParaElSegundoEntoncesElCompuestoEsElPrimeroMasElSegundoModificado
-      fullName: IngredienteTest.Test11ElPrimeroTieneModificacionesParaElSegundoEntoncesElCompuestoEsElPrimeroMasElSegundoModificado
-      resultStatus: 1
-      duration: 0.000922
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1015
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1027
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test12ElSegundoTieneModificacionesParaElPrimeroEntoncesElCompuestoEsElPrimeroModificadoMasElSegundo]
-      name: Test12ElSegundoTieneModificacionesParaElPrimeroEntoncesElCompuestoEsElPrimeroModificadoMasElSegundo
-      fullName: IngredienteTest.Test12ElSegundoTieneModificacionesParaElPrimeroEntoncesElCompuestoEsElPrimeroModificadoMasElSegundo
-      resultStatus: 1
-      duration: 0.0008119
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1015
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1028
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test13LosDosIngredientesTieneModificadoresEntoncesElCompuestoEsLaSumaModificada]
-      name: Test13LosDosIngredientesTieneModificadoresEntoncesElCompuestoEsLaSumaModificada
-      fullName: IngredienteTest.Test13LosDosIngredientesTieneModificadoresEntoncesElCompuestoEsLaSumaModificada
-      resultStatus: 1
-      duration: 0.0009146
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1015
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1025
-      uniqueId: EditModeTest.dll/[EditModeTest][MezclaTest][suite]
-      name: MezclaTest
-      fullName: MezclaTest
-      resultStatus: 1
-      duration: 0.0272914
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1033
-      parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
-        - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-    - id: 1026
-      uniqueId: EditModeTest.dll/MezclaTest/[EditModeTest][MezclaTest.Test01MezclaSinIngredientesAlCalcularElEstadoEsIgualAlEstadoInicial]
-      name: Test01MezclaSinIngredientesAlCalcularElEstadoEsIgualAlEstadoInicial
-      fullName: MezclaTest.Test01MezclaSinIngredientesAlCalcularElEstadoEsIgualAlEstadoInicial
-      resultStatus: 1
-      duration: 0.0008923
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1025
-      parentUniqueId: EditModeTest.dll/[EditModeTest][MezclaTest][suite]
-    - id: 1031
-      uniqueId: EditModeTest.dll/MezclaTest/[EditModeTest][MezclaTest.Test02MezclaConUnIngredientesAlCalcularElEstadoEsIgualAlEstadoInicialMasElIngrediente]
-      name: Test02MezclaConUnIngredientesAlCalcularElEstadoEsIgualAlEstadoInicialMasElIngrediente
-      fullName: MezclaTest.Test02MezclaConUnIngredientesAlCalcularElEstadoEsIgualAlEstadoInicialMasElIngrediente
-      resultStatus: 1
-      duration: 0.0011429
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: EditModeTest.dll/[EditModeTest][MezclaTest][suite]
-    - id: 1032
-      uniqueId: EditModeTest.dll/MezclaTest/[EditModeTest][MezclaTest.Test03MezclaConDosIngredientesYAlCalcularElEstadoEsIgaulEstadoInicialMasLosDosIngredientes]
-      name: Test03MezclaConDosIngredientesYAlCalcularElEstadoEsIgaulEstadoInicialMasLosDosIngredientes
-      fullName: MezclaTest.Test03MezclaConDosIngredientesYAlCalcularElEstadoEsIgaulEstadoInicialMasLosDosIngredientes
-      resultStatus: 1
-      duration: 0.0011038
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: EditModeTest.dll/[EditModeTest][MezclaTest][suite]
-    - id: 1033
-      uniqueId: EditModeTest.dll/MezclaTest/[EditModeTest][MezclaTest.Test04MezclaConUnIngredienteDespuesDeFinalizarAlCalcularDeEstadoEsIgualAlEstadoInicial]
-      name: Test04MezclaConUnIngredienteDespuesDeFinalizarAlCalcularDeEstadoEsIgualAlEstadoInicial
-      fullName: MezclaTest.Test04MezclaConUnIngredienteDespuesDeFinalizarAlCalcularDeEstadoEsIgualAlEstadoInicial
-      resultStatus: 1
-      duration: 0.0008541
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: EditModeTest.dll/[EditModeTest][MezclaTest][suite]
-    - id: 1034
-      uniqueId: EditModeTest.dll/MezclaTest/[EditModeTest][MezclaTest.Test05MezclaConDosIngredientesAlMezclarseElCalculaodDeEstadoEsIgualAlEstadoInicialMasElIngredienteCombinado]
-      name: Test05MezclaConDosIngredientesAlMezclarseElCalculaodDeEstadoEsIgualAlEstadoInicialMasElIngredienteCombinado
-      fullName: MezclaTest.Test05MezclaConDosIngredientesAlMezclarseElCalculaodDeEstadoEsIgualAlEstadoInicialMasElIngredienteCombinado
-      resultStatus: 1
-      duration: 0.0014676
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: EditModeTest.dll/[EditModeTest][MezclaTest][suite]
-    - id: 1035
-      uniqueId: EditModeTest.dll/MezclaTest/[EditModeTest][MezclaTest.Test06MezclaConDosIngredientesAlMezclarseNoSeUnenElCalculaodDeEstadoEsIgualAlEstadoInicialMasLosDosIngredientes]
-      name: Test06MezclaConDosIngredientesAlMezclarseNoSeUnenElCalculaodDeEstadoEsIgualAlEstadoInicialMasLosDosIngredientes
-      fullName: MezclaTest.Test06MezclaConDosIngredientesAlMezclarseNoSeUnenElCalculaodDeEstadoEsIgualAlEstadoInicialMasLosDosIngredientes
-      resultStatus: 1
-      duration: 0.0013153
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: EditModeTest.dll/[EditModeTest][MezclaTest][suite]
-    - id: 1036
-      uniqueId: EditModeTest.dll/MezclaTest/[EditModeTest][MezclaTest.Test07MezclaConTresIngredientesYAlMezclarUnaVezSoloSeCombinanDosHaciendoQueElEstadoSeaElEstadoInicialLaCombinacionYElTercerIngrediente]
-      name: Test07MezclaConTresIngredientesYAlMezclarUnaVezSoloSeCombinanDosHaciendoQueElEstadoSeaElEstadoInicialLaCombinacionYElTercerIngrediente
-      fullName: MezclaTest.Test07MezclaConTresIngredientesYAlMezclarUnaVezSoloSeCombinanDosHaciendoQueElEstadoSeaElEstadoInicialLaCombinacionYElTercerIngrediente
-      resultStatus: 1
-      duration: 0.0022424
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: EditModeTest.dll/[EditModeTest][MezclaTest][suite]
-    - id: 1037
-      uniqueId: EditModeTest.dll/MezclaTest/[EditModeTest][MezclaTest.Test08MezclaConTresIngredientesYAlMezclarDosVecesSeCombinanHaciendoQueElEstadoSeaElEstadoInicialLaCombinacion]
-      name: Test08MezclaConTresIngredientesYAlMezclarDosVecesSeCombinanHaciendoQueElEstadoSeaElEstadoInicialLaCombinacion
-      fullName: MezclaTest.Test08MezclaConTresIngredientesYAlMezclarDosVecesSeCombinanHaciendoQueElEstadoSeaElEstadoInicialLaCombinacion
-      resultStatus: 1
-      duration: 0.0018489
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: EditModeTest.dll/[EditModeTest][MezclaTest][suite]
-    m_ResultText: ContenedorTest (0,045s)
+    m_ResultText: 
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0a7af1fa
-      m_LastClickedID: -84837878
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: e42016c84d6046163991b11ef9eb8725afa49c43ab251d70ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -1208,7 +627,7 @@ MonoBehaviour:
       selectedCategoryMask: -1
       availableCategories:
       - Uncategorized
---- !u!114 &18
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1231,7 +650,7 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 1041
-    height: 477
+    height: 479
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1433,9 +852,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.9991264, y: -0.727664, z: 0.098792076}
+    m_Target: {x: 0.6921513, y: -0.097058415, z: -0.69536304}
     speed: 2
-    m_Value: {x: 1.9991264, y: -0.727664, z: 0.098792076}
+    m_Value: {x: 0.6921513, y: -0.097058415, z: -0.69536304}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1482,13 +901,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.03648516, y: 0.9555884, z: -0.1341761, w: 0.2598431}
+    m_Target: {x: 0.01834413, y: 0.97884583, z: -0.10167389, w: 0.17660367}
     speed: 2
-    m_Value: {x: 0.036485128, y: 0.9555875, z: -0.13417597, w: 0.25984287}
+    m_Value: {x: 0.01834413, y: 0.97884583, z: -0.10167389, w: 0.17660367}
   m_Size:
-    m_Target: 2.9058697
+    m_Target: 4.512727
     speed: 2
-    m_Value: 2.9058697
+    m_Value: 4.512727
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1513,7 +932,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &19
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1536,7 +955,7 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 1041
-    height: 477
+    height: 479
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1547,7 +966,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1041, y: 456}
+  m_TargetSize: {x: 1041, y: 458}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1555,7 +974,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
-  m_Stats: 1
+  m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
@@ -1564,8 +983,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -520.5
     m_HBaseRangeMax: 520.5
-    m_VBaseRangeMin: -228
-    m_VBaseRangeMax: 228
+    m_VBaseRangeMin: -239.5
+    m_VBaseRangeMax: 239.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1582,11 +1001,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1041
-      height: 456
+      height: 479
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 520.5, y: 228}
+    m_Translation: {x: 520.5, y: 239.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -1594,18 +1013,18 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -520.5
-      y: -228
+      y: -239.5
       width: 1041
-      height: 456
+      height: 479
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1041, y: 477}
+  m_LastWindowPixelSize: {x: 1041, y: 479}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &20
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1626,14 +1045,14 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 571
+    y: 573
     width: 1041
-    height: 248
+    height: 246
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &21
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1674,7 +1093,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &22
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1705,9 +1124,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 74500000
+      m_SelectedIDs: 2e100000
       m_LastClickedID: 0
-      m_ExpandedIDs: 6851ffff8a51ffff1656ffff6e62ffff4665ffffa469ffff1c77ffff5478ffff707bffffe68cffff668dffff588fffffc690ffffe092ffff10a2ffff76a6ffff3aa9ffff90b6ffff50b8ffff1ac0ffff6ec8ffff18d7ffff90d9ffff0cdaffff8edeffff64e0ffff48e8ffff50e9ffff60ebffff38fbffff
+      m_ExpandedIDs: 34fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1723,7 +1142,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 7}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1731,7 +1150,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &23
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1772,7 +1191,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Vista/Input
+    - Assets/Tests/EditModeTest/ClasesPruebas
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -1787,7 +1206,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 683d0000
     m_LastClickedID: 15720
-    m_ExpandedIDs: 000000001e4b0000204b0000224b0000244b0000264b0000284b00002a4b00002c4b00002e4b0000304b0000324b0000344b0000364b0000384b00003a4b00003c4b00003e4b0000
+    m_ExpandedIDs: 00000000144e0000164e0000184e00001a4e00001c4e00001e4e0000204e0000224e0000244e0000264e0000284e00002a4e00002c4e00002e4e0000304e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1812,10 +1231,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 417}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000001e4b0000204b0000224b0000264b0000284b00002c4b00002e4b0000304b0000364b0000384b00003a4b00003c4b00003e4b00005e4b0000604b00003c50000040500000
+    m_ExpandedIDs: ffffffff00000000144e0000164e0000184e00001a4e00001c4e00001e4e0000204e0000224e0000244e0000264e0000284e00002a4e00002c4e00002e4e0000304e0000664e0000724e0000964e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1831,7 +1250,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 15}
+      m_ClientGUIView: {fileID: 12}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}

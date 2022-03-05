@@ -537,7 +537,7 @@ MonoBehaviour:
   _jumpForce: 8
   _gravity: 18
   _lockCursor: 1
-  _mouseSensitivity: 5
+  _mouseSensitivity: 3
   _pitchMinMax: {x: -40, y: 85}
   _rotationSmoothTime: 0
   _yaw: 0

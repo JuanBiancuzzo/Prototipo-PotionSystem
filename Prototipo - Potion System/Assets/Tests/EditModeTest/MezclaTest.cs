@@ -11,7 +11,7 @@ public class MezclaTest
     private IIdentificador _vida = new IdentificadorPrueba();
     private IIdentificador _temp = new IdentificadorPrueba();
     private IIdentificador _vel = new IdentificadorPrueba();
-
+    /*
     [Test]
     public void Test01MezclaSinIngredientesAlCalcularElEstadoEsIgualAlEstadoInicial()
     {
@@ -365,5 +365,5 @@ public class MezclaTest
         Assert.That(resultado.GetValor(_temp), Is.EqualTo(resultadoEsperado).Using(comparador));
         resultadoEsperado = valorVel + valorVelIngre1 * valorAMultiplicar3 + valorVelIngre2 * valorAMultiplicar3 + valorVelIngre3;
         Assert.That(resultado.GetValor(_vel), Is.EqualTo(resultadoEsperado).Using(comparador));
-    }
+    } */
 }

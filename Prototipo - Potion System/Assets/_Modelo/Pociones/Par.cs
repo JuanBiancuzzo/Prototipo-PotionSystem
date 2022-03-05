@@ -56,6 +56,11 @@ namespace ItIsNotOnlyMe
             return propio.Comparar(otro) ? propio._valor * otro._valor : _valorNulo;
         }
 
+        public static Par NuevoMultiplicar(Par propio, Par otro)
+        {
+            return new Par(propio._identificador, Multiplicar(propio, otro));
+        }
+
         public static Par Dividir(Par par, float valor)
         {
             float valorResultante = (valor == 0f) ? 0f : par._valor / valor;

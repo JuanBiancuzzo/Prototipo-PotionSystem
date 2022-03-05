@@ -6,28 +6,30 @@ public class CambiarTest
 {
     private class CambiantePrueba : ICambiante
     {
-        private IIdentificador _identificador;
-        private float _valor, _valorNulo;
-        private List<ICambiar> _cambiantes;
+        private Atributos _atributoBase;
+        private List<ICambiar> _modificadores;
 
-        public CambiantePrueba(IIdentificador identificador, float valor, float valorNulo)
+        public CambiantePrueba(IIdentificador identificador, float valor)
         {
-            _identificador = identificador;
-            _valor = valor;
-            _valorNulo = valorNulo;
-            _cambiantes = new List<ICambiar>();
+            _modificadores = new List<ICambiar>();
+            _atributoBase = new Atributos(new List<Par> { new Par(identificador, valor) });
         }
 
         public void AgregarModificador(ICambiar modificador)
         {
-            _cambiantes.Add(modificador);
+            _modificadores.Add(modificador);
         }
 
-        public float GetValor(IIdentificador identificador)
+        public void SacarModificador(ICambiar modificador)
         {
-            float valor = _identificador.EsIgual(identificador) ? _valor : _valorNulo;
-            _cambiantes.ForEach(cambiar => valor = cambiar.Modificar(identificador, valor));
-            return valor;
+            _modificadores.Remove(modificador);
+        }
+
+        public Atributos Modificar(Atributos atributos)
+        {
+            Atributos nuevo = _atributoBase;
+            _modificadores.ForEach(modificador => nuevo = modificador.Modificar(nuevo));
+            return Atributos.Sumar(nuevo, atributos);
         }
     }
 
@@ -37,24 +39,28 @@ public class CambiarTest
     [Test]
     public void Test01CambiarSeCumpleYElValorPasaDeTresADos()
     {
-        float valorCambiante = 3, valorNulo = 0, valorCambio = 2;
-        CambiantePrueba cambiante = new CambiantePrueba(_uno, valorCambiante, valorNulo);
+        float valorCambiante = 3, valorCambio = 2;
+        CambiantePrueba cambiante = new CambiantePrueba(_uno, valorCambiante);
         ICambiar cambiar = new CambiarSumarPrueba(valorCambio, _uno);
 
         cambiar.Cambiar(cambiante);
 
-        Assert.AreEqual(valorCambiante + valorCambio, cambiante.GetValor(_uno));
+        Atributos respuesta = cambiante.Modificar(Atributos.Nulo());
+
+        Assert.AreEqual(valorCambiante + valorCambio, respuesta.GetValor(_uno));
     }
 
     [Test]
     public void Test02CambiarVariaUnEjeQueNoTenia()
     {
-        float valorCambiante = 3, valorNulo = 0, valorCambio = 2;
-        CambiantePrueba cambiante = new CambiantePrueba(_uno, valorCambiante, valorNulo);
+        float valorCambiante = 3, valorCambio = 2;
+        CambiantePrueba cambiante = new CambiantePrueba(_uno, valorCambiante);
         ICambiar cambiar = new CambiarSumarPrueba(valorCambio, _dos);
 
         cambiar.Cambiar(cambiante);
 
-        Assert.AreEqual(valorNulo + valorCambio, cambiante.GetValor(_dos));
+        Atributos respuesta = cambiante.Modificar(Atributos.Nulo());
+
+        Assert.AreEqual(valorCambio, respuesta.GetValor(_dos));
     }
 }

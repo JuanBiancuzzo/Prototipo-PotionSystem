@@ -7,8 +7,10 @@ using UnityEngine.TestTools;
 
 public class IngredienteTest
 {
+    
+
     private IIdentificador _vida, _temp, _vel;
-    private Atributos atributosNulo;
+    private Atributos _atributosNulo;
 
     public IngredienteTest()
     {
@@ -16,350 +18,179 @@ public class IngredienteTest
         _temp = new IdentificadorPrueba();
         _vel = new IdentificadorPrueba();
 
-        atributosNulo = new Atributos(new List<Par>
+        _atributosNulo = Atributos.Nulo();
+    }
+
+    private Atributos HacerAtributos(float vida, float temp, float vel)
+    {
+        return new Atributos(new List<Par>
         {
-            new Par(_vida, 0f), new Par(_temp, 0f), new Par(_vel, 0f)
+            new Par(_vida, vida), new Par(_temp, temp), new Par(_vel, vel)
         });
     }
 
     [Test]
-    public void Test01IngredienteSinNingunRequisitoNecesarioEsEvaluadoPositivo()
+    public void Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial()
     {
         float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
-        Atributos atributosBase = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
-        });
+        Atributos atributosBase = HacerAtributos(valorVida, valorTemp, valorVel);
         IIngrediente ingrediente = new Ingrediente(atributosBase);
 
-        Assert.IsTrue(ingrediente.PermiteUnirse());
-    }
+        Atributos resultado = ingrediente.Agregar(_atributosNulo);
 
-    [Test]
-    public void Test02IngredienteConLosRequisitosEsEvaluadoPositivo()
-    {
-        float valorMinimo = 4f;
-        IRequisito requisito = new RequisitoMayorPrueba(valorMinimo, _vida);
-
-        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValidoPrueba()) };
-
-        float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
-        Atributos atributosBase = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
-        });
-        IIngrediente ingrediente = new Ingrediente(atributosBase, requisitos);
-
-        Assert.IsTrue(ingrediente.PermiteUnirse());
-    }
-
-    [Test]
-    public void Test03IngredienteSinLosRequisitosEsEvaluadoNegativo()
-    {
-        float valorMinimo = 4f;
-        IRequisito requisito = new RequisitoMayorPrueba(valorMinimo, _temp);
-
-        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValidoPrueba()) };
-
-        float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
-        Atributos atributosBase = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
-        });
-        IIngrediente ingrediente = new Ingrediente(atributosBase, requisitos);
-
-        Assert.IsFalse(ingrediente.PermiteUnirse());
-    }
-
-    [Test]
-    public void Test04IngredienteEsModificadoSumandoleDosALaDimensionVida()
-    {
-        float valorVida = 5f, valorTemp = 3f, valorVel = 4f;
-        Atributos atributosBase = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
-        });
-        IIngrediente ingrediente = new Ingrediente(atributosBase);
-
-        float valorASumar = 2f;
-        ICambiar cambiar = new CambiarSumarPrueba(valorASumar, _vida);
-
-        cambiar.Cambiar(ingrediente);
-
-        Atributos resultado = ingrediente.Agregar(atributosNulo);
-
-        Assert.AreEqual(valorVida + valorASumar, resultado.GetValor(_vida));
+        Assert.AreEqual(valorVida, resultado.GetValor(_vida));
         Assert.AreEqual(valorTemp, resultado.GetValor(_temp));
         Assert.AreEqual(valorVel, resultado.GetValor(_vel));
     }
 
     [Test]
-    public void Test05IngredienteEsModificadoSumandoleDosALaDimensionVelocidadQueNoTiene()
-    {
-        float valorVida = 5f, valorTemp = 3f;
-        Atributos atributosBase = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida), new Par(_temp, valorTemp)
-        });
-        IIngrediente ingrediente = new Ingrediente(atributosBase);
-
-        float valorASumar = 2f;
-        ICambiar cambiar = new CambiarSumarPrueba(valorASumar, _vel);
-
-        cambiar.Cambiar(ingrediente);
-
-        Atributos resultado = ingrediente.Agregar(atributosNulo);
-
-        Assert.AreEqual(valorVida, resultado.GetValor(_vida));
-        Assert.AreEqual(valorTemp, resultado.GetValor(_temp));
-        Assert.AreEqual(valorASumar, resultado.GetValor(_vel));
-    }
-
-    [Test]
-    public void Test06CuandoSeJuntanDosIngredientesSinModificacionesYSinCondicionesElResultadoEsLaSumaDeAmbos()
+    public void Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse()
     {
         float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
-        Atributos atributosBase1 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida1), new Par(_temp, valorTemp1), new Par(_vel, valorVel1)
-        });
+        Atributos atributosBase1 = HacerAtributos(valorVida1, valorTemp1, valorVel1);
         IIngrediente ingrediente1 = new Ingrediente(atributosBase1);
 
-        float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
-        Atributos atributosBase2 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida2), new Par(_temp, valorTemp2), new Par(_vel, valorVel2)
-        });
+        float valorVida2 = 5f, valorTemp2 = 3f, valorVel2 = 4f;
+        Atributos atributosBase2 = HacerAtributos(valorVida2, valorTemp2, valorVel2);
         IIngrediente ingrediente2 = new Ingrediente(atributosBase2);
 
-        IIngrediente compuesto = ingrediente1.Unirse(ingrediente2);
-
-        Assert.AreNotEqual(null, compuesto);
-
-        Atributos resultado = compuesto.Agregar(atributosNulo);
-
-        Assert.AreEqual(valorVida1 + valorVida2, resultado.GetValor(_vida));
-        Assert.AreEqual(valorTemp1 + valorTemp2, resultado.GetValor(_temp));
-        Assert.AreEqual(valorVel1 + valorVel2, resultado.GetValor(_vel));
+        bool pudoUnirse = IIngrediente.Unirse(ingrediente1, ingrediente2);
+        Assert.IsFalse(pudoUnirse);
     }
 
     [Test]
-    public void Test07ElPrimerIngredienteNoEstaEnCondicionesDeUnirse()
+    public void Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion()
     {
-        float valorMinimo = 4f;
-        IRequisito requisito = new RequisitoMayorPrueba(valorMinimo, _temp);
+        float multiplicador = 2f;
+        ICambiar modificador = new CambiarMultiplicarPrueba(multiplicador, _vida);
 
-        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValidoPrueba()) };
+        IRequisito requisito = new RequisitoValidoPrueba();
+
+        List<ICondicionDeVinculo> condiciones = new List<ICondicionDeVinculo>
+            { new CondicionDeVinculoPrueba(requisito, modificador) };
 
         float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
-        Atributos atributosBase1 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida1), new Par(_temp, valorTemp1), new Par(_vel, valorVel1)
-        });
-        IIngrediente ingrediente1 = new Ingrediente(atributosBase1, requisitos);
+        Atributos atributosBase1 = HacerAtributos(valorVida1, valorTemp1, valorVel1);
+        IIngrediente ingrediente1 = new Ingrediente(atributosBase1, condiciones);
 
-        float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
-        Atributos atributosBase2 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida2), new Par(_temp, valorTemp2), new Par(_vel, valorVel2)
-        });
+        float valorVida2 = 5f, valorTemp2 = 3f, valorVel2 = 4f;
+        Atributos atributosBase2 = HacerAtributos(valorVida2, valorTemp2, valorVel2);
         IIngrediente ingrediente2 = new Ingrediente(atributosBase2);
 
-        Assert.IsFalse(ingrediente1.PermiteUnirse());
-        Assert.IsTrue(ingrediente2.PermiteUnirse());
+        bool pudoUnirse = IIngrediente.Unirse(ingrediente1, ingrediente2);
 
-        IIngrediente compuesto = ingrediente1.Unirse(ingrediente2);
+        Assert.IsTrue(pudoUnirse);
 
-        Assert.AreEqual(null, compuesto);
+        Atributos resultado = ingrediente1.Agregar(_atributosNulo);
+
+        Assert.AreEqual(valorVida1 * multiplicador, resultado.GetValor(_vida));
+        Assert.AreEqual(valorTemp1, resultado.GetValor(_temp));
+        Assert.AreEqual(valorVel1, resultado.GetValor(_vel));
     }
 
     [Test]
-    public void Test08ElSegundoIngredienteNoEstaEnCondicionesDeUnirse()
+    public void Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente()
     {
-        float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
-        Atributos atributosBase1 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida1), new Par(_temp, valorTemp1), new Par(_vel, valorVel1)
-        });
-        IIngrediente ingrediente1 = new Ingrediente(atributosBase1);
+        float multiplicador = 2f;
+        ICambiar modificador = new CambiarMultiplicarPrueba(multiplicador, _vida);
 
-        float valorMinimo = 4f;
-        IRequisito requisito = new RequisitoMayorPrueba(valorMinimo, _temp);
+        IRequisito requisito = new RequisitoValidoPrueba();
 
-        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValidoPrueba()) };
-
-        float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
-        Atributos atributosBase2 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida2), new Par(_temp, valorTemp2), new Par(_vel, valorVel2)
-        });
-        IIngrediente ingrediente2 = new Ingrediente(atributosBase2, requisitos);
-
-        Assert.IsTrue(ingrediente1.PermiteUnirse());
-        Assert.IsFalse(ingrediente2.PermiteUnirse());
-
-        IIngrediente compuesto = ingrediente1.Unirse(ingrediente2);
-
-        Assert.AreEqual(null, compuesto);
-    }
-
-    [Test]
-    public void Test09ElPrimeroYElSegundoPuedenUnirseYPuedenUnirseEntreSi()
-    {
-
-        float valorMinimo = 1f;
-        IRequisito requisito = new RequisitoMayorPrueba(valorMinimo, _temp);
-
-        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoValidoPrueba()) };
+        List<ICondicionDeVinculo> condiciones = new List<ICondicionDeVinculo>
+            { new CondicionDeVinculoPrueba(requisito, modificador) };
 
         float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
-        Atributos atributosBase1 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida1), new Par(_temp, valorTemp1), new Par(_vel, valorVel1)
-        });
-        IIngrediente ingrediente1 = new Ingrediente(atributosBase1, requisitos);
+        Atributos atributosBase1 = HacerAtributos(valorVida1, valorTemp1, valorVel1);
+        IIngrediente ingrediente1 = new Ingrediente(atributosBase1, condiciones);
 
-        float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
-        Atributos atributosBase2 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida2), new Par(_temp, valorTemp2), new Par(_vel, valorVel2)
-        });
+        float valorVida2 = 5f, valorTemp2 = 3f, valorVel2 = 4f;
+        Atributos atributosBase2 = HacerAtributos(valorVida2, valorTemp2, valorVel2);
         IIngrediente ingrediente2 = new Ingrediente(atributosBase2);
 
-        Assert.IsTrue(ingrediente1.PermiteUnirse());
-        Assert.IsTrue(ingrediente2.PermiteUnirse());
+        bool pudoUnirse = IIngrediente.Unirse(ingrediente1, ingrediente2);
+        Assert.IsTrue(pudoUnirse);
 
-        Assert.IsTrue(ingrediente1.PermiteUnirseCon(ingrediente2));
-
-        IIngrediente compuesto = ingrediente1.Unirse(ingrediente2);
-
-        Assert.AreNotEqual(null, compuesto);
+        pudoUnirse = IIngrediente.Unirse(ingrediente1, ingrediente2);
+        Assert.IsFalse(pudoUnirse);
     }
 
     [Test]
-    public void Test10ElPrimeroYElSegundoPuedenUnirsePeroNoEntreSi()
+    public void Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion()
     {
+        float multiplicador = 2f;
+        ICambiar modificador = new CambiarMultiplicarPrueba(multiplicador, _vida);
 
-        float valorMinimo = 1f;
-        IRequisito requisito = new RequisitoMayorPrueba(valorMinimo, _temp);
+        IRequisito requisito = new RequisitoValidoPrueba();
 
-        List<ICombinacionRequisitos> requisitos = new List<ICombinacionRequisitos> { new ParRequisito(requisito, new RequisitoInvalidoPrueba()) };
+        List<ICondicionDeVinculo> condiciones = new List<ICondicionDeVinculo>
+            { new CondicionDeVinculoPrueba(requisito, modificador) };
 
         float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
-        Atributos atributosBase1 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida1), new Par(_temp, valorTemp1), new Par(_vel, valorVel1)
-        });
-        IIngrediente ingrediente1 = new Ingrediente(atributosBase1, requisitos);
+        Atributos atributosBase1 = HacerAtributos(valorVida1, valorTemp1, valorVel1);
+        IIngrediente ingrediente1 = new Ingrediente(atributosBase1, condiciones);
 
-        float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
-        Atributos atributosBase2 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida2), new Par(_temp, valorTemp2), new Par(_vel, valorVel2)
-        });
+        float valorVida2 = 5f, valorTemp2 = 3f, valorVel2 = 4f;
+        Atributos atributosBase2 = HacerAtributos(valorVida2, valorTemp2, valorVel2);
         IIngrediente ingrediente2 = new Ingrediente(atributosBase2);
 
-        Assert.IsTrue(ingrediente1.PermiteUnirse());
-        Assert.IsTrue(ingrediente2.PermiteUnirse());
+        float valorVida3 = 5f, valorTemp3 = 3f, valorVel3 = 4f;
+        Atributos atributosBase3 = HacerAtributos(valorVida3, valorTemp3, valorVel3);
+        IIngrediente ingrediente3 = new Ingrediente(atributosBase3);
 
-        Assert.IsFalse(ingrediente1.PermiteUnirseCon(ingrediente2)); 
-        
-        IIngrediente compuesto = ingrediente1.Unirse(ingrediente2);
+        bool pudoUnirse = IIngrediente.Unirse(ingrediente1, ingrediente2);
+        Assert.IsTrue(pudoUnirse);
 
-        Assert.AreEqual(null, compuesto);
+        pudoUnirse = IIngrediente.Unirse(ingrediente3, ingrediente1);
+        Assert.IsTrue(pudoUnirse);
+
+        Atributos resultado = ingrediente1.Agregar(_atributosNulo);
+
+        Assert.AreEqual(valorVida1 * multiplicador * multiplicador, resultado.GetValor(_vida));
+        Assert.AreEqual(valorTemp1, resultado.GetValor(_temp));
+        Assert.AreEqual(valorVel1, resultado.GetValor(_vel));
     }
 
     [Test]
-    public void Test11ElPrimeroTieneModificacionesParaElSegundoEntoncesElCompuestoEsElPrimeroMasElSegundoModificado()
+    public void Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo()
     {
-        float valorAMultiplicar = 2f;
-        ICambiar cambiar = new CambiarMultiplicarPrueba(valorAMultiplicar, _vida);
+        float multiplicador1 = 2f;
+        ICambiar modificador1 = new CambiarMultiplicarPrueba(multiplicador1, _vida);
 
-        List<ICambiar> modificadores = new List<ICambiar> { cambiar };
+        IRequisito requisito1 = new RequisitoMayorPrueba(7f, _vida);
 
-        float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
-        Atributos atributosBase1 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida1), new Par(_temp, valorTemp1), new Par(_vel, valorVel1)
-        });
-        IIngrediente ingrediente1 = new Ingrediente(atributosBase1, modificadores);
+        List<ICondicionDeVinculo> condiciones1 = new List<ICondicionDeVinculo>
+            { new CondicionDeVinculoPrueba(requisito1, modificador1) };
 
-        float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
-        Atributos atributosBase2 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida2), new Par(_temp, valorTemp2), new Par(_vel, valorVel2)
-        });
+        float valorVida1 = 10f, valorTemp1 = 3f, valorVel1 = 4f;
+        Atributos atributosBase1 = HacerAtributos(valorVida1, valorTemp1, valorVel1);
+        IIngrediente ingrediente1 = new Ingrediente(atributosBase1, condiciones1);
+
+        float valorVida2 = 50f, valorTemp2 = 3f, valorVel2 = 4f;
+        Atributos atributosBase2 = HacerAtributos(valorVida2, valorTemp2, valorVel2);
         IIngrediente ingrediente2 = new Ingrediente(atributosBase2);
 
-        IIngrediente compuesto = ingrediente1.Unirse(ingrediente2);
+        float multiplicador3 = .25f;
+        ICambiar modificador3 = new CambiarMultiplicarPrueba(multiplicador3, _vida);
 
-        Atributos resultado = compuesto.Agregar(atributosNulo);
+        IRequisito requisito3 = new RequisitoValidoPrueba();
 
-        Assert.AreEqual(valorVida1 + valorVida2 * valorAMultiplicar, resultado.GetValor(_vida));
-        Assert.AreEqual(valorTemp1 + valorTemp2, resultado.GetValor(_temp));
-        Assert.AreEqual(valorVel1 + valorVel2, resultado.GetValor(_vel));
-    }
+        List<ICondicionDeVinculo> condiciones3 = new List<ICondicionDeVinculo>
+            { new CondicionDeVinculoPrueba(requisito3, modificador3) };
 
-    [Test]
-    public void Test12ElSegundoTieneModificacionesParaElPrimeroEntoncesElCompuestoEsElPrimeroModificadoMasElSegundo()
-    {
-        float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
-        Atributos atributosBase1 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida1), new Par(_temp, valorTemp1), new Par(_vel, valorVel1)
-        });
-        IIngrediente ingrediente1 = new Ingrediente(atributosBase1);
+        float valorVida3 = 5f, valorTemp3 = 3f, valorVel3 = 4f;
+        Atributos atributosBase3 = HacerAtributos(valorVida3, valorTemp3, valorVel3);
+        IIngrediente ingrediente3 = new Ingrediente(atributosBase3, condiciones3);
 
-        float valorAMultiplicar = 2f;
-        ICambiar cambiar = new CambiarMultiplicarPrueba(valorAMultiplicar, _vida);
+        bool pudoUnirse = IIngrediente.Unirse(ingrediente1, ingrediente2);
+        Assert.IsTrue(pudoUnirse);
 
-        List<ICambiar> modificadores = new List<ICambiar> { cambiar };
+        pudoUnirse = IIngrediente.Unirse(ingrediente1, ingrediente3);
+        Assert.IsTrue(pudoUnirse);
 
-        float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
-        Atributos atributosBase2 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida2), new Par(_temp, valorTemp2), new Par(_vel, valorVel2)
-        });
-        IIngrediente ingrediente2 = new Ingrediente(atributosBase2, modificadores);
+        Atributos resultado = ingrediente1.Agregar(_atributosNulo);
 
-        IIngrediente compuesto = ingrediente1.Unirse(ingrediente2);
-
-        Atributos resultado = compuesto.Agregar(atributosNulo);
-
-        Assert.AreEqual(valorVida1 * valorAMultiplicar + valorVida2, resultado.GetValor(_vida));
-        Assert.AreEqual(valorTemp1 + valorTemp2, resultado.GetValor(_temp));
-        Assert.AreEqual(valorVel1 + valorVel2, resultado.GetValor(_vel));
-    }
-
-    [Test]
-    public void Test13LosDosIngredientesTieneModificadoresEntoncesElCompuestoEsLaSumaModificada()
-    {
-        float valorAMultiplicar1 = 3f;
-        List<ICambiar> modificadores1 = new List<ICambiar> { new CambiarMultiplicarPrueba(valorAMultiplicar1, _vida) };
-
-        float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
-        Atributos atributosBase1 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida1), new Par(_temp, valorTemp1), new Par(_vel, valorVel1)
-        });
-        IIngrediente ingrediente1 = new Ingrediente(atributosBase1, modificadores1);
-
-        float valorAMultiplicar2 = 4f;
-        List<ICambiar> modificadores2 = new List<ICambiar> { new CambiarMultiplicarPrueba(valorAMultiplicar2, _temp) };
-
-        float valorVida2 = 3f, valorTemp2 = 1f, valorVel2 = 6f;
-        Atributos atributosBase2 = new Atributos(new List<Par>
-        {
-            new Par(_vida, valorVida2), new Par(_temp, valorTemp2), new Par(_vel, valorVel2)
-        });
-        IIngrediente ingrediente2 = new Ingrediente(atributosBase2, modificadores2);
-
-        IIngrediente compuesto = ingrediente1.Unirse(ingrediente2);
-
-        Atributos resultado = compuesto.Agregar(atributosNulo);
-
-        Assert.AreEqual(valorVida1 + valorVida2 * valorAMultiplicar1, resultado.GetValor(_vida));
-        Assert.AreEqual(valorTemp1 * valorAMultiplicar2 + valorTemp2, resultado.GetValor(_temp));
-        Assert.AreEqual(valorVel1 + valorVel2, resultado.GetValor(_vel));
+        Assert.AreEqual(valorVida1 * multiplicador3, resultado.GetValor(_vida));
+        Assert.AreEqual(valorTemp1, resultado.GetValor(_temp));
+        Assert.AreEqual(valorVel1, resultado.GetValor(_vel));
     }
 }

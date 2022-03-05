@@ -22,7 +22,7 @@ namespace ItIsNotOnlyMe
 
         public void Mezclar()
         {
-            IIngrediente principal = null, secundario = null;
+            /*IIngrediente principal = null, secundario = null;
             bool encontradoEnlace = false;
 
             for (int i = 0; i < _ingredientes.Count && !encontradoEnlace; i++)
@@ -54,7 +54,7 @@ namespace ItIsNotOnlyMe
 
             _ingredientes.Remove(principal);
             _ingredientes.Remove(secundario);
-            _ingredientes.Add(compuesto);
+            _ingredientes.Add(compuesto); */
         }
 
         public Atributos CalcularEstado()

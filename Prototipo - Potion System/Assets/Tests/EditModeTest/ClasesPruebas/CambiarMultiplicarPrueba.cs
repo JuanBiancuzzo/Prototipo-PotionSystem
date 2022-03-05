@@ -2,12 +2,12 @@
 
 public class CambiarMultiplicarPrueba : ICambiar
 {
-    private float _valorSumar;
+    private float _valorMultiplicar;
     private IIdentificador _identificador;
 
-    public CambiarMultiplicarPrueba(float valorSumar, IIdentificador identificador)
+    public CambiarMultiplicarPrueba(float valorMultiplicar, IIdentificador identificador)
     {
-        _valorSumar = valorSumar;
+        _valorMultiplicar = valorMultiplicar;
         _identificador = identificador;
     }
 
@@ -16,10 +16,8 @@ public class CambiarMultiplicarPrueba : ICambiar
         cambiante.AgregarModificador(this);
     }
 
-    public float Modificar(IIdentificador identificador, float valor)
+    public Atributos Modificar(Atributos atributos)
     {
-        if (_identificador.EsIgual(identificador))
-            return valor * _valorSumar;
-        return valor;
+        return Atributos.Multiplicar(atributos, new Par(_identificador, _valorMultiplicar));
     }
 }

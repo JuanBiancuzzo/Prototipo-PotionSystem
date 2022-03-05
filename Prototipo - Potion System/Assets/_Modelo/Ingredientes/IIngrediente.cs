@@ -1,18 +1,45 @@
 ﻿namespace ItIsNotOnlyMe
 {
-    public interface IIngrediente : IDemandado, ICambiante
+    public interface IIngrediente : IDemandado, ICambiante, IVinculado
     {
         public Atributos Agregar(Atributos atributos);
-        
-        // si quiero hacerlo mas realista, puedo hacer que devuelva una lista
-        // y de esa forma poder hacer que realmente el que permite unirse
-        // sea el que se una y por lo tanto asi crear el compuesto
-        public IIngrediente Unirse(IIngrediente ingrediente);
 
-        public bool PermiteUnirse();
+        public void Estabilidad();
 
-        public bool PermiteUnirseCon(IIngrediente ingrediente);
+        public bool HayVinculo(IIngrediente ingrediente);
 
-        public void ModificarOtro(IIngrediente ingrediente);
+        public ICondicionDeVinculo EncontrarCondicion(IIngrediente ingrediente);
+
+        public static bool Unirse(IIngrediente ingrediente1, IIngrediente ingrediente2)
+        {
+            ingrediente1.Estabilidad();
+            ingrediente2.Estabilidad();
+
+            if (ingrediente1.HayVinculo(ingrediente2))
+                return false;
+
+            IVinculo vinculo;
+            ICondicionDeVinculo condicion;
+
+            if (ingrediente1.PermiteVinculoCon(ingrediente2))
+            {
+                condicion = ingrediente1.EncontrarCondicion(ingrediente2);
+                vinculo = new Vinculo(ingrediente1, ingrediente2, condicion);
+            }
+            else if (ingrediente2.PermiteVinculoCon(ingrediente1))
+            {
+                condicion = ingrediente2.EncontrarCondicion(ingrediente1);
+                vinculo = new Vinculo(ingrediente2, ingrediente1, condicion);
+            }
+            else
+            {
+                return false;
+            }
+
+            ingrediente1.CrearVinculo(vinculo);
+            ingrediente2.CrearVinculo(vinculo);
+
+            return true;
+        }
     }
 }

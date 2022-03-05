@@ -92,6 +92,22 @@ namespace ItIsNotOnlyMe
             return new Atributos(nuevosPares);
         }
 
+        public static Atributos Multiplicar(Atributos atributos, Par multiplicador)
+        {
+            List<Par> nuevosPares = new List<Par>();
+            foreach (Par par in atributos._pares)
+                if (par.Comparar(multiplicador))
+                    nuevosPares.Add(Par.NuevoMultiplicar(par, multiplicador));
+                else
+                    nuevosPares.Add(par);
+            return new Atributos(nuevosPares);
+        }
+
+        public static Atributos Nulo()
+        {
+            return new Atributos(new List<Par>());
+        }
+
         private static float ProductoInterno(Atributos propio, Atributos otro)
         {
             Tuple<Atributos, Atributos> atributosNuevos = AtributoGeneral(propio, otro);
