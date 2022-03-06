@@ -17,7 +17,6 @@ namespace ItIsNotOnlyMe
 
         [SerializeField] private float _walkSpeed = 3;
         [SerializeField] private float _smoothMoveTime = 0f;
-        [SerializeField] private float _jumpForce = 8;
         [SerializeField] private float _gravity = 18;
 
         [SerializeField] private bool _lockCursor;
@@ -36,23 +35,18 @@ namespace ItIsNotOnlyMe
         private float _verticalVelocity;
         private Vector3 _velocity;
         private Vector3 _smoothV;
-
-        private bool _jumping;
-        private float _lastGroundedTime;
         private Vector3 _inputDireccion;
 
         private void OnEnable()
         {
-            _inputPlayer.eventoMover += ActualizarInput;
-            _inputPlayer.eventoSalto += Saltar;
-            _inputPlayer.eventoRotar += Rotar;
+            _inputPlayer.EventoMover += ActualizarInput;
+            _inputPlayer.EventoRotar += Rotar;
         }
 
         private void OnDisable()
         {
-            _inputPlayer.eventoMover -= ActualizarInput;
-            _inputPlayer.eventoSalto -= Saltar;
-            _inputPlayer.eventoRotar -= Rotar;
+            _inputPlayer.EventoMover -= ActualizarInput;
+            _inputPlayer.EventoRotar -= Rotar;
         }
 
         void Start()
@@ -92,21 +86,7 @@ namespace ItIsNotOnlyMe
 
             var flags = _controller.Move(_velocity * Time.deltaTime);
             if (flags == CollisionFlags.Below)
-            {
-                _jumping = false;
-                _lastGroundedTime = Time.time;
                 _verticalVelocity = 0;
-            }
-        }
-
-        void Saltar()
-        {
-            float timeSinceLastTouchedGround = Time.time - _lastGroundedTime;
-            if (_controller.isGrounded || (!_jumping && timeSinceLastTouchedGround < 0.15f))
-            {
-                _jumping = true;
-                _verticalVelocity = _jumpForce;
-            }
         }
 
         void Rotar(Vector2 rotacion)

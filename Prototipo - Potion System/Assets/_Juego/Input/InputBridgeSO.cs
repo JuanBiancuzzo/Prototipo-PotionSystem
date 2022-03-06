@@ -7,66 +7,99 @@ using UnityEngine.InputSystem;
 namespace ItIsNotOnlyMe
 {
     [CreateAssetMenu(menuName = "Input/Player input")]
-    public class InputBridgeSO : ScriptableObject, PlayerInputs.IPlayerActions
+    public class InputBridgeSO : ScriptableObject, Inputs.IEntreAccionesActions, Inputs.ICreandoPocionesActions
     {
-        public event Action<Vector2> eventoMover;
-        public event Action<Vector2> eventoRotar;
-        public event Action eventoSalto;
-        public event Action eventoCancelarSalto;
+        private enum Estado
+        {
+            EntreAcciones,
+            CreandoPociones
+        }
 
-        private PlayerInputs playerControls = null;
+        public event Action<Vector2> EventoMover;
+        public event Action<Vector2> EventoRotar;
+        public event Action EventoInteractuar;
+        public event Action EventoCancelarInteraccion;
+
+        public event Action EventoInteractuarMouse;
+        public event Action EventoCancelarInteraccionMouse;
+
+        private Inputs _playerControls = null;
+
+        private Estado _estado;
 
         private void OnEnable()
         {
-            if (playerControls == null)
+            if (_playerControls == null)
             {
-                playerControls = new PlayerInputs();
-                playerControls.Player.SetCallbacks(this);
+                _playerControls = new Inputs();
+                _playerControls.EntreAcciones.SetCallbacks(this);
+                _playerControls.CreandoPociones.SetCallbacks(this);
             }
 
-            Abilitar();
+            ActivarEntreAcciones();
+            _estado = Estado.EntreAcciones;
         }
 
         private void OnDisable()
         {
-            Desabilitar();
+            DesactivarCreandoPociones();
+            DesactivarEntreAcciones();
         }
 
-        /*
-        public void OnInteractuar(InputAction.CallbackContext context)
+        private void Cambiar()
         {
-            if (context.phase == InputActionPhase.Performed)
-                eventoInteractuar?.Invoke();
+            switch (_estado)
+            {
+                case Estado.EntreAcciones:
+                    DesactivarEntreAcciones();
+                    ActivarCreandoPociones();
+                    _estado = Estado.CreandoPociones;
+                    break;
+                case Estado.CreandoPociones:
+                    DesactivarCreandoPociones();
+                    ActivarEntreAcciones();
+                    _estado = Estado.EntreAcciones;
+                    break;
+            }
         }
-        */
 
-        private void Abilitar()
+        private void ActivarEntreAcciones()
         {
-            playerControls.Player.Enable();
+            _playerControls.EntreAcciones.Enable();
         }
 
-        private void Desabilitar()
+        private void ActivarCreandoPociones()
         {
-            playerControls?.Player.Disable();
+            _playerControls.CreandoPociones.Enable();
+        }
+
+        private void DesactivarEntreAcciones()
+        {
+            _playerControls.EntreAcciones.Disable();
+        }
+
+        private void DesactivarCreandoPociones()
+        {
+            _playerControls.CreandoPociones.Disable();
         }
 
         public void OnMover(InputAction.CallbackContext context)
         {
-            eventoMover?.Invoke(context.ReadValue<Vector2>());
+            EventoMover?.Invoke(context.ReadValue<Vector2>());
         }
 
         public void OnMirar(InputAction.CallbackContext context)
         {
-            eventoRotar?.Invoke(context.ReadValue<Vector2>());
+            EventoRotar?.Invoke(context.ReadValue<Vector2>());
         }
 
-        public void OnSaltar(InputAction.CallbackContext context)
+        public void OnInteractuar(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
-                eventoSalto?.Invoke();
+                EventoInteractuar?.Invoke();
 
             if (context.phase == InputActionPhase.Canceled)
-                eventoCancelarSalto?.Invoke();
+                EventoCancelarInteraccion?.Invoke();
         }
     }
 }
