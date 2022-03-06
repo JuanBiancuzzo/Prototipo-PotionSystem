@@ -180,12 +180,80 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Salir",
+                    "type": "Button",
+                    "id": "96cdb1c8-ca93-49df-9bb5-67af7117b771",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "67ad81a1-e64b-45b4-aba8-dd439ba6c3ee",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interactuar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b2e19a60-e7f5-42dd-b57d-a1677351859f",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Salir",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "ComprarVender",
+            "id": "58944cbf-b5d5-42c7-bf43-f37e4a4aa37c",
+            "actions": [
+                {
+                    "name": "Interactuar",
+                    "type": "Button",
+                    "id": "9e51e147-eebd-4f72-a7ce-3ebb7d7f938b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Salir",
+                    "type": "Button",
+                    "id": "89a9e2d9-fcb2-429e-8e5f-d8fc2aafce8d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7376721a-d8a0-417e-9a32-4ffcd51bfcc8",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Salir",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9e9a4268-0cc2-461a-8d4a-dd1c43bac586",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",

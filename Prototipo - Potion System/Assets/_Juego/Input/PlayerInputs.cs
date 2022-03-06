@@ -202,12 +202,80 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Salir"",
+                    ""type"": ""Button"",
+                    ""id"": ""96cdb1c8-ca93-49df-9bb5-67af7117b771"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""67ad81a1-e64b-45b4-aba8-dd439ba6c3ee"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interactuar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b2e19a60-e7f5-42dd-b57d-a1677351859f"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Salir"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""ComprarVender"",
+            ""id"": ""58944cbf-b5d5-42c7-bf43-f37e4a4aa37c"",
+            ""actions"": [
+                {
+                    ""name"": ""Interactuar"",
+                    ""type"": ""Button"",
+                    ""id"": ""9e51e147-eebd-4f72-a7ce-3ebb7d7f938b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Salir"",
+                    ""type"": ""Button"",
+                    ""id"": ""89a9e2d9-fcb2-429e-8e5f-d8fc2aafce8d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""7376721a-d8a0-417e-9a32-4ffcd51bfcc8"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Salir"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9e9a4268-0cc2-461a-8d4a-dd1c43bac586"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -229,6 +297,11 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
         // CreandoPociones
         m_CreandoPociones = asset.FindActionMap("CreandoPociones", throwIfNotFound: true);
         m_CreandoPociones_Interactuar = m_CreandoPociones.FindAction("Interactuar", throwIfNotFound: true);
+        m_CreandoPociones_Salir = m_CreandoPociones.FindAction("Salir", throwIfNotFound: true);
+        // ComprarVender
+        m_ComprarVender = asset.FindActionMap("ComprarVender", throwIfNotFound: true);
+        m_ComprarVender_Interactuar = m_ComprarVender.FindAction("Interactuar", throwIfNotFound: true);
+        m_ComprarVender_Salir = m_ComprarVender.FindAction("Salir", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -338,11 +411,13 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_CreandoPociones;
     private ICreandoPocionesActions m_CreandoPocionesActionsCallbackInterface;
     private readonly InputAction m_CreandoPociones_Interactuar;
+    private readonly InputAction m_CreandoPociones_Salir;
     public struct CreandoPocionesActions
     {
         private @Inputs m_Wrapper;
         public CreandoPocionesActions(@Inputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Interactuar => m_Wrapper.m_CreandoPociones_Interactuar;
+        public InputAction @Salir => m_Wrapper.m_CreandoPociones_Salir;
         public InputActionMap Get() { return m_Wrapper.m_CreandoPociones; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -355,6 +430,9 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                 @Interactuar.started -= m_Wrapper.m_CreandoPocionesActionsCallbackInterface.OnInteractuar;
                 @Interactuar.performed -= m_Wrapper.m_CreandoPocionesActionsCallbackInterface.OnInteractuar;
                 @Interactuar.canceled -= m_Wrapper.m_CreandoPocionesActionsCallbackInterface.OnInteractuar;
+                @Salir.started -= m_Wrapper.m_CreandoPocionesActionsCallbackInterface.OnSalir;
+                @Salir.performed -= m_Wrapper.m_CreandoPocionesActionsCallbackInterface.OnSalir;
+                @Salir.canceled -= m_Wrapper.m_CreandoPocionesActionsCallbackInterface.OnSalir;
             }
             m_Wrapper.m_CreandoPocionesActionsCallbackInterface = instance;
             if (instance != null)
@@ -362,10 +440,54 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                 @Interactuar.started += instance.OnInteractuar;
                 @Interactuar.performed += instance.OnInteractuar;
                 @Interactuar.canceled += instance.OnInteractuar;
+                @Salir.started += instance.OnSalir;
+                @Salir.performed += instance.OnSalir;
+                @Salir.canceled += instance.OnSalir;
             }
         }
     }
     public CreandoPocionesActions @CreandoPociones => new CreandoPocionesActions(this);
+
+    // ComprarVender
+    private readonly InputActionMap m_ComprarVender;
+    private IComprarVenderActions m_ComprarVenderActionsCallbackInterface;
+    private readonly InputAction m_ComprarVender_Interactuar;
+    private readonly InputAction m_ComprarVender_Salir;
+    public struct ComprarVenderActions
+    {
+        private @Inputs m_Wrapper;
+        public ComprarVenderActions(@Inputs wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Interactuar => m_Wrapper.m_ComprarVender_Interactuar;
+        public InputAction @Salir => m_Wrapper.m_ComprarVender_Salir;
+        public InputActionMap Get() { return m_Wrapper.m_ComprarVender; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ComprarVenderActions set) { return set.Get(); }
+        public void SetCallbacks(IComprarVenderActions instance)
+        {
+            if (m_Wrapper.m_ComprarVenderActionsCallbackInterface != null)
+            {
+                @Interactuar.started -= m_Wrapper.m_ComprarVenderActionsCallbackInterface.OnInteractuar;
+                @Interactuar.performed -= m_Wrapper.m_ComprarVenderActionsCallbackInterface.OnInteractuar;
+                @Interactuar.canceled -= m_Wrapper.m_ComprarVenderActionsCallbackInterface.OnInteractuar;
+                @Salir.started -= m_Wrapper.m_ComprarVenderActionsCallbackInterface.OnSalir;
+                @Salir.performed -= m_Wrapper.m_ComprarVenderActionsCallbackInterface.OnSalir;
+                @Salir.canceled -= m_Wrapper.m_ComprarVenderActionsCallbackInterface.OnSalir;
+            }
+            m_Wrapper.m_ComprarVenderActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Interactuar.started += instance.OnInteractuar;
+                @Interactuar.performed += instance.OnInteractuar;
+                @Interactuar.canceled += instance.OnInteractuar;
+                @Salir.started += instance.OnSalir;
+                @Salir.performed += instance.OnSalir;
+                @Salir.canceled += instance.OnSalir;
+            }
+        }
+    }
+    public ComprarVenderActions @ComprarVender => new ComprarVenderActions(this);
     public interface IEntreAccionesActions
     {
         void OnMover(InputAction.CallbackContext context);
@@ -375,5 +497,11 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
     public interface ICreandoPocionesActions
     {
         void OnInteractuar(InputAction.CallbackContext context);
+        void OnSalir(InputAction.CallbackContext context);
+    }
+    public interface IComprarVenderActions
+    {
+        void OnInteractuar(InputAction.CallbackContext context);
+        void OnSalir(InputAction.CallbackContext context);
     }
 }

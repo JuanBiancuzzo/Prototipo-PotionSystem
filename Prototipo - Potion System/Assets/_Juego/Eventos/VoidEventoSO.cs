@@ -8,11 +8,11 @@ namespace ItIsNotOnlyMe
     [CreateAssetMenu(fileName = "Evento void", menuName = "Eventos/Tipo void")]
     public class VoidEventoSO : ScriptableObject
     {
-        public event Action evento;
+        public event Action Evento;
 
         public void Activar()
         {
-            evento?.Invoke();
+            Evento?.Invoke();
         }
     }
 }

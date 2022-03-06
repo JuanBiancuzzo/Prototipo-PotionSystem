@@ -7,25 +7,17 @@ using UnityEngine.InputSystem;
 namespace ItIsNotOnlyMe
 {
     [CreateAssetMenu(menuName = "Input/Player input")]
-    public class InputBridgeSO : ScriptableObject, Inputs.IEntreAccionesActions, Inputs.ICreandoPocionesActions
+    public class InputEntreAccionesSO : ScriptableObject, Inputs.IEntreAccionesActions
     {
-        private enum Estado
-        {
-            EntreAcciones,
-            CreandoPociones
-        }
 
         public event Action<Vector2> EventoMover;
         public event Action<Vector2> EventoRotar;
         public event Action EventoInteractuar;
         public event Action EventoCancelarInteraccion;
 
-        public event Action EventoInteractuarMouse;
-        public event Action EventoCancelarInteraccionMouse;
-
         private Inputs _playerControls = null;
 
-        private Estado _estado;
+        [SerializeField] private EstadoJugadorEventoSO _cambio;
 
         private void OnEnable()
         {
@@ -33,54 +25,34 @@ namespace ItIsNotOnlyMe
             {
                 _playerControls = new Inputs();
                 _playerControls.EntreAcciones.SetCallbacks(this);
-                _playerControls.CreandoPociones.SetCallbacks(this);
             }
 
-            ActivarEntreAcciones();
-            _estado = Estado.EntreAcciones;
+            if (_cambio != null)
+                _cambio.Evento += Cambiar;
         }
 
         private void OnDisable()
         {
-            DesactivarCreandoPociones();
-            DesactivarEntreAcciones();
+            Desactivar();
+            if (_cambio != null)
+                _cambio.Evento -= Cambiar;
         }
 
-        private void Cambiar()
+        private void Cambiar(EstadoJugador nuevoEstado)
         {
-            switch (_estado)
-            {
-                case Estado.EntreAcciones:
-                    DesactivarEntreAcciones();
-                    ActivarCreandoPociones();
-                    _estado = Estado.CreandoPociones;
-                    break;
-                case Estado.CreandoPociones:
-                    DesactivarCreandoPociones();
-                    ActivarEntreAcciones();
-                    _estado = Estado.EntreAcciones;
-                    break;
-            }
+            Desactivar();
+            if (nuevoEstado == EstadoJugador.EntreAcciones)
+                Activar();
         }
 
-        private void ActivarEntreAcciones()
+        private void Activar()
         {
             _playerControls.EntreAcciones.Enable();
         }
 
-        private void ActivarCreandoPociones()
-        {
-            _playerControls.CreandoPociones.Enable();
-        }
-
-        private void DesactivarEntreAcciones()
+        private void Desactivar()
         {
             _playerControls.EntreAcciones.Disable();
-        }
-
-        private void DesactivarCreandoPociones()
-        {
-            _playerControls.CreandoPociones.Disable();
         }
 
         public void OnMover(InputAction.CallbackContext context)
