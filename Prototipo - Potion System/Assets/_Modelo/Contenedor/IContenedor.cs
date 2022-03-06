@@ -8,6 +8,6 @@
 
         public Atributos CalcularEstado();
 
-        public Pocion Finalizar();
+        public Pocion ConsumirPocion();
     }
 }
