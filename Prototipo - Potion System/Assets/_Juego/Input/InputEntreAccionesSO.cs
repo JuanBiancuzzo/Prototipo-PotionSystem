@@ -29,6 +29,7 @@ namespace ItIsNotOnlyMe
 
             if (_cambio != null)
                 _cambio.Evento += Cambiar;
+            Activar();
         }
 
         private void OnDisable()
