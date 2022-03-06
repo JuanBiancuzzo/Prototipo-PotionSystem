@@ -2,7 +2,7 @@
     "name": "PlayerInputs",
     "maps": [
         {
-            "name": "Player",
+            "name": "EntreAcciones",
             "id": "e7fcdf1a-1ddc-4a51-9a66-7777e15c47af",
             "actions": [
                 {
@@ -24,9 +24,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Saltar",
+                    "name": "Interactuar",
                     "type": "Button",
-                    "id": "a14be12c-5734-4215-84cb-4981f883da41",
+                    "id": "3f1fb61f-794f-494a-9d33-4c0f050e8789",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -157,12 +157,40 @@
                 },
                 {
                     "name": "",
-                    "id": "52fe6e02-707f-4b79-a7ea-211a10b2fb7f",
-                    "path": "<Keyboard>/space",
+                    "id": "a06a9bad-af36-4e3c-9fe7-1233950cec9e",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Saltar",
+                    "action": "Interactuar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "CreandoPociones",
+            "id": "1e23e07f-c40d-472d-b6bd-30d10fee6d3c",
+            "actions": [
+                {
+                    "name": "Interactuar",
+                    "type": "Button",
+                    "id": "87442d2b-4ae9-4886-8ecf-80bba027eff6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "67ad81a1-e64b-45b4-aba8-dd439ba6c3ee",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interactuar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
