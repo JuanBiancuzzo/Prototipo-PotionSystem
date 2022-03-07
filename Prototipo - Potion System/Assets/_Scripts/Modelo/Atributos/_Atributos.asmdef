@@ -1,3 +1,14 @@
 {
-	"name": "_Posiones"
+    "name": "_Atributos",
+    "rootNamespace": "ItIsNotOnlyMe",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
