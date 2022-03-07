@@ -4,21 +4,20 @@ namespace ItIsNotOnlyMe
 {
     public class Contenedor : IContenedor
     {
-        private static int _minimoCapacidad;
-
-        private Atributos _estado;
         private List<IIngrediente> _ingredientes;
         private ICapacidad _capacidad;
+        private List<ICambiar> _modificadores;
 
-        public Contenedor(Atributos estadoInicial, ICapacidad capacidad)
+        public Contenedor(ICapacidad capacidad, List<ICambiar> modificadores = null)
         {
-            _estado = estadoInicial;
             _ingredientes = new List<IIngrediente>();
             _capacidad = capacidad;
+            _modificadores = (modificadores == null) ? new List<ICambiar>() : modificadores;
         }
 
         public void AgregarIngrediente(IIngrediente ingrediente)
         {
+            _modificadores.ForEach(modificador => ingrediente.AgregarModificador(modificador));
             _ingredientes.Add(ingrediente);
             _capacidad.Agregar();
         }
@@ -31,7 +30,7 @@ namespace ItIsNotOnlyMe
 
         public Atributos CalcularEstado()
         {
-            Atributos atributos = _estado;
+            Atributos atributos = Atributos.Nulo();
             _ingredientes.ForEach(ingredientes => atributos = ingredientes.Agregar(atributos));
             return atributos;
         }
