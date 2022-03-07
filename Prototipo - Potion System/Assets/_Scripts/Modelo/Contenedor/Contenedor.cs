@@ -4,41 +4,41 @@ namespace ItIsNotOnlyMe
 {
     public class Contenedor : IContenedor
     {
-        private List<IIngrediente> _ingredientes;
+        private List<IElemento> _elementos;
         private ICapacidad _capacidad;
         private List<ICambiar> _modificadores;
 
         public Contenedor(ICapacidad capacidad, List<ICambiar> modificadores = null)
         {
-            _ingredientes = new List<IIngrediente>();
+            _elementos = new List<IElemento>();
             _capacidad = capacidad;
             _modificadores = (modificadores == null) ? new List<ICambiar>() : modificadores;
         }
 
-        public void AgregarIngrediente(IIngrediente ingrediente)
+        public void AgregarIngrediente(IElemento elemento)
         {
-            _modificadores.ForEach(modificador => ingrediente.AgregarModificador(modificador));
-            _ingredientes.Add(ingrediente);
+            _modificadores.ForEach(modificador => elemento.AgregarModificador(modificador));
+            _elementos.Add(elemento);
             _capacidad.Agregar();
         }
 
-        public void Mezclar(IIngrediente ingrediente1, IIngrediente ingrediente2)
+        public void Mezclar(IElemento elemento1, IElemento elemento2)
         {
-            if (_ingredientes.Contains(ingrediente1) && _ingredientes.Contains(ingrediente2))
-                IIngrediente.Unirse(ingrediente1, ingrediente2);
+            if (_elementos.Contains(elemento1) && _elementos.Contains(elemento2))
+                IElemento.Unirse(elemento1, elemento2);
         }
 
         public Atributos CalcularEstado()
         {
             Atributos atributos = Atributos.Nulo();
-            _ingredientes.ForEach(ingredientes => atributos = ingredientes.Agregar(atributos));
+            _elementos.ForEach(elemento => atributos = elemento.Agregar(atributos));
             return atributos;
         }
 
         public Pocion ConsumirPocion()
         {
             if (_capacidad.Vacio())
-                _ingredientes.Clear();
+                _elementos.Clear();
             _capacidad.Reducir();
 
             Atributos estado = CalcularEstado();

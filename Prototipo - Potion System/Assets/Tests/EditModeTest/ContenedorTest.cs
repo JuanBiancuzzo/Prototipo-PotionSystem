@@ -64,7 +64,7 @@ public class ContenedorTest
         
         float valorVida = 4f, valorTemp = 3f, valorVel = 5f;
         Atributos atributo = CrearAtributos(valorVida, valorTemp, valorVel);
-        IIngrediente ingrediente =  new Ingrediente(atributo);
+        IElemento ingrediente =  new Elemento(atributo);
 
         Pocion pocionEsperada = new Pocion(atributo);
         IContenedor contenedor = new Contenedor(_capacidadIlimitada);
@@ -82,11 +82,11 @@ public class ContenedorTest
     {
         float valorVida1 = 4f, valorTemp1 = 3f, valorVel1 = 5f;
         Atributos atributo1 = CrearAtributos(valorVida1, valorTemp1, valorVel1);
-        IIngrediente ingrediente1 = new Ingrediente(atributo1);
+        IElemento ingrediente1 = new Elemento(atributo1);
 
         float valorVida2 = 4f, valorTemp2 = 3f, valorVel2 = 5f;
         Atributos atributo2 = CrearAtributos(valorVida2, valorTemp2, valorVel2);
-        IIngrediente ingrediente2 = new Ingrediente(atributo2);
+        IElemento ingrediente2 = new Elemento(atributo2);
 
         IContenedor contenedor = new Contenedor(_capacidadIlimitada);
 
@@ -114,11 +114,11 @@ public class ContenedorTest
 
         float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
         Atributos atributo1 = CrearAtributos(valorVida1, valorTemp1, valorVel1);
-        IIngrediente ingrediente1 = new Ingrediente(atributo1, condiciones);
+        IElemento ingrediente1 = new Elemento(atributo1, condiciones);
 
         float valorVida2 = 4f, valorTemp2 = 3f, valorVel2 = 5f;
         Atributos atributo2 = CrearAtributos(valorVida2, valorTemp2, valorVel2);
-        IIngrediente ingrediente2 = new Ingrediente(atributo2);
+        IElemento ingrediente2 = new Elemento(atributo2);
 
         IContenedor contenedor = new Contenedor(_capacidadIlimitada);
 
@@ -141,11 +141,11 @@ public class ContenedorTest
     {
         float valorVida1 = 4f, valorTemp1 = 3f, valorVel1 = 5f;
         Atributos atributo1 = CrearAtributos(valorVida1, valorTemp1, valorVel1);
-        IIngrediente ingrediente1 = new Ingrediente(atributo1);
+        IElemento ingrediente1 = new Elemento(atributo1);
 
         float valorVida2 = 4f, valorTemp2 = 3f, valorVel2 = 5f;
         Atributos atributo2 = CrearAtributos(valorVida2, valorTemp2, valorVel2);
-        IIngrediente ingrediente2 = new Ingrediente(atributo2);
+        IElemento ingrediente2 = new Elemento(atributo2);
 
         Pocion pocionEsperada = new Pocion(Atributos.Sumar(atributo1, atributo2));
 
@@ -170,7 +170,7 @@ public class ContenedorTest
     {
         float valorVida = 4f, valorTemp = 3f, valorVel = 5f;
         Atributos atributo = CrearAtributos(valorVida, valorTemp, valorVel);
-        IIngrediente ingrediente = new Ingrediente(atributo);
+        IElemento ingrediente = new Elemento(atributo);
 
         float factoDeMultiplicacion = 4f;
         ICambiar modificador = new CambiarMultiplicarPrueba(factoDeMultiplicacion, _vida);

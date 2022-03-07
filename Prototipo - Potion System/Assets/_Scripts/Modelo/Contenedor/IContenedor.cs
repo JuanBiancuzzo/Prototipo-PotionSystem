@@ -2,9 +2,9 @@
 {
     public interface IContenedor
     {
-        public void AgregarIngrediente(IIngrediente ingrediente);
+        public void AgregarIngrediente(IElemento elemento);
 
-        public void Mezclar(IIngrediente ingrediente1, IIngrediente ingrediente2);
+        public void Mezclar(IElemento elemento1, IElemento elemento2);
 
         public Atributos CalcularEstado();
 

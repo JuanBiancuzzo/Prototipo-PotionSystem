@@ -2,7 +2,7 @@
 
 namespace ItIsNotOnlyMe
 {
-    public class Ingrediente : IIngrediente
+    public class Elemento : IElemento
     {
         private List<IVinculo> _vinculos;
 
@@ -11,7 +11,7 @@ namespace ItIsNotOnlyMe
 
         private Atributos _atributosBase;
 
-        public Ingrediente(Atributos atributosBase,
+        public Elemento(Atributos atributosBase,
                            List<ICondicionDeVinculo> condiciones = null)
         {
             _vinculos = new List<IVinculo>();
@@ -62,14 +62,14 @@ namespace ItIsNotOnlyMe
             _modificadores.Remove(modificador);
         }
 
-        public bool HayVinculo(IIngrediente ingrediente)
+        public bool HayVinculo(IElemento elemento)
         {
-            return _vinculos.Exists(vinculo => vinculo.HayVinculo(ingrediente));
+            return _vinculos.Exists(vinculo => vinculo.HayVinculo(elemento));
         }
 
-        public ICondicionDeVinculo EncontrarCondicion(IIngrediente ingrediente)
+        public ICondicionDeVinculo EncontrarCondicion(IElemento elemento)
         {
-            return _condiciones.Find(condicion => condicion.Evaluar(this, ingrediente));
+            return _condiciones.Find(condicion => condicion.Evaluar(this, elemento));
         }
 
         public bool PermiteVinculoCon(IVinculado vinculado)
