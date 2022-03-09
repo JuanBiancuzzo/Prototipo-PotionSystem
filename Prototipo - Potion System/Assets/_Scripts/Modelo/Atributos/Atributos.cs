@@ -125,7 +125,7 @@ namespace ItIsNotOnlyMe
             return Mathf.Sqrt(ProductoInterno(atributos, atributos));
         }
 
-        private static Atributos Normalizar(Atributos atributos)
+        public static Atributos Normalizar(Atributos atributos)
         {
             float modulo = Modulo(atributos);
             List<Par> nuevosPares = new List<Par>();

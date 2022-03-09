@@ -7,5 +7,7 @@
         public void Reducir();
 
         public bool Vacio();
+
+        public bool Lleno();
     }
 }

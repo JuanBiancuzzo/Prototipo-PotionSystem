@@ -19,8 +19,8 @@ MonoBehaviour:
     width: 1600
     height: 817
   m_ShowMode: 4
-  m_Title: Scene
-  m_RootView: {fileID: 7}
+  m_Title: Project
+  m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
@@ -41,43 +41,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 200
-    height: 767
+    width: 234
+    height: 403
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 19}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 500
-    width: 878
-    height: 267
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 17}
-  m_Panes:
-  - {fileID: 17}
-  - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,19 +63,98 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 5}
-  - {fileID: 3}
+  - {fileID: 2}
+  - {fileID: 7}
   m_Position:
     serializedVersion: 2
-    x: 200
+    x: 0
     y: 0
-    width: 878
+    width: 1028
+    height: 403
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 121
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ProjectBrowser
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1345
+    y: 0
+    width: 255
     height: 767
-  m_MinSize: {x: 100, y: 200}
-  m_MaxSize: {x: 8096, y: 16192}
-  vertical: 1
-  controlID: 19
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 21}
+  m_Panes:
+  - {fileID: 21}
+  m_Selected: 0
+  m_LastSelected: 0
 --- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: TestRunnerWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 403
+    width: 1028
+    height: 364
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 18}
+  - {fileID: 15}
+  - {fileID: 17}
+  m_Selected: 1
+  m_LastSelected: 2
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 3}
+  - {fileID: 5}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1028
+    height: 767
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 120
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,47 +169,20 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 234
     y: 0
-    width: 878
-    height: 500
+    width: 794
+    height: 403
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 15}
   - {fileID: 16}
+  - {fileID: 14}
   - {fileID: 13}
-  - {fileID: 12}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1078
-    y: 0
-    width: 252
-    height: 767
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
-  m_Panes:
-  - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &7
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,9 +195,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 8}
-  - {fileID: 10}
   - {fileID: 9}
+  - {fileID: 11}
+  - {fileID: 10}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -185,7 +210,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &8
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,7 +232,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &9
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,7 +253,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &10
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,10 +266,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 2}
-  - {fileID: 4}
   - {fileID: 6}
-  - {fileID: 11}
+  - {fileID: 12}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -254,8 +278,8 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 27
---- !u!114 &11
+  controlID: 18
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,23 +289,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1330
+    x: 1028
     y: 0
-    width: 270
+    width: 317
     height: 767
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 20}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 20}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &12
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,15 +325,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 234
     y: 73
-    width: 1041
-    height: 479
+    width: 792
+    height: 382
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &13
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -329,10 +353,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 234
     y: 73
-    width: 1041
-    height: 479
+    width: 792
+    height: 382
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -357,7 +381,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 7}
     m_SearchString: 
   m_ActionsTreeState:
     scrollPos: {x: 0, y: 0}
@@ -379,7 +403,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 7}
     m_SearchString: 
   m_ControlPickerViewState:
     m_AdvancedDropdownState:
@@ -554,7 +578,7 @@ MonoBehaviour:
     m_Text: PlayerInputs (Input Actions)
     m_Image: {fileID: 0}
     m_Tooltip: 
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -575,20 +599,20 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 573
-    width: 1041
-    height: 246
+    y: 476
+    width: 1027
+    height: 343
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 124
+    ID: 133
     splitterInitialOffset: 561
     currentActiveSplitter: -1
     realSizes:
-    - 562
-    - 479
+    - 554
+    - 473
     relativeSizes:
     - 0.5398655
     - 0.4601345
@@ -598,7 +622,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 1041
+    lastTotalSize: 1027
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -643,14 +667,14 @@ MonoBehaviour:
       availableCategories: []
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 14}
+    m_Window: {fileID: 15}
     m_NewResultList:
     - id: 1000
       uniqueId: '[Prototipo - Potion System][suite]'
       name: Prototipo - Potion System
       fullName: Prototipo - Potion System
       resultStatus: 1
-      duration: 0.1145775
+      duration: 0.3515998
       messages: 
       output: 
       stacktrace: 
@@ -668,7 +692,7 @@ MonoBehaviour:
       fullName: C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo -
         Potion System/Library/ScriptAssemblies/EditModeTest.dll
       resultStatus: 1
-      duration: 0.070268
+      duration: 0.1241936
       messages: 
       output: 
       stacktrace: 
@@ -684,7 +708,7 @@ MonoBehaviour:
       name: AtributosTest
       fullName: AtributosTest
       resultStatus: 1
-      duration: 0.0153322
+      duration: 0.0747682
       messages: 
       output: 
       stacktrace: 
@@ -701,7 +725,7 @@ MonoBehaviour:
       name: Test01DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden
       fullName: AtributosTest.Test01DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden
       resultStatus: 1
-      duration: 0.0033202
+      duration: 0.0352563
       messages: 
       output: 
       stacktrace: 
@@ -718,7 +742,7 @@ MonoBehaviour:
       name: Test02DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden
       fullName: AtributosTest.Test02DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden
       resultStatus: 1
-      duration: 0.0018343
+      duration: 0.0012892
       messages: 
       output: 
       stacktrace: 
@@ -735,7 +759,7 @@ MonoBehaviour:
       name: Test03DistanciaEntreDosAtributosConParesDiferentes
       fullName: AtributosTest.Test03DistanciaEntreDosAtributosConParesDiferentes
       resultStatus: 1
-      duration: 0.0010327
+      duration: 0.0008598
       messages: 
       output: 
       stacktrace: 
@@ -752,7 +776,7 @@ MonoBehaviour:
       name: Test04LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico
       fullName: AtributosTest.Test04LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico
       resultStatus: 1
-      duration: 0.0008741
+      duration: 0.0022827
       messages: 
       output: 
       stacktrace: 
@@ -769,7 +793,7 @@ MonoBehaviour:
       name: Test05LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso
       fullName: AtributosTest.Test05LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso
       resultStatus: 1
-      duration: 0.0014201
+      duration: 0.0008296
       messages: 
       output: 
       stacktrace: 
@@ -786,7 +810,7 @@ MonoBehaviour:
       name: Test06LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal
       fullName: AtributosTest.Test06LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal
       resultStatus: 1
-      duration: 0.0008311
+      duration: 0.0006274
       messages: 
       output: 
       stacktrace: 
@@ -803,7 +827,7 @@ MonoBehaviour:
       name: Test07LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble
       fullName: AtributosTest.Test07LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble
       resultStatus: 1
-      duration: 0.0009085
+      duration: 0.0012981
       messages: 
       output: 
       stacktrace: 
@@ -820,7 +844,7 @@ MonoBehaviour:
       name: Test08LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso
       fullName: AtributosTest.Test08LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso
       resultStatus: 1
-      duration: 0.0009334
+      duration: 0.000887
       messages: 
       output: 
       stacktrace: 
@@ -832,12 +856,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: EditModeTest.dll/[EditModeTest][AtributosTest][suite]
-    - id: 1013
+    - id: 1010
       uniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
       name: ContenedorTest
       fullName: ContenedorTest
       resultStatus: 1
-      duration: 0.0109727
+      duration: 0.0173261
       messages: 
       output: 
       stacktrace: 
@@ -846,15 +870,15 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1021
+      parentId: 1028
       parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
         - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-    - id: 1014
+    - id: 1011
       uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial]
       name: Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial
       fullName: ContenedorTest.Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial
       resultStatus: 1
-      duration: 0.0003896
+      duration: 0.002245
       messages: 
       output: 
       stacktrace: 
@@ -864,14 +888,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1013
+      parentId: 1010
       parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
-    - id: 1015
+    - id: 1012
       uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente]
       name: Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente
       fullName: ContenedorTest.Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente
       resultStatus: 1
-      duration: 0.0001636
+      duration: 0.0021422
       messages: 
       output: 
       stacktrace: 
@@ -881,14 +905,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1013
+      parentId: 1010
       parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
-    - id: 1016
+    - id: 1013
       uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados]
       name: Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados
       fullName: ContenedorTest.Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados
       resultStatus: 1
-      duration: 0.0002135
+      duration: 0.0004304
       messages: 
       output: 
       stacktrace: 
@@ -898,14 +922,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1013
+      parentId: 1010
       parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
-    - id: 1017
+    - id: 1014
       uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test04UnContenedorConDosIngredientesVinculadosEsLaSumaDeSusEstadosModificados]
       name: Test04UnContenedorConDosIngredientesVinculadosEsLaSumaDeSusEstadosModificados
       fullName: ContenedorTest.Test04UnContenedorConDosIngredientesVinculadosEsLaSumaDeSusEstadosModificados
       resultStatus: 1
-      duration: 0.0002008
+      duration: 0.0008137
       messages: 
       output: 
       stacktrace: 
@@ -915,14 +939,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1013
+      parentId: 1010
       parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
     - id: 1015
       uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales]
       name: Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales
       fullName: ContenedorTest.Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales
       resultStatus: 1
-      duration: 0.0002499
+      duration: 0.0007499
       messages: 
       output: 
       stacktrace: 
@@ -935,11 +959,28 @@ MonoBehaviour:
       parentId: 1010
       parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
     - id: 1016
-      uniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-      name: IngredienteTest
-      fullName: IngredienteTest
+      uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test06UnContenedorModificaLosIngredientesQueSeAgregan]
+      name: Test06UnContenedorModificaLosIngredientesQueSeAgregan
+      fullName: ContenedorTest.Test06UnContenedorModificaLosIngredientesQueSeAgregan
       resultStatus: 1
-      duration: 0.0261063
+      duration: 0.0011298
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1010
+      parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
+    - id: 1017
+      uniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
+      name: ElementoTest
+      fullName: ElementoTest
+      resultStatus: 1
+      duration: 0.0179662
       messages: 
       output: 
       stacktrace: 
@@ -948,32 +989,15 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1021
+      parentId: 1029
       parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
         - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-    - id: 1017
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial]
-      name: Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial
-      fullName: IngredienteTest.Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial
-      resultStatus: 1
-      duration: 0.0014226
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1016
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
     - id: 1018
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse]
-      name: Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse
-      fullName: IngredienteTest.Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse
+      uniqueId: EditModeTest.dll/ElementoTest/[EditModeTest][ElementoTest.Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial]
+      name: Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial
+      fullName: ElementoTest.Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial
       resultStatus: 1
-      duration: 0.0010538
+      duration: 0.00228
       messages: 
       output: 
       stacktrace: 
@@ -983,14 +1007,31 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1016
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
+      parentId: 1017
+      parentUniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
     - id: 1019
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion]
+      uniqueId: EditModeTest.dll/ElementoTest/[EditModeTest][ElementoTest.Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse]
+      name: Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse
+      fullName: ElementoTest.Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse
+      resultStatus: 1
+      duration: 0.0010897
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
+    - id: 1020
+      uniqueId: EditModeTest.dll/ElementoTest/[EditModeTest][ElementoTest.Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion]
       name: Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion
-      fullName: IngredienteTest.Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion
+      fullName: ElementoTest.Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion
       resultStatus: 1
-      duration: 0.0031349
+      duration: 0.0013536
       messages: 
       output: 
       stacktrace: 
@@ -1000,14 +1041,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1016
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1020
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente]
+      parentId: 1017
+      parentUniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
+    - id: 1021
+      uniqueId: EditModeTest.dll/ElementoTest/[EditModeTest][ElementoTest.Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente]
       name: Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente
-      fullName: IngredienteTest.Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente
+      fullName: ElementoTest.Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente
       resultStatus: 1
-      duration: 0.0007568
+      duration: 0.0004424
       messages: 
       output: 
       stacktrace: 
@@ -1017,31 +1058,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1016
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
-    - id: 1020
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion]
-      name: Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion
-      fullName: IngredienteTest.Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion
-      resultStatus: 1
-      duration: 0.0004782
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1016
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
+      parentId: 1017
+      parentUniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
     - id: 1022
-      uniqueId: EditModeTest.dll/IngredienteTest/[EditModeTest][IngredienteTest.Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo]
-      name: Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo
-      fullName: IngredienteTest.Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo
+      uniqueId: EditModeTest.dll/ElementoTest/[EditModeTest][ElementoTest.Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion]
+      name: Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion
+      fullName: ElementoTest.Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion
       resultStatus: 1
-      duration: 0.0008332
+      duration: 0.0005533
       messages: 
       output: 
       stacktrace: 
@@ -1051,14 +1075,31 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1016
-      parentUniqueId: EditModeTest.dll/[EditModeTest][IngredienteTest][suite]
+      parentId: 1017
+      parentUniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
+    - id: 1023
+      uniqueId: EditModeTest.dll/ElementoTest/[EditModeTest][ElementoTest.Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo]
+      name: Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo
+      fullName: ElementoTest.Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo
+      resultStatus: 1
+      duration: 0.0011078
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
     - id: 1025
       uniqueId: EditModeTest.dll/[EditModeTest][VinculoTest][suite]
       name: VinculoTest
       fullName: VinculoTest
       resultStatus: 1
-      duration: 0.0128619
+      duration: 0.0110418
       messages: 
       output: 
       stacktrace: 
@@ -1075,7 +1116,7 @@ MonoBehaviour:
       name: Test01UnVinculoDondeLosVinculadosNoTienenNingunModificacionEsEstable
       fullName: VinculoTest.Test01UnVinculoDondeLosVinculadosNoTienenNingunModificacionEsEstable
       resultStatus: 1
-      duration: 0.0009058
+      duration: 0.0008815
       messages: 
       output: 
       stacktrace: 
@@ -1092,7 +1133,7 @@ MonoBehaviour:
       name: Test02UnVinculoDondeLosVinculadosEstanModificadoHaciendoQueYaNoSeanEstable
       fullName: VinculoTest.Test02UnVinculoDondeLosVinculadosEstanModificadoHaciendoQueYaNoSeanEstable
       resultStatus: 1
-      duration: 0.0009453
+      duration: 0.0019416
       messages: 
       output: 
       stacktrace: 
@@ -1109,7 +1150,7 @@ MonoBehaviour:
       name: Test03DosVinculadosCuandoHayUnVinculoSuEstadoEsModificado
       fullName: VinculoTest.Test03DosVinculadosCuandoHayUnVinculoSuEstadoEsModificado
       resultStatus: 1
-      duration: 0.000347
+      duration: 0.0003592
       messages: 
       output: 
       stacktrace: 
@@ -1126,7 +1167,7 @@ MonoBehaviour:
       name: Test04DosVinculadosCuandoSeRompeElVinculoYaSuEstadoNoEstaModificado
       fullName: VinculoTest.Test04DosVinculadosCuandoSeRompeElVinculoYaSuEstadoNoEstaModificado
       resultStatus: 1
-      duration: 0.0003969
+      duration: 0.0003267
       messages: 
       output: 
       stacktrace: 
@@ -1138,10 +1179,10 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1022
       parentUniqueId: EditModeTest.dll/[EditModeTest][VinculoTest][suite]
-    m_ResultText: ContenedorTest (0,011s)
+    m_ResultText: ContenedorTest (0,017s)
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 4}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 0a7af1fa
       m_LastClickedID: -84837878
       m_ExpandedIDs: e42016c80a7af1fa4d6046163991b11ef9eb8725afa49c43ab251d70ffffff7f
@@ -1170,7 +1211,7 @@ MonoBehaviour:
       selectedCategoryMask: -1
       availableCategories:
       - Uncategorized
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1190,10 +1231,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 200
+    x: 234
     y: 73
-    width: 876
-    height: 479
+    width: 792
+    height: 382
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1214,9 +1255,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -141, y: 149}
+      snapOffset: {x: 101, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
+      snapCorner: 0
       id: unity-grid-and-snap-toolbar
       index: 1
       layout: 1
@@ -1395,9 +1436,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.873353, y: -2.8529892, z: 5.5101814}
+    m_Target: {x: -0.2907784, y: -0.5079994, z: -0.81015205}
     speed: 2
-    m_Value: {x: 2.873353, y: -2.8529892, z: 5.5101814}
+    m_Value: {x: -0.2907784, y: -0.5079994, z: -0.81015205}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1444,13 +1485,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.20297286, y: 0.15378805, z: -0.0322971, w: 0.9664974}
+    m_Target: {x: 0.28100684, y: -0.10168422, z: 0.029956035, w: 0.95383966}
     speed: 2
-    m_Value: {x: 0.20765404, y: 0.14349368, z: -0.030810049, w: 0.9671298}
+    m_Value: {x: 0.28100517, y: -0.10168362, z: 0.029955857, w: 0.953834}
   m_Size:
-    m_Target: 8.635808
+    m_Target: 8.591723
     speed: 2
-    m_Value: 9.042731
+    m_Value: 8.591723
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1475,7 +1516,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1495,10 +1536,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 200
-    y: 73
-    width: 876
-    height: 479
+    x: 0
+    y: 476
+    width: 1027
+    height: 343
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1509,7 +1550,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 876, y: 458}
+  m_TargetSize: {x: 1027, y: 322}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1524,10 +1565,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -438
-    m_HBaseRangeMax: 438
-    m_VBaseRangeMin: -229
-    m_VBaseRangeMax: 229
+    m_HBaseRangeMin: -513.5
+    m_HBaseRangeMax: 513.5
+    m_VBaseRangeMin: -161
+    m_VBaseRangeMax: 161
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1536,7 +1577,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1545,29 +1586,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 876
-      height: 458
+      width: 1027
+      height: 322
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 438, y: 229}
+    m_Translation: {x: 513.5, y: 161}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -438
-      y: -229
-      width: 876
-      height: 458
+      x: -513.5
+      y: -161
+      width: 1027
+      height: 322
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 876, y: 479}
+  m_LastWindowPixelSize: {x: 1027, y: 343}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1587,15 +1628,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 200
-    y: 573
-    width: 876
-    height: 246
+    x: 0
+    y: 476
+    width: 1027
+    height: 343
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1615,9 +1656,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1078
+    x: 1028
     y: 73
-    width: 250
+    width: 315
     height: 746
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1636,7 +1677,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &19
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1658,8 +1699,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 199
-    height: 746
+    width: 233
+    height: 382
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1667,9 +1708,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 88080000
       m_LastClickedID: 0
-      m_ExpandedIDs: 74beffff34fbffff
+      m_ExpandedIDs: 34fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1685,7 +1726,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 2}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1693,7 +1734,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &20
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1713,9 +1754,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1330
+    x: 1345
     y: 73
-    width: 269
+    width: 254
     height: 746
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1733,7 +1774,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/_Scripts/Modelo/Contenedor
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -1748,7 +1790,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 683d0000
     m_LastClickedID: 15720
-    m_ExpandedIDs: 00000000064e0000084e00000a4e00000c4e00000e4e0000104e0000124e0000144e0000164e0000184e00001a4e00001c4e00001e4e0000204e0000224e0000
+    m_ExpandedIDs: 00000000a64e0000a84e0000aa4e0000ac4e0000ae4e0000b04e0000b24e0000b44e0000b64e0000b84e0000ba4e0000bc4e0000be4e0000c04e0000c24e0000c44e0000c64e0000c84e0000ca4e0000cc4e0000ce4e0000d04e0000d24e0000d44e0000d64e0000d84e0000da4e0000dc4e0000de4e0000e04e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1776,23 +1818,23 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000064e00000a4e00000c4e00000e4e0000104e0000124e0000144e0000164e0000184e00001a4e00001c4e00001e4e0000204e0000744e00007c4e0000884e0000c84e00004450000046500000485000004a5000004c5000004e50000050500000
+    m_ExpandedIDs: ffffffff00000000a64e0000a84e0000aa4e0000ac4e0000ae4e0000b04e0000b24e0000b44e0000b64e0000b84e0000ba4e0000bc4e0000be4e0000c04e0000c24e0000c44e0000c64e0000c84e0000ca4e0000cc4e0000ce4e0000d04e0000d24e0000d44e0000d64e0000d84e0000da4e0000dc4e0000de4e0000e04e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Prototype_512x512_Cyan
-      m_OriginalName: Prototype_512x512_Cyan
+      m_Name: IContenedor
+      m_OriginalName: IContenedor
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 20504
+      m_UserData: 5178
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 4}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}

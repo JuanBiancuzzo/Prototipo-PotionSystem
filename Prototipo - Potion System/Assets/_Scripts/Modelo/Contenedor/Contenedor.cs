@@ -2,6 +2,7 @@
 
 namespace ItIsNotOnlyMe
 {
+    // los ingredientes y las pociones son variaciones de contenedor
     public class Contenedor : IContenedor
     {
         private List<IElemento> _elementos;
@@ -15,11 +16,15 @@ namespace ItIsNotOnlyMe
             _modificadores = (modificadores == null) ? new List<ICambiar>() : modificadores;
         }
 
-        public void AgregarIngrediente(IElemento elemento)
+        public bool AgregarElemento(IElemento elemento)
         {
+            if (_capacidad.Lleno())
+                return false;
+
             _modificadores.ForEach(modificador => elemento.AgregarModificador(modificador));
             _elementos.Add(elemento);
             _capacidad.Agregar();
+            return true;
         }
 
         public void Mezclar(IElemento elemento1, IElemento elemento2)
@@ -35,14 +40,31 @@ namespace ItIsNotOnlyMe
             return atributos;
         }
 
-        public Pocion ConsumirPocion()
+        public void Transferir(IContenedor contenedor)
+        {
+            while (!contenedor.Lleno() && _capacidad.Vacio())
+            {
+                IElemento elemento = _elementos[0];
+                contenedor.AgregarElemento(elemento);
+
+                _capacidad.Reducir();
+                _elementos.RemoveAt(0);
+            }
+        }
+
+        public IResultado ConseguirResultado()
         {
             if (_capacidad.Vacio())
                 _elementos.Clear();
             _capacidad.Reducir();
 
             Atributos estado = CalcularEstado();
-            return new Pocion(estado);
+            return new Resultado(estado);
+        }
+
+        public bool Lleno()
+        {
+            return _capacidad.Lleno();
         }
     }
 }

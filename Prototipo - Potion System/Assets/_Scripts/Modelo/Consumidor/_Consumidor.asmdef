@@ -1,7 +1,9 @@
 {
     "name": "_Consumidor",
     "rootNamespace": "ItIsNotOnlyMe",
-    "references": [],
+    "references": [
+        "GUID:a249b583bc3d91a4fb01da85a2027011"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

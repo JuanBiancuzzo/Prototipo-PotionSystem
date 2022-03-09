@@ -6,6 +6,6 @@ namespace ItIsNotOnlyMe
 {
     public interface IConsumidor
     {
-
+        public void Consumir(IResultado resultado);
     }
 }

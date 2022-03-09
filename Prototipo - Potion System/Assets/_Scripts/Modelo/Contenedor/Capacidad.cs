@@ -27,5 +27,10 @@ namespace ItIsNotOnlyMe
         {
             return _cantidad == _minimoCantidad;
         }
+
+        public bool Lleno()
+        {
+            return _cantidad == _capacidad;
+        }
     }
 }

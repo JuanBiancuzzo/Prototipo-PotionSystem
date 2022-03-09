@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ItIsNotOnlyMe
 {
     [CreateAssetMenu(fileName = "Receta para posion", menuName = "Posiones/Receta de posion")]
-    public class RecetaSO : ScriptableObject, IPocion
+    public class RecetaSO : ScriptableObject, IResultado
     {
         [Serializable]
         private struct ParIdValor
@@ -19,40 +19,50 @@ namespace ItIsNotOnlyMe
 
         [SerializeField] List<ParIdValor> _parIdValores;
 
-        private Pocion _posionBase = null;
-        private Pocion _posion
+        private Resultado _pocionBase = null;
+        private Resultado _pocion
         {
             get
             {
-                if (_posionBase == null)
+                if (_pocionBase == null)
                 {
                     List<Par> pares = new List<Par>();
                     foreach (ParIdValor par in _parIdValores)
                         pares.Add(new Par(par.Identificador, par.Valor));
-                    _posionBase = new Pocion(new Atributos(pares));
+                    _pocionBase = new Resultado(new Atributos(pares));
                 }
-                return _posionBase;
+                return _pocionBase;
             }
         }
 
-        public Atributos GetAtributos()
+        public float Distancia(IResultado posion)
         {
-            return _posion.GetAtributos();
+            return _pocion.Distancia(posion);
         }
 
-        public float Distancia(IPocion posion)
+        public float Distancia(Atributos atributos)
         {
-            return _posion.Distancia(posion);
+            return _pocion.Distancia(atributos);
         }
 
-        public float Similitud(IPocion posion)
+        public float Similitud(IResultado posion)
         {
-            return _posion.Similitud(posion);
+            return _pocion.Similitud(posion);
         }
 
-        public float Multiplicidad(IPocion posion)
+        public float Similitud(Atributos atributos)
         {
-            return _posion.Multiplicidad(posion);
+            return _pocion.Similitud(atributos);
+        }
+
+        public float Multiplicidad(IResultado posion)
+        {
+            return _pocion.Multiplicidad(posion);
+        }
+
+        public float Multiplicidad(Atributos atributos)
+        {
+            return _pocion.Multiplicidad(atributos);
         }
     }
 }
