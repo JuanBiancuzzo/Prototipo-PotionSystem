@@ -5,8 +5,8 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "_Contenedor",
-        "_Atributos",
-        "_Elementos"
+        "_Elementos",
+        "_Vectores"
     ],
     "includePlatforms": [
         "Editor"
