@@ -65,7 +65,7 @@ namespace ItIsNotOnlyMe
         public void Multiplicar(float escalar, IIdentificador identificador)
         {
             if (_idetificador.EsIgual(identificador))
-                _valor *= _valor;
+                _valor *= escalar;
             if (_componente != null)
                 _componente.Multiplicar(escalar, identificador);
         }

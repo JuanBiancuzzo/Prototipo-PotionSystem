@@ -224,4 +224,33 @@ public class VectorTest
 
         Assert.AreEqual(-1f, MathfVectores.Multiplicdad(vector1, vector2));
     }
+
+    [Test]
+    public void Test16UnVectorMultiplicadoPorUnIdentificadorEspecifico()
+    {
+        float valorX = 4f, valorY = 3.5f, valorZ = 0.5f;
+        Vector vector = CrearVector(valorX, valorY, valorZ);
+
+        float multiplicador = 2f;
+        Vector resultado = vector.Multiplicar(multiplicador, _x);
+        Vector vectorEsperado = CrearVector(valorX * multiplicador, valorY, valorZ);
+
+        Assert.IsTrue(resultado.EsIgual(vectorEsperado));
+    }
+
+    [Test]
+    public void Test17UnaSumaDeVectoresMultiplicadoPorUnIdentificadorEspecifico()
+    {
+        float valorX1 = 4f, valorY1 = 3.5f, valorZ1 = 0.5f;
+        Vector vector1 = CrearVector(valorX1, valorY1, valorZ1);
+
+        float valorX2 = 5f, valorY2 = -2f, valorZ2 = 6.25f;
+        Vector vector2 = CrearVector(valorX2, valorY2, valorZ2);
+
+        float multiplicador = 2f;
+        Vector resultado = (vector1.Sumar(vector2)).Multiplicar(multiplicador, _x);
+        Vector vectorEsperado = CrearVector((valorX1 + valorX2) * multiplicador, valorY1 + valorY2, valorZ1 + valorZ2);
+
+        Assert.IsTrue(resultado.EsIgual(vectorEsperado));
+    }
 }
