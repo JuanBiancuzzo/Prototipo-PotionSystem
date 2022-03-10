@@ -2,7 +2,7 @@
 
 namespace ItIsNotOnlyMe
 {
-    public struct Par
+    public class Par
     {
         private static float _valorNulo = 0f;
         private IIdentificador _identificador;

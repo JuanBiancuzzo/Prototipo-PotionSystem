@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 234
     height: 403
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 121
+  controlID: 119
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -120,15 +120,15 @@ MonoBehaviour:
     y: 403
     width: 1028
     height: 364
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 15}
   - {fileID: 17}
-  m_Selected: 1
-  m_LastSelected: 2
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 120
+  controlID: 118
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 18
+  controlID: 128
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -674,7 +674,7 @@ MonoBehaviour:
       name: Prototipo - Potion System
       fullName: Prototipo - Potion System
       resultStatus: 1
-      duration: 0.3515998
+      duration: 0.1643097
       messages: 
       output: 
       stacktrace: 
@@ -692,7 +692,7 @@ MonoBehaviour:
       fullName: C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo -
         Potion System/Library/ScriptAssemblies/EditModeTest.dll
       resultStatus: 1
-      duration: 0.1241936
+      duration: 0.0997185
       messages: 
       output: 
       stacktrace: 
@@ -708,7 +708,7 @@ MonoBehaviour:
       name: AtributosTest
       fullName: AtributosTest
       resultStatus: 1
-      duration: 0.0747682
+      duration: 0.0435781
       messages: 
       output: 
       stacktrace: 
@@ -725,7 +725,7 @@ MonoBehaviour:
       name: Test01DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden
       fullName: AtributosTest.Test01DistanciaEntreDosAtributosConParesIgualesYEnElMismoOrden
       resultStatus: 1
-      duration: 0.0352563
+      duration: 0.0177115
       messages: 
       output: 
       stacktrace: 
@@ -742,7 +742,7 @@ MonoBehaviour:
       name: Test02DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden
       fullName: AtributosTest.Test02DistanciaEntreDosAtributosConParesIgualesYEnElDiferenteOrden
       resultStatus: 1
-      duration: 0.0012892
+      duration: 0.0010539
       messages: 
       output: 
       stacktrace: 
@@ -759,7 +759,7 @@ MonoBehaviour:
       name: Test03DistanciaEntreDosAtributosConParesDiferentes
       fullName: AtributosTest.Test03DistanciaEntreDosAtributosConParesDiferentes
       resultStatus: 1
-      duration: 0.0008598
+      duration: 0.0010452
       messages: 
       output: 
       stacktrace: 
@@ -776,7 +776,7 @@ MonoBehaviour:
       name: Test04LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico
       fullName: AtributosTest.Test04LaSimilitudEntreDosAtributosEsUnoCuandoEsUnMultiplico
       resultStatus: 1
-      duration: 0.0022827
+      duration: 0.0023433
       messages: 
       output: 
       stacktrace: 
@@ -793,7 +793,7 @@ MonoBehaviour:
       name: Test05LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso
       fullName: AtributosTest.Test05LaSimilitudEntreDosAtributosEsMenosUnoCuandoEsElInverso
       resultStatus: 1
-      duration: 0.0008296
+      duration: 0.0009165
       messages: 
       output: 
       stacktrace: 
@@ -810,7 +810,7 @@ MonoBehaviour:
       name: Test06LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal
       fullName: AtributosTest.Test06LaSimilitudEntreDosAtributosEsCeroCuandoEsOrtogonal
       resultStatus: 1
-      duration: 0.0006274
+      duration: 0.0006786
       messages: 
       output: 
       stacktrace: 
@@ -827,7 +827,7 @@ MonoBehaviour:
       name: Test07LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble
       fullName: AtributosTest.Test07LaMultiplicidadEntreDosAtributosEsDosCuandoEsElDoble
       resultStatus: 1
-      duration: 0.0012981
+      duration: 0.0012792
       messages: 
       output: 
       stacktrace: 
@@ -844,7 +844,7 @@ MonoBehaviour:
       name: Test08LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso
       fullName: AtributosTest.Test08LaMultiplicidadEntreDosAtributosEsMenosDosCuandoEsElDobleEInverso
       resultStatus: 1
-      duration: 0.000887
+      duration: 0.0009535
       messages: 
       output: 
       stacktrace: 
@@ -861,7 +861,7 @@ MonoBehaviour:
       name: ContenedorTest
       fullName: ContenedorTest
       resultStatus: 1
-      duration: 0.0173261
+      duration: 0.0197066
       messages: 
       output: 
       stacktrace: 
@@ -878,7 +878,7 @@ MonoBehaviour:
       name: Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial
       fullName: ContenedorTest.Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial
       resultStatus: 1
-      duration: 0.002245
+      duration: 0.0017328
       messages: 
       output: 
       stacktrace: 
@@ -895,7 +895,7 @@ MonoBehaviour:
       name: Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente
       fullName: ContenedorTest.Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente
       resultStatus: 1
-      duration: 0.0021422
+      duration: 0.0022191
       messages: 
       output: 
       stacktrace: 
@@ -912,7 +912,7 @@ MonoBehaviour:
       name: Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados
       fullName: ContenedorTest.Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados
       resultStatus: 1
-      duration: 0.0004304
+      duration: 0.000444
       messages: 
       output: 
       stacktrace: 
@@ -929,7 +929,7 @@ MonoBehaviour:
       name: Test04UnContenedorConDosIngredientesVinculadosEsLaSumaDeSusEstadosModificados
       fullName: ContenedorTest.Test04UnContenedorConDosIngredientesVinculadosEsLaSumaDeSusEstadosModificados
       resultStatus: 1
-      duration: 0.0008137
+      duration: 0.000872
       messages: 
       output: 
       stacktrace: 
@@ -946,7 +946,7 @@ MonoBehaviour:
       name: Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales
       fullName: ContenedorTest.Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales
       resultStatus: 1
-      duration: 0.0007499
+      duration: 0.0006398
       messages: 
       output: 
       stacktrace: 
@@ -963,7 +963,7 @@ MonoBehaviour:
       name: Test06UnContenedorModificaLosIngredientesQueSeAgregan
       fullName: ContenedorTest.Test06UnContenedorModificaLosIngredientesQueSeAgregan
       resultStatus: 1
-      duration: 0.0011298
+      duration: 0.0010951
       messages: 
       output: 
       stacktrace: 
@@ -980,7 +980,7 @@ MonoBehaviour:
       name: ElementoTest
       fullName: ElementoTest
       resultStatus: 1
-      duration: 0.0179662
+      duration: 0.0205274
       messages: 
       output: 
       stacktrace: 
@@ -997,7 +997,7 @@ MonoBehaviour:
       name: Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial
       fullName: ElementoTest.Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial
       resultStatus: 1
-      duration: 0.00228
+      duration: 0.002512
       messages: 
       output: 
       stacktrace: 
@@ -1014,7 +1014,7 @@ MonoBehaviour:
       name: Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse
       fullName: ElementoTest.Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse
       resultStatus: 1
-      duration: 0.0010897
+      duration: 0.0010461
       messages: 
       output: 
       stacktrace: 
@@ -1031,7 +1031,7 @@ MonoBehaviour:
       name: Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion
       fullName: ElementoTest.Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion
       resultStatus: 1
-      duration: 0.0013536
+      duration: 0.0013656
       messages: 
       output: 
       stacktrace: 
@@ -1048,7 +1048,7 @@ MonoBehaviour:
       name: Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente
       fullName: ElementoTest.Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente
       resultStatus: 1
-      duration: 0.0004424
+      duration: 0.0003917
       messages: 
       output: 
       stacktrace: 
@@ -1065,7 +1065,7 @@ MonoBehaviour:
       name: Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion
       fullName: ElementoTest.Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion
       resultStatus: 1
-      duration: 0.0005533
+      duration: 0.0008116
       messages: 
       output: 
       stacktrace: 
@@ -1082,7 +1082,7 @@ MonoBehaviour:
       name: Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo
       fullName: ElementoTest.Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo
       resultStatus: 1
-      duration: 0.0011078
+      duration: 0.0016543
       messages: 
       output: 
       stacktrace: 
@@ -1099,7 +1099,7 @@ MonoBehaviour:
       name: VinculoTest
       fullName: VinculoTest
       resultStatus: 1
-      duration: 0.0110418
+      duration: 0.0119942
       messages: 
       output: 
       stacktrace: 
@@ -1116,7 +1116,7 @@ MonoBehaviour:
       name: Test01UnVinculoDondeLosVinculadosNoTienenNingunModificacionEsEstable
       fullName: VinculoTest.Test01UnVinculoDondeLosVinculadosNoTienenNingunModificacionEsEstable
       resultStatus: 1
-      duration: 0.0008815
+      duration: 0.0023328
       messages: 
       output: 
       stacktrace: 
@@ -1133,7 +1133,7 @@ MonoBehaviour:
       name: Test02UnVinculoDondeLosVinculadosEstanModificadoHaciendoQueYaNoSeanEstable
       fullName: VinculoTest.Test02UnVinculoDondeLosVinculadosEstanModificadoHaciendoQueYaNoSeanEstable
       resultStatus: 1
-      duration: 0.0019416
+      duration: 0.000875
       messages: 
       output: 
       stacktrace: 
@@ -1150,7 +1150,7 @@ MonoBehaviour:
       name: Test03DosVinculadosCuandoHayUnVinculoSuEstadoEsModificado
       fullName: VinculoTest.Test03DosVinculadosCuandoHayUnVinculoSuEstadoEsModificado
       resultStatus: 1
-      duration: 0.0003592
+      duration: 0.0003669
       messages: 
       output: 
       stacktrace: 
@@ -1167,7 +1167,7 @@ MonoBehaviour:
       name: Test04DosVinculadosCuandoSeRompeElVinculoYaSuEstadoNoEstaModificado
       fullName: VinculoTest.Test04DosVinculadosCuandoSeRompeElVinculoYaSuEstadoNoEstaModificado
       resultStatus: 1
-      duration: 0.0003267
+      duration: 0.0004308
       messages: 
       output: 
       stacktrace: 
@@ -1179,12 +1179,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1022
       parentUniqueId: EditModeTest.dll/[EditModeTest][VinculoTest][suite]
-    m_ResultText: ContenedorTest (0,017s)
+    m_ResultText: Test06UnContenedorModificaLosIngredientesQueSeAgregan (0,001s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0a7af1fa
-      m_LastClickedID: -84837878
+      m_SelectedIDs: 1d23f308
+      m_LastClickedID: 150151965
       m_ExpandedIDs: e42016c80a7af1fa4d6046163991b11ef9eb8725afa49c43ab251d70ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -1708,9 +1708,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 88080000
+      m_SelectedIDs: 680e0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 34fbffff
+      m_ExpandedIDs: f4e8ffffaaeaffff30edffffccf2ffff34fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1775,7 +1775,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Scripts/Modelo/Contenedor
+    - Assets/_Scripts/Modelo/Atributos
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -1821,18 +1821,18 @@ MonoBehaviour:
     m_ExpandedIDs: ffffffff00000000a64e0000a84e0000aa4e0000ac4e0000ae4e0000b04e0000b24e0000b44e0000b64e0000b84e0000ba4e0000bc4e0000be4e0000c04e0000c24e0000c44e0000c64e0000c84e0000ca4e0000cc4e0000ce4e0000d04e0000d24e0000d44e0000d64e0000d84e0000da4e0000dc4e0000de4e0000e04e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: IContenedor
-      m_OriginalName: IContenedor
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 5178
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 

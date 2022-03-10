@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace ItIsNotOnlyMe
 {
+
     public class Atributos
     {
         private static float _valorNulo = 0f;
@@ -41,11 +42,13 @@ namespace ItIsNotOnlyMe
             return Modulo(new Atributos(paresNuevos));
         }
 
+        //done
         public static float Similitud(Atributos propio, Atributos otro)
         {
             return ProductoInterno(Normalizar(propio), Normalizar(otro));
         }
 
+        // done
         public static float Multiplicidad(Atributos propio, Atributos otro)
         {
             Atributos otroProyectado = Proyeccion(propio, otro);
