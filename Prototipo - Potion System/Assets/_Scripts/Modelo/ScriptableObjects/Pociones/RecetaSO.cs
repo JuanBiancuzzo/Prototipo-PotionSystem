@@ -17,52 +17,45 @@ namespace ItIsNotOnlyMe
             public float Valor;
         }
 
-        [SerializeField] List<ParIdValor> _parIdValores;
+        [SerializeField] private List<ParIdValor> _parIdValores;
+        private Vector _atributos;
 
-        private Resultado _pocionBase = null;
-        private Resultado _pocion
+        public void Awake()
         {
-            get
-            {
-                if (_pocionBase == null)
-                {
-                    List<IComponente> pares = new List<IComponente>();
-                    foreach (ParIdValor par in _parIdValores)
-                        pares.Add(new Componente(par.Identificador, par.Valor));
-                    _pocionBase = new Resultado(new Vector(pares));
-                }
-                return _pocionBase;
-            }
+            List<IComponente> pares = new List<IComponente>();
+            foreach (ParIdValor par in _parIdValores)
+                pares.Add(new Componente(par.Identificador, par.Valor));
+            _atributos = new Vector(pares);
         }
 
-        public float Distancia(IResultado posion)
+        public float Distancia(IResultado resultado)
         {
-            return _pocion.Distancia(posion);
+            return resultado.Distancia(_atributos);
         }
 
         public float Distancia(Vector atributos)
         {
-            return _pocion.Distancia(atributos);
+            return MathfVectores.Distancia(atributos, _atributos);
         }
 
-        public float Similitud(IResultado posion)
+        public float Similitud(IResultado resultado)
         {
-            return _pocion.Similitud(posion);
+            return resultado.Similitud(_atributos);
         }
 
         public float Similitud(Vector atributos)
         {
-            return _pocion.Similitud(atributos);
+            return MathfVectores.Similitud(atributos, _atributos);
         }
 
-        public float Multiplicidad(IResultado posion)
+        public float Multiplicidad(IResultado resultado)
         {
-            return _pocion.Multiplicidad(posion);
+            return resultado.Multiplicidad(_atributos);
         }
 
         public float Multiplicidad(Vector atributos)
         {
-            return _pocion.Multiplicidad(atributos);
+            return MathfVectores.Multiplicdad(atributos, _atributos);
         }
     }
 }

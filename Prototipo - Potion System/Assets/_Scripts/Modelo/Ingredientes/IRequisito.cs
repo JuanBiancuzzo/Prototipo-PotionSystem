@@ -6,9 +6,4 @@
 
         public bool Evaluar(IDemandado demandado);
     }
-
-    public interface IDemandado
-    {
-        public float ObtenerValor(IIdentificador identificador);
-    }
 }

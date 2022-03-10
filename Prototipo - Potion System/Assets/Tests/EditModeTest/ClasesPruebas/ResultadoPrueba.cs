@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace ItIsNotOnlyMe
 {
-    public class Resultado : IResultado
+    public class ResultadoPrueba : IResultado
     {
         private Vector _atributos;
 
-        public Resultado(Vector atributos)
+        public ResultadoPrueba(Vector atributos)
         {
             _atributos = atributos;
         }

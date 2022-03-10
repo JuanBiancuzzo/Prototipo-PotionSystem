@@ -11,7 +11,5 @@
         public bool Lleno();
 
         public void Transferir(IContenedor contenedor);
-
-        public IResultado ConseguirResultado();
     }
 }

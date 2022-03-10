@@ -52,16 +52,6 @@ namespace ItIsNotOnlyMe
             }
         }
 
-        public IResultado ConseguirResultado()
-        {
-            if (_capacidad.Vacio())
-                _elementos.Clear();
-            _capacidad.Reducir();
-
-            Vector estado = CalcularEstado();
-            return new Resultado(estado);
-        }
-
         public bool Lleno()
         {
             return _capacidad.Lleno();
