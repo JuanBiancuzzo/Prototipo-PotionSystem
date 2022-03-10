@@ -5,7 +5,7 @@ namespace ItIsNotOnlyMe
     public static class MathfVectores
     {
         
-        public static float Comparacion(Vector vector, Vector otro)
+        public static float Distancia(Vector vector, Vector otro)
         {
             Vector direccion = (Vector) vector.Restar(otro);
             return Modulo(direccion);

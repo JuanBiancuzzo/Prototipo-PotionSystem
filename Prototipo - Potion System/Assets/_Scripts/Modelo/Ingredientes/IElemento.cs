@@ -2,7 +2,7 @@
 {
     public interface IElemento : IDemandado, ICambiante, IVinculado
     {
-        public Atributos Agregar(Atributos atributos);
+        public Vector Agregar(Vector vector);
 
         public void Estabilidad();
 

@@ -9,9 +9,9 @@ namespace ItIsNotOnlyMe
         private List<ICondicionDeVinculo> _condiciones;
         private List<ICambiar> _modificadores;
 
-        private Atributos _atributosBase;
+        private Vector _atributosBase;
 
-        public Elemento(Atributos atributosBase,
+        public Elemento(Vector atributosBase,
                            List<ICondicionDeVinculo> condiciones = null)
         {
             _vinculos = new List<IVinculo>();
@@ -22,16 +22,16 @@ namespace ItIsNotOnlyMe
             _atributosBase = atributosBase;
         }
 
-        public Atributos Agregar(Atributos atributos)
+        public Vector Agregar(Vector atributos)
         {
             Estabilidad();
-            Atributos modificado = AtributoBaseModificado();
-            return Atributos.Sumar(atributos, modificado);
+            Vector modificado = AtributoBaseModificado();
+            return atributos.Sumar(modificado);
         }
 
-        private Atributos AtributoBaseModificado()
+        private Vector AtributoBaseModificado()
         {
-            Atributos nuevo = _atributosBase;
+            Vector nuevo = _atributosBase;
             _modificadores.ForEach(modificador => nuevo = modificador.Modificar(nuevo));
             return nuevo;
         }
@@ -48,8 +48,8 @@ namespace ItIsNotOnlyMe
 
         public float ObtenerValor(IIdentificador identificador)
         {
-            Atributos atributos = AtributoBaseModificado();
-            return atributos.GetValor(identificador);
+            Vector atributos = AtributoBaseModificado();
+            return atributos.ProductoInterno(new Vector(new Componente(identificador, 1)));
         }
 
         public void AgregarModificador(ICambiar modificador)

@@ -6,9 +6,9 @@ namespace ItIsNotOnlyMe
 {
     public class Resultado : IResultado
     {
-        private Atributos _atributos;
+        private Vector _atributos;
 
-        public Resultado(Atributos atributos)
+        public Resultado(Vector atributos)
         {
             _atributos = atributos;
         }
@@ -18,9 +18,9 @@ namespace ItIsNotOnlyMe
             return resultado.Distancia(_atributos);
         }
 
-        public float Distancia(Atributos atributos)
+        public float Distancia(Vector atributos)
         {
-            return Atributos.Comparacion(atributos, _atributos);
+            return MathfVectores.Distancia(atributos, _atributos);
         }
 
         public float Similitud(IResultado resultado)
@@ -28,9 +28,9 @@ namespace ItIsNotOnlyMe
             return resultado.Similitud(_atributos);
         }
 
-        public float Similitud(Atributos atributos)
+        public float Similitud(Vector atributos)
         {
-            return Atributos.Similitud(atributos, _atributos);
+            return MathfVectores.Similitud(atributos, _atributos);
         }
 
         public float Multiplicidad(IResultado resultado)
@@ -38,9 +38,9 @@ namespace ItIsNotOnlyMe
             return resultado.Multiplicidad(_atributos);
         }
 
-        public float Multiplicidad(Atributos atributos)
+        public float Multiplicidad(Vector atributos)
         {
-            return Atributos.Multiplicidad(atributos, _atributos);
+            return MathfVectores.Multiplicdad(atributos, _atributos);
         }
     }
 }

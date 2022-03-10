@@ -4,7 +4,7 @@
     {
         public void Cambiar(ICambiante cambiante);
 
-        public Atributos Modificar(Atributos atributos);
+        public Vector Modificar(Vector atributos);
     }   
 
     public interface ICambiante

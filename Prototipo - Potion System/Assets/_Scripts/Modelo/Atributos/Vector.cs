@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace ItIsNotOnlyMe
 {
+
     public class Vector
     {
         private IComponente _cadena;
@@ -46,6 +47,13 @@ namespace ItIsNotOnlyMe
             return new Vector(nuevaCadena);
         }
 
+        public Vector Multiplicar(float escalar, IIdentificador identificador)
+        {
+            IComponente nuevaCadena = NuevaCadna();
+            nuevaCadena.Multiplicar(escalar, identificador);
+            return new Vector(nuevaCadena);
+        }
+
         public Vector Dividir(float escalar)
         {
             IComponente nuevaCadena = NuevaCadna();
@@ -61,6 +69,11 @@ namespace ItIsNotOnlyMe
         private IComponente NuevaCadna()
         {
             return _cadena.Copia();
+        }
+
+        public static Vector VectorNulo()
+        {
+            return new Vector(new ComponenteNulo());
         }
     }
 }

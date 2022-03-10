@@ -14,6 +14,8 @@ namespace ItIsNotOnlyMe
 
         public void Multiplicar(float escalar);
 
+        public void Multiplicar(float escalar, IIdentificador identificador);
+
         public void Dividir(float escalar);
 
         public float ProductoInterno(IComponente componente);

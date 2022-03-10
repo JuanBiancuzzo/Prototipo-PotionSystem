@@ -50,11 +50,11 @@ public class ContenedorTest
         _vel = new IdentificadorPrueba();
     }
 
-    private Atributos CrearAtributos(float valorVida, float valorTemp, float valorVel)
+    private Vector CrearVector(float valorVida, float valorTemp, float valorVel)
     {
-        Atributos atributo = new Atributos(new List<Par>
+        Vector atributo = new Vector(new List<IComponente>
         {
-            new Par(_vida, valorVida), new Par(_temp, valorTemp), new Par(_vel, valorVel)
+            new Componente(_vida, valorVida), new Componente(_temp, valorTemp), new Componente(_vel, valorVel)
         });
         return atributo;
     }
@@ -63,7 +63,7 @@ public class ContenedorTest
     public void Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial()
     {
         IContenedor contenedor = new Contenedor(_capacidadIlimitada);
-        Resultado pocionEsperada = new Resultado(Atributos.Nulo());
+        Resultado pocionEsperada = new Resultado(Vector.VectorNulo());
 
         IResultado pocionResultado = contenedor.ConseguirResultado();
 
@@ -77,7 +77,7 @@ public class ContenedorTest
     {
         
         float valorVida = 4f, valorTemp = 3f, valorVel = 5f;
-        Atributos atributo = CrearAtributos(valorVida, valorTemp, valorVel);
+        Vector atributo = CrearVector(valorVida, valorTemp, valorVel);
         IElemento ingrediente =  new Elemento(atributo);
 
         Resultado pocionEsperada = new Resultado(atributo);
@@ -95,11 +95,11 @@ public class ContenedorTest
     public void Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados()
     {
         float valorVida1 = 4f, valorTemp1 = 3f, valorVel1 = 5f;
-        Atributos atributo1 = CrearAtributos(valorVida1, valorTemp1, valorVel1);
+        Vector atributo1 = CrearVector(valorVida1, valorTemp1, valorVel1);
         IElemento ingrediente1 = new Elemento(atributo1);
 
         float valorVida2 = 4f, valorTemp2 = 3f, valorVel2 = 5f;
-        Atributos atributo2 = CrearAtributos(valorVida2, valorTemp2, valorVel2);
+        Vector atributo2 = CrearVector(valorVida2, valorTemp2, valorVel2);
         IElemento ingrediente2 = new Elemento(atributo2);
 
         IContenedor contenedor = new Contenedor(_capacidadIlimitada);
@@ -107,7 +107,7 @@ public class ContenedorTest
         contenedor.AgregarElemento(ingrediente1);
         contenedor.AgregarElemento(ingrediente2);
 
-        Resultado pocionEsperada = new Resultado(Atributos.Sumar(atributo1, atributo2));
+        Resultado pocionEsperada = new Resultado(atributo1.Sumar(atributo2));
         IResultado pocionResultado = contenedor.ConseguirResultado();
 
         FloatEqualityComparer comparador = new FloatEqualityComparer(10e-3f);
@@ -127,11 +127,11 @@ public class ContenedorTest
             { new CondicionDeVinculoPrueba(requisito, modificador) };
 
         float valorVida1 = 5f, valorTemp1 = 3f, valorVel1 = 4f;
-        Atributos atributo1 = CrearAtributos(valorVida1, valorTemp1, valorVel1);
+        Vector atributo1 = CrearVector(valorVida1, valorTemp1, valorVel1);
         IElemento ingrediente1 = new Elemento(atributo1, condiciones);
 
         float valorVida2 = 4f, valorTemp2 = 3f, valorVel2 = 5f;
-        Atributos atributo2 = CrearAtributos(valorVida2, valorTemp2, valorVel2);
+        Vector atributo2 = CrearVector(valorVida2, valorTemp2, valorVel2);
         IElemento ingrediente2 = new Elemento(atributo2);
 
         IContenedor contenedor = new Contenedor(_capacidadIlimitada);
@@ -139,7 +139,7 @@ public class ContenedorTest
         contenedor.AgregarElemento(ingrediente1);
         contenedor.AgregarElemento(ingrediente2);
 
-        Atributos atributoEsperado = ingrediente1.Agregar(Atributos.Nulo());
+        Vector atributoEsperado = ingrediente1.Agregar(Vector.VectorNulo());
         atributoEsperado = ingrediente2.Agregar(atributoEsperado);
 
         Resultado pocionEsperada = new Resultado(atributoEsperado);
@@ -154,14 +154,14 @@ public class ContenedorTest
     public void Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales()
     {
         float valorVida1 = 4f, valorTemp1 = 3f, valorVel1 = 5f;
-        Atributos atributo1 = CrearAtributos(valorVida1, valorTemp1, valorVel1);
+        Vector atributo1 = CrearVector(valorVida1, valorTemp1, valorVel1);
         IElemento ingrediente1 = new Elemento(atributo1);
 
         float valorVida2 = 4f, valorTemp2 = 3f, valorVel2 = 5f;
-        Atributos atributo2 = CrearAtributos(valorVida2, valorTemp2, valorVel2);
+        Vector atributo2 = CrearVector(valorVida2, valorTemp2, valorVel2);
         IElemento ingrediente2 = new Elemento(atributo2);
 
-        Resultado pocionEsperada = new Resultado(Atributos.Sumar(atributo1, atributo2));
+        Resultado pocionEsperada = new Resultado(atributo1.Sumar(atributo2));
 
         IContenedor contenedor = new Contenedor(_capacidadDeDos);
         contenedor.AgregarElemento(ingrediente1);
@@ -183,7 +183,7 @@ public class ContenedorTest
     public void Test06UnContenedorModificaLosIngredientesQueSeAgregan()
     {
         float valorVida = 4f, valorTemp = 3f, valorVel = 5f;
-        Atributos atributo = CrearAtributos(valorVida, valorTemp, valorVel);
+        Vector atributo = CrearVector(valorVida, valorTemp, valorVel);
         IElemento ingrediente = new Elemento(atributo);
 
         float factoDeMultiplicacion = 4f;

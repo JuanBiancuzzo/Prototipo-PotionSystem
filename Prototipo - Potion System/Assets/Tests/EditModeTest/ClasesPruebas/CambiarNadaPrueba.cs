@@ -10,7 +10,7 @@ public class CambiarNadaPrueba : ICambiar
         cambiante.AgregarModificador(this);
     }
 
-    public Atributos Modificar(Atributos atributos)
+    public Vector Modificar(Vector atributos)
     {
         return atributos;
     }

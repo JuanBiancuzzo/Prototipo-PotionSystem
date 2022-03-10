@@ -3,13 +3,11 @@ using System.Collections.Generic;
 
 public class CambiarSumarPrueba : ICambiar
 {
-    private float _valorSumar;
-    private IIdentificador _identificador;
+    private Vector _vector;
 
     public CambiarSumarPrueba(float valorSumar, IIdentificador identificador)
     {
-        _valorSumar = valorSumar;
-        _identificador = identificador;
+        _vector = new Vector(new Componente(identificador, valorSumar));
     }
 
     public void Cambiar(ICambiante cambiante)
@@ -17,8 +15,8 @@ public class CambiarSumarPrueba : ICambiar
         cambiante.AgregarModificador(this);
     }
 
-    public Atributos Modificar(Atributos atributos)
+    public Vector Modificar(Vector atributos)
     {
-        return Atributos.Sumar(atributos, new Atributos(new List<Par> { new Par(_identificador, _valorSumar) }));
+        return atributos.Sumar(_vector);
     }
 }

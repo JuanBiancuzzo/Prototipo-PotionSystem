@@ -9,12 +9,12 @@ public class VinculoTest
 {
     private class VinculadoPrueba : IVinculado
     {
-        private Atributos _estado;
+        private Vector _estado;
         private ICondicionDeVinculo _condicion;
         private List<IVinculo> _vinculos;
         private List<ICambiar> _modificadores;
 
-        public VinculadoPrueba(Atributos estadoInicial, ICondicionDeVinculo condicion = null)
+        public VinculadoPrueba(Vector estadoInicial, ICondicionDeVinculo condicion = null)
         {
             _estado = estadoInicial;
             _condicion = condicion;
@@ -45,7 +45,12 @@ public class VinculoTest
 
         public float ObtenerValor(IIdentificador identificador)
         {
-            return EstadoModificado().GetValor(identificador);
+            return GetValor(EstadoModificado(), identificador);
+        }
+
+        private float GetValor(Vector vector, IIdentificador identificador)
+        {
+            return vector.ProductoInterno(new Vector(new Componente(identificador, 1)));
         }
 
         public bool PermiteVinculoCon(IVinculado vinculado)
@@ -53,9 +58,9 @@ public class VinculoTest
             return (_condicion == null) ? false : _condicion.Evaluar(this, vinculado);
         }
 
-        private Atributos EstadoModificado()
+        private Vector EstadoModificado()
         {
-            Atributos nuevo = _estado;
+            Vector nuevo = _estado;
             _modificadores.ForEach(modificador => nuevo = modificador.Modificar(nuevo));
             return nuevo;
         }
@@ -70,11 +75,11 @@ public class VinculoTest
         _vel = new IdentificadorPrueba();
     }
 
-    Atributos CrearAtributos(float vida, float temp, float vel)
+    Vector CrearVector(float vida, float temp, float vel)
     {
-        return new Atributos(new List<Par>
+        return new Vector(new List<IComponente>
         {
-            new Par(_vida, vida), new Par(_temp, temp), new Par(_vel, vel)
+            new Componente(_vida, vida), new Componente(_temp, temp), new Componente(_vel, vel)
         });
     }
 
@@ -84,8 +89,8 @@ public class VinculoTest
         ICondicionDeVinculo condicion = new CondicionDeVinculoPrueba(new RequisitoValidoPrueba(),
                                                                      new CambiarNadaPrueba());
 
-        IVinculado vinculado1 = new VinculadoPrueba(Atributos.Nulo(), condicion);
-        IVinculado vinculado2 = new VinculadoPrueba(Atributos.Nulo());
+        IVinculado vinculado1 = new VinculadoPrueba(Vector.VectorNulo(), condicion);
+        IVinculado vinculado2 = new VinculadoPrueba(Vector.VectorNulo());
 
         IVinculo vinculo = new Vinculo(vinculado1, vinculado2, condicion);
 
@@ -98,10 +103,10 @@ public class VinculoTest
         ICondicionDeVinculo condicion = new CondicionDeVinculoPrueba(new RequisitoMayorPrueba(7f, _vida),
                                                                      new CambiarNadaPrueba());
 
-        Atributos estado1 = CrearAtributos(10f, 0f, 0f);
+        Vector estado1 = CrearVector(10f, 0f, 0f);
         IVinculado vinculado1 = new VinculadoPrueba(estado1, condicion);
 
-        Atributos estado2 = CrearAtributos(20f, 0f, 0f);
+        Vector estado2 = CrearVector(20f, 0f, 0f);
         IVinculado vinculado2 = new VinculadoPrueba(estado2);
 
         IVinculo vinculo = new Vinculo(vinculado1, vinculado2, condicion);
@@ -126,11 +131,11 @@ public class VinculoTest
         ICondicionDeVinculo condicion = new CondicionDeVinculoPrueba(new RequisitoValidoPrueba(),
                                                                      modificador);
         float valorVida1 = 10f;
-        Atributos estado1 = CrearAtributos(valorVida1, 0f, 0f);
+        Vector estado1 = CrearVector(valorVida1, 0f, 0f);
         IVinculado vinculado1 = new VinculadoPrueba(estado1, condicion);
 
         float valorVida2 = 20f;
-        Atributos estado2 = CrearAtributos(valorVida2, 0f, 0f);
+        Vector estado2 = CrearVector(valorVida2, 0f, 0f);
         IVinculado vinculado2 = new VinculadoPrueba(estado2);
 
         IVinculo vinculo = new Vinculo(vinculado1, vinculado2, condicion);
@@ -148,11 +153,11 @@ public class VinculoTest
         ICondicionDeVinculo condicion = new CondicionDeVinculoPrueba(new RequisitoValidoPrueba(),
                                                                      modificador);
         float valorVida1 = 10f;
-        Atributos estado1 = CrearAtributos(valorVida1, 0f, 0f);
+        Vector estado1 = CrearVector(valorVida1, 0f, 0f);
         IVinculado vinculado1 = new VinculadoPrueba(estado1, condicion);
 
         float valorVida2 = 20f;
-        Atributos estado2 = CrearAtributos(valorVida2, 0f, 0f);
+        Vector estado2 = CrearVector(valorVida2, 0f, 0f);
         IVinculado vinculado2 = new VinculadoPrueba(estado2);
 
         IVinculo vinculo = new Vinculo(vinculado1, vinculado2, condicion);

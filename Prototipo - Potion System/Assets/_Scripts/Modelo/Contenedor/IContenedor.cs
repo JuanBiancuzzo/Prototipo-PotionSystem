@@ -6,7 +6,7 @@
 
         public void Mezclar(IElemento elemento1, IElemento elemento2);
 
-        public Atributos CalcularEstado();
+        public Vector CalcularEstado();
 
         public bool Lleno();
 

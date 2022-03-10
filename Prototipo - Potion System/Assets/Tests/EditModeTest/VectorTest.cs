@@ -135,7 +135,7 @@ public class VectorTest
         float valorX1 = 4f, valorY1 = 3.5f, valorZ1 = 0.5f;
         Vector vector1 = CrearVector(valorX1, valorY1, valorZ1);
 
-        Assert.AreEqual(0f, MathfVectores.Comparacion(vector1, vector1));
+        Assert.AreEqual(0f, MathfVectores.Distancia(vector1, vector1));
     }
 
     [Test]
@@ -153,7 +153,7 @@ public class VectorTest
 
         float distancia = Mathf.Sqrt(diffX * diffX + diffY * diffY + diffZ * diffZ);
 
-        Assert.AreEqual(distancia, MathfVectores.Comparacion(vector1, vector2));
+        Assert.AreEqual(distancia, MathfVectores.Distancia(vector1, vector2));
     }
 
     [Test]

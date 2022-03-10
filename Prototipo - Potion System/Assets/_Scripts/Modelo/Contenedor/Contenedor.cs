@@ -33,9 +33,9 @@ namespace ItIsNotOnlyMe
                 IElemento.Unirse(elemento1, elemento2);
         }
 
-        public Atributos CalcularEstado()
+        public Vector CalcularEstado()
         {
-            Atributos atributos = Atributos.Nulo();
+            Vector atributos = Vector.VectorNulo();
             _elementos.ForEach(elemento => atributos = elemento.Agregar(atributos));
             return atributos;
         }
@@ -58,7 +58,7 @@ namespace ItIsNotOnlyMe
                 _elementos.Clear();
             _capacidad.Reducir();
 
-            Atributos estado = CalcularEstado();
+            Vector estado = CalcularEstado();
             return new Resultado(estado);
         }
 

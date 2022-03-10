@@ -26,10 +26,10 @@ namespace ItIsNotOnlyMe
             {
                 if (_pocionBase == null)
                 {
-                    List<Par> pares = new List<Par>();
+                    List<IComponente> pares = new List<IComponente>();
                     foreach (ParIdValor par in _parIdValores)
-                        pares.Add(new Par(par.Identificador, par.Valor));
-                    _pocionBase = new Resultado(new Atributos(pares));
+                        pares.Add(new Componente(par.Identificador, par.Valor));
+                    _pocionBase = new Resultado(new Vector(pares));
                 }
                 return _pocionBase;
             }
@@ -40,7 +40,7 @@ namespace ItIsNotOnlyMe
             return _pocion.Distancia(posion);
         }
 
-        public float Distancia(Atributos atributos)
+        public float Distancia(Vector atributos)
         {
             return _pocion.Distancia(atributos);
         }
@@ -50,7 +50,7 @@ namespace ItIsNotOnlyMe
             return _pocion.Similitud(posion);
         }
 
-        public float Similitud(Atributos atributos)
+        public float Similitud(Vector atributos)
         {
             return _pocion.Similitud(atributos);
         }
@@ -60,7 +60,7 @@ namespace ItIsNotOnlyMe
             return _pocion.Multiplicidad(posion);
         }
 
-        public float Multiplicidad(Atributos atributos)
+        public float Multiplicidad(Vector atributos)
         {
             return _pocion.Multiplicidad(atributos);
         }

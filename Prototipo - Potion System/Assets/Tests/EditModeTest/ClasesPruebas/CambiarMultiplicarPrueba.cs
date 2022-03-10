@@ -16,8 +16,8 @@ public class CambiarMultiplicarPrueba : ICambiar
         cambiante.AgregarModificador(this);
     }
 
-    public Atributos Modificar(Atributos atributos)
+    public Vector Modificar(Vector atributos)
     {
-        return Atributos.Multiplicar(atributos, new Par(_identificador, _valorMultiplicar));
+        return atributos.Multiplicar(_valorMultiplicar, _identificador);
     }
 }
