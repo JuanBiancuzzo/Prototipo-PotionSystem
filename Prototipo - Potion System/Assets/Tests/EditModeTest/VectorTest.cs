@@ -7,9 +7,14 @@ using UnityEngine.TestTools;
 
 public class VectorTest
 {
-    private IIdentificador _x = new IdentificadorPrueba();
-    private IIdentificador _y = new IdentificadorPrueba();
-    private IIdentificador _z = new IdentificadorPrueba();
+    private IIdentificador _x, _y, _z;
+
+    public VectorTest()
+    {
+        _x = new IdentificadorPrueba();
+        _y = new IdentificadorPrueba();
+        _z = new IdentificadorPrueba();
+    }
 
     private Vector CrearVector(float x, float y)
     {
@@ -122,5 +127,101 @@ public class VectorTest
         float productoInterno = 6 * 6 + 3 * 3 + 3 * 3;
 
         Assert.AreEqual(productoInterno, resultado.ProductoInterno(resultado));
+    }
+
+    [Test]
+    public void Test08DistanciaEntreDosVectoresIguales()
+    {
+        float valorX1 = 4f, valorY1 = 3.5f, valorZ1 = 0.5f;
+        Vector vector1 = CrearVector(valorX1, valorY1, valorZ1);
+
+        Assert.AreEqual(0f, MathfVectores.Comparacion(vector1, vector1));
+    }
+
+    [Test]
+    public void Test09DistanciaEntreDosVectoresDistintos()
+    {
+        float valorX1 = 4f, valorY1 = 3.5f, valorZ1 = 0.5f;
+        Vector vector1 = CrearVector(valorX1, valorY1, valorZ1);
+
+        float valorX2 = 3.8f, valorY2 = 4f, valorZ2 = -0.5f;
+        Vector vector2 = CrearVector(valorX2, valorY2, valorZ2);
+
+        float diffX = valorX1 - valorX2;
+        float diffY = valorY1 - valorY2;
+        float diffZ = valorZ1 - valorZ2;
+
+        float distancia = Mathf.Sqrt(diffX * diffX + diffY * diffY + diffZ * diffZ);
+
+        Assert.AreEqual(distancia, MathfVectores.Comparacion(vector1, vector2));
+    }
+
+    [Test]
+    public void Test10LaSimilitudEntreDosVectoresMultiplosEsUno()
+    {
+        float valorX1 = 4f, valorY1 = 3.5f, valorZ1 = 0.5f;
+        Vector vector1 = CrearVector(valorX1, valorY1, valorZ1);
+
+        float valorX2 = 8f, valorY2 = 7f, valorZ2 = 1f;
+        Vector vector2 = CrearVector(valorX2, valorY2, valorZ2);
+
+        Assert.AreEqual(1f, MathfVectores.Similitud(vector1, vector2));
+    }
+
+    [Test]
+    public void Test11LaSimilitudEntreDosVectoresOrtogonalesEsCero()
+    {
+        float valorX1 = 4f, valorY1 = 3.5f, valorZ1 = 0.5f;
+        Vector vector1 = CrearVector(valorX1, valorY1, valorZ1);
+
+        float valorX2 = -0.5f, valorY2 = 0f, valorZ2 = 4f;
+        Vector vector2 = CrearVector(valorX2, valorY2, valorZ2);
+
+        Assert.AreEqual(0f, MathfVectores.Similitud(vector1, vector2));
+    }
+
+    [Test]
+    public void Test12LaSimilitudEntreUnVectorYSuInversoEsMenosUno()
+    {
+        float valorX1 = 4f, valorY1 = 3.5f, valorZ1 = 0.5f;
+        Vector vector1 = CrearVector(valorX1, valorY1, valorZ1);
+
+        float valorX2 = -4f, valorY2 = -3.5f, valorZ2 = -0.5f;
+        Vector vector2 = CrearVector(valorX2, valorY2, valorZ2);
+
+        Assert.AreEqual(-1f, MathfVectores.Similitud(vector1, vector2));
+    }
+
+    [Test]
+    public void Test13LaMultiplicidadEntreElMismoVectorEsUno()
+    {
+        float valorX1 = 4f, valorY1 = 3.5f, valorZ1 = 0.5f;
+        Vector vector1 = CrearVector(valorX1, valorY1, valorZ1);
+
+        Assert.AreEqual(1f, MathfVectores.Multiplicdad(vector1, vector1));
+    }
+
+    [Test]
+    public void Test14LaMultiplicidadEntreUnVectorYElDobleEsDos()
+    {
+        float valorX1 = 4f, valorY1 = 3.5f, valorZ1 = 0.5f;
+        Vector vector1 = CrearVector(valorX1, valorY1, valorZ1);
+
+        float valorX2 = 8f, valorY2 = 7f, valorZ2 = 1f;
+        Vector vector2 = CrearVector(valorX2, valorY2, valorZ2);
+
+        Assert.AreEqual(2f, MathfVectores.Multiplicdad(vector1, vector2));
+    }
+
+    [Test]
+    public void Test15LaMultiplicidadEntreUnVectorYElInversoEsMenosUno()
+    { 
+        float valorX1 = 4f, valorY1 = 3.5f, valorZ1 = 0.5f;
+        Vector vector1 = CrearVector(valorX1, valorY1, valorZ1);
+
+        float valorX2 = -4f, valorY2 = -3.5f, valorZ2 = -0.5f;
+        Vector vector2 = CrearVector(valorX2, valorY2, valorZ2);
+
+        Assert.AreEqual(-1f, MathfVectores.Multiplicdad(vector1, vector2));
     }
 }
