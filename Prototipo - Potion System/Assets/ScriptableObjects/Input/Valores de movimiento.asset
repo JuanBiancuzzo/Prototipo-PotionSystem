@@ -9,9 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21f8bfe947e06ab4f9576e80300a6cb0, type: 3}
-  m_Name: Movimiento crear pociones input
+  m_Script: {fileID: 11500000, guid: 572ed89653e78cf4bbe6f65f61d64c49, type: 3}
+  m_Name: Valores de movimiento
   m_EditorClassIdentifier: 
-  _cambio: {fileID: 11400000, guid: 8face63726d2c5343b377b1f4040187f, type: 2}
-  _eventoCambiar: {fileID: 0}
-  _sencibilidadDeCambio: 0.1
+  WalkSpeed: 8
+  SmoothMoveTime: 0
+  Gravity: 18
+  RotationSmoothTime: 0
+  MouseSensitivity: 3
+  VelocidadHorizontal: 10
+  VelocidadVertical: 10
+  AnguloClamp: 80

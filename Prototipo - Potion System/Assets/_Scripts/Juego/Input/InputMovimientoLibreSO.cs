@@ -18,6 +18,7 @@ namespace ItIsNotOnlyMe
         private Inputs _playerControls = null;
 
         [SerializeField] private EstadoJugadorEventoSO _cambio;
+        [SerializeField] private VoidEventoSO _eventoCambiar;
 
         private void OnEnable()
         {
@@ -42,8 +43,11 @@ namespace ItIsNotOnlyMe
         private void Cambiar(EstadoJugador nuevoEstado)
         {
             Desactivar();
-            if (nuevoEstado == EstadoJugador.EntreAcciones)
+            if (nuevoEstado == EstadoJugador.MovimientoLibre)
+            {
                 Activar();
+                _eventoCambiar?.Activar();
+            }
         }
 
         private void Activar()

@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21f8bfe947e06ab4f9576e80300a6cb0, type: 3}
-  m_Name: Movimiento crear pociones input
+  m_Script: {fileID: 11500000, guid: 89cbde58cbdf2e948a40d9c37257e6dd, type: 3}
+  m_Name: CambioDeModo
   m_EditorClassIdentifier: 
-  _cambio: {fileID: 11400000, guid: 8face63726d2c5343b377b1f4040187f, type: 2}
-  _eventoCambiar: {fileID: 0}
-  _sencibilidadDeCambio: 0.1

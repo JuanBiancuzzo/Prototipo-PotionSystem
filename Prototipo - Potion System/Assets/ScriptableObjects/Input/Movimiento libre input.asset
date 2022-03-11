@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a5ef78e1bbc6f94486e8edfa849f82e, type: 3}
   m_Name: Movimiento libre input
   m_EditorClassIdentifier: 
-  _cambio: {fileID: 0}
+  _cambio: {fileID: 11400000, guid: 8face63726d2c5343b377b1f4040187f, type: 2}
+  _eventoCambiar: {fileID: 0}

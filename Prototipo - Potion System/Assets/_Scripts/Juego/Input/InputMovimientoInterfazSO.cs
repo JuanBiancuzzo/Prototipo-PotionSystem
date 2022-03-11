@@ -16,6 +16,7 @@ namespace ItIsNotOnlyMe
         private Inputs _playerControls = null;
 
         [SerializeField] private EstadoJugadorEventoSO _cambio;
+        [SerializeField] private VoidEventoSO _eventoCambiar;
         [Space]
         [SerializeField] [Range(0.01f, 1f)] private float _sencibilidadDeCambio = 0.1f;
 
@@ -30,6 +31,7 @@ namespace ItIsNotOnlyMe
             if (_cambio != null)
                 _cambio.Evento += Cambiar;
         }
+
         private void OnDisable()
         {
             Desactivar();
@@ -41,7 +43,10 @@ namespace ItIsNotOnlyMe
         {
             Desactivar();
             if (nuevoEstado == EstadoJugador.CreandoPociones)
+            {
                 Activar();
+                _eventoCambiar?.Activar();
+            }
         }
 
         private void Activar()

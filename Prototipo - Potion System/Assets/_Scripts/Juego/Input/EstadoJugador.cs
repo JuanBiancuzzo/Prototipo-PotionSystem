@@ -2,8 +2,7 @@
 {
     public enum EstadoJugador
     {
-        EntreAcciones,
-        CreandoPociones,
-        CompraVenta
+        MovimientoLibre,
+        CreandoPociones
     }
 }
