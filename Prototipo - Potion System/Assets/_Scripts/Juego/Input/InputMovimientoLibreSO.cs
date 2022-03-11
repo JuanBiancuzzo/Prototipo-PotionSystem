@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 namespace ItIsNotOnlyMe
 {
-    [CreateAssetMenu(menuName = "Input/Player input")]
+    [CreateAssetMenu(fileName = "Movimiento libre", menuName = "Input/Movimiento libre input")]
     public class InputMovimientoLibreSO : ScriptableObject, Inputs.IMovimientoLibreActions
     {
 

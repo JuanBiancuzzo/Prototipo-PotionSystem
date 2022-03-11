@@ -4,16 +4,20 @@ using UnityEngine.InputSystem;
 
 namespace ItIsNotOnlyMe
 {
-    [CreateAssetMenu(menuName = "Input/Crear pociones input")]
+    [CreateAssetMenu(fileName = "Movimiento crear pociones",  menuName = "Input/Crear pociones input")]
     public class InputMovimientoInterfazSO : ScriptableObject, Inputs.IMovimientoInterfazActions
     {
         public event Action EventoInteractuar;
         public event Action EventoCancelarInteraccion;
         public event Action EventoSalir;
+        public event Action EventoCambiarIzquierda;
+        public event Action EventoCambiarDerecha;
 
         private Inputs _playerControls = null;
 
         [SerializeField] private EstadoJugadorEventoSO _cambio;
+        [Space]
+        [SerializeField] [Range(0.01f, 1f)] private float _sencibilidadDeCambio = 0.1f;
 
         private void OnEnable()
         {
@@ -62,6 +66,16 @@ namespace ItIsNotOnlyMe
 
             if (context.phase == InputActionPhase.Canceled)
                 EventoCancelarInteraccion?.Invoke();
+        }
+
+        public void OnCambiarEstacion(InputAction.CallbackContext context)
+        {
+            float direccion = context.ReadValue<float>();
+
+            if (direccion < -_sencibilidadDeCambio)
+                EventoCambiarIzquierda?.Invoke();
+            else if (direccion > _sencibilidadDeCambio)
+                EventoCambiarDerecha?.Invoke();
         }
     }
 }

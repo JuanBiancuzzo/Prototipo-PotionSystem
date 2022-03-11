@@ -211,6 +211,15 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CambiarEstacion"",
+                    ""type"": ""Value"",
+                    ""id"": ""7bb35c0b-ac9f-472d-a93c-de53a45caea2"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -235,6 +244,39 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                     ""action"": ""Salir"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""AD"",
+                    ""id"": ""cdc44e1a-d362-4181-8ca3-6368c33ffec8"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CambiarEstacion"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""e36055fa-97b0-47e3-ae17-53299a447764"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CambiarEstacion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""991d6101-865d-4d7e-8d2e-55259aa15e65"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CambiarEstacion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -250,6 +292,7 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
         m_MovimientoInterfaz = asset.FindActionMap("MovimientoInterfaz", throwIfNotFound: true);
         m_MovimientoInterfaz_Interactuar = m_MovimientoInterfaz.FindAction("Interactuar", throwIfNotFound: true);
         m_MovimientoInterfaz_Salir = m_MovimientoInterfaz.FindAction("Salir", throwIfNotFound: true);
+        m_MovimientoInterfaz_CambiarEstacion = m_MovimientoInterfaz.FindAction("CambiarEstacion", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -360,12 +403,14 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
     private IMovimientoInterfazActions m_MovimientoInterfazActionsCallbackInterface;
     private readonly InputAction m_MovimientoInterfaz_Interactuar;
     private readonly InputAction m_MovimientoInterfaz_Salir;
+    private readonly InputAction m_MovimientoInterfaz_CambiarEstacion;
     public struct MovimientoInterfazActions
     {
         private @Inputs m_Wrapper;
         public MovimientoInterfazActions(@Inputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Interactuar => m_Wrapper.m_MovimientoInterfaz_Interactuar;
         public InputAction @Salir => m_Wrapper.m_MovimientoInterfaz_Salir;
+        public InputAction @CambiarEstacion => m_Wrapper.m_MovimientoInterfaz_CambiarEstacion;
         public InputActionMap Get() { return m_Wrapper.m_MovimientoInterfaz; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -381,6 +426,9 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                 @Salir.started -= m_Wrapper.m_MovimientoInterfazActionsCallbackInterface.OnSalir;
                 @Salir.performed -= m_Wrapper.m_MovimientoInterfazActionsCallbackInterface.OnSalir;
                 @Salir.canceled -= m_Wrapper.m_MovimientoInterfazActionsCallbackInterface.OnSalir;
+                @CambiarEstacion.started -= m_Wrapper.m_MovimientoInterfazActionsCallbackInterface.OnCambiarEstacion;
+                @CambiarEstacion.performed -= m_Wrapper.m_MovimientoInterfazActionsCallbackInterface.OnCambiarEstacion;
+                @CambiarEstacion.canceled -= m_Wrapper.m_MovimientoInterfazActionsCallbackInterface.OnCambiarEstacion;
             }
             m_Wrapper.m_MovimientoInterfazActionsCallbackInterface = instance;
             if (instance != null)
@@ -391,6 +439,9 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                 @Salir.started += instance.OnSalir;
                 @Salir.performed += instance.OnSalir;
                 @Salir.canceled += instance.OnSalir;
+                @CambiarEstacion.started += instance.OnCambiarEstacion;
+                @CambiarEstacion.performed += instance.OnCambiarEstacion;
+                @CambiarEstacion.canceled += instance.OnCambiarEstacion;
             }
         }
     }
@@ -405,5 +456,6 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
     {
         void OnInteractuar(InputAction.CallbackContext context);
         void OnSalir(InputAction.CallbackContext context);
+        void OnCambiarEstacion(InputAction.CallbackContext context);
     }
 }

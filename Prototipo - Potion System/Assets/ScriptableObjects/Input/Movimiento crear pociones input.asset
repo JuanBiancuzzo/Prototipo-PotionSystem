@@ -9,6 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48d0841108182e744a4f5fd2961a1cb0, type: 3}
-  m_Name: Hojas
+  m_Script: {fileID: 11500000, guid: 21f8bfe947e06ab4f9576e80300a6cb0, type: 3}
+  m_Name: Movimiento crear pociones input
   m_EditorClassIdentifier: 
+  _cambio: {fileID: 0}
+  _sencibilidadDeCambio: 0.1
