@@ -1,15 +1,19 @@
-﻿using System;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace ItIsNotOnlyMe
 {
-    [CreateAssetMenu(menuName = "Input/Crear pociones input")]
-    public class InputCrearPocionesSO : ScriptableObject, Inputs.ICreandoPocionesActions
+    [CreateAssetMenu(menuName = "Input/Player input")]
+    public class InputMovimientoLibreSO : ScriptableObject, Inputs.IMovimientoLibreActions
     {
+
+        public event Action<Vector2> EventoMover;
+        public event Action<Vector2> EventoRotar;
         public event Action EventoInteractuar;
         public event Action EventoCancelarInteraccion;
-        public event Action EventoSalir;
 
         private Inputs _playerControls = null;
 
@@ -20,12 +24,14 @@ namespace ItIsNotOnlyMe
             if (_playerControls == null)
             {
                 _playerControls = new Inputs();
-                _playerControls.CreandoPociones.SetCallbacks(this);
+                _playerControls.MovimientoLibre.SetCallbacks(this);
             }
 
             if (_cambio != null)
                 _cambio.Evento += Cambiar;
+            Activar();
         }
+
         private void OnDisable()
         {
             Desactivar();
@@ -33,26 +39,31 @@ namespace ItIsNotOnlyMe
                 _cambio.Evento -= Cambiar;
         }
 
-        public void Cambiar(EstadoJugador nuevoEstado)
+        private void Cambiar(EstadoJugador nuevoEstado)
         {
             Desactivar();
-            if (nuevoEstado == EstadoJugador.CreandoPociones)
+            if (nuevoEstado == EstadoJugador.EntreAcciones)
                 Activar();
         }
 
         private void Activar()
         {
-            _playerControls.CreandoPociones.Enable();
+            _playerControls.MovimientoLibre.Enable();
         }
 
         private void Desactivar()
         {
-            _playerControls.CreandoPociones.Disable();
+            _playerControls.MovimientoLibre.Disable();
         }
 
-        public void OnSalir(InputAction.CallbackContext context)
+        public void OnMover(InputAction.CallbackContext context)
         {
-            EventoSalir?.Invoke();
+            EventoMover?.Invoke(context.ReadValue<Vector2>());
+        }
+
+        public void OnMirar(InputAction.CallbackContext context)
+        {
+            EventoRotar?.Invoke(context.ReadValue<Vector2>());
         }
 
         public void OnInteractuar(InputAction.CallbackContext context)

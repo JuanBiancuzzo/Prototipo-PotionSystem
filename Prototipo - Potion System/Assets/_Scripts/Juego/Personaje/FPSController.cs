@@ -7,7 +7,7 @@ namespace ItIsNotOnlyMe
     [RequireComponent(typeof(CharacterController))]
     public class FPSController : MonoBehaviour
     {
-        [SerializeField] private InputEntreAccionesSO _inputPlayer;
+        [SerializeField] private InputMovimientoLibreSO _inputPlayer;
 
         [Space]
 

@@ -2,7 +2,7 @@
     "name": "PlayerInputs",
     "maps": [
         {
-            "name": "EntreAcciones",
+            "name": "MovimientoLibre",
             "id": "e7fcdf1a-1ddc-4a51-9a66-7777e15c47af",
             "actions": [
                 {
@@ -169,7 +169,7 @@
             ]
         },
         {
-            "name": "CreandoPociones",
+            "name": "MovimientoInterfaz",
             "id": "1e23e07f-c40d-472d-b6bd-30d10fee6d3c",
             "actions": [
                 {
@@ -211,54 +211,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Salir",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "ComprarVender",
-            "id": "58944cbf-b5d5-42c7-bf43-f37e4a4aa37c",
-            "actions": [
-                {
-                    "name": "Interactuar",
-                    "type": "Button",
-                    "id": "9e51e147-eebd-4f72-a7ce-3ebb7d7f938b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Salir",
-                    "type": "Button",
-                    "id": "89a9e2d9-fcb2-429e-8e5f-d8fc2aafce8d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "7376721a-d8a0-417e-9a32-4ffcd51bfcc8",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Salir",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9e9a4268-0cc2-461a-8d4a-dd1c43bac586",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interactuar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
