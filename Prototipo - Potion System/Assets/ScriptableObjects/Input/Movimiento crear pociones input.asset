@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Movimiento crear pociones input
   m_EditorClassIdentifier: 
   _cambio: {fileID: 11400000, guid: 8face63726d2c5343b377b1f4040187f, type: 2}
-  _eventoCambiar: {fileID: 0}
+  _eventoActivar: {fileID: 11400000, guid: b8f6a5ba79cf63c4cb1a9ac4708f07fa, type: 2}
+  _eventoDesactivar: {fileID: 11400000, guid: 4eb14688b7ffbf34cbda68856bcb6445, type: 2}
   _sencibilidadDeCambio: 0.1
