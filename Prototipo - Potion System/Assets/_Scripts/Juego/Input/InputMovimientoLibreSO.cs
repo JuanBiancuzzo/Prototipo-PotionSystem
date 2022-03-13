@@ -7,9 +7,8 @@ using UnityEngine.InputSystem;
 namespace ItIsNotOnlyMe
 {
     [CreateAssetMenu(fileName = "Movimiento libre", menuName = "Input/Movimiento libre input")]
-    public class InputMovimientoLibreSO : ScriptableObject, Inputs.IMovimientoLibreActions
+    public class InputMovimientoLibreSO : ScriptableObject, Inputs.IMovimientoLibreActions, MovimientoInput
     {
-
         public bool Interactuar { get; private set; }
         public Vector2 DeltaMouse { get; private set; }
         public Vector2 Movimiento { get; private set; }
@@ -31,6 +30,7 @@ namespace ItIsNotOnlyMe
         {
             Desactivar();
         }
+
         public void Activar()
         {
             _playerControls.MovimientoLibre.Enable();

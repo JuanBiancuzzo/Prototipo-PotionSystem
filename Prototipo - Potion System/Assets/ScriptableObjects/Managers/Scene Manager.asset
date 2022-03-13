@@ -13,9 +13,5 @@ MonoBehaviour:
   m_Name: Scene Manager
   m_EditorClassIdentifier: 
   _estadoJugador: 0
-  _cambiar: {fileID: 11400000, guid: 8face63726d2c5343b377b1f4040187f, type: 2}
-  _cambiosDeEstado:
-  - _estadoActual: 0
-    _estadoDeseado: 1
-  - _estadoActual: 1
-    _estadoDeseado: 0
+  _cambiar: {fileID: 0}
+  _cambiosDeEstado: []

@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 namespace ItIsNotOnlyMe
 {
     [CreateAssetMenu(fileName = "Movimiento crear pociones", menuName = "Input/Crear pociones input")]
-    public class InputMovimientoInterfazSO : ScriptableObject, Inputs.IMovimientoInterfazActions
+    public class InputMovimientoInterfazSO : ScriptableObject, Inputs.IMovimientoInterfazActions, MovimientoInput
     {
         public float CambiarDireccion { get; private set; }
         public bool Interactuar { get; private set; }
@@ -20,14 +20,13 @@ namespace ItIsNotOnlyMe
                 _playerControls = new Inputs();
                 _playerControls.MovimientoInterfaz.SetCallbacks(this);
             }
-
-            Activar();
         }
 
         private void OnDisable()
         {
             Desactivar();
         }
+
         public void Activar()
         {
             _playerControls.MovimientoInterfaz.Enable();
@@ -45,7 +44,6 @@ namespace ItIsNotOnlyMe
             Interactuar = false;
             Salir = false;
         }
-
 
         public void OnCambiarEstacion(InputAction.CallbackContext context)
         {

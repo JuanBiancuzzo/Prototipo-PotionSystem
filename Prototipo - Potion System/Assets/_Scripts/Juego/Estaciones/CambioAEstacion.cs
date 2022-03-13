@@ -4,24 +4,19 @@ using UnityEngine;
 
 namespace ItIsNotOnlyMe
 {
-    public class MovimientoPocionesController : MonoBehaviour
+    public class CambioAEstacion : MonoBehaviour
     {
-        [SerializeField] private InputMovimientoInterfazSO _inputPlayer;
+        [SerializeField] private InputMovimientoLibreSO _inputPlayer;
 
         [Space]
 
         [SerializeField] private SceneManager _sceneManager;
-        [SerializeField] private InputMovimientoLibreSO _nuevoInput;
+        [SerializeField] private InputMovimientoInterfazSO _nuevoInput;
         [SerializeField] private CamaraPrioridad _nuevaCamara;
 
-        private void Update()
+        private void OnTriggerStay(Collider other)
         {
-            Salir();
-        }
-
-        private void Salir()
-        {
-            if (_inputPlayer.Salir)
+            if (_inputPlayer.Interactuar)
                 _sceneManager.Cambiar(_nuevoInput, _nuevaCamara);
         }
     }

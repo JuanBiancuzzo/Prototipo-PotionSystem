@@ -8,36 +8,21 @@ namespace ItIsNotOnlyMe
     [CreateAssetMenu(fileName = "Scene Manager", menuName = "Manager/Scene Manager")]
     public class SceneManager : ScriptableObject
     {
-        [System.Serializable]
-        private struct CambioDeEstados
+        private MovimientoInput _inputActual;
+        private CamaraPrioridad _camaraActual;
+
+        public void Cambiar(MovimientoInput input, CamaraPrioridad camara)
         {
-            [SerializeField]
-            private EstadoJugador _estadoActual, _estadoDeseado;
+            if (_inputActual != null)
+                _inputActual.Desactivar();
+            if (_camaraActual != null)
+                _camaraActual.Desactivar();
 
-            public bool EstadoActual(EstadoJugador estado)
-            {
-                return _estadoActual == estado;
-            }
+            _camaraActual = camara;
+            _inputActual = input;
 
-            public EstadoJugador EstadoDeseado()
-            {
-                return _estadoDeseado;
-            }
-        }
-
-        [SerializeField] private EstadoJugador _estadoJugador = EstadoJugador.MovimientoLibre;
-        [SerializeField] private EstadoJugadorEventoSO _cambiar;
-        [SerializeField] private List<CambioDeEstados> _cambiosDeEstado;
-
-        public void SalirDeEstado(EstadoJugador estado)
-        {
-            foreach (CambioDeEstados cambio in _cambiosDeEstado)
-                if (cambio.EstadoActual(estado))
-                {
-                    _estadoJugador = cambio.EstadoDeseado();
-                    _cambiar?.Activar(_estadoJugador);
-                    return;
-                }
+            _camaraActual.Activar();
+            _inputActual.Activar();
         }
     }
 }

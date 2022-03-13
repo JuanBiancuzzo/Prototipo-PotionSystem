@@ -37,7 +37,6 @@ namespace ItIsNotOnlyMe
         private void Update()
         {
             Mover();
-            CambiarDeEscena();
         }
 
         private void Mover()
@@ -59,12 +58,6 @@ namespace ItIsNotOnlyMe
             float forwardY = transform.forward.y;
             float forwardZ = _camara.transform.forward.z;
             transform.forward = new Vector3(forwardX, forwardY, forwardZ);
-        }
-
-        private void CambiarDeEscena()
-        {
-            if (_inputPlayer.Interactuar)
-                _sceneManager.SalirDeEstado(EstadoJugador.MovimientoLibre);
         }
     }
 }
