@@ -10,15 +10,11 @@ namespace ItIsNotOnlyMe
     public class InputMovimientoLibreSO : ScriptableObject, Inputs.IMovimientoLibreActions
     {
 
-        public event Action<Vector2> EventoMover;
-        public event Action<Vector2> EventoRotar;
-        public event Action EventoInteractuar;
-        public event Action EventoCancelarInteraccion;
+        public bool Interactuar { get; private set; }
+        public Vector2 DeltaMouse { get; private set; }
+        public Vector2 Movimiento { get; private set; }
 
         private Inputs _playerControls = null;
-
-        [SerializeField] private EstadoJugadorEventoSO _cambio;
-        [SerializeField] private VoidEventoSO _eventoActivar, _eventoDesactivar;
 
         private void OnEnable()
         {
@@ -28,55 +24,48 @@ namespace ItIsNotOnlyMe
                 _playerControls.MovimientoLibre.SetCallbacks(this);
             }
 
-            if (_cambio != null)
-                _cambio.Evento += Cambiar;
             Activar();
         }
 
         private void OnDisable()
         {
             Desactivar();
-            if (_cambio != null)
-                _cambio.Evento -= Cambiar;
         }
-
-        private void Cambiar(EstadoJugador nuevoEstado)
+        public void Activar()
         {
-            if (nuevoEstado == EstadoJugador.MovimientoLibre)
-                Activar();
-            else
-                Desactivar();
-        }
-
-        private void Activar()
-        {
-            _eventoActivar?.Activar();
             _playerControls.MovimientoLibre.Enable();
+            ResetearValores();
         }
 
-        private void Desactivar()
+        public void Desactivar()
         {
-            _eventoDesactivar?.Activar();
             _playerControls.MovimientoLibre.Disable();
         }
 
-        public void OnMover(InputAction.CallbackContext context)
+        private void ResetearValores()
         {
-            EventoMover?.Invoke(context.ReadValue<Vector2>());
-        }
-
-        public void OnMirar(InputAction.CallbackContext context)
-        {
-            EventoRotar?.Invoke(context.ReadValue<Vector2>());
+            Interactuar = false;
+            DeltaMouse = Vector2.zero;
+            Movimiento = Vector2.zero;
         }
 
         public void OnInteractuar(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
-                EventoInteractuar?.Invoke();
+                Interactuar = true;
 
             if (context.phase == InputActionPhase.Canceled)
-                EventoCancelarInteraccion?.Invoke();
+                Interactuar = false;
+        }
+
+        public void OnMirar(InputAction.CallbackContext context)
+        {
+            DeltaMouse = context.ReadValue<Vector2>();
+        }
+
+        public void OnMover(InputAction.CallbackContext context)
+        {
+            Movimiento = context.ReadValue<Vector2>();
         }
     }
 }

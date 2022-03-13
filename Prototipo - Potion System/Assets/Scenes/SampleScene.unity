@@ -1197,7 +1197,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.8348348, y: 1}
+    m_SensorSize: {x: 2.9968255, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1582,7 +1582,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.8348348, y: 1}
+    m_SensorSize: {x: 2.9968255, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1619,7 +1619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f5bb383628aef64eb141975ed75cfeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputPlayer: {fileID: 11400000, guid: ff9af72db36ff9345b724cecf753011b, type: 2}
+  _inputPlayer: {fileID: 11400000, guid: 6219005c0863bb14e98e5696f263ea55, type: 2}
   _valores: {fileID: 11400000, guid: 93f9a2d600848724da09903dcceb41d7, type: 2}
 --- !u!1 &1289391612
 GameObject:
@@ -2335,7 +2335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneManager: {fileID: 11400000, guid: 23532f6d72a030f4cae71fd072ec7402, type: 2}
-  _inputPlayer: {fileID: 11400000, guid: ff9af72db36ff9345b724cecf753011b, type: 2}
+  _inputPlayer: {fileID: 11400000, guid: 6219005c0863bb14e98e5696f263ea55, type: 2}
   _valores: {fileID: 11400000, guid: 93f9a2d600848724da09903dcceb41d7, type: 2}
   _camara: {fileID: 963194227}
   _lockCursor: 1
@@ -2352,7 +2352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneManager: {fileID: 11400000, guid: 23532f6d72a030f4cae71fd072ec7402, type: 2}
-  _inputPlayer: {fileID: 11400000, guid: becf4e51e37b815488d317e730684c4c, type: 2}
+  _inputPlayer: {fileID: 11400000, guid: 3e017dca80420e146b1431a6586e848c, type: 2}
 --- !u!1 &1911982694
 GameObject:
   m_ObjectHideFlags: 0

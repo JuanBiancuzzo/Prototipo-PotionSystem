@@ -4,21 +4,14 @@ using UnityEngine.InputSystem;
 
 namespace ItIsNotOnlyMe
 {
-    [CreateAssetMenu(fileName = "Movimiento crear pociones",  menuName = "Input/Crear pociones input")]
+    [CreateAssetMenu(fileName = "Movimiento crear pociones", menuName = "Input/Crear pociones input")]
     public class InputMovimientoInterfazSO : ScriptableObject, Inputs.IMovimientoInterfazActions
     {
-        public event Action EventoInteractuar;
-        public event Action EventoCancelarInteraccion;
-        public event Action EventoSalir;
-        public event Action EventoCambiarIzquierda;
-        public event Action EventoCambiarDerecha;
+        public float CambiarDireccion { get; private set; }
+        public bool Interactuar { get; private set; }
+        public bool Salir { get; private set; }
 
         private Inputs _playerControls = null;
-
-        [SerializeField] private EstadoJugadorEventoSO _cambio;
-        [SerializeField] private VoidEventoSO _eventoActivar, _eventoDesactivar;
-        [Space]
-        [SerializeField] [Range(0.01f, 1f)] private float _sencibilidadDeCambio = 0.1f;
 
         private void OnEnable()
         {
@@ -28,59 +21,53 @@ namespace ItIsNotOnlyMe
                 _playerControls.MovimientoInterfaz.SetCallbacks(this);
             }
 
-            if (_cambio != null)
-                _cambio.Evento += Cambiar;
+            Activar();
         }
 
         private void OnDisable()
         {
             Desactivar();
-            if (_cambio != null)
-                _cambio.Evento -= Cambiar;
         }
-
-        public void Cambiar(EstadoJugador nuevoEstado)
+        public void Activar()
         {
-            if (nuevoEstado == EstadoJugador.CreandoPociones)
-                Activar();
-            else
-                Desactivar();
-        }
-
-        private void Activar()
-        {
-            _eventoActivar?.Activar();
             _playerControls.MovimientoInterfaz.Enable();
+            ResetearValores();
         }
 
-        private void Desactivar()
+        public void Desactivar()
         {
-            _eventoDesactivar?.Activar();
             _playerControls.MovimientoInterfaz.Disable();
         }
 
-        public void OnSalir(InputAction.CallbackContext context)
+        private void ResetearValores()
         {
-            EventoSalir?.Invoke();
+            CambiarDireccion = 0f;
+            Interactuar = false;
+            Salir = false;
+        }
+
+
+        public void OnCambiarEstacion(InputAction.CallbackContext context)
+        {
+            CambiarDireccion = context.ReadValue<float>();
         }
 
         public void OnInteractuar(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
-                EventoInteractuar?.Invoke();
+                Interactuar = true;
 
             if (context.phase == InputActionPhase.Canceled)
-                EventoCancelarInteraccion?.Invoke();
+                Interactuar = false;
         }
 
-        public void OnCambiarEstacion(InputAction.CallbackContext context)
+        public void OnSalir(InputAction.CallbackContext context)
         {
-            float direccion = context.ReadValue<float>();
+            if (context.phase == InputActionPhase.Performed)
+                Salir = true;
 
-            if (direccion < -_sencibilidadDeCambio)
-                EventoCambiarIzquierda?.Invoke();
-            else if (direccion > _sencibilidadDeCambio)
-                EventoCambiarDerecha?.Invoke();
+            if (context.phase == InputActionPhase.Canceled)
+                Salir = false;
         }
     }
 }

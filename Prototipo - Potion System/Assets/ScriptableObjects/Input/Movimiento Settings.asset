@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 572ed89653e78cf4bbe6f65f61d64c49, type: 3}
-  m_Name: Valores de movimiento
+  m_Name: Movimiento Settings
   m_EditorClassIdentifier: 
   WalkSpeed: 8
   SmoothMoveTime: 0

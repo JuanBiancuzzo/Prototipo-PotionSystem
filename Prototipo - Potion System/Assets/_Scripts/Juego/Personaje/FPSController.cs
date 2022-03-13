@@ -22,19 +22,6 @@ namespace ItIsNotOnlyMe
         
         private Vector3 _velocidad;
         private Vector3 _smoothV;
-        private Vector3 _inputDireccion;
-
-        private void OnEnable()
-        {
-            _inputPlayer.EventoMover += ActualizarInput;
-            _inputPlayer.EventoInteractuar += CambiarDeEscena;
-        }
-
-        private void OnDisable()
-        {
-            _inputPlayer.EventoMover -= ActualizarInput;
-            _inputPlayer.EventoInteractuar -= CambiarDeEscena;
-        }
 
         void Awake()
         {
@@ -50,16 +37,14 @@ namespace ItIsNotOnlyMe
         private void Update()
         {
             Mover();
-        }
-
-        private void ActualizarInput(Vector2 movimiento)
-        {
-            _inputDireccion = new Vector3(movimiento.x, 0, movimiento.y);
+            CambiarDeEscena();
         }
 
         private void Mover()
         {
-            Vector3 worldInputDir = transform.TransformDirection(_inputDireccion);
+            Vector2 movimiento = _inputPlayer.Movimiento;
+            Vector3 inputDireccion = new Vector3(movimiento.x, 0, movimiento.y);
+            Vector3 worldInputDir = transform.TransformDirection(inputDireccion);
             Vector3 targetVelocity = worldInputDir * _valores.WalkSpeed;
             _velocidad = Vector3.SmoothDamp(_velocidad, targetVelocity, ref _smoothV, _valores.SmoothMoveTime);
 
@@ -78,7 +63,8 @@ namespace ItIsNotOnlyMe
 
         private void CambiarDeEscena()
         {
-            _sceneManager.SalirDeEstado(EstadoJugador.MovimientoLibre);
+            if (_inputPlayer.Interactuar)
+                _sceneManager.SalirDeEstado(EstadoJugador.MovimientoLibre);
         }
     }
 }

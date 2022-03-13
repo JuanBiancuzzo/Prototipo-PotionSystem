@@ -12,24 +12,15 @@ namespace ItIsNotOnlyMe
 
         [SerializeField] private InputMovimientoInterfazSO _inputPlayer;
 
-        private void OnEnable()
+        private void Update()
         {
-            _inputPlayer.EventoSalir += Salir;
-        }
-
-        private void OnDisable()
-        {
-            _inputPlayer.EventoSalir -= Salir;
-        }
-
-        private void Interactuar()
-        {
-            // ray cast para agarrar el objeto y de esa forma moverlo
+            Salir();
         }
 
         private void Salir()
         {
-            _sceneManager.SalirDeEstado(EstadoJugador.CreandoPociones);
+            if (_inputPlayer.Salir)
+                _sceneManager.SalirDeEstado(EstadoJugador.CreandoPociones);
         }
     }
 }
