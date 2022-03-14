@@ -11,6 +11,12 @@ namespace ItIsNotOnlyMe
         private MovimientoInput _inputActual;
         private CamaraPrioridad _camaraActual;
 
+        public void Init(MovimientoInput input, CamaraPrioridad camara)
+        {
+            _camaraActual = camara;
+            _inputActual = input;
+        }
+
         public void Cambiar(MovimientoInput input, CamaraPrioridad camara)
         {
             if (_inputActual != null)

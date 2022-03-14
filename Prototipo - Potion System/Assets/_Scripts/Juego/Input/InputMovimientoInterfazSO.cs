@@ -7,8 +7,8 @@ namespace ItIsNotOnlyMe
     [CreateAssetMenu(fileName = "Movimiento crear pociones", menuName = "Input/Crear pociones input")]
     public class InputMovimientoInterfazSO : ScriptableObject, Inputs.IMovimientoInterfazActions, MovimientoInput
     {
-        public float CambiarDireccion { get; private set; }
-        public bool Interactuar { get; private set; }
+        public float Navegar { get; private set; }
+        public bool Click { get; private set; }
         public bool Salir { get; private set; }
 
         private Inputs _playerControls = null;
@@ -40,23 +40,9 @@ namespace ItIsNotOnlyMe
 
         private void ResetearValores()
         {
-            CambiarDireccion = 0f;
-            Interactuar = false;
+            Navegar = 0f;
+            Click = false;
             Salir = false;
-        }
-
-        public void OnCambiarEstacion(InputAction.CallbackContext context)
-        {
-            CambiarDireccion = context.ReadValue<float>();
-        }
-
-        public void OnInteractuar(InputAction.CallbackContext context)
-        {
-            if (context.phase == InputActionPhase.Performed)
-                Interactuar = true;
-
-            if (context.phase == InputActionPhase.Canceled)
-                Interactuar = false;
         }
 
         public void OnSalir(InputAction.CallbackContext context)
@@ -66,6 +52,40 @@ namespace ItIsNotOnlyMe
 
             if (context.phase == InputActionPhase.Canceled)
                 Salir = false;
+        }
+
+        public void OnNavegar(InputAction.CallbackContext context)
+        {
+            Navegar = context.ReadValue<float>();
+        }
+
+        public void OnPoint(InputAction.CallbackContext context)
+        {
+            
+        }
+
+        public void OnClick(InputAction.CallbackContext context)
+        {
+            if (context.phase == InputActionPhase.Performed)
+                Click = true;
+
+            if (context.phase == InputActionPhase.Canceled)
+                Click = false;
+        }
+
+        public void OnRightClick(InputAction.CallbackContext context)
+        {
+            
+        }
+
+        public void OnMiddleClick(InputAction.CallbackContext context)
+        {
+            
+        }
+
+        public void OnScrollWheel(InputAction.CallbackContext context)
+        {
+            
         }
     }
 }
