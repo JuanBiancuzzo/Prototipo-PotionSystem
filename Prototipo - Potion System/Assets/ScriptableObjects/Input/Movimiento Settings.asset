@@ -16,7 +16,7 @@ MonoBehaviour:
   SmoothMoveTime: 0
   Gravity: 18
   RotationSmoothTime: 0
-  MouseSensitivity: 3
+  MouseSensitivity: 2
   VelocidadHorizontal: 10
   VelocidadVertical: 10
   AnguloClamp: 80

@@ -7,10 +7,6 @@ namespace ItIsNotOnlyMe
     [RequireComponent(typeof(CharacterController))]
     public class FPSController : MonoBehaviour
     {
-        [SerializeField] private SceneManager _sceneManager;
-
-        [Space]
-
         [SerializeField] private InputMovimientoLibreSO _inputPlayer;
         [SerializeField] private ValoresJugador _valores;
         [SerializeField] private Camera _camara;
@@ -26,12 +22,21 @@ namespace ItIsNotOnlyMe
         void Awake()
         {
             if (_lockCursor)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-            }
+                LockMouse();
 
             _controller = GetComponent<CharacterController>();
+        }
+
+        private void OnApplicationFocus(bool focus)
+        {
+            if (focus && _lockCursor)
+                LockMouse();
+        }
+
+        private void LockMouse()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         private void Update()

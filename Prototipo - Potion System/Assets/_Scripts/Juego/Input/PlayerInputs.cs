@@ -53,6 +53,15 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Menu"",
+                    ""type"": ""Button"",
+                    ""id"": ""d9a8792c-4c28-4c53-a534-2a36c7ac1e7a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -185,6 +194,17 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interactuar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""08bde963-3d38-4642-8fe9-fe9f777fb52c"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Menu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -423,6 +443,7 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
         m_MovimientoLibre_Mover = m_MovimientoLibre.FindAction("Mover", throwIfNotFound: true);
         m_MovimientoLibre_Mirar = m_MovimientoLibre.FindAction("Mirar", throwIfNotFound: true);
         m_MovimientoLibre_Interactuar = m_MovimientoLibre.FindAction("Interactuar", throwIfNotFound: true);
+        m_MovimientoLibre_Menu = m_MovimientoLibre.FindAction("Menu", throwIfNotFound: true);
         // MovimientoInterfaz
         m_MovimientoInterfaz = asset.FindActionMap("MovimientoInterfaz", throwIfNotFound: true);
         m_MovimientoInterfaz_Salir = m_MovimientoInterfaz.FindAction("Salir", throwIfNotFound: true);
@@ -494,6 +515,7 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
     private readonly InputAction m_MovimientoLibre_Mover;
     private readonly InputAction m_MovimientoLibre_Mirar;
     private readonly InputAction m_MovimientoLibre_Interactuar;
+    private readonly InputAction m_MovimientoLibre_Menu;
     public struct MovimientoLibreActions
     {
         private @Inputs m_Wrapper;
@@ -501,6 +523,7 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
         public InputAction @Mover => m_Wrapper.m_MovimientoLibre_Mover;
         public InputAction @Mirar => m_Wrapper.m_MovimientoLibre_Mirar;
         public InputAction @Interactuar => m_Wrapper.m_MovimientoLibre_Interactuar;
+        public InputAction @Menu => m_Wrapper.m_MovimientoLibre_Menu;
         public InputActionMap Get() { return m_Wrapper.m_MovimientoLibre; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -519,6 +542,9 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                 @Interactuar.started -= m_Wrapper.m_MovimientoLibreActionsCallbackInterface.OnInteractuar;
                 @Interactuar.performed -= m_Wrapper.m_MovimientoLibreActionsCallbackInterface.OnInteractuar;
                 @Interactuar.canceled -= m_Wrapper.m_MovimientoLibreActionsCallbackInterface.OnInteractuar;
+                @Menu.started -= m_Wrapper.m_MovimientoLibreActionsCallbackInterface.OnMenu;
+                @Menu.performed -= m_Wrapper.m_MovimientoLibreActionsCallbackInterface.OnMenu;
+                @Menu.canceled -= m_Wrapper.m_MovimientoLibreActionsCallbackInterface.OnMenu;
             }
             m_Wrapper.m_MovimientoLibreActionsCallbackInterface = instance;
             if (instance != null)
@@ -532,6 +558,9 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
                 @Interactuar.started += instance.OnInteractuar;
                 @Interactuar.performed += instance.OnInteractuar;
                 @Interactuar.canceled += instance.OnInteractuar;
+                @Menu.started += instance.OnMenu;
+                @Menu.performed += instance.OnMenu;
+                @Menu.canceled += instance.OnMenu;
             }
         }
     }
@@ -622,6 +651,7 @@ public partial class @Inputs : IInputActionCollection2, IDisposable
         void OnMover(InputAction.CallbackContext context);
         void OnMirar(InputAction.CallbackContext context);
         void OnInteractuar(InputAction.CallbackContext context);
+        void OnMenu(InputAction.CallbackContext context);
     }
     public interface IMovimientoInterfazActions
     {

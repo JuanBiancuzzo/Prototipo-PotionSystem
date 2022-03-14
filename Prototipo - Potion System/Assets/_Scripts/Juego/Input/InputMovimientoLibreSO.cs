@@ -10,6 +10,11 @@ namespace ItIsNotOnlyMe
     public class InputMovimientoLibreSO : ScriptableObject, Inputs.IMovimientoLibreActions, MovimientoInput
     {
         public bool Interactuar { get; private set; }
+        public Action EventoInteractuar;
+
+        public bool Menu { get; private set; }
+        public Action EventoMenu;
+
         public Vector2 DeltaMouse { get; private set; }
         public Vector2 Movimiento { get; private set; }
 
@@ -45,6 +50,7 @@ namespace ItIsNotOnlyMe
         private void ResetearValores()
         {
             Interactuar = false;
+            Menu = false;
             DeltaMouse = Vector2.zero;
             Movimiento = Vector2.zero;
         }
@@ -52,7 +58,10 @@ namespace ItIsNotOnlyMe
         public void OnInteractuar(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
+            {
                 Interactuar = true;
+                EventoInteractuar?.Invoke();
+            }
 
             if (context.phase == InputActionPhase.Canceled)
                 Interactuar = false;
@@ -66,6 +75,18 @@ namespace ItIsNotOnlyMe
         public void OnMover(InputAction.CallbackContext context)
         {
             Movimiento = context.ReadValue<Vector2>();
+        }
+
+        public void OnMenu(InputAction.CallbackContext context)
+        {
+            if (context.phase == InputActionPhase.Performed)
+            {
+                Interactuar = true;
+                EventoMenu?.Invoke();
+            }
+
+            if (context.phase == InputActionPhase.Canceled)
+                Interactuar = false;
         }
     }
 }
