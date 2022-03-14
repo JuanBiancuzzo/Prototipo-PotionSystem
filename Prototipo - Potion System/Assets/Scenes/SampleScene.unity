@@ -1474,7 +1474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1159358670}
   - component: {fileID: 1159358669}
-  - component: {fileID: 1159358672}
+  - component: {fileID: 1159358671}
   m_Layer: 0
   m_Name: First person
   m_TagString: Untagged
@@ -1511,7 +1511,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.505747, y: 1}
+    m_SensorSize: {x: 2.8908045, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1536,7 +1536,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1159358672
+--- !u!114 &1159358671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1545,12 +1545,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1159358668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb7194dc27b9df64c8beca7482ee8e0d, type: 3}
+  m_Script: {fileID: 11500000, guid: d15eb992b47d2304088bdc81cc531a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerIndex: -1
-  XYAxis: {fileID: 5701199977170072931, guid: c7d160d1c2054be449fdde3f3f04d72a, type: 3}
-  ZAxis: {fileID: 0}
+  _inputPlayer: {fileID: 11400000, guid: 6219005c0863bb14e98e5696f263ea55, type: 2}
+  _valores: {fileID: 11400000, guid: 93f9a2d600848724da09903dcceb41d7, type: 2}
 --- !u!1 &1289391612
 GameObject:
   m_ObjectHideFlags: 0

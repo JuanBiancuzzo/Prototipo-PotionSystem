@@ -1,20 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ItIsNotOnlyMe
 {
     public class Menu : MonoBehaviour
     {
-        [SerializeField] private InputMovimientoLibreSO _inputPlayer;
+        [SerializeField] private InputMenuSO _inputPlayer;
+        [SerializeField] private InputMovimientoLibreSO _movimiento;
         [SerializeField] private GameObject _tablero;
+
+        [SerializeReference] private Slider _seleccionDefault;
 
         private bool _estadoMenu;
 
         private void Awake()
         {
-            _tablero.SetActive(false);
             _estadoMenu = false;
+            _tablero.SetActive(_estadoMenu);
+            _movimiento.SetActive(!_estadoMenu);
         }
 
         private void OnEnable() => _inputPlayer.EventoMenu += Cambiar;
@@ -24,6 +27,8 @@ namespace ItIsNotOnlyMe
         {
             _estadoMenu = !_estadoMenu;
             _tablero.SetActive(_estadoMenu);
+            _movimiento.SetActive(!_estadoMenu);
+            _seleccionDefault.Select();
         }
     }
 }
