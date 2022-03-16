@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "com.itisnotonlyme.inventario": "https://github.com/It-is-not-only-me/com.itisnotonlyme.inventario.git",
+    "com.itisnotonlyme.sistema-de-pociones": "https://github.com/JuanBiancuzzo/com.itisnotonlyme.sistema-de-pociones.git",
+    "com.itisnotonlyme.vector-dinamico": "https://github.com/JuanBiancuzzo/com.itisnotonlyme.vector-dinamico.git",
     "com.unity.cinemachine": "2.8.4",
     "com.unity.collab-proxy": "1.15.12",
     "com.unity.ide.rider": "3.0.7",

@@ -41,7 +41,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 321
-    width: 267
+    width: 340
     height: 446
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
@@ -67,14 +67,14 @@ MonoBehaviour:
   - {fileID: 2}
   m_Position:
     serializedVersion: 2
-    x: 1333
+    x: 1260
     y: 0
-    width: 267
+    width: 340
     height: 767
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 60
+  controlID: 107
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -92,10 +92,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 267
+    width: 340
     height: 321
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 33
+  controlID: 106
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -217,12 +217,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1007
+    width: 926
     height: 767
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 96
+  controlID: 55
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -240,10 +240,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1007
-    height: 377
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 926
+    height: 418
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -260,24 +260,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 377
-    width: 1007
-    height: 390
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+    y: 418
+    width: 926
+    height: 349
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 13}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -293,9 +293,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1007
+    x: 926
     y: 0
-    width: 326
+    width: 334
     height: 767
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -416,9 +416,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1333
+    x: 1260
     y: 73
-    width: 266
+    width: 339
     height: 300
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -427,9 +427,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a0510000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 04fbffff
+      m_ExpandedIDs: 
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -475,8 +475,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 1006
-    height: 356
+    width: 925
+    height: 397
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -678,9 +678,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 700.3117, y: 315.67783, z: 8.763816}
+    m_Target: {x: 345.33334, y: 123.96362, z: 10.118568}
     speed: 2
-    m_Value: {x: 700.3117, y: 315.67783, z: 8.763816}
+    m_Value: {x: 345.33334, y: 123.96362, z: 10.118568}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -731,9 +731,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 344.86487
+    m_Target: 351.2352
     speed: 2
-    m_Value: 344.86487
+    m_Value: 351.2352
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1000,9 +1000,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 450
-    width: 872
-    height: 369
+    y: 491
+    width: 925
+    height: 328
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1028,20 +1028,20 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 505
-    width: 944
-    height: 314
+    y: 491
+    width: 925
+    height: 328
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 16714
+    ID: 470
     splitterInitialOffset: 561
     currentActiveSplitter: -1
     realSizes:
-    - 510
-    - 434
+    - 499
+    - 426
     relativeSizes:
     - 0.5398655
     - 0.4601345
@@ -1051,7 +1051,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 944
+    lastTotalSize: 925
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -1103,7 +1103,7 @@ MonoBehaviour:
       name: Prototipo - Potion System
       fullName: Prototipo - Potion System
       resultStatus: 1
-      duration: 0.1702031
+      duration: 0.0836844
       messages: 
       output: 
       stacktrace: 
@@ -1114,14 +1114,14 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1021
-      uniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
-        - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-      name: EditModeTest.dll
+    - id: 1020
+      uniqueId: '[com.itisnotonlyme.vector-dinamico.Tests][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
+        - Potion System/Library/ScriptAssemblies/com.itisnotonlyme.vector-dinamico.Tests.dll][suite]'
+      name: com.itisnotonlyme.vector-dinamico.Tests.dll
       fullName: C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo -
-        Potion System/Library/ScriptAssemblies/EditModeTest.dll
+        Potion System/Library/ScriptAssemblies/com.itisnotonlyme.vector-dinamico.Tests.dll
       resultStatus: 1
-      duration: 0.120887
+      duration: 0.0431159
       messages: 
       output: 
       stacktrace: 
@@ -1132,250 +1132,12 @@ MonoBehaviour:
       categories: []
       parentId: 1000
       parentUniqueId: '[Prototipo - Potion System][suite]'
-    - id: 1010
-      uniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
-      name: ContenedorTest
-      fullName: ContenedorTest
-      resultStatus: 1
-      duration: 0.0648338
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1028
-      parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
-        - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-    - id: 1011
-      uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial]
-      name: Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial
-      fullName: ContenedorTest.Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial
-      resultStatus: 1
-      duration: 0.0174908
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
-    - id: 1012
-      uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente]
-      name: Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente
-      fullName: ContenedorTest.Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente
-      resultStatus: 1
-      duration: 0.0030072
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
-    - id: 1013
-      uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados]
-      name: Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados
-      fullName: ContenedorTest.Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados
-      resultStatus: 1
-      duration: 0.0004219
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
-    - id: 1014
-      uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test04UnContenedorConDosIngredientesVinculadosEsLaSumaDeSusEstadosModificados]
-      name: Test04UnContenedorConDosIngredientesVinculadosEsLaSumaDeSusEstadosModificados
-      fullName: ContenedorTest.Test04UnContenedorConDosIngredientesVinculadosEsLaSumaDeSusEstadosModificados
-      resultStatus: 1
-      duration: 0.000667
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
-    - id: 1015
-      uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales]
-      name: Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales
-      fullName: ContenedorTest.Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales
-      resultStatus: 1
-      duration: 0.0005415
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
-    - id: 1016
-      uniqueId: EditModeTest.dll/ContenedorTest/[EditModeTest][ContenedorTest.Test06UnContenedorModificaLosIngredientesQueSeAgregan]
-      name: Test06UnContenedorModificaLosIngredientesQueSeAgregan
-      fullName: ContenedorTest.Test06UnContenedorModificaLosIngredientesQueSeAgregan
-      resultStatus: 1
-      duration: 0.0007346
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ContenedorTest][suite]
-    - id: 1017
-      uniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
-      name: ElementoTest
-      fullName: ElementoTest
-      resultStatus: 1
-      duration: 0.0197858
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1029
-      parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
-        - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-    - id: 1018
-      uniqueId: EditModeTest.dll/ElementoTest/[EditModeTest][ElementoTest.Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial]
-      name: Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial
-      fullName: ElementoTest.Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial
-      resultStatus: 1
-      duration: 0.0026371
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
-    - id: 1019
-      uniqueId: EditModeTest.dll/ElementoTest/[EditModeTest][ElementoTest.Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse]
-      name: Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse
-      fullName: ElementoTest.Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse
-      resultStatus: 1
-      duration: 0.0011113
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
-    - id: 1020
-      uniqueId: EditModeTest.dll/ElementoTest/[EditModeTest][ElementoTest.Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion]
-      name: Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion
-      fullName: ElementoTest.Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion
-      resultStatus: 1
-      duration: 0.0019133
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
-    - id: 1021
-      uniqueId: EditModeTest.dll/ElementoTest/[EditModeTest][ElementoTest.Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente]
-      name: Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente
-      fullName: ElementoTest.Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente
-      resultStatus: 1
-      duration: 0.0006215
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
-    - id: 1022
-      uniqueId: EditModeTest.dll/ElementoTest/[EditModeTest][ElementoTest.Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion]
-      name: Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion
-      fullName: ElementoTest.Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion
-      resultStatus: 1
-      duration: 0.0004863
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
-    - id: 1023
-      uniqueId: EditModeTest.dll/ElementoTest/[EditModeTest][ElementoTest.Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo]
-      name: Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo
-      fullName: ElementoTest.Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo
-      resultStatus: 1
-      duration: 0.0009245
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: EditModeTest.dll/[EditModeTest][ElementoTest][suite]
-    - id: 1024
-      uniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
+    - id: 1001
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
       name: VectorTest
       fullName: VectorTest
       resultStatus: 1
-      duration: 0.0205745
+      duration: 0.0407617
       messages: 
       output: 
       stacktrace: 
@@ -1384,15 +1146,15 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1031
-      parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
-        - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-    - id: 1025
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test01SeSumaDosVectores]
+      parentId: 1020
+      parentUniqueId: '[com.itisnotonlyme.vector-dinamico.Tests][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
+        - Potion System/Library/ScriptAssemblies/com.itisnotonlyme.vector-dinamico.Tests.dll][suite]'
+    - id: 1002
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test01SeSumaDosVectores]
       name: Test01SeSumaDosVectores
       fullName: VectorTest.Test01SeSumaDosVectores
       resultStatus: 1
-      duration: 0.0012758
+      duration: 0.0114428
       messages: 
       output: 
       stacktrace: 
@@ -1402,14 +1164,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1026
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test02SeRestanDosVectores]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1003
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test02SeRestanDosVectores]
       name: Test02SeRestanDosVectores
       fullName: VectorTest.Test02SeRestanDosVectores
       resultStatus: 1
-      duration: 0.0002212
+      duration: 0.0002207
       messages: 
       output: 
       stacktrace: 
@@ -1419,14 +1181,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1027
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test03SeSumaDosVectoresYLuegoSeRestaUnTercero]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1004
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test03SeSumaDosVectoresYLuegoSeRestaUnTercero]
       name: Test03SeSumaDosVectoresYLuegoSeRestaUnTercero
       fullName: VectorTest.Test03SeSumaDosVectoresYLuegoSeRestaUnTercero
       resultStatus: 1
-      duration: 0.0003261
+      duration: 0.0003205
       messages: 
       output: 
       stacktrace: 
@@ -1436,14 +1198,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1028
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test04SeMultiplicaUnVector]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1005
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test04SeMultiplicaUnVector]
       name: Test04SeMultiplicaUnVector
       fullName: VectorTest.Test04SeMultiplicaUnVector
       resultStatus: 1
-      duration: 0.0001852
+      duration: 0.0002889
       messages: 
       output: 
       stacktrace: 
@@ -1453,14 +1215,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1029
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test05SeDivideUnVector]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1006
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test05SeDivideUnVector]
       name: Test05SeDivideUnVector
       fullName: VectorTest.Test05SeDivideUnVector
       resultStatus: 1
-      duration: 0.0001613
+      duration: 0.0003138
       messages: 
       output: 
       stacktrace: 
@@ -1470,14 +1232,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1030
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test06SeCalculaElProductoInternoEntreElMismoVector]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1007
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test06SeCalculaElProductoInternoEntreElMismoVector]
       name: Test06SeCalculaElProductoInternoEntreElMismoVector
       fullName: VectorTest.Test06SeCalculaElProductoInternoEntreElMismoVector
       resultStatus: 1
-      duration: 0.0001984
+      duration: 0.0041059
       messages: 
       output: 
       stacktrace: 
@@ -1487,14 +1249,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1031
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test06SeCalculaElProductoInternoEntreLaSumaDeDosVectores]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1008
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test06SeCalculaElProductoInternoEntreLaSumaDeDosVectores]
       name: Test06SeCalculaElProductoInternoEntreLaSumaDeDosVectores
       fullName: VectorTest.Test06SeCalculaElProductoInternoEntreLaSumaDeDosVectores
       resultStatus: 1
-      duration: 0.0004435
+      duration: 0.0002037
       messages: 
       output: 
       stacktrace: 
@@ -1504,14 +1266,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1032
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test07SeCalculaElProductoInternoEntreLaDiferenciaDeDosVectores]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1009
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test07SeCalculaElProductoInternoEntreLaDiferenciaDeDosVectores]
       name: Test07SeCalculaElProductoInternoEntreLaDiferenciaDeDosVectores
       fullName: VectorTest.Test07SeCalculaElProductoInternoEntreLaDiferenciaDeDosVectores
       resultStatus: 1
-      duration: 0.0002468
+      duration: 0.0002169
       messages: 
       output: 
       stacktrace: 
@@ -1521,14 +1283,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1033
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test08DistanciaEntreDosVectoresIguales]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1010
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test08DistanciaEntreDosVectoresIguales]
       name: Test08DistanciaEntreDosVectoresIguales
       fullName: VectorTest.Test08DistanciaEntreDosVectoresIguales
       resultStatus: 1
-      duration: 0.0002972
+      duration: 0.0003425
       messages: 
       output: 
       stacktrace: 
@@ -1538,14 +1300,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1034
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test09DistanciaEntreDosVectoresDistintos]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1011
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test09DistanciaEntreDosVectoresDistintos]
       name: Test09DistanciaEntreDosVectoresDistintos
       fullName: VectorTest.Test09DistanciaEntreDosVectoresDistintos
       resultStatus: 1
-      duration: 0.0004402
+      duration: 0.000216
       messages: 
       output: 
       stacktrace: 
@@ -1555,12 +1317,46 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1035
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test10LaSimilitudEntreDosVectoresMultiplosEsUno]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1012
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test10LaSimilitudEntreDosVectoresMultiplosEsUno]
       name: Test10LaSimilitudEntreDosVectoresMultiplosEsUno
       fullName: VectorTest.Test10LaSimilitudEntreDosVectoresMultiplosEsUno
+      resultStatus: 1
+      duration: 0.0002973
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1013
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test11LaSimilitudEntreDosVectoresOrtogonalesEsCero]
+      name: Test11LaSimilitudEntreDosVectoresOrtogonalesEsCero
+      fullName: VectorTest.Test11LaSimilitudEntreDosVectoresOrtogonalesEsCero
+      resultStatus: 1
+      duration: 0.0002541
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1014
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test12LaSimilitudEntreUnVectorYSuInversoEsMenosUno]
+      name: Test12LaSimilitudEntreUnVectorYSuInversoEsMenosUno
+      fullName: VectorTest.Test12LaSimilitudEntreUnVectorYSuInversoEsMenosUno
       resultStatus: 1
       duration: 0.0002126
       messages: 
@@ -1572,48 +1368,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1036
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test11LaSimilitudEntreDosVectoresOrtogonalesEsCero]
-      name: Test11LaSimilitudEntreDosVectoresOrtogonalesEsCero
-      fullName: VectorTest.Test11LaSimilitudEntreDosVectoresOrtogonalesEsCero
-      resultStatus: 1
-      duration: 0.0002179
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1037
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test12LaSimilitudEntreUnVectorYSuInversoEsMenosUno]
-      name: Test12LaSimilitudEntreUnVectorYSuInversoEsMenosUno
-      fullName: VectorTest.Test12LaSimilitudEntreUnVectorYSuInversoEsMenosUno
-      resultStatus: 1
-      duration: 0.0001894
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1038
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test13LaMultiplicidadEntreElMismoVectorEsUno]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1015
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test13LaMultiplicidadEntreElMismoVectorEsUno]
       name: Test13LaMultiplicidadEntreElMismoVectorEsUno
       fullName: VectorTest.Test13LaMultiplicidadEntreElMismoVectorEsUno
       resultStatus: 1
-      duration: 0.0001912
+      duration: 0.0003381
       messages: 
       output: 
       stacktrace: 
@@ -1623,14 +1385,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1039
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test14LaMultiplicidadEntreUnVectorYElDobleEsDos]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1016
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test14LaMultiplicidadEntreUnVectorYElDobleEsDos]
       name: Test14LaMultiplicidadEntreUnVectorYElDobleEsDos
       fullName: VectorTest.Test14LaMultiplicidadEntreUnVectorYElDobleEsDos
       resultStatus: 1
-      duration: 0.0001781
+      duration: 0.0001837
       messages: 
       output: 
       stacktrace: 
@@ -1640,14 +1402,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1040
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test15LaMultiplicidadEntreUnVectorYElInversoEsMenosUno]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1017
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test15LaMultiplicidadEntreUnVectorYElInversoEsMenosUno]
       name: Test15LaMultiplicidadEntreUnVectorYElInversoEsMenosUno
       fullName: VectorTest.Test15LaMultiplicidadEntreUnVectorYElInversoEsMenosUno
       resultStatus: 1
-      duration: 0.0001738
+      duration: 0.0001719
       messages: 
       output: 
       stacktrace: 
@@ -1657,14 +1419,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1041
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test16UnVectorMultiplicadoPorUnIdentificadorEspecifico]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1018
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test16UnVectorMultiplicadoPorUnIdentificadorEspecifico]
       name: Test16UnVectorMultiplicadoPorUnIdentificadorEspecifico
       fullName: VectorTest.Test16UnVectorMultiplicadoPorUnIdentificadorEspecifico
       resultStatus: 1
-      duration: 0.0001758
+      duration: 0.0002731
       messages: 
       output: 
       stacktrace: 
@@ -1674,14 +1436,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1042
-      uniqueId: EditModeTest.dll/VectorTest/[EditModeTest][VectorTest.Test17UnaSumaDeVectoresMultiplicadoPorUnIdentificadorEspecifico]
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    - id: 1019
+      uniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/VectorTest/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest.Test17UnaSumaDeVectoresMultiplicadoPorUnIdentificadorEspecifico]
       name: Test17UnaSumaDeVectoresMultiplicadoPorUnIdentificadorEspecifico
       fullName: VectorTest.Test17UnaSumaDeVectoresMultiplicadoPorUnIdentificadorEspecifico
       resultStatus: 1
-      duration: 0.0001859
+      duration: 0.0002105
       messages: 
       output: 
       stacktrace: 
@@ -1691,101 +1453,15 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1024
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VectorTest][suite]
-    - id: 1025
-      uniqueId: EditModeTest.dll/[EditModeTest][VinculoTest][suite]
-      name: VinculoTest
-      fullName: VinculoTest
-      resultStatus: 1
-      duration: 0.0127672
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1028
-      parentUniqueId: '[EditModeTest][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
-        - Potion System/Library/ScriptAssemblies/EditModeTest.dll][suite]'
-    - id: 1023
-      uniqueId: EditModeTest.dll/VinculoTest/[EditModeTest][VinculoTest.Test01UnVinculoDondeLosVinculadosNoTienenNingunModificacionEsEstable]
-      name: Test01UnVinculoDondeLosVinculadosNoTienenNingunModificacionEsEstable
-      fullName: VinculoTest.Test01UnVinculoDondeLosVinculadosNoTienenNingunModificacionEsEstable
-      resultStatus: 1
-      duration: 0.0007867
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1022
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VinculoTest][suite]
-    - id: 1024
-      uniqueId: EditModeTest.dll/VinculoTest/[EditModeTest][VinculoTest.Test02UnVinculoDondeLosVinculadosEstanModificadoHaciendoQueYaNoSeanEstable]
-      name: Test02UnVinculoDondeLosVinculadosEstanModificadoHaciendoQueYaNoSeanEstable
-      fullName: VinculoTest.Test02UnVinculoDondeLosVinculadosEstanModificadoHaciendoQueYaNoSeanEstable
-      resultStatus: 1
-      duration: 0.0011049
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1022
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VinculoTest][suite]
-    - id: 1025
-      uniqueId: EditModeTest.dll/VinculoTest/[EditModeTest][VinculoTest.Test03DosVinculadosCuandoHayUnVinculoSuEstadoEsModificado]
-      name: Test03DosVinculadosCuandoHayUnVinculoSuEstadoEsModificado
-      fullName: VinculoTest.Test03DosVinculadosCuandoHayUnVinculoSuEstadoEsModificado
-      resultStatus: 1
-      duration: 0.0003751
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1022
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VinculoTest][suite]
-    - id: 1026
-      uniqueId: EditModeTest.dll/VinculoTest/[EditModeTest][VinculoTest.Test04DosVinculadosCuandoSeRompeElVinculoYaSuEstadoNoEstaModificado]
-      name: Test04DosVinculadosCuandoSeRompeElVinculoYaSuEstadoNoEstaModificado
-      fullName: VinculoTest.Test04DosVinculadosCuandoSeRompeElVinculoYaSuEstadoNoEstaModificado
-      resultStatus: 1
-      duration: 0.0004261
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1022
-      parentUniqueId: EditModeTest.dll/[EditModeTest][VinculoTest][suite]
-    m_ResultText: Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion
-      (0,002s)
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
+    m_ResultText: com.itisnotonlyme.vector-dinamico.Tests.dll (0,043s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: dfa633a0
-      m_LastClickedID: -1607227681
-      m_ExpandedIDs: e42016c84d6046163991b11ef9eb8725afa49c43ab251d70ffffff7f
+      m_SelectedIDs: c7347d79
+      m_LastClickedID: 2038248647
+      m_ExpandedIDs: e42016c84d6046163991b11ef9eb8725afa49c43ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1831,9 +1507,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1007
+    x: 926
     y: 73
-    width: 324
+    width: 332
     height: 746
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1872,9 +1548,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1333
+    x: 1260
     y: 394
-    width: 266
+    width: 339
     height: 425
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1907,7 +1583,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 683d0000
     m_LastClickedID: 15720
-    m_ExpandedIDs: 0000000010500000aa500000ac500000ae500000b0500000b2500000b4500000b6500000b8500000ba500000bc500000be500000c0500000c2500000c4500000c6500000c8500000ca500000cc500000ce500000d0500000d2500000
+    m_ExpandedIDs: 00000000065100009e510000a0510000a2510000a4510000a6510000a8510000aa510000ac510000ae510000b0510000b2510000b4510000b6510000b8510000ba510000bc510000be510000c0510000c2510000c4510000c6510000c8510000ca510000cc510000ce510000d0510000d2510000d4510000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1932,10 +1608,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 373}
+    scrollPos: {x: 0, y: 389}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff0000000010500000aa500000ac500000ae500000b0500000b2500000b4500000b6500000b8500000ba500000bc500000be500000c0500000c2500000c4500000c6500000c8500000ca500000cc500000ce500000d0500000d2500000f2500000fc500000065100004a510000
+    m_ExpandedIDs: ffffffff00000000065100009e510000a0510000a2510000a4510000a6510000a8510000aa510000ac510000ae510000b0510000b2510000b4510000b6510000b8510000ba510000be510000c0510000c4510000c6510000cc510000ce510000d0510000d2510000d45100000c5200001c52000066520000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1951,7 +1627,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 2}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
