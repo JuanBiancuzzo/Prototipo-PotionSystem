@@ -1,4 +1,4 @@
-﻿namespace ItIsNotOnlyMe
+﻿namespace ItIsNotOnlyMe.PotionSystem
 {
     public class Vinculo : IVinculo
     {

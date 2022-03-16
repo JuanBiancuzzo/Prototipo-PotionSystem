@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using ItIsNotOnlyMe;
-using UnityEngine;
+using ItIsNotOnlyMe.VectorDinamico;
 
 public class IdentificadorPrueba : IIdentificador
 {

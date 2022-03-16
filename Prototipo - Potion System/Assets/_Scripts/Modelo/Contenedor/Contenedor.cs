@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using ItIsNotOnlyMe.VectorDinamico;
 
-namespace ItIsNotOnlyMe
+namespace ItIsNotOnlyMe.PotionSystem
 {
     // los ingredientes y las pociones son variaciones de contenedor
     public class Contenedor : IContenedor

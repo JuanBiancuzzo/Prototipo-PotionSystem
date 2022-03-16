@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ItIsNotOnlyMe
+namespace ItIsNotOnlyMe.VectorDinamico
 {
     public static class MathfVectores
     {

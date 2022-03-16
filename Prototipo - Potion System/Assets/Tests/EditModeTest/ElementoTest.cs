@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
-using ItIsNotOnlyMe;
-using UnityEngine;
-using UnityEngine.TestTools;
+using ItIsNotOnlyMe.PotionSystem;
+using ItIsNotOnlyMe.VectorDinamico;
 
 public class ElementoTest
 {

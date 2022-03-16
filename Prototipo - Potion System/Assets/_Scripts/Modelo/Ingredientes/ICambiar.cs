@@ -1,4 +1,6 @@
-﻿namespace ItIsNotOnlyMe
+﻿using ItIsNotOnlyMe.VectorDinamico;
+
+namespace ItIsNotOnlyMe.PotionSystem
 {
     public interface ICambiar 
     {

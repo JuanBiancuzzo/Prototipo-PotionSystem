@@ -1,5 +1,5 @@
-﻿using ItIsNotOnlyMe;
-using System.Collections.Generic;
+﻿using ItIsNotOnlyMe.PotionSystem;
+using ItIsNotOnlyMe.VectorDinamico;
 
 public class CambiarSumarPrueba : ICambiar
 {

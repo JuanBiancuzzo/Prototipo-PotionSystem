@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
-using ItIsNotOnlyMe;
+using ItIsNotOnlyMe.VectorDinamico;
 using UnityEngine;
-using UnityEngine.TestTools;
 
 public class VectorTest
 {

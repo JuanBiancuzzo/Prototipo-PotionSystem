@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ItIsNotOnlyMe
+namespace ItIsNotOnlyMe.PotionSystem
 {
     public class Capacidad : ICapacidad
     {

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using ItIsNotOnlyMe.PotionSystem;
+using ItIsNotOnlyMe.VectorDinamico;
 
 namespace ItIsNotOnlyMe
 {

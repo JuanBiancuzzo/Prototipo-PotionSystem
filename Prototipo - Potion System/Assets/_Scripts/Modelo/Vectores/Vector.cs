@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ItIsNotOnlyMe
+namespace ItIsNotOnlyMe.VectorDinamico
 {
 
     public class Vector

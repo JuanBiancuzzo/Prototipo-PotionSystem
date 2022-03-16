@@ -1,4 +1,5 @@
-﻿using ItIsNotOnlyMe;
+﻿using ItIsNotOnlyMe.PotionSystem;
+using ItIsNotOnlyMe.VectorDinamico;
 
 public class RequisitoInvalidoPrueba : IRequisito
 {

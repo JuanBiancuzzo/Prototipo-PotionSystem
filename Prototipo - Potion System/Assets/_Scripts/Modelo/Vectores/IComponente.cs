@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ItIsNotOnlyMe
+namespace ItIsNotOnlyMe.VectorDinamico
 {
     public interface IComponente
     {

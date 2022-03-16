@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using ItIsNotOnlyMe.VectorDinamico;
 
 namespace ItIsNotOnlyMe
 {

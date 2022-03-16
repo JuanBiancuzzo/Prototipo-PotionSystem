@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace ItIsNotOnlyMe
+namespace ItIsNotOnlyMe.VectorDinamico
 {
     public class Componente : IComponente
     {

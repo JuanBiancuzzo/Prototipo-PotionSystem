@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using ItIsNotOnlyMe;
-using UnityEngine;
+using ItIsNotOnlyMe.PotionSystem;
+using ItIsNotOnlyMe.VectorDinamico;
 
 public class CambiarNadaPrueba : ICambiar
 {

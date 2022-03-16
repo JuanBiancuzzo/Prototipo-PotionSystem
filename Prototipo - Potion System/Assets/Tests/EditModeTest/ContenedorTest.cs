@@ -1,9 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
-using ItIsNotOnlyMe;
+using ItIsNotOnlyMe.PotionSystem;
+using ItIsNotOnlyMe.VectorDinamico;
 using UnityEngine;
-using UnityEngine.TestTools;
 using UnityEngine.TestTools.Utils;
 
 public class ContenedorTest

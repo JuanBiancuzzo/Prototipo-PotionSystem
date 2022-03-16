@@ -1,4 +1,4 @@
-﻿namespace ItIsNotOnlyMe
+﻿namespace ItIsNotOnlyMe.VectorDinamico
 {
     public interface IIdentificador
     {
