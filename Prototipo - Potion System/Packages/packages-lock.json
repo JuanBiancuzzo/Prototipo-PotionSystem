@@ -5,21 +5,21 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2c56e50a676e6d3be24e36b6cc47a2470759c756"
+      "hash": "4fa0c4b187867398b6fc11d22f330e19f01074e5"
     },
     "com.itisnotonlyme.sistema-de-pociones": {
       "version": "https://github.com/JuanBiancuzzo/com.itisnotonlyme.sistema-de-pociones.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f333b29307aa9853ae7a2960e2fea242aecb8bec"
+      "hash": "713168937e48d36754995d4ed10b01c2bb54b289"
     },
     "com.itisnotonlyme.vector-dinamico": {
       "version": "https://github.com/JuanBiancuzzo/com.itisnotonlyme.vector-dinamico.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "72a6f669039bc1d9a4c1754005bbe8e12753ebc2"
+      "hash": "e42ed5bed8934b68304a5a65bc99b2a603df9490"
     },
     "com.unity.cinemachine": {
       "version": "2.8.4",

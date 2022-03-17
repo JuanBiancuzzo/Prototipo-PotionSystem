@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1600
     height: 817
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 5}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -40,9 +40,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 321
+    y: 213
     width: 340
-    height: 446
+    height: 554
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 20}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 107
+  controlID: 104
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -93,9 +93,9 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 340
-    height: 321
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    height: 213
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 106
+  controlID: 103
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 55
+  controlID: 22
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,9 +241,9 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 926
-    height: 418
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+    height: 501
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -260,24 +260,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 418
+    y: 501
     width: 926
-    height: 349
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 17}
+    height: 266
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -419,7 +419,7 @@ MonoBehaviour:
     x: 1260
     y: 73
     width: 339
-    height: 300
+    height: 192
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -427,9 +427,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 04faffff
       m_LastClickedID: 0
-      m_ExpandedIDs: 
+      m_ExpandedIDs: 0ef9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -476,7 +476,7 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 925
-    height: 397
+    height: 480
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1028,15 +1028,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 491
+    y: 574
     width: 925
-    height: 328
+    height: 245
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 470
+    ID: 243
     splitterInitialOffset: 561
     currentActiveSplitter: -1
     realSizes:
@@ -1103,7 +1103,7 @@ MonoBehaviour:
       name: Prototipo - Potion System
       fullName: Prototipo - Potion System
       resultStatus: 1
-      duration: 0.0836844
+      duration: 0.2378566
       messages: 
       output: 
       stacktrace: 
@@ -1114,6 +1114,518 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
+    - id: 1008
+      uniqueId: '[com.itisnotonlyme.inventario.Editor.Tests][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
+        - Potion System/Library/ScriptAssemblies/com.itisnotonlyme.inventario.Editor.Tests.dll][suite]'
+      name: com.itisnotonlyme.inventario.Editor.Tests.dll
+      fullName: C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo -
+        Potion System/Library/ScriptAssemblies/com.itisnotonlyme.inventario.Editor.Tests.dll
+      resultStatus: 1
+      duration: 0.1120679
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Prototipo - Potion System][suite]'
+    - id: 1001
+      uniqueId: com.itisnotonlyme.inventario.Editor.Tests.dll/[com.itisnotonlyme.inventario.Editor.Tests][InventarioTest][suite]
+      name: InventarioTest
+      fullName: InventarioTest
+      resultStatus: 1
+      duration: 0.1094002
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1008
+      parentUniqueId: '[com.itisnotonlyme.inventario.Editor.Tests][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
+        - Potion System/Library/ScriptAssemblies/com.itisnotonlyme.inventario.Editor.Tests.dll][suite]'
+    - id: 1002
+      uniqueId: com.itisnotonlyme.inventario.Editor.Tests.dll/InventarioTest/[com.itisnotonlyme.inventario.Editor.Tests][InventarioTest.Test01UnInventarioSinItemsTieneUnaCantidadDeCero]
+      name: Test01UnInventarioSinItemsTieneUnaCantidadDeCero
+      fullName: InventarioTest.Test01UnInventarioSinItemsTieneUnaCantidadDeCero
+      resultStatus: 1
+      duration: 0.075054
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.inventario.Editor.Tests.dll/[com.itisnotonlyme.inventario.Editor.Tests][InventarioTest][suite]
+    - id: 1003
+      uniqueId: com.itisnotonlyme.inventario.Editor.Tests.dll/InventarioTest/[com.itisnotonlyme.inventario.Editor.Tests][InventarioTest.Test02UnInventarioConUnItemAgregadoTieneCantidadUno]
+      name: Test02UnInventarioConUnItemAgregadoTieneCantidadUno
+      fullName: InventarioTest.Test02UnInventarioConUnItemAgregadoTieneCantidadUno
+      resultStatus: 1
+      duration: 0.002298
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.inventario.Editor.Tests.dll/[com.itisnotonlyme.inventario.Editor.Tests][InventarioTest][suite]
+    - id: 1004
+      uniqueId: com.itisnotonlyme.inventario.Editor.Tests.dll/InventarioTest/[com.itisnotonlyme.inventario.Editor.Tests][InventarioTest.Test03UnInventarioConDosItemsDiferentesTieneCantidadDos]
+      name: Test03UnInventarioConDosItemsDiferentesTieneCantidadDos
+      fullName: InventarioTest.Test03UnInventarioConDosItemsDiferentesTieneCantidadDos
+      resultStatus: 1
+      duration: 0.0006645
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.inventario.Editor.Tests.dll/[com.itisnotonlyme.inventario.Editor.Tests][InventarioTest][suite]
+    - id: 1005
+      uniqueId: com.itisnotonlyme.inventario.Editor.Tests.dll/InventarioTest/[com.itisnotonlyme.inventario.Editor.Tests][InventarioTest.Test04UnInventarioConDosItemsIgualesTieneCantidadDos]
+      name: Test04UnInventarioConDosItemsIgualesTieneCantidadDos
+      fullName: InventarioTest.Test04UnInventarioConDosItemsIgualesTieneCantidadDos
+      resultStatus: 1
+      duration: 0.000507
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.inventario.Editor.Tests.dll/[com.itisnotonlyme.inventario.Editor.Tests][InventarioTest][suite]
+    - id: 1006
+      uniqueId: com.itisnotonlyme.inventario.Editor.Tests.dll/InventarioTest/[com.itisnotonlyme.inventario.Editor.Tests][InventarioTest.Test05UnInventarioConDosItemsYDespuesSacarUnoTieneCantidadUno]
+      name: Test05UnInventarioConDosItemsYDespuesSacarUnoTieneCantidadUno
+      fullName: InventarioTest.Test05UnInventarioConDosItemsYDespuesSacarUnoTieneCantidadUno
+      resultStatus: 1
+      duration: 0.0009417
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.inventario.Editor.Tests.dll/[com.itisnotonlyme.inventario.Editor.Tests][InventarioTest][suite]
+    - id: 1007
+      uniqueId: com.itisnotonlyme.inventario.Editor.Tests.dll/InventarioTest/[com.itisnotonlyme.inventario.Editor.Tests][InventarioTest.Test06UnInventarioConDosItemsSeSacaUnoYSeDevuelveElCorrecto]
+      name: Test06UnInventarioConDosItemsSeSacaUnoYSeDevuelveElCorrecto
+      fullName: InventarioTest.Test06UnInventarioConDosItemsSeSacaUnoYSeDevuelveElCorrecto
+      resultStatus: 1
+      duration: 0.0013445
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: com.itisnotonlyme.inventario.Editor.Tests.dll/[com.itisnotonlyme.inventario.Editor.Tests][InventarioTest][suite]
+    - id: 1030
+      uniqueId: '[com.itisnotonlyme.sistema-de-pociones.Tests][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
+        - Potion System/Library/ScriptAssemblies/com.itisnotonlyme.sistema-de-pociones.Tests.dll][suite]'
+      name: com.itisnotonlyme.sistema-de-pociones.Tests.dll
+      fullName: C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo -
+        Potion System/Library/ScriptAssemblies/com.itisnotonlyme.sistema-de-pociones.Tests.dll
+      resultStatus: 1
+      duration: 0.05542
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Prototipo - Potion System][suite]'
+    - id: 1009
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ConsumidorTest][suite]
+      name: ConsumidorTest
+      fullName: ConsumidorTest
+      resultStatus: 1
+      duration: 0.0019242
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1030
+      parentUniqueId: '[com.itisnotonlyme.sistema-de-pociones.Tests][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
+        - Potion System/Library/ScriptAssemblies/com.itisnotonlyme.sistema-de-pociones.Tests.dll][suite]'
+    - id: 1010
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ConsumidorTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ConsumidorTest.ConsumidorTestSimplePasses]
+      name: ConsumidorTestSimplePasses
+      fullName: ConsumidorTest.ConsumidorTestSimplePasses
+      resultStatus: 1
+      duration: 0.0005405
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ConsumidorTest][suite]
+    - id: 1011
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest][suite]
+      name: ContenedorTest
+      fullName: ContenedorTest
+      resultStatus: 1
+      duration: 0.0196501
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1030
+      parentUniqueId: '[com.itisnotonlyme.sistema-de-pociones.Tests][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
+        - Potion System/Library/ScriptAssemblies/com.itisnotonlyme.sistema-de-pociones.Tests.dll][suite]'
+    - id: 1012
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ContenedorTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest.Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial]
+      name: Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial
+      fullName: ContenedorTest.Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial
+      resultStatus: 1
+      duration: 0.0034602
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest][suite]
+    - id: 1013
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ContenedorTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest.Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente]
+      name: Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente
+      fullName: ContenedorTest.Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente
+      resultStatus: 1
+      duration: 0.0032356
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest][suite]
+    - id: 1014
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ContenedorTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest.Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados]
+      name: Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados
+      fullName: ContenedorTest.Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados
+      resultStatus: 1
+      duration: 0.0004806
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest][suite]
+    - id: 1015
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ContenedorTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest.Test04UnContenedorConDosIngredientesVinculadosEsLaSumaDeSusEstadosModificados]
+      name: Test04UnContenedorConDosIngredientesVinculadosEsLaSumaDeSusEstadosModificados
+      fullName: ContenedorTest.Test04UnContenedorConDosIngredientesVinculadosEsLaSumaDeSusEstadosModificados
+      resultStatus: 1
+      duration: 0.0008387
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest][suite]
+    - id: 1016
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ContenedorTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest.Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales]
+      name: Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales
+      fullName: ContenedorTest.Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales
+      resultStatus: 1
+      duration: 0.0006575
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest][suite]
+    - id: 1017
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ContenedorTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest.Test06UnContenedorModificaLosIngredientesQueSeAgregan]
+      name: Test06UnContenedorModificaLosIngredientesQueSeAgregan
+      fullName: ContenedorTest.Test06UnContenedorModificaLosIngredientesQueSeAgregan
+      resultStatus: 1
+      duration: 0.0009394
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest][suite]
+    - id: 1018
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ElementoTest][suite]
+      name: ElementoTest
+      fullName: ElementoTest
+      resultStatus: 1
+      duration: 0.0156242
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1030
+      parentUniqueId: '[com.itisnotonlyme.sistema-de-pociones.Tests][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
+        - Potion System/Library/ScriptAssemblies/com.itisnotonlyme.sistema-de-pociones.Tests.dll][suite]'
+    - id: 1019
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ElementoTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ElementoTest.Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial]
+      name: Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial
+      fullName: ElementoTest.Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial
+      resultStatus: 1
+      duration: 0.0015133
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ElementoTest][suite]
+    - id: 1020
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ElementoTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ElementoTest.Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse]
+      name: Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse
+      fullName: ElementoTest.Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse
+      resultStatus: 1
+      duration: 0.0009698
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ElementoTest][suite]
+    - id: 1021
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ElementoTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ElementoTest.Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion]
+      name: Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion
+      fullName: ElementoTest.Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion
+      resultStatus: 1
+      duration: 0.0011819
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ElementoTest][suite]
+    - id: 1022
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ElementoTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ElementoTest.Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente]
+      name: Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente
+      fullName: ElementoTest.Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente
+      resultStatus: 1
+      duration: 0.0003847
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ElementoTest][suite]
+    - id: 1023
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ElementoTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ElementoTest.Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion]
+      name: Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion
+      fullName: ElementoTest.Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion
+      resultStatus: 1
+      duration: 0.0004247
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ElementoTest][suite]
+    - id: 1024
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ElementoTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ElementoTest.Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo]
+      name: Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo
+      fullName: ElementoTest.Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo
+      resultStatus: 1
+      duration: 0.0008191
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ElementoTest][suite]
+    - id: 1025
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][VinculoTest][suite]
+      name: VinculoTest
+      fullName: VinculoTest
+      resultStatus: 1
+      duration: 0.0097864
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1030
+      parentUniqueId: '[com.itisnotonlyme.sistema-de-pociones.Tests][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
+        - Potion System/Library/ScriptAssemblies/com.itisnotonlyme.sistema-de-pociones.Tests.dll][suite]'
+    - id: 1026
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/VinculoTest/[com.itisnotonlyme.sistema-de-pociones.Tests][VinculoTest.Test01UnVinculoDondeLosVinculadosNoTienenNingunModificacionEsEstable]
+      name: Test01UnVinculoDondeLosVinculadosNoTienenNingunModificacionEsEstable
+      fullName: VinculoTest.Test01UnVinculoDondeLosVinculadosNoTienenNingunModificacionEsEstable
+      resultStatus: 1
+      duration: 0.0008468
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][VinculoTest][suite]
+    - id: 1027
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/VinculoTest/[com.itisnotonlyme.sistema-de-pociones.Tests][VinculoTest.Test02UnVinculoDondeLosVinculadosEstanModificadoHaciendoQueYaNoSeanEstable]
+      name: Test02UnVinculoDondeLosVinculadosEstanModificadoHaciendoQueYaNoSeanEstable
+      fullName: VinculoTest.Test02UnVinculoDondeLosVinculadosEstanModificadoHaciendoQueYaNoSeanEstable
+      resultStatus: 1
+      duration: 0.0007555
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][VinculoTest][suite]
+    - id: 1028
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/VinculoTest/[com.itisnotonlyme.sistema-de-pociones.Tests][VinculoTest.Test03DosVinculadosCuandoHayUnVinculoSuEstadoEsModificado]
+      name: Test03DosVinculadosCuandoHayUnVinculoSuEstadoEsModificado
+      fullName: VinculoTest.Test03DosVinculadosCuandoHayUnVinculoSuEstadoEsModificado
+      resultStatus: 1
+      duration: 0.0002919
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][VinculoTest][suite]
+    - id: 1029
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/VinculoTest/[com.itisnotonlyme.sistema-de-pociones.Tests][VinculoTest.Test04DosVinculadosCuandoSeRompeElVinculoYaSuEstadoNoEstaModificado]
+      name: Test04DosVinculadosCuandoSeRompeElVinculoYaSuEstadoNoEstaModificado
+      fullName: VinculoTest.Test04DosVinculadosCuandoSeRompeElVinculoYaSuEstadoNoEstaModificado
+      resultStatus: 1
+      duration: 0.0003436
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][VinculoTest][suite]
     - id: 1020
       uniqueId: '[com.itisnotonlyme.vector-dinamico.Tests][C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo
         - Potion System/Library/ScriptAssemblies/com.itisnotonlyme.vector-dinamico.Tests.dll][suite]'
@@ -1121,7 +1633,7 @@ MonoBehaviour:
       fullName: C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo -
         Potion System/Library/ScriptAssemblies/com.itisnotonlyme.vector-dinamico.Tests.dll
       resultStatus: 1
-      duration: 0.0431159
+      duration: 0.0217726
       messages: 
       output: 
       stacktrace: 
@@ -1137,7 +1649,7 @@ MonoBehaviour:
       name: VectorTest
       fullName: VectorTest
       resultStatus: 1
-      duration: 0.0407617
+      duration: 0.0102006
       messages: 
       output: 
       stacktrace: 
@@ -1154,7 +1666,7 @@ MonoBehaviour:
       name: Test01SeSumaDosVectores
       fullName: VectorTest.Test01SeSumaDosVectores
       resultStatus: 1
-      duration: 0.0114428
+      duration: 0.0013757
       messages: 
       output: 
       stacktrace: 
@@ -1171,7 +1683,7 @@ MonoBehaviour:
       name: Test02SeRestanDosVectores
       fullName: VectorTest.Test02SeRestanDosVectores
       resultStatus: 1
-      duration: 0.0002207
+      duration: 0.0002598
       messages: 
       output: 
       stacktrace: 
@@ -1188,7 +1700,7 @@ MonoBehaviour:
       name: Test03SeSumaDosVectoresYLuegoSeRestaUnTercero
       fullName: VectorTest.Test03SeSumaDosVectoresYLuegoSeRestaUnTercero
       resultStatus: 1
-      duration: 0.0003205
+      duration: 0.0004736
       messages: 
       output: 
       stacktrace: 
@@ -1205,7 +1717,7 @@ MonoBehaviour:
       name: Test04SeMultiplicaUnVector
       fullName: VectorTest.Test04SeMultiplicaUnVector
       resultStatus: 1
-      duration: 0.0002889
+      duration: 0.000227
       messages: 
       output: 
       stacktrace: 
@@ -1222,7 +1734,7 @@ MonoBehaviour:
       name: Test05SeDivideUnVector
       fullName: VectorTest.Test05SeDivideUnVector
       resultStatus: 1
-      duration: 0.0003138
+      duration: 0.0002139
       messages: 
       output: 
       stacktrace: 
@@ -1239,7 +1751,7 @@ MonoBehaviour:
       name: Test06SeCalculaElProductoInternoEntreElMismoVector
       fullName: VectorTest.Test06SeCalculaElProductoInternoEntreElMismoVector
       resultStatus: 1
-      duration: 0.0041059
+      duration: 0.0002211
       messages: 
       output: 
       stacktrace: 
@@ -1256,7 +1768,7 @@ MonoBehaviour:
       name: Test06SeCalculaElProductoInternoEntreLaSumaDeDosVectores
       fullName: VectorTest.Test06SeCalculaElProductoInternoEntreLaSumaDeDosVectores
       resultStatus: 1
-      duration: 0.0002037
+      duration: 0.0002159
       messages: 
       output: 
       stacktrace: 
@@ -1273,7 +1785,7 @@ MonoBehaviour:
       name: Test07SeCalculaElProductoInternoEntreLaDiferenciaDeDosVectores
       fullName: VectorTest.Test07SeCalculaElProductoInternoEntreLaDiferenciaDeDosVectores
       resultStatus: 1
-      duration: 0.0002169
+      duration: 0.0002135
       messages: 
       output: 
       stacktrace: 
@@ -1290,7 +1802,7 @@ MonoBehaviour:
       name: Test08DistanciaEntreDosVectoresIguales
       fullName: VectorTest.Test08DistanciaEntreDosVectoresIguales
       resultStatus: 1
-      duration: 0.0003425
+      duration: 0.0002591
       messages: 
       output: 
       stacktrace: 
@@ -1307,7 +1819,7 @@ MonoBehaviour:
       name: Test09DistanciaEntreDosVectoresDistintos
       fullName: VectorTest.Test09DistanciaEntreDosVectoresDistintos
       resultStatus: 1
-      duration: 0.000216
+      duration: 0.0002649
       messages: 
       output: 
       stacktrace: 
@@ -1324,7 +1836,7 @@ MonoBehaviour:
       name: Test10LaSimilitudEntreDosVectoresMultiplosEsUno
       fullName: VectorTest.Test10LaSimilitudEntreDosVectoresMultiplosEsUno
       resultStatus: 1
-      duration: 0.0002973
+      duration: 0.0002425
       messages: 
       output: 
       stacktrace: 
@@ -1341,7 +1853,7 @@ MonoBehaviour:
       name: Test11LaSimilitudEntreDosVectoresOrtogonalesEsCero
       fullName: VectorTest.Test11LaSimilitudEntreDosVectoresOrtogonalesEsCero
       resultStatus: 1
-      duration: 0.0002541
+      duration: 0.0002437
       messages: 
       output: 
       stacktrace: 
@@ -1358,7 +1870,7 @@ MonoBehaviour:
       name: Test12LaSimilitudEntreUnVectorYSuInversoEsMenosUno
       fullName: VectorTest.Test12LaSimilitudEntreUnVectorYSuInversoEsMenosUno
       resultStatus: 1
-      duration: 0.0002126
+      duration: 0.0002195
       messages: 
       output: 
       stacktrace: 
@@ -1375,7 +1887,7 @@ MonoBehaviour:
       name: Test13LaMultiplicidadEntreElMismoVectorEsUno
       fullName: VectorTest.Test13LaMultiplicidadEntreElMismoVectorEsUno
       resultStatus: 1
-      duration: 0.0003381
+      duration: 0.0001928
       messages: 
       output: 
       stacktrace: 
@@ -1392,7 +1904,7 @@ MonoBehaviour:
       name: Test14LaMultiplicidadEntreUnVectorYElDobleEsDos
       fullName: VectorTest.Test14LaMultiplicidadEntreUnVectorYElDobleEsDos
       resultStatus: 1
-      duration: 0.0001837
+      duration: 0.0002031
       messages: 
       output: 
       stacktrace: 
@@ -1409,7 +1921,7 @@ MonoBehaviour:
       name: Test15LaMultiplicidadEntreUnVectorYElInversoEsMenosUno
       fullName: VectorTest.Test15LaMultiplicidadEntreUnVectorYElInversoEsMenosUno
       resultStatus: 1
-      duration: 0.0001719
+      duration: 0.0002009
       messages: 
       output: 
       stacktrace: 
@@ -1426,7 +1938,7 @@ MonoBehaviour:
       name: Test16UnVectorMultiplicadoPorUnIdentificadorEspecifico
       fullName: VectorTest.Test16UnVectorMultiplicadoPorUnIdentificadorEspecifico
       resultStatus: 1
-      duration: 0.0002731
+      duration: 0.000198
       messages: 
       output: 
       stacktrace: 
@@ -1443,7 +1955,7 @@ MonoBehaviour:
       name: Test17UnaSumaDeVectoresMultiplicadoPorUnIdentificadorEspecifico
       fullName: VectorTest.Test17UnaSumaDeVectoresMultiplicadoPorUnIdentificadorEspecifico
       resultStatus: 1
-      duration: 0.0002105
+      duration: 0.0002179
       messages: 
       output: 
       stacktrace: 
@@ -1455,7 +1967,7 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
-    m_ResultText: com.itisnotonlyme.vector-dinamico.Tests.dll (0,043s)
+    m_ResultText: com.itisnotonlyme.vector-dinamico.Tests.dll (0,022s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
@@ -1549,9 +2061,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1260
-    y: 394
+    y: 286
     width: 339
-    height: 425
+    height: 533
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1583,7 +2095,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 683d0000
     m_LastClickedID: 15720
-    m_ExpandedIDs: 00000000065100009e510000a0510000a2510000a4510000a6510000a8510000aa510000ac510000ae510000b0510000b2510000b4510000b6510000b8510000ba510000bc510000be510000c0510000c2510000c4510000c6510000c8510000ca510000cc510000ce510000d0510000d2510000d4510000
+    m_ExpandedIDs: 00000000ba4f0000fe4f000000500000025000000450000006500000085000000a5000000c5000000e50000010500000125000001450000016500000185000001a5000001c5000001e50000020500000225000002450000026500000285000002a5000002c500000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1608,10 +2120,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 389}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000065100009e510000a0510000a2510000a4510000a6510000a8510000aa510000ac510000ae510000b0510000b2510000b4510000b6510000b8510000ba510000be510000c0510000c4510000c6510000cc510000ce510000d0510000d2510000d45100000c5200001c52000066520000ffffff7f
+    m_ExpandedIDs: ffffffff00000000ba4f0000fe4f000000500000025000000450000006500000085000000a5000000c5000000e50000010500000125000001450000016500000185000001a5000001c5000001e50000020500000225000002450000026500000285000002a5000002c500000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
