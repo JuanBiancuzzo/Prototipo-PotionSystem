@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 242932812}
   - component: {fileID: 242932811}
   - component: {fileID: 242932814}
+  - component: {fileID: 242932815}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -242,6 +243,22 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &242932815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242932810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &380378529
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +272,7 @@ GameObject:
   - component: {fileID: 380378531}
   - component: {fileID: 380378530}
   - component: {fileID: 380378534}
+  - component: {fileID: 380378535}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -354,8 +372,21 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
+--- !u!114 &380378535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380378529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0231cdcb4a9814b4ebf637dd83f0afdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _velocidadMouse: 10
 --- !u!1 &641997066
 GameObject:
   m_ObjectHideFlags: 0
