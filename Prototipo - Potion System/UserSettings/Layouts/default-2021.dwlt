@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1600
     height: 817
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 5}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -40,14 +40,14 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 213
+    y: 392
     width: 340
-    height: 554
+    height: 375
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 20}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &3
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 104
+  controlID: 46
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -93,7 +93,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 340
-    height: 213
+    height: 392
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 103
+  controlID: 81
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -217,12 +217,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 926
+    width: 925
     height: 767
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 22
+  controlID: 82
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -240,14 +240,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 926
-    height: 501
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 925
+    height: 471
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
-  - {fileID: 16}
+  - {fileID: 13}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &11
@@ -260,24 +260,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 501
-    width: 926
-    height: 266
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+    y: 471
+    width: 925
+    height: 296
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 16}
   m_Panes:
+  - {fileID: 16}
   - {fileID: 17}
-  - {fileID: 18}
-  - {fileID: 13}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -293,15 +292,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 926
+    x: 925
     y: 0
-    width: 334
+    width: 335
     height: 767
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 19}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &13
@@ -325,9 +324,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 450
-    width: 1006
-    height: 369
+    y: 73
+    width: 924
+    height: 450
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -365,7 +364,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -374,23 +373,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1006
-      height: 348
-    m_Scale: {x: 0.32222223, y: 0.32222223}
-    m_Translation: {x: 503, y: 174}
+      width: 924
+      height: 429
+    m_Scale: {x: 0.39722222, y: 0.39722222}
+    m_Translation: {x: 462, y: 214.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1561.0344
+      x: -1163.0769
       y: -540
-      width: 3122.0688
+      width: 2326.1538
       height: 1080
     m_MinimalGUI: 1
-  m_defaultScale: 0.32222223
-  m_LastWindowPixelSize: {x: 1006, y: 369}
+  m_defaultScale: 0.39722222
+  m_LastWindowPixelSize: {x: 924, y: 450}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -419,7 +418,7 @@ MonoBehaviour:
     x: 1260
     y: 73
     width: 339
-    height: 192
+    height: 371
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -427,9 +426,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 04faffff
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 0ef9ffff
+      m_ExpandedIDs: 52efffffc6f4ffff70f5ffff82f8ffff18fbffffee610000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -475,8 +474,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 925
-    height: 480
+    width: 924
+    height: 450
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -526,6 +525,17 @@ MonoBehaviour:
       index: 1
       layout: 1
     - dockPosition: 0
+      containerId: overlay-toolbar__left
+      floating: 1
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: -171, y: -113}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 3
+      id: Scene View/Camera
+      index: 0
+      layout: 4
+    - dockPosition: 0
       containerId: overlay-container--left
       floating: 0
       collapsed: 0
@@ -566,7 +576,7 @@ MonoBehaviour:
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
-      id: Scene View/Camera
+      id: Scene View/Cloth Constraints
       index: 1
       layout: 4
     - dockPosition: 1
@@ -577,7 +587,7 @@ MonoBehaviour:
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
-      id: Scene View/Cloth Constraints
+      id: Scene View/Cloth Collisions
       index: 2
       layout: 4
     - dockPosition: 1
@@ -588,7 +598,7 @@ MonoBehaviour:
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
-      id: Scene View/Cloth Collisions
+      id: Scene View/Navmesh Display
       index: 3
       layout: 4
     - dockPosition: 1
@@ -599,7 +609,7 @@ MonoBehaviour:
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
-      id: Scene View/Navmesh Display
+      id: Scene View/Agent Display
       index: 4
       layout: 4
     - dockPosition: 1
@@ -610,7 +620,7 @@ MonoBehaviour:
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
-      id: Scene View/Agent Display
+      id: Scene View/Obstacle Display
       index: 5
       layout: 4
     - dockPosition: 1
@@ -621,7 +631,7 @@ MonoBehaviour:
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
-      id: Scene View/Obstacle Display
+      id: Scene View/Occlusion Culling
       index: 6
       layout: 4
     - dockPosition: 1
@@ -632,7 +642,7 @@ MonoBehaviour:
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
-      id: Scene View/Occlusion Culling
+      id: Scene View/Physics Debugger
       index: 7
       layout: 4
     - dockPosition: 1
@@ -643,7 +653,7 @@ MonoBehaviour:
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
-      id: Scene View/Physics Debugger
+      id: Scene View/Scene Visibility
       index: 8
       layout: 4
     - dockPosition: 1
@@ -654,33 +664,22 @@ MonoBehaviour:
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
-      id: Scene View/Scene Visibility
-      index: 9
-      layout: 4
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
       id: Scene View/Particles
-      index: 10
+      index: 9
       layout: 4
   m_WindowGUID: a42f0cef739b6c94bb08b15ca0999a5d
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 345.33334, y: 123.96362, z: 10.118568}
+    m_Target: {x: 0.065744385, y: 0.49429703, z: -9.720329}
     speed: 2
-    m_Value: {x: 345.33334, y: 123.96362, z: 10.118568}
+    m_Value: {x: 0.065744385, y: 0.49429703, z: -9.720329}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -709,17 +708,17 @@ MonoBehaviour:
       m_Size: {x: 0, y: 0}
     yGrid:
       m_Fade:
-        m_Target: 0
+        m_Target: 1
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -727,17 +726,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: 0.011180043, y: -0.94136775, z: 0.33575538, w: 0.031356856}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: 0.01117997, y: -0.94136155, z: 0.33575317, w: 0.03135665}
   m_Size:
-    m_Target: 351.2352
+    m_Target: 2.6061814
     speed: 2
-    m_Value: 351.2352
+    m_Value: 2.6061814
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -751,7 +750,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0.3287734, y: 0.022664418, z: -0.007887701, w: 0.94411075}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -759,227 +758,6 @@ MonoBehaviour:
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
 --- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb55afc2c109f42f2af37941a8c9300e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 600, y: 300}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: PlayerInputs (Input Actions)
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 73
-    width: 1006
-    height: 356
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_ActionMapsTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: bdf89d75
-    m_LastClickedID: 1973287101
-    m_ExpandedIDs: 00000000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 10}
-    m_SearchString: 
-  m_ActionsTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: ec8fad824bf41e9fcb7753b4cfee21ba92bcabcc66adcfd937fd0fde20be8ee1c8f29ef0a187b400ccb6ac1364fecd233701d82cbdf89d75
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 10}
-    m_SearchString: 
-  m_ControlPickerViewState:
-    m_AdvancedDropdownState:
-      states:
-      - itemId: 371857150
-        selectedIndex: 9
-        scroll: {x: 0, y: 0}
-      - itemId: 300744546
-        selectedIndex: 0
-        scroll: {x: 0, y: 0}
-      - itemId: 656259478
-        selectedIndex: 0
-        scroll: {x: 0, y: 0}
-      - itemId: 378383742
-        selectedIndex: -1
-        scroll: {x: 0, y: 0}
-      - itemId: 403810634
-        selectedIndex: 0
-        scroll: {x: 0, y: 0}
-      - itemId: -376880915
-        selectedIndex: -1
-        scroll: {x: 0, y: 0}
-      - itemId: 82801685
-        selectedIndex: -1
-        scroll: {x: 0, y: 0}
-      - itemId: 1081013944
-        selectedIndex: -1
-        scroll: {x: 0, y: 0}
-      - itemId: -656690626
-        selectedIndex: -1
-        scroll: {x: 0, y: 0}
-      - itemId: -654788001
-        selectedIndex: -1
-        scroll: {x: 0, y: 0}
-      - itemId: 1923899077
-        selectedIndex: -1
-        scroll: {x: 0, y: 0}
-    m_ManualPathEditMode: 0
-  m_ActionAssetManager:
-    m_AssetObjectForEditing: {fileID: 0}
-    m_ImportedAssetObject: {fileID: -944628639613478452, guid: c7d160d1c2054be449fdde3f3f04d72a, type: 3}
-    m_AssetGUID: c7d160d1c2054be449fdde3f3f04d72a
-    m_ImportedAssetJson: "{\n    \"name\": \"PlayerInputs\",\n    \"maps\": [\n       
-      {\n            \"name\": \"MovimientoLibre\",\n            \"id\": \"e7fcdf1a-1ddc-4a51-9a66-7777e15c47af\",\n           
-      \"actions\": [\n                {\n                    \"name\": \"Mover\",\n                   
-      \"type\": \"Value\",\n                    \"id\": \"1f0514e1-9b96-4f78-950b-c5c6bc1a6d21\",\n                   
-      \"expectedControlType\": \"Vector2\",\n                    \"processors\":
-      \"\",\n                    \"interactions\": \"\",\n                    \"initialStateCheck\":
-      true\n                },\n                {\n                    \"name\":
-      \"Mirar\",\n                    \"type\": \"Value\",\n                    \"id\":
-      \"f20a8ec8-e08d-4d90-8d52-ac322684ad33\",\n                    \"expectedControlType\":
-      \"Vector2\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
-      },\n                {\n                    \"name\": \"Interactuar\",\n                   
-      \"type\": \"Button\",\n                    \"id\": \"3f1fb61f-794f-494a-9d33-4c0f050e8789\",\n                   
-      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
-      }\n            ],\n            \"bindings\": [\n                {\n                   
-      \"name\": \"Flechas\",\n                    \"id\": \"00433930-f527-46c7-ac80-a8d51acb9893\",\n                   
-      \"path\": \"2DVector\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"Mover\",\n                    \"isComposite\": true,\n                   
-      \"isPartOfComposite\": false\n                },\n                {\n                   
-      \"name\": \"up\",\n                    \"id\": \"1984a672-da69-4f52-a905-5b331443ee42\",\n                   
-      \"path\": \"<Keyboard>/upArrow\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"Mover\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": true\n                },\n                {\n                   
-      \"name\": \"down\",\n                    \"id\": \"a7909742-9e01-4aa0-aab8-08c9b46ece56\",\n                   
-      \"path\": \"<Keyboard>/downArrow\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"\",\n                    \"action\": \"Mover\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": true\n                },\n               
-      {\n                    \"name\": \"left\",\n                    \"id\": \"0f227a72-5e28-485f-95cc-ffc6b1bbfbac\",\n                   
-      \"path\": \"<Keyboard>/leftArrow\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"\",\n                    \"action\": \"Mover\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": true\n                },\n               
-      {\n                    \"name\": \"right\",\n                    \"id\": \"0bac7864-b2d9-4934-89f0-c8b980d49e2e\",\n                   
-      \"path\": \"<Keyboard>/rightArrow\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"\",\n                    \"action\": \"Mover\",\n                    \"isComposite\":
-      false,\n                    \"isPartOfComposite\": true\n                },\n               
-      {\n                    \"name\": \"AWSD\",\n                    \"id\": \"9504009f-134f-4340-923d-9eda75d3d5d2\",\n                   
-      \"path\": \"2DVector\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"Mover\",\n                    \"isComposite\": true,\n                   
-      \"isPartOfComposite\": false\n                },\n                {\n                   
-      \"name\": \"up\",\n                    \"id\": \"12a90f8e-a722-4d9a-9a21-1814001d30a4\",\n                   
-      \"path\": \"<Keyboard>/w\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"Mover\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": true\n                },\n                {\n                   
-      \"name\": \"down\",\n                    \"id\": \"90d9330e-3552-47cb-8b63-2e20fba19148\",\n                   
-      \"path\": \"<Keyboard>/s\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"Mover\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": true\n                },\n                {\n                   
-      \"name\": \"left\",\n                    \"id\": \"7074404d-3557-4b80-985b-8e9af99a0132\",\n                   
-      \"path\": \"<Keyboard>/a\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"Mover\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": true\n                },\n                {\n                   
-      \"name\": \"right\",\n                    \"id\": \"f1480d4c-d33f-4e09-b3f3-c961eab70174\",\n                   
-      \"path\": \"<Keyboard>/d\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"Mover\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": true\n                },\n                {\n                   
-      \"name\": \"\",\n                    \"id\": \"50c2d45b-ffb0-43b5-8d27-f635dd405a16\",\n                   
-      \"path\": \"<Mouse>/delta\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"Mirar\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": false\n                },\n                {\n                   
-      \"name\": \"\",\n                    \"id\": \"a06a9bad-af36-4e3c-9fe7-1233950cec9e\",\n                   
-      \"path\": \"<Keyboard>/e\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"Interactuar\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": false\n                }\n            ]\n        },\n       
-      {\n            \"name\": \"Menu\",\n            \"id\": \"a3339ccd-e98c-4d2b-aa3e-5443a0bf5232\",\n           
-      \"actions\": [\n                {\n                    \"name\": \"Menu\",\n                   
-      \"type\": \"Button\",\n                    \"id\": \"a724a245-4b03-42cb-809c-21970ac36261\",\n                   
-      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
-      }\n            ],\n            \"bindings\": [\n                {\n                   
-      \"name\": \"\",\n                    \"id\": \"a3e9c789-1be6-4e46-8a67-d118fc08ec1d\",\n                   
-      \"path\": \"<Keyboard>/escape\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"Menu\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": false\n                },\n                {\n                   
-      \"name\": \"\",\n                    \"id\": \"a7bd0e4f-924f-4e75-b8eb-d10375051f1e\",\n                   
-      \"path\": \"<Keyboard>/q\",\n                    \"interactions\": \"\",\n                   
-      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
-      \"action\": \"Menu\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": false\n                }\n            ]\n        }\n   
-      ],\n    \"controlSchemes\": []\n}"
-    m_IsDirty: 0
-  m_Toolbar:
-    m_IsDirty: 0
-    m_SelectedControlSchemeIndex: -1
-    m_SelectedDeviceRequirementIndex: -1
-    m_ControlSchemes: []
-    m_SearchText: 
-  m_DirtyTitle:
-    m_Text: (*) PlayerInputs (Input Actions)
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Title:
-    m_Text: PlayerInputs (Input Actions)
-    m_Image: {fileID: 0}
-    m_Tooltip: 
---- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1000,14 +778,14 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 491
-    width: 925
-    height: 328
+    y: 544
+    width: 924
+    height: 275
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &18
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1028,20 +806,20 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 574
-    width: 925
-    height: 245
+    y: 544
+    width: 924
+    height: 275
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 243
+    ID: 161
     splitterInitialOffset: 561
     currentActiveSplitter: -1
     realSizes:
-    - 499
-    - 426
+    - 111
+    - 94
     relativeSizes:
     - 0.5398655
     - 0.4601345
@@ -1051,7 +829,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 925
+    lastTotalSize: 205
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -1096,14 +874,14 @@ MonoBehaviour:
       availableCategories: []
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 18}
+    m_Window: {fileID: 17}
     m_NewResultList:
     - id: 1000
       uniqueId: '[Prototipo - Potion System][suite]'
       name: Prototipo - Potion System
       fullName: Prototipo - Potion System
       resultStatus: 1
-      duration: 0.2378566
+      duration: 0.1739505
       messages: 
       output: 
       stacktrace: 
@@ -1121,7 +899,7 @@ MonoBehaviour:
       fullName: C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo -
         Potion System/Library/ScriptAssemblies/com.itisnotonlyme.inventario.Editor.Tests.dll
       resultStatus: 1
-      duration: 0.1120679
+      duration: 0.0548228
       messages: 
       output: 
       stacktrace: 
@@ -1137,7 +915,7 @@ MonoBehaviour:
       name: InventarioTest
       fullName: InventarioTest
       resultStatus: 1
-      duration: 0.1094002
+      duration: 0.0531231
       messages: 
       output: 
       stacktrace: 
@@ -1154,7 +932,7 @@ MonoBehaviour:
       name: Test01UnInventarioSinItemsTieneUnaCantidadDeCero
       fullName: InventarioTest.Test01UnInventarioSinItemsTieneUnaCantidadDeCero
       resultStatus: 1
-      duration: 0.075054
+      duration: 0.0307772
       messages: 
       output: 
       stacktrace: 
@@ -1171,7 +949,7 @@ MonoBehaviour:
       name: Test02UnInventarioConUnItemAgregadoTieneCantidadUno
       fullName: InventarioTest.Test02UnInventarioConUnItemAgregadoTieneCantidadUno
       resultStatus: 1
-      duration: 0.002298
+      duration: 0.0011819
       messages: 
       output: 
       stacktrace: 
@@ -1188,7 +966,7 @@ MonoBehaviour:
       name: Test03UnInventarioConDosItemsDiferentesTieneCantidadDos
       fullName: InventarioTest.Test03UnInventarioConDosItemsDiferentesTieneCantidadDos
       resultStatus: 1
-      duration: 0.0006645
+      duration: 0.0003679
       messages: 
       output: 
       stacktrace: 
@@ -1205,7 +983,7 @@ MonoBehaviour:
       name: Test04UnInventarioConDosItemsIgualesTieneCantidadDos
       fullName: InventarioTest.Test04UnInventarioConDosItemsIgualesTieneCantidadDos
       resultStatus: 1
-      duration: 0.000507
+      duration: 0.000358
       messages: 
       output: 
       stacktrace: 
@@ -1222,7 +1000,7 @@ MonoBehaviour:
       name: Test05UnInventarioConDosItemsYDespuesSacarUnoTieneCantidadUno
       fullName: InventarioTest.Test05UnInventarioConDosItemsYDespuesSacarUnoTieneCantidadUno
       resultStatus: 1
-      duration: 0.0009417
+      duration: 0.0006513
       messages: 
       output: 
       stacktrace: 
@@ -1239,7 +1017,7 @@ MonoBehaviour:
       name: Test06UnInventarioConDosItemsSeSacaUnoYSeDevuelveElCorrecto
       fullName: InventarioTest.Test06UnInventarioConDosItemsSeSacaUnoYSeDevuelveElCorrecto
       resultStatus: 1
-      duration: 0.0013445
+      duration: 0.0007103
       messages: 
       output: 
       stacktrace: 
@@ -1258,7 +1036,7 @@ MonoBehaviour:
       fullName: C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo -
         Potion System/Library/ScriptAssemblies/com.itisnotonlyme.sistema-de-pociones.Tests.dll
       resultStatus: 1
-      duration: 0.05542
+      duration: 0.0602541
       messages: 
       output: 
       stacktrace: 
@@ -1274,7 +1052,7 @@ MonoBehaviour:
       name: ConsumidorTest
       fullName: ConsumidorTest
       resultStatus: 1
-      duration: 0.0019242
+      duration: 0.0044351
       messages: 
       output: 
       stacktrace: 
@@ -1291,7 +1069,7 @@ MonoBehaviour:
       name: ConsumidorTestSimplePasses
       fullName: ConsumidorTest.ConsumidorTestSimplePasses
       resultStatus: 1
-      duration: 0.0005405
+      duration: 0.0006974
       messages: 
       output: 
       stacktrace: 
@@ -1308,7 +1086,7 @@ MonoBehaviour:
       name: ContenedorTest
       fullName: ContenedorTest
       resultStatus: 1
-      duration: 0.0196501
+      duration: 0.0172863
       messages: 
       output: 
       stacktrace: 
@@ -1325,7 +1103,7 @@ MonoBehaviour:
       name: Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial
       fullName: ContenedorTest.Test01UnContenedorSinIngredientesDaUnaPosionIgualAlEstadoInicial
       resultStatus: 1
-      duration: 0.0034602
+      duration: 0.0049114
       messages: 
       output: 
       stacktrace: 
@@ -1342,7 +1120,7 @@ MonoBehaviour:
       name: Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente
       fullName: ContenedorTest.Test02UnContenedorConUnIngredienteDaUnaPosicionIgualAlEstadoInicialMasElEstadoDelIngrediente
       resultStatus: 1
-      duration: 0.0032356
+      duration: 0.0042206
       messages: 
       output: 
       stacktrace: 
@@ -1359,7 +1137,7 @@ MonoBehaviour:
       name: Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados
       fullName: ContenedorTest.Test03UnContenedorConDosIngredientesNoVinculadosEsComoSumarSusEstados
       resultStatus: 1
-      duration: 0.0004806
+      duration: 0.0004531
       messages: 
       output: 
       stacktrace: 
@@ -1376,7 +1154,7 @@ MonoBehaviour:
       name: Test04UnContenedorConDosIngredientesVinculadosEsLaSumaDeSusEstadosModificados
       fullName: ContenedorTest.Test04UnContenedorConDosIngredientesVinculadosEsLaSumaDeSusEstadosModificados
       resultStatus: 1
-      duration: 0.0008387
+      duration: 0.0006417
       messages: 
       output: 
       stacktrace: 
@@ -1389,28 +1167,11 @@ MonoBehaviour:
       parentId: 1011
       parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest][suite]
     - id: 1016
-      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ContenedorTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest.Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales]
-      name: Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales
-      fullName: ContenedorTest.Test05UnContenedorConCapacidadDeDosPuedeSacarDosPocionesIguales
+      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ContenedorTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest.Test05UnContenedorModificaLosIngredientesQueSeAgregan]
+      name: Test05UnContenedorModificaLosIngredientesQueSeAgregan
+      fullName: ContenedorTest.Test05UnContenedorModificaLosIngredientesQueSeAgregan
       resultStatus: 1
-      duration: 0.0006575
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1011
-      parentUniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest][suite]
-    - id: 1017
-      uniqueId: com.itisnotonlyme.sistema-de-pociones.Tests.dll/ContenedorTest/[com.itisnotonlyme.sistema-de-pociones.Tests][ContenedorTest.Test06UnContenedorModificaLosIngredientesQueSeAgregan]
-      name: Test06UnContenedorModificaLosIngredientesQueSeAgregan
-      fullName: ContenedorTest.Test06UnContenedorModificaLosIngredientesQueSeAgregan
-      resultStatus: 1
-      duration: 0.0009394
+      duration: 0.0007712
       messages: 
       output: 
       stacktrace: 
@@ -1427,7 +1188,7 @@ MonoBehaviour:
       name: ElementoTest
       fullName: ElementoTest
       resultStatus: 1
-      duration: 0.0156242
+      duration: 0.0136206
       messages: 
       output: 
       stacktrace: 
@@ -1444,7 +1205,7 @@ MonoBehaviour:
       name: Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial
       fullName: ElementoTest.Test01IngredienteSinNingunVinculoAlAgregaEsSuEstadoInicial
       resultStatus: 1
-      duration: 0.0015133
+      duration: 0.0018115
       messages: 
       output: 
       stacktrace: 
@@ -1461,7 +1222,7 @@ MonoBehaviour:
       name: Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse
       fullName: ElementoTest.Test02IngredienteNoSePuedeVincularSiNoTieneCondicionesParaUnirse
       resultStatus: 1
-      duration: 0.0009698
+      duration: 0.0013997
       messages: 
       output: 
       stacktrace: 
@@ -1478,7 +1239,7 @@ MonoBehaviour:
       name: Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion
       fullName: ElementoTest.Test03IngredienteConUnVinculoAlAgregarEsSuEstadoInicialConLaModificacion
       resultStatus: 1
-      duration: 0.0011819
+      duration: 0.001755
       messages: 
       output: 
       stacktrace: 
@@ -1495,7 +1256,7 @@ MonoBehaviour:
       name: Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente
       fullName: ElementoTest.Test04IngredienteNoSePuedeUnirDosVecesConUnIngrediente
       resultStatus: 1
-      duration: 0.0003847
+      duration: 0.0005678
       messages: 
       output: 
       stacktrace: 
@@ -1512,7 +1273,7 @@ MonoBehaviour:
       name: Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion
       fullName: ElementoTest.Test05IngredienteSeVinculaConDosIngredientesYSuEstadoEsElInicialYDosVecesLaModificacion
       resultStatus: 1
-      duration: 0.0004247
+      duration: 0.0011403
       messages: 
       output: 
       stacktrace: 
@@ -1529,7 +1290,7 @@ MonoBehaviour:
       name: Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo
       fullName: ElementoTest.Test06IngredienteSeVinculaConOtroYAlVincularseConElTerceroRompeElPrimerVinculo
       resultStatus: 1
-      duration: 0.0008191
+      duration: 0.0012556
       messages: 
       output: 
       stacktrace: 
@@ -1546,7 +1307,7 @@ MonoBehaviour:
       name: VinculoTest
       fullName: VinculoTest
       resultStatus: 1
-      duration: 0.0097864
+      duration: 0.009389
       messages: 
       output: 
       stacktrace: 
@@ -1563,7 +1324,7 @@ MonoBehaviour:
       name: Test01UnVinculoDondeLosVinculadosNoTienenNingunModificacionEsEstable
       fullName: VinculoTest.Test01UnVinculoDondeLosVinculadosNoTienenNingunModificacionEsEstable
       resultStatus: 1
-      duration: 0.0008468
+      duration: 0.0006265
       messages: 
       output: 
       stacktrace: 
@@ -1580,7 +1341,7 @@ MonoBehaviour:
       name: Test02UnVinculoDondeLosVinculadosEstanModificadoHaciendoQueYaNoSeanEstable
       fullName: VinculoTest.Test02UnVinculoDondeLosVinculadosEstanModificadoHaciendoQueYaNoSeanEstable
       resultStatus: 1
-      duration: 0.0007555
+      duration: 0.0021886
       messages: 
       output: 
       stacktrace: 
@@ -1597,7 +1358,7 @@ MonoBehaviour:
       name: Test03DosVinculadosCuandoHayUnVinculoSuEstadoEsModificado
       fullName: VinculoTest.Test03DosVinculadosCuandoHayUnVinculoSuEstadoEsModificado
       resultStatus: 1
-      duration: 0.0002919
+      duration: 0.000783
       messages: 
       output: 
       stacktrace: 
@@ -1614,7 +1375,7 @@ MonoBehaviour:
       name: Test04DosVinculadosCuandoSeRompeElVinculoYaSuEstadoNoEstaModificado
       fullName: VinculoTest.Test04DosVinculadosCuandoSeRompeElVinculoYaSuEstadoNoEstaModificado
       resultStatus: 1
-      duration: 0.0003436
+      duration: 0.0003897
       messages: 
       output: 
       stacktrace: 
@@ -1633,7 +1394,7 @@ MonoBehaviour:
       fullName: C:/Users/juanh/137v/proyectos/Prototipo-PotionSystem/Prototipo -
         Potion System/Library/ScriptAssemblies/com.itisnotonlyme.vector-dinamico.Tests.dll
       resultStatus: 1
-      duration: 0.0217726
+      duration: 0.018446
       messages: 
       output: 
       stacktrace: 
@@ -1649,7 +1410,7 @@ MonoBehaviour:
       name: VectorTest
       fullName: VectorTest
       resultStatus: 1
-      duration: 0.0102006
+      duration: 0.0114894
       messages: 
       output: 
       stacktrace: 
@@ -1666,7 +1427,7 @@ MonoBehaviour:
       name: Test01SeSumaDosVectores
       fullName: VectorTest.Test01SeSumaDosVectores
       resultStatus: 1
-      duration: 0.0013757
+      duration: 0.0015533
       messages: 
       output: 
       stacktrace: 
@@ -1683,7 +1444,7 @@ MonoBehaviour:
       name: Test02SeRestanDosVectores
       fullName: VectorTest.Test02SeRestanDosVectores
       resultStatus: 1
-      duration: 0.0002598
+      duration: 0.0004417
       messages: 
       output: 
       stacktrace: 
@@ -1700,7 +1461,7 @@ MonoBehaviour:
       name: Test03SeSumaDosVectoresYLuegoSeRestaUnTercero
       fullName: VectorTest.Test03SeSumaDosVectoresYLuegoSeRestaUnTercero
       resultStatus: 1
-      duration: 0.0004736
+      duration: 0.0007864
       messages: 
       output: 
       stacktrace: 
@@ -1717,7 +1478,7 @@ MonoBehaviour:
       name: Test04SeMultiplicaUnVector
       fullName: VectorTest.Test04SeMultiplicaUnVector
       resultStatus: 1
-      duration: 0.000227
+      duration: 0.0002752
       messages: 
       output: 
       stacktrace: 
@@ -1734,7 +1495,7 @@ MonoBehaviour:
       name: Test05SeDivideUnVector
       fullName: VectorTest.Test05SeDivideUnVector
       resultStatus: 1
-      duration: 0.0002139
+      duration: 0.0002701
       messages: 
       output: 
       stacktrace: 
@@ -1751,7 +1512,7 @@ MonoBehaviour:
       name: Test06SeCalculaElProductoInternoEntreElMismoVector
       fullName: VectorTest.Test06SeCalculaElProductoInternoEntreElMismoVector
       resultStatus: 1
-      duration: 0.0002211
+      duration: 0.0002988
       messages: 
       output: 
       stacktrace: 
@@ -1768,7 +1529,7 @@ MonoBehaviour:
       name: Test06SeCalculaElProductoInternoEntreLaSumaDeDosVectores
       fullName: VectorTest.Test06SeCalculaElProductoInternoEntreLaSumaDeDosVectores
       resultStatus: 1
-      duration: 0.0002159
+      duration: 0.0002777
       messages: 
       output: 
       stacktrace: 
@@ -1785,7 +1546,7 @@ MonoBehaviour:
       name: Test07SeCalculaElProductoInternoEntreLaDiferenciaDeDosVectores
       fullName: VectorTest.Test07SeCalculaElProductoInternoEntreLaDiferenciaDeDosVectores
       resultStatus: 1
-      duration: 0.0002135
+      duration: 0.0002756
       messages: 
       output: 
       stacktrace: 
@@ -1802,7 +1563,7 @@ MonoBehaviour:
       name: Test08DistanciaEntreDosVectoresIguales
       fullName: VectorTest.Test08DistanciaEntreDosVectoresIguales
       resultStatus: 1
-      duration: 0.0002591
+      duration: 0.0003946
       messages: 
       output: 
       stacktrace: 
@@ -1819,7 +1580,7 @@ MonoBehaviour:
       name: Test09DistanciaEntreDosVectoresDistintos
       fullName: VectorTest.Test09DistanciaEntreDosVectoresDistintos
       resultStatus: 1
-      duration: 0.0002649
+      duration: 0.0002802
       messages: 
       output: 
       stacktrace: 
@@ -1836,7 +1597,7 @@ MonoBehaviour:
       name: Test10LaSimilitudEntreDosVectoresMultiplosEsUno
       fullName: VectorTest.Test10LaSimilitudEntreDosVectoresMultiplosEsUno
       resultStatus: 1
-      duration: 0.0002425
+      duration: 0.0002133
       messages: 
       output: 
       stacktrace: 
@@ -1853,7 +1614,7 @@ MonoBehaviour:
       name: Test11LaSimilitudEntreDosVectoresOrtogonalesEsCero
       fullName: VectorTest.Test11LaSimilitudEntreDosVectoresOrtogonalesEsCero
       resultStatus: 1
-      duration: 0.0002437
+      duration: 0.000172
       messages: 
       output: 
       stacktrace: 
@@ -1870,7 +1631,7 @@ MonoBehaviour:
       name: Test12LaSimilitudEntreUnVectorYSuInversoEsMenosUno
       fullName: VectorTest.Test12LaSimilitudEntreUnVectorYSuInversoEsMenosUno
       resultStatus: 1
-      duration: 0.0002195
+      duration: 0.0001667
       messages: 
       output: 
       stacktrace: 
@@ -1887,7 +1648,7 @@ MonoBehaviour:
       name: Test13LaMultiplicidadEntreElMismoVectorEsUno
       fullName: VectorTest.Test13LaMultiplicidadEntreElMismoVectorEsUno
       resultStatus: 1
-      duration: 0.0001928
+      duration: 0.0001496
       messages: 
       output: 
       stacktrace: 
@@ -1904,7 +1665,7 @@ MonoBehaviour:
       name: Test14LaMultiplicidadEntreUnVectorYElDobleEsDos
       fullName: VectorTest.Test14LaMultiplicidadEntreUnVectorYElDobleEsDos
       resultStatus: 1
-      duration: 0.0002031
+      duration: 0.000157
       messages: 
       output: 
       stacktrace: 
@@ -1921,7 +1682,7 @@ MonoBehaviour:
       name: Test15LaMultiplicidadEntreUnVectorYElInversoEsMenosUno
       fullName: VectorTest.Test15LaMultiplicidadEntreUnVectorYElInversoEsMenosUno
       resultStatus: 1
-      duration: 0.0002009
+      duration: 0.0001566
       messages: 
       output: 
       stacktrace: 
@@ -1938,7 +1699,7 @@ MonoBehaviour:
       name: Test16UnVectorMultiplicadoPorUnIdentificadorEspecifico
       fullName: VectorTest.Test16UnVectorMultiplicadoPorUnIdentificadorEspecifico
       resultStatus: 1
-      duration: 0.000198
+      duration: 0.0001771
       messages: 
       output: 
       stacktrace: 
@@ -1955,7 +1716,7 @@ MonoBehaviour:
       name: Test17UnaSumaDeVectoresMultiplicadoPorUnIdentificadorEspecifico
       fullName: VectorTest.Test17UnaSumaDeVectoresMultiplicadoPorUnIdentificadorEspecifico
       resultStatus: 1
-      duration: 0.0002179
+      duration: 0.0002322
       messages: 
       output: 
       stacktrace: 
@@ -1967,7 +1728,7 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: com.itisnotonlyme.vector-dinamico.Tests.dll/[com.itisnotonlyme.vector-dinamico.Tests][VectorTest][suite]
-    m_ResultText: com.itisnotonlyme.vector-dinamico.Tests.dll (0,022s)
+    m_ResultText: com.itisnotonlyme.vector-dinamico.Tests.dll (0,018s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
@@ -1999,7 +1760,7 @@ MonoBehaviour:
       selectedCategoryMask: -1
       availableCategories:
       - Uncategorized
---- !u!114 &19
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2019,9 +1780,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 926
+    x: 925
     y: 73
-    width: 332
+    width: 333
     height: 746
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2040,7 +1801,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &20
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2061,9 +1822,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1260
-    y: 286
+    y: 465
     width: 339
-    height: 533
+    height: 354
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2080,7 +1841,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -2095,7 +1857,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 683d0000
     m_LastClickedID: 15720
-    m_ExpandedIDs: 00000000ba4f0000fe4f000000500000025000000450000006500000085000000a5000000c5000000e50000010500000125000001450000016500000185000001a5000001c5000001e50000020500000225000002450000026500000285000002a5000002c500000
+    m_ExpandedIDs: 00000000985100009a5100009c5100009e510000a0510000a2510000a4510000a6510000a8510000aa510000ac510000ae510000b0510000b2510000b4510000b6510000b8510000ba510000bc510000be510000c0510000c2510000c4510000c6510000c8510000ca510000cc510000ce510000d0510000d2510000d4510000d6510000d8510000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2123,7 +1885,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000ba4f0000fe4f000000500000025000000450000006500000085000000a5000000c5000000e50000010500000125000001450000016500000185000001a5000001c5000001e50000020500000225000002450000026500000285000002a5000002c500000
+    m_ExpandedIDs: 86dbffffffffffff00000000985100009a5100009c5100009e510000a2510000a4510000a6510000a8510000aa510000ac510000ae510000b0510000b2510000b4510000b6510000b8510000ba510000bc510000be510000c0510000c2510000c4510000c6510000c8510000ca510000cc510000d0510000d4510000d6510000d8510000305200003652000066650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
